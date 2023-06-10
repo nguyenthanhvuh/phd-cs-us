@@ -24,6 +24,21 @@
 }
 \usepackage{booktabs}
 
+\newtcolorbox{cbox}[1][]
+{
+left=1pt,right=1pt,top=1pt,bottom=1pt,
+colback=gray!10,
+boxrule=0.5pt,
+title=#1 % I would like to make this (one of these in general) assignment optional depending on #1, #2...
+}
+
+ \newenvironment{commentbox}[1][]{
+ \small
+    \begin{cbox}[#1]
+ }{
+   \end{cbox}
+}
+
 
 \def\Section{\S}
 
@@ -61,7 +76,6 @@ If you have suggestions or comments, feel free to create a \href{https://github.
 
 \section{Should You Apply?}
 
-
 First, I want to emphasize that PhD students in Computer
 Science \emph{do not} need to worry about funding, especially at good R1
 universities in the US. If you are admitted, you will almost certainly
@@ -75,11 +89,11 @@ Second, I believe that applying to a good US university \emph{should not} be any
 harder than at schools in other countries. If you think you have a
 chance at schools in other countries, e.g., South Korea, Singapore, Germany, UK, Japan and Australia, then you will surely have a chance in the US as well.
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
+\begin{commentbox}[]
 Vu: One of the reasons I create this post is that several of my colleagues are interested in 
 recruiting Vietnamese students and were surprised when seeing very few applications in Vietnam (e.g., our CS PhD program has on average 3 applications from Vietnam each year). In general the number of
 PhD applications from Vietnam to US universities is very low and  more would be very welcomed. 
-\end{tcolorbox}
+\end{commentbox}
 
 %% Vu: *what's a PhD?*  This [[https://matt.might.net/articles/phd-school-in-pictures/][series of pictures]] from [[https://matt.might.net][Matt Might]] illustrates what a PhD means.
 %% \end{tcolorbox}
@@ -94,19 +108,19 @@ Then your application will be reviewed by a
 
 In many cases, the admission committee can involve current students and assistant professors in the department. This provides junior faculty the opportunities to recruit students. The chair of the committee will be a senior professor, but they likely will not review individual applications and instead assign them to committee members. The chair will look at various factors such as research interests or mentioning faculty names to assign the applications to appropriate faculty. 
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
-Vu: We usually decide that a candidate is either (i) admit with funding (TA or RA) or (ii) rejected. In other words, in most cases, we either
+\begin{commentbox}[]
+Vu: We usually decide that a PhD candidate is either (i) admit with funding (TA or RA) or (ii) rejected. In other words, in most cases, we either
 admit you with full funding, or we don't. In some rare cases, we may admit
 you with no funding because you have funding on your own (e.g., you are
-supported by your government or have external grants). Also, we justify
+supported by your government or have external grants). We justify
 our decision with a short summary about your application, where we list
 strengths (e.g., well-known undergrad school) and weaknesses (e.g., weak
 LORs).
-\end{tcolorbox}
+\end{commentbox}
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
-    Hakan: At GMU, for full consideration, students should make sure to submit \textbf{ALL} required documents by the application deadline (December 1st), and should never assume that some required documents (such as official TOEFL scores or official diplomas/transcripts) will be waived by the admissions office. If something is listed and not marked as "optional", it is mandatory and they should plan for submitting all those.  
-\end{tcolorbox}
+\begin{commentbox}[]
+    Hakan: At GMU, for full consideration, students should make sure to submit \textbf{ALL} required documents by the application deadline, and should never assume that some required documents (such as official TOEFL scores or official diplomas/transcripts) will be waived by the admissions office. If something is listed and not marked as "optional", it is mandatory and they should plan for submitting all those.  
+\end{commentbox}
 \paragraph{Why we do not waive application fee?}  This is typically a requirement of the university. Individual departments/programs do not have the flexibility to waive the application fee, even if they want to. 
 
 In my opinion, requiring applicants to pay the fee helps ensure their seriousness, as it filters out non-serious candidates. Also, if the application process were free for everyone, we would receive an overwhelming number of applications to review.
@@ -131,13 +145,13 @@ faculty.
 
 However, I understand that many international students do not have the opportunities to publish in top places, so general IEEE/ACM/USENIX confs/journals would suffice.  But be sure to talk about it in your \hyperref[sec:research-statement]{statement}.
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
-Vu: Vietnamese students often mention Scopus Q1, which consists of diverse journals from IEEE, Elsevier, and several other publishers unfamiliar to me.  Honestly, I don't know/recognize the majority of journals listed in Scopus Q1. So this might be something to be mindful of, as \textbf{CS} faculty might not be too familiar with Scopus or journals listed in there, so devote sometime in your statement to discuss the significance of your papers.
-\end{tcolorbox}
+\begin{commentbox}[]
+Vu: Vietnamese students often mention Scopus Q1, which consists of diverse journals from IEEE, Elsevier, and many other publishers unfamiliar to me.  Honestly, I don't know/recognize many of journals listed in Scopus Q1 and. So this might be something to be mindful of, as \textbf{CS} faculty might not be too familiar with Scopus or journals listed in there, so devote sometime in your statement to discuss the significance of your papers.
+\end{commentbox}
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
+\begin{commentbox}[]
 Craig: GMU and many other universities allow you to upload your published papers and other writing samples. In many cases, even if the papers were not published at top places, we can still determine their quality by simply skimming over the paper.  
-\end{tcolorbox}
+\end{commentbox}
 
 Additionally, \textbf{work experiences at renowned research laboratories}, such as Microsoft Research, can significantly strengthen your
 application.  Unfortunately, many good international research places, e.g., VinAI in Vietnam, remain relatively unknown to most universities in the US. So you should explicit say something about them in your statement.
@@ -171,10 +185,9 @@ well-known than a generic/weak letter from a well-known person.
 Vietnamese students sometimes go through great length just to get letters from well-known senior professors in their school, but the letters are very generic and weak and therefore carry little value, in fact, red flags. Moreover, a top professor in Vietnamese might not be well-known to US faculty (see more details in \S\ref{sec:your-school}). So save the trouble and just get letters from \emph{any} professors who knows you well and can write a good letter about your research ability.
 \end{tcolorbox}
 
-\subsection{Research Statement}\label{sec:research-statement}
+\subsection{Research or Personal Statement}\label{sec:research-statement}
 
-While you might not be able to get good LORs or change
-\hyperref[sec:your-school]{where your go to school}, you have control of your
+While you might not have control over LORs \hyperref[sec:your-school]{where your go to school}, you do over your
 statement! So write it well because we do take it seriously.
 A well-written LOR also shows that you can communicate, which is very important in research, and that you can effectively teach and communicate with students, which is important for TA funding (see \S\ref{sec:funding}).
 %is important because if you need (GTA) funding, it will provide evidence
@@ -183,9 +196,10 @@ A well-written LOR also shows that you can communicate, which is very important 
 There are many guides on writing research statement, e.g.,~\cite{blattman2022writing},
 so I will not talk too much about it. In short, discuss about your research vision and convince us that you can achieve it through your experience, e.g., published papers, or if you work on some projects by yourself, talk about it.
 
-Finally, this is something very easy to do, but is missed by many
+Finally, this is something easy to do, but is missed by many
 applicants: \textbf{customize the statement} for the school you're applying to,
 e.g., why do you apply here? talk about a couple of professors who you're interested in working with (in many cases your application will be forwarded to them for evaluation).
+This shows that you're serious and have done homework on where you're applying to.
 Be careful not to send wrong statement to wrong school or mixing
 facts (e.g., talking about school X but mentioned about working with
 profs. at school Y; and definitely do not talk about George Washington when applying to George Mason). I have seen such statements more time that I
@@ -193,6 +207,7 @@ should.
 
 
 \begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
+\small
 Vu: I always read the research statement first and then LORs. If I am
 persuaded by then, I would skim over other factors and advocate for
 admission (unless I see red flags in other parts). If I am not
