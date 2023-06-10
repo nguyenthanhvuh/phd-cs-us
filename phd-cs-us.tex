@@ -24,7 +24,7 @@
 }
 \usepackage{booktabs}
 
-\newtcolorbox{cbox}[]
+\newtcolorbox{cbox}
 {
 left=1pt,right=1pt,top=1pt,bottom=1pt,
 colback=gray!10,
@@ -46,9 +46,9 @@ boxrule=0.5pt
 \newcommand{\red}[1]{{\color{red}{#1}}}
 \renewcommand{\figurename}{Fig.}
 \renewcommand{\tablename}{Tab.}
-\title{Demystifying the Computer Science Ph.D. Admission in the US}
+\title{Demystifying the Computer Science Ph.D. Admission in the US \\{\Large A guide for Vietnamese and International Students}}
 \date{\today}
-\author{ThanhVu (Vu) Nguyen, George Mason University}
+\author{\small ThanhVu (Vu) Nguyen, George Mason University}
 %\setcounter{secnumdepth}{3}
 \begin{document}
 \maketitle
@@ -63,7 +63,7 @@ getting admitted is difficult compared to CS PhD programs in other countries.
 
 So I want to share my opinions and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
 While I wrote this document for Vietnamese students interested in CS, it should be applicable to students in various countries interested in STEM.
-Moreover, while many examples given are for GMU, which is 33rd on CSRankings (see \S\ref{sec:ranking}), the writing should be generalize to most other R1\footnote{An \href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1 institution} in the US is a research-intensive university with a high level of research activity across various disciplines.} universities  (though \emph{very} top schools might be very extreme, e.g., see the admission process at \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{CMU}).
+Moreover, while many examples given are for GMU, which is 32rd in the US according CSRankings (see \S\ref{sec:ranking}), the writing should be generalize to most other R1\footnote{An \href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1 institution} in the US is a research-intensive university with a high level of research activity across various disciplines.} universities  (though \emph{very} top schools might be very extreme, e.g., see the admission process at \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{CMU}).
 
 I wish you the best of luck. And if you follow these advice,
 you will at least have a good chance at GMU (see
@@ -110,10 +110,10 @@ In many cases, the admission committee can involve current students and assistan
 \begin{commentbox}
 Vu: We usually decide that a PhD candidate is either (i) admit with funding (TA or RA) or (ii) rejected. In other words, in most cases, we either
 admit you with full funding, or we don't. In some rare cases, we may admit
-you with no funding because you have funding on your own (e.g., you are
-supported by your government or have external grants). We justify
-our decision with a short summary about your application, where we list
-strengths (e.g., well-known undergrad school) and weaknesses (e.g., weak
+you without funding because you have funding on your own (e.g., you are
+supported by your government or have external grants). We also justify
+our decision with a summary about your application, where we list
+strengths (e.g., well-known school) and weaknesses (e.g., weak
 LORs).
 \end{commentbox}
 
@@ -242,13 +242,13 @@ have bad grades in relevant, e.g., CS and Math, courses.
 \paragraph{GRE} Most CS programs in the US \emph{no longer require GREs}, so you don't need to
 take them. However, they might be useful for international students from programs we are not familiar with. 
 
-\paragraph{English Test} Unless you're from certain countries (e.g., English speaking ones), you will need to
+\paragraph{English Test} Unless your degrees are from certain countries such as \href{https://github.com/dynaroars/dynaroars.github.io/wiki/About-GMU#standard-tests-waiver-eligible-countries}{these}, you will need to
 take standardized English test. Just do well enough to pass minimum requirement set by the university, which nowadays has many options for you to choose from.
 
 \begin{commentbox}
 Vu: The minimum for GMU (being above this might not mean much, but below is a \red{red flag}).
 \begin{itemize}
-\item GPA: $\ge 3.0$ in your undergrad (but as mentioned, we also consider the rank/prestige of your school)
+\item GPA: $\ge 3.0$ in your undergrad (but we also consider the rank/prestige of your school)
 \item GRE: not required, though it can help boost your profile
 %    \item but if you want to use it, then we expect a total (V+Q) of $\ge 311$ (with a $\ge 157$ Q) and A $\ge 3.0-3.5$.
 \item English requirement tests (one of the below)
@@ -348,12 +348,12 @@ Vu: If you're lucky and got recruited by a prof. who would give you RA right awa
 
 \subsection{Fellowship/Scholarship}
 
-Fellowship is another type of funding in which the student applies for (e.g., from school, industries, government). Fellowships are typically competitive and generous, and gives pretty much all benefits tuition/insurance that a TA/RA has.  Moreover, it often gives higher stipend (including summer) and opens doors for job opportunities (e.g., internship).  For example, a student with a Microsoft fellowship will likely get an internship at Microsoft.  
+Fellowship is another type of funding that the student needs to apply for (e.g., from school, industries, government). Fellowships are typically competitive and generous, and gives pretty much all benefits tuition/insurance that a TA/RA has.  Moreover, it often gives higher stipend (including summer) and opens doors for job opportunities (e.g., internship).  For example, a student with a Microsoft fellowship will likely get an internship at Microsoft.  
 
 In general, fellowship is prestigious, and you will stand out if you get one.  Every PhD student has pubs, but only superstars have NSF grad or Microsoft fellowship. In fact, these are so prestigious that even if you didn't get it but make it to the final round, school will still mention you on their website and you still should put it on your CV.
 
 
-\textbf{How to get Fellowship?} You apply for them.  The US government has many fellowships but these would likely require US citizenship or residency.  However, tech companies including Google, Microsoft, Facebook, IBM have fellowships that international students can apply for. 
+\textbf{How to get Fellowship?} You apply for them.  The US government has many fellowships that would likely require US citizenship or residency.  However, tech companies including Google, Microsoft, Facebook, IBM have fellowships that international students can apply for. 
 
 Prestigious fellowships typically require a clear and good research plan, so it is a good idea to wait until at least your second year to have research experience and even publication before applying. Remember, you're competiting with the top Ph.D. students at top universities worldwide. 
 
@@ -400,45 +400,42 @@ At GMU, Ph.D. applicants are automatically eligible for a Presidential Fellowshi
 
 
 \subsection{Current 2023 Rankings of CS PhD programs in the U.S}\label{sec:ranking}
-  Tab.~\ref{tab:ranking} lists the top 50 CS programs in the US from \href{https://www.csrankings.org}{CSRankings.org}, a ranking system that is based on CS conferences.
+  Tab.~\ref{tab:ranking} lists the top 50 CS programs in the US from \href{https://www.csrankings.org}{CSRankings.org}, a ranking system  based on top CS conferences.
   
-  \begin{table}
+  \begin{table}[h!]
     \centering
     \small
-    \caption{Top 50 CS PhD programs in the U.S. (CSRankings, April 2023)}\label{tab:ranking}
+    \caption{Top 50 CS PhD programs in the U.S. (CSRankings, June 2023)}\label{tab:ranking}
   \begin{tabular}{rl|rl}
     \toprule
-    1 & Carnegie Mellon University & 26 & Univ. of California - Irvine \\
-    2 & Univ. of Illinois at Urbana-Champaign  & 27 & University of Southern California \\
-    3 & Univ. of California - San Diego & 28 &  Duke University \\
-    4 & Massachusetts Institute of Technology & 29 & Univ. of California - Riverside\\
-    5 & Stanford University         & 30 & Pennsylvania State University \\
-    6 & University of Michigan - Ann Arbor & 31 & Northwestern University \\
-    7 & University of Washington   & 32& Ohio State University \\  
-    8 & Cornell University       &33 & George Mason University \\
-    9 & Univ. of California - Berkeley  &34& Harvard University  \\
-    10 & Georgia Institute of Technology &35& Brown University  \\
-    11 & Northeastern University  &36& University of Utah \\
-    12 & University of Maryland - College Park &37& Texas A\&M University\\
-    13 & University of Wisconsin - Madison  &38& Univ. of California - Santa Cruz  \\
-    14 &   Purdue University  &39 & Yale University  \\
-    15 & University of Texas at Austin  &40& Boston University \\
-    16 &   Columbia University  &41 & University at Buffalo\\
-    17 & University of Pennsylvania &42& University of Colorado-Boulder \\
-    18 & New York University  & 43& North Carolina State University\\
-    19 & Princeton University & 44& Rice University \\
-    20 & University of Massachusetts Amherst &45& University of Illinois at Chicago  \\
-    21 & Univ. of California - Los Angeles &46& University of North Carolina \\
-    22 & University of Chicago &47& University of Virginia \\
-    23 & Stony Brook University &48& Arizona State University \\
-    24 & Univ. of California - Santa Barbara &49& University of Minnesota \\
-    25 & Rutgers University &50& Virginia Tech  \\
+    1 & Carnegie Mellon & 26 & Univ. of California - Irvine \\
+    2 & Univ. of Illinois at Urbana-Champaign  & 27 &  Duke University \\
+    3 & Univ. of California-San Diego & 28 & Rutgers University \\
+    4 & MIT & 29 & Univ. of California - Riverside\\
+    5 & Georgia Institute of Technology         & 30 & Northwestern University\\
+    6 & Stanford University& 31 & Pennsylvania State University  \\
+    7 & University of Michigan - Ann Arbor   & 32& George Mason University\\  
+    8 & University of Washington      &33 &  Harvard University \\
+    9 &  Univ. of California - Berkeley  &34&  Univ. of California - Santa Cruz \\
+    10 & Cornell University  & 35 &  Yale University \\
+    11 & University of Maryland - College Park &  36& Brown University \\ 
+    12 & Northeastern University 37&  Ohio State University\\
+    13 & University of Wisconsin - Madison  &38& Texas A\&M University \\
+    14 & Columbia University   &39 & Boston University  \\
+    15 &   Purdue University  &40& North Carolina State University\\\  
+    16 & University of Texas at Austin   &41 & University of Utah \\
+    17 & University of Pennsylvania &42 & University at Buffalo\\
+    18 & Princeton University  & 43& Rice University\\
+    19 & University of Massachusetts-Amherst & 44&  University of Colorado-Boulder \\
+    20 &  New York University  &45& University of Illinois at Chicago  \\
+    21 & Univ. of California - Los Angeles &46& Virginia Tech  \\
+    22 & University of Southern California &47&  Arizona State University \\
+    23 & Stony Brook University &48&University of Minnesota \\
+    24 & University of Chicago &49& University of Virginia \\
+    25 & Univ. of California - Santa Barbara &50& University of North Carolina \\
     \bottomrule
     \end{tabular}
 \end{table}
-
-   
-
 
 \section{Acknowledgement}
 Many faculty and students have contributed to this document.
