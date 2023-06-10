@@ -24,17 +24,16 @@
 }
 \usepackage{booktabs}
 
-\newtcolorbox{cbox}[1][]
+\newtcolorbox{cbox}[]
 {
 left=1pt,right=1pt,top=1pt,bottom=1pt,
 colback=gray!10,
-boxrule=0.5pt,
-title=#1 % I would like to make this (one of these in general) assignment optional depending on #1, #2...
+boxrule=0.5pt
 }
 
- \newenvironment{commentbox}[1][]{
+ \newenvironment{commentbox}{
  \small
-    \begin{cbox}[#1]
+    \begin{cbox}
  }{
    \end{cbox}
 }
@@ -64,7 +63,7 @@ getting admitted is difficult compared to CS PhD programs in other countries.
 
 So I want to share my opinions and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
 While I wrote this document for Vietnamese students interested in CS, it should be applicable to students in various countries interested in STEM.
-Moreover, while many examples given are for GMU, which is 33rd on CSRankings (see \S\ref{sec:ranking}), the writing should be generalize to most other R1\footnote{An \href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1 institution} in the US refers to a research-intensive university with a high level of research activity across various disciplines.} universities  (though \emph{very} top schools might be very extreme, e.g., see the admission process at \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{CMU}).
+Moreover, while many examples given are for GMU, which is 33rd on CSRankings (see \S\ref{sec:ranking}), the writing should be generalize to most other R1\footnote{An \href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1 institution} in the US is a research-intensive university with a high level of research activity across various disciplines.} universities  (though \emph{very} top schools might be very extreme, e.g., see the admission process at \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{CMU}).
 
 I wish you the best of luck. And if you follow these advice,
 you will at least have a good chance at GMU (see
@@ -89,14 +88,14 @@ Second, I believe that applying to a good US university \emph{should not} be any
 harder than at schools in other countries. If you think you have a
 chance at schools in other countries, e.g., South Korea, Singapore, Germany, UK, Japan and Australia, then you will surely have a chance in the US as well.
 
-\begin{commentbox}[]
+\begin{commentbox}
 Vu: One of the reasons I create this post is that several of my colleagues are interested in 
 recruiting Vietnamese students and were surprised when seeing very few applications in Vietnam (e.g., our CS PhD program has on average 3 applications from Vietnam each year). In general the number of
 PhD applications from Vietnam to US universities is very low and  more would be very welcomed. 
 \end{commentbox}
 
 %% Vu: *what's a PhD?*  This [[https://matt.might.net/articles/phd-school-in-pictures/][series of pictures]] from [[https://matt.might.net][Matt Might]] illustrates what a PhD means.
-%% \end{tcolorbox}
+%% \end{commentbox}
 
 
 \section{How is Your Application Evaluated?}
@@ -108,7 +107,7 @@ Then your application will be reviewed by a
 
 In many cases, the admission committee can involve current students and assistant professors in the department. This provides junior faculty the opportunities to recruit students. The chair of the committee will be a senior professor, but they likely will not review individual applications and instead assign them to committee members. The chair will look at various factors such as research interests or mentioning faculty names to assign the applications to appropriate faculty. 
 
-\begin{commentbox}[]
+\begin{commentbox}
 Vu: We usually decide that a PhD candidate is either (i) admit with funding (TA or RA) or (ii) rejected. In other words, in most cases, we either
 admit you with full funding, or we don't. In some rare cases, we may admit
 you with no funding because you have funding on your own (e.g., you are
@@ -118,7 +117,7 @@ strengths (e.g., well-known undergrad school) and weaknesses (e.g., weak
 LORs).
 \end{commentbox}
 
-\begin{commentbox}[]
+\begin{commentbox}
     Hakan: At GMU, for full consideration, students should make sure to submit \textbf{ALL} required documents by the application deadline, and should never assume that some required documents (such as official TOEFL scores or official diplomas/transcripts) will be waived by the admissions office. If something is listed and not marked as "optional", it is mandatory and they should plan for submitting all those.  
 \end{commentbox}
 \paragraph{Why we do not waive application fee?}  This is typically a requirement of the university. Individual departments/programs do not have the flexibility to waive the application fee, even if they want to. 
@@ -145,11 +144,11 @@ faculty.
 
 However, I understand that many international students do not have the opportunities to publish in top places, so general IEEE/ACM/USENIX confs/journals would suffice.  But be sure to talk about it in your \hyperref[sec:research-statement]{statement}.
 
-\begin{commentbox}[]
+\begin{commentbox}
 Vu: Vietnamese students often mention Scopus Q1, which consists of diverse journals from IEEE, Elsevier, and many other publishers unfamiliar to me.  Honestly, I don't know/recognize many of journals listed in Scopus Q1 and. So this might be something to be mindful of, as \textbf{CS} faculty might not be too familiar with Scopus or journals listed in there, so devote sometime in your statement to discuss the significance of your papers.
 \end{commentbox}
 
-\begin{commentbox}[]
+\begin{commentbox}
 Craig: GMU and many other universities allow you to upload your published papers and other writing samples. In many cases, even if the papers were not published at top places, we can still determine their quality by simply skimming over the paper.  
 \end{commentbox}
 
@@ -177,13 +176,13 @@ working at. It is OK as long as it is a research-based personalized
 letter (once again, we are talking about PhD applications, not MS).
 
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
+\begin{commentbox}
 Vu: It's better to have a good personalized
 letter about your own research ability from someone who is less
 well-known than a generic/weak letter from a well-known person.
 
 Vietnamese students sometimes go through great length just to get letters from well-known senior professors in their school, but the letters are very generic and weak and therefore carry little value, in fact, red flags. Moreover, a top professor in Vietnamese might not be well-known to US faculty (see more details in \S\ref{sec:your-school}). So save the trouble and just get letters from \emph{any} professors who knows you well and can write a good letter about your research ability.
-\end{tcolorbox}
+\end{commentbox}
 
 \subsection{Research or Personal Statement}\label{sec:research-statement}
 
@@ -206,14 +205,14 @@ profs. at school Y; and definitely do not talk about George Washington when appl
 should.
 
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
+\begin{commentbox}
 \small
 Vu: I always read the research statement first and then LORs. If I am
 persuaded by then, I would skim over other factors and advocate for
 admission (unless I see red flags in other parts). If I am not
 convinced, then I will likely recommend rejection (unless I see
 something standout in other parts).
-\end{tcolorbox}
+\end{commentbox}
 
 
 \subsection{Your School}\label{sec:your-school}
@@ -224,9 +223,9 @@ However, if committee members do not know much about schools in your country, th
 
 So what can you do about this? several things such as asking your CS dept to put itself on CSRankings (it's the easiest way to get CS people to know about the school), explaining about your school in your statement (and asking your LOR writer to do that too), and of course, if you're Vietnamese, considering a CS PhD program that has \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{Vietnamese professors}.
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
+\begin{commentbox}
 Vu: Sometime PhD admission committee will share a document such as \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Foreign-Top-Schools}{this one}, which lists the top schools in several countries. I have looked at Vietnamese applications (whether they are assigned to me or not) and provide inputs to the reviewers of those applications, e.g., X is the top tech school in Vietnam and so it should be \emph{top} instead of \emph{unknown} foreign, which makes a huge difference.
-\end{tcolorbox}
+\end{commentbox}
 
 \subsection{Grades/GREs}\label{sec:grades}
 Having good grades is important, but, in general, unless your school is well-known, having top grades/ranks
@@ -246,7 +245,7 @@ take them. However, they might be useful for international students from program
 \paragraph{English Test} Unless you're from certain countries (e.g., English speaking ones), you will need to
 take standardized English test. Just do well enough to pass minimum requirement set by the university, which nowadays has many options for you to choose from.
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
+\begin{commentbox}
 Vu: The minimum for GMU (being above this might not mean much, but below is a \red{red flag}).
 \begin{itemize}
 \item GPA: $\ge 3.0$ in your undergrad (but as mentioned, we also consider the rank/prestige of your school)
@@ -260,7 +259,7 @@ Vu: The minimum for GMU (being above this might not mean much, but below is a \r
   \item Pearson Test of Academic English: $\ge 67$
   \end{itemize}  
 \end{itemize}
-\end{tcolorbox}
+\end{commentbox}
 
 
 \subsection{CV/Resume}
@@ -272,9 +271,9 @@ Sometime a faculty wants to interview an applicant to make a decision. This mean
 
 An interview lasts about 15--30 mins, and one implicit thing you will be evaluated on is whether you can communicate effectively (i.e., speak/understand English).  You will also get chance to ask questions about the university so think of something to ask (just the same as you interview at a company).
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
+\begin{commentbox}
 Vu: At GMU, we are encouraged to interview candidates. For very strong candidates, the interview is actually to recruit them.  In some cases a faculty interviews a candidate that they see potentials and wants argue for admission, i.e., without the interview, that candidate is definitely rejected. In any case, getting interview means you have a very good chance of being admitted.
-\end{tcolorbox}
+\end{commentbox}
 
 \section{Getting Admitted and Choosing the Right School}
 
@@ -285,9 +284,9 @@ Most schools will have an \textbf{Open House}, which is a great resource to lear
 
 In short, if you can come to the Open House, do come.  But if you're international student outside of the US, then likely you cannot come.  So see if you can attend it virtually and ask to meet with individual faculty if you can.
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
+\begin{commentbox}
 Vu: GMU has Virtual Open House, e.g., \url{https://cs-gmu.github.io/cs-phd-voh-s23/}, which I've co-organized in the last two years. We invite all admitted PhD students to the VOH through Zoom to learn about the CS program, the department, GMU, and the DC area in general. Students also get opportunities to chat with professors and current students.
-\end{tcolorbox}
+\end{commentbox}
 
 
 
@@ -321,9 +320,9 @@ The most common type of funding is \textbf{graduate assistanship}, which is eith
 
 Several about stipend. First, the amount of stipend depends on the university, which in turns depend on various factors such as location (e.g., a stipend in Washington DC is likely higher than in Lincoln, Nebraska due to higher living cost). Second, a school year is (typically) 9-month in the US, so stipend is for 9 months (so divide by 9 for each month). Third, like for most source of income in the US, you will have to pay tax on your stipend. Finally, private universities might pay more for stipend.
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
+\begin{commentbox}
 Vu: TA and RA at GMU have similar benefits in tuition waiving and insurance.  For stipend, depending on the college and department, a 9-month graduate assistant stipend is set.  TA and RA will usually be that amount (TA will definitely be that, RA might fluctuate a bit depending on the stage of the student and the prof.). 
-\end{tcolorbox}
+\end{commentbox}
 
 \subsubsection{Teaching Assistant (TA)}
 
@@ -331,9 +330,9 @@ TA is common in the beginning when you haven't found your advisor who would pay 
 
 \paragraph{How to get TA?}  Unless you have other funding such as RA or Fellowships, TA is typically a default thing. When you apply to be a full-time student, you also sate that you need financial assistant. It is common that the PhD committee will either admit you and give you GTA, or reject you; i.e., we do not admit a student without supporting them.  
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
+\begin{commentbox}
 At GMU CS, students admitted with TA have  4 years of GTA guaranteed and also receive  stipend for the \textbf{first} summer.
-\end{tcolorbox}
+\end{commentbox}
 
 Even if you have other funding and do not need TA, you still should do TA at least once.  This allows you to see what teaching is like, which is especially helpful for research career where you often have to give talks and tell people about your work. Note that GMU sometimes has classes that a more senior student can teach.  In that case, you will be paid as a lecturer, which is higher than GTA.  This is a good opportunity for students to get teaching experience and also get paid more.
 \subsection{Research Assistant (RA)}
@@ -343,9 +342,9 @@ You do not need to teach as an RA, so you can focus on your research. Depending 
 \textbf{How to get RA?} When a professor recruits you, they will likely give you RA right away (e.g., when you apply).  A common scenario is that you first get admitted with TA, and then after a year or two find an advisor to support you with RA. 
 
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
+\begin{commentbox}
 Vu: If you're lucky and got recruited by a prof. who would give you RA right away, it's very likely you will get admitted.  For example, if a prof., even if not in PhD admission committee, wants to work with and funds you, the PhD admission committee will respect that decision and admit your application (unless your application has many red flags).
-\end{tcolorbox}
+\end{commentbox}
 
 \subsection{Fellowship/Scholarship}
 
@@ -359,30 +358,31 @@ In general, fellowship is prestigious, and you will stand out if you get one.  E
 Prestigious fellowships typically require a clear and good research plan, so it is a good idea to wait until at least your second year to have research experience and even publication before applying. Remember, you're competiting with the top Ph.D. students at top universities worldwide. 
 
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
+\begin{commentbox}
 At GMU, Ph.D. applicants are automatically eligible for a Presidential Fellowship.  It is at least as good as GTA but the most important thing is that as a fellowship it is truly free money (i.e., you are not depending on any prof. or TA duties).  PhD admission committee members nominate applicants for this fellowship and the committee will vote and give the fellowship to the top 2.
-\end{tcolorbox}
+\end{commentbox}
 
 
 \section{Miscs and FAQs}
 
-\begin{enumerate}
-    \item   Is an MS degree required for admission to PhD?
-    \begin{description}
-    \item No. In fact, student with BS can get MS degree "along the way" to PhD.  However, MS can help if it gives research experience or is from a more well-known school than your undergrad institution.
-    \end{description}
-
-    \item Can I apply to PhD to CS if my undergrad was in Math, Biology, Finance, etc?
-    \begin{description}
-        \item Yes, as long as you can demonstrate you are ready for CS PhD research through research experiences, LoRs, statements, etc as mentioned.
-    \end{description}
-    
+\begin{enumerate}   
     \item What can you do to increase your admission chance?
     \begin{description}
         \item Show something that makes you \textbf{stand out}, e.g., are you a female or a minority in CS (research for this on Google)? Do you participate in outreach activities that help increase diversity and inclusion in CS?  All of these are important in CS in the US.
     
         Also, even if you do not have formal research experience, you can talk about your personal project. If it is used by many people, have lots of stars in Github, etc, it would certainly worth talking about.  If you write technical, research-like blogs, that would also help.
     \end{description}
+
+    \item Can I apply to PhD to CS if my undergrad was not in CS or any related areas?
+    \begin{description}
+        \item Yes, as long as you can demonstrate you are ready for CS PhD research through research experiences, LoRs, statements, etc as mentioned. You might be even able leverage this to make your profile stand out.
+    \end{description}
+
+
+    \item   Is an MS degree required for admission to PhD?
+    \begin{description}
+    \item No. In fact, student with BS can get MS degree "along the way" to PhD.  However, MS can help if it gives research experience or is from a more well-known school than your undergrad institution.
+    \end{description}    
     
     \item How do I address a professor Firstname Lastname?
     \begin{description}
@@ -391,9 +391,9 @@ At GMU, Ph.D. applicants are automatically eligible for a Presidential Fellowshi
         Also do not use Mr. or Mrs., or just write Firstname. May be it is OK with others but I find it a bit disrespectful. As you know that prof. better and depends on their preference, you can call them by their Firstname.
 
 
-\begin{tcolorbox}[left=1pt,right=1pt,top=1pt,bottom=1pt]
+\begin{commentbox}
     Vu: I've been called Dr. Vu and I find it a bit amusing but am totally fine with it.
-    \end{tcolorbox}
+    \end{commentbox}
     \end{description}
 \end{enumerate}
 
