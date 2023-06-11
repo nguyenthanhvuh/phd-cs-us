@@ -43,6 +43,7 @@ boxrule=0.5pt
 
 \newcommand{\mycomment}[3][\color{black}]{{#1{{#2}: {#3}}}}
 \newcommand{\tvn}[1]{\mycomment{TVN}{#1}}{}
+\newcommand{\tl}[1]{\mycomment{ThanhLe}{#1}}{}
 \newcommand{\red}[1]{{\color{red}{#1}}}
 \renewcommand{\figurename}{Fig.}
 \renewcommand{\tablename}{Tab.}
@@ -168,20 +169,25 @@ can be challenging for international students, who might not have much interacti
 Many students have letters written by the applicants themselves and signed by their professors. These have little
 values (we can easily recognize them) and will consider them weakness.
 Similarly, many professors write very generic letters for students (a common example is that the students didn't do any
-research or make any impression for the professor to write about). These
-letters are also not useful and considered weak.
+research or make any impression for the professor to write about). These letters are also not useful and considered weak.
 
-Many students get letters from someone from company where they did internship or are
+Many students get letters from supervisors from company where they did internship or are
 working at. It is OK as long as it is a research-based personalized
 letter (once again, we are talking about PhD applications, not MS).
 
+\begin{commentbox}
+Vu: In Vietnam some letter writers ask the applicants to write their own letters so they can just sign. As mentioned, this will hurt the applicants (admission committee are actually quite good at determining this)! I was told that some people did this to ensure the applicants will only go to places where they want to the students to go to (e.g., stay in Vietnam or go to specific places where they have networks). 
+\end{commentbox}
+
+
 
 \begin{commentbox}
-Vu: It's better to have a good personalized
+Vu: Vietnamese students sometimes go through great length just to get letters from well-known senior professors in their school, but the letters are generic and carry little value, in fact, \red{red flags}. Moreover, a top professor in Vietnamese might not be well-known to US faculty (see more details in \S\ref{sec:your-school}). So save the trouble and just get letters from \emph{any} professors/supervisors who knows you well and can write a good letter about your research ability.
+
+
+In short, it's better to have a good personalized
 letter about your own research ability from someone who is less
 well-known than a generic/weak letter from a well-known person.
-
-Vietnamese students sometimes go through great length just to get letters from well-known senior professors in their school, but the letters are very generic and weak and therefore carry little value, in fact, red flags. Moreover, a top professor in Vietnamese might not be well-known to US faculty (see more details in \S\ref{sec:your-school}). So save the trouble and just get letters from \emph{any} professors who knows you well and can write a good letter about your research ability.
 \end{commentbox}
 
 \subsection{Research or Personal Statement}\label{sec:research-statement}
@@ -355,7 +361,7 @@ In general, fellowship is prestigious, and you will stand out if you get one.  E
 
 \textbf{How to get Fellowship?} You apply for them.  The US government has many fellowships that would likely require US citizenship or residency.  However, tech companies including Google, Microsoft, Facebook, IBM have fellowships that international students can apply for. 
 
-Prestigious fellowships typically require a clear and good research plan, so it is a good idea to wait until at least your second year to have research experience and even publication before applying. Remember, you're competiting with the top Ph.D. students at top universities worldwide. 
+Prestigious fellowships typically require a clear and good research plan, so it is a good idea to wait until at least your second year to have research experience and even publication before applying. Remember, you're competing with the top Ph.D. students at top universities worldwide. 
 
 
 \begin{commentbox}
@@ -370,8 +376,22 @@ At GMU, Ph.D. applicants are automatically eligible for a Presidential Fellowshi
     \begin{description}
         \item Show something that makes you \textbf{stand out}, e.g., are you a female or a minority in CS (research for this on Google)? Do you participate in outreach activities that help increase diversity and inclusion in CS?  All of these are important in CS in the US.
     
-        Also, even if you do not have formal research experience, you can talk about your personal project. If it is used by many people, have lots of stars in Github, etc, it would certainly worth talking about.  If you write technical, research-like blogs, that would also help.
+    \item Even if you do not have formal research experience, you can talk about your personal projects. For example, if you have an open-source project on Github that is used by many people, has lots of stars in Github, do talk about it. If you write technical, research-like blogs, talk about them too.
     \end{description}
+
+   \item How to rank or select a CS program?
+
+\begin{description}
+\item International students not familiar with US universities often put them into \emph{two} bins:  (i) very top school that they dream about such as Stanford, MIT, Princeton, Harvard and (ii) everything else.  Sometimes they apply reputations of schools for non-CS programs, e.g., medical or physics, to rank CS programs. 
+In some cases they rank universities based on popular states they know in the US, e.g., California, New York, and Texas.  Let's just say there are so many thing wrong with these methods.
+
+\item You can learn about CS programs and research expertise of faculty using resources such as \href{https://csrankings.org}{CSRankings.org}, which is designed specifically to help prospective PhD students in Computer Science!  You will be very surprised to learn that a school X that you don't know much about has very strong research in your interested field Y. This is also a good way to learn about individual faculty (who works on what) and the well-known CS conferences\footnote{In CS (and only in CS), conferences, not journals, are oten the main venue to publish research finding.}.
+\begin{commentbox}
+    Dat: many Vietnamese students, even those from very top engineering schools, do not know about CSRankings.  Only few applicants who worked at top research places such as VinAI might know about it.
+\end{commentbox}
+
+\item But more generally, rankings is superficial and you will want to do more research to be informed and make better decision. For example, if you get admissions to several places, you should contact profs. that you're interested in at those place and talk to them. They would be more willing to chat to you now that you have been admitted.  Ask them questions about their work, how they manage students, their expectations. You can even ask to contact their students.
+\end{description}
 
     \item Can I apply to PhD to CS if my undergrad was not in CS or any related areas?
     \begin{description}
@@ -438,8 +458,9 @@ At GMU, Ph.D. applicants are automatically eligible for a Presidential Fellowshi
 \end{table}
 
 \section{Acknowledgement}
-Many faculty and students have contributed to this document.
-Craig Yu (GMU) and Hakan Aydin (GMU) contributed to the early version of this document. Other GMU faculty also have provided valuable feedbacks.  Thanks to all of them.
+
+Many people have contributed to this document.
+Craig Yu (GMU) and Hakan Aydin (GMU) provided valuable input in the early version. Other GMU faculty members also have provided feedback and contributions.  Many Vietnamese students have provided feedback and contributed questions, which provide contents for the writing.
 \bibliographystyle{abbrv}
 \bibliography{phd-cs-us.bib}
 \newpage
