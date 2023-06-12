@@ -3,6 +3,7 @@
 %\usepackage[small,compact]{titlesec} %very powerful
 \usepackage{tcolorbox}
 \usepackage{enumitem}
+\usepackage{epigraph}
 \usepackage[T1]{fontenc}
 \usepackage{cite}
 \usepackage{caption}
@@ -75,6 +76,7 @@ This document is available on \href{https://github.com/nguyenthanhvuh/phd-cs-us}
 \end{abstract}
 
 \section{Should You Apply?}
+\epigraph{Don't make fun of graduate students. They just made a terrible life choice.}{The Simpsons}
 
 First, I want to emphasize that PhD students in Computer
 Science \emph{do not} need to worry about funding, especially at good R1
@@ -456,7 +458,43 @@ If you don't know the prof., do not use Mr. or Mrs., or Firstname. To me it seem
     Vu: I've been called Dr. Vu and I find it a bit amusing but am totally fine with it.
 \end{commentbox}
 
-\section{Rankings of CS PhD programs in the U.S}\label{sec:ranking}
+\section{How much do \emph{you} cost?}
+PhD students often wonder how their salary is so low compared to their advisor's ludicrous grants or that why their offer letters sometime mentioned their benefits worth way more than what they actually receive (i.e., stipend).  This section aims to shed some light to these questions by breaking down how much a GRA costs to their advisor. 
+
+Tab.~\ref{tab:cost} shows the budget breakdown for a GRA per year.
+These numbers are based on my experience at public universities in the US.  Private universities may have different numbers.  For simplicity, I will assume the department has a 9-month stipend of \$27000 (GMU actually pays more) and therefore a 3-month summer of \$9000. I will also use GMU tuition rate of about \$15000/year for full-time study and a 58.9\% \emph{indirect cost}, which is what GMU charges for administrative costs (yes, after all, universities are businesses!).  Finally, I assume the student will make 2 conference trips per year, one domestic and one international (so conf. registration, airline tickets, taxi, meals, etc are all included). At the end, the total budget comes out to be \$69K.  \emph{The summary is that while you're paid X, your advisor probably pays 2X for you}.
+
+\begin{table}
+    \centering
+    \small
+    \caption{GRA cost breakdown. F \& A is Facilities \& Administrative Cost Base and 
+    MTDC is Modified Total Direct Cost.}\label{tab:cost}
+    \begin{tabular}{rcl}
+        \textbf{Budget} & \textbf{Cost} & \textbf{Notes} \\
+        \midrule
+        GRA (9-month) & 27K & \\
+        GRA (summer)  &9K	& 3-month, 20hrs/week\\
+        \textbf{Total Salary} &\red{36K}	&\\
+        \midrule
+        Health Insurance	&3K	& full year\\
+        Tuition (In-State) &	15K	& (\$680/ Credit + \$150/Student Fee/ Credit)* 9 credits = \\
+        &&\$7470 (\$6120 + \$1350) per semester\\
+        \textbf{Total Tuition \& Insurance}	&\red{18K}	&Full year tuition + insurance\\
+        \midrule
+        Conference Registration	& 500 & \\
+        International Travel &	1800& \\
+        Domestic Travel	& 700	& \\
+        \textbf{Total Travel}&	\red{3K}	\\
+        \midrule
+     Total Direct Cost	& \red{57K}	&Salary + Travel + Health + Tuition \\
+     F \& A (MTDC)	& 21K	& Direct Cost - GRA Salary\\
+    Total Indirect Cost	& \red{12K}	&58.9\% of MTDC\\
+    \textbf{Total (Direct + Indirect)} &	\red{69K}	& Budget for a GRA\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Ranking of CS PhD programs in the U.S}\label{sec:ranking}
   Tab.~\ref{tab:ranking} lists the top 50 CS programs in the US from \href{https://www.csrankings.org}{CSRankings.org}, a ranking system  based on top CS conferences.
   
   \begin{table}
