@@ -25,25 +25,29 @@
 }
 \usepackage{booktabs}
 
-\newtcolorbox{cbox}
+\newtcolorbox{cbox}[1][]
 {
 left=1pt,right=1pt,top=1pt,bottom=1pt,
 colback=gray!10,
 boxrule=0.5pt
 }
 
- \newenvironment{commentbox}{
- \small
+\newenvironment{commentbox}[1][]{
+\small
     \begin{cbox}
+    \textbf{#1}: 
  }{
    \end{cbox}
 }
 
 
+
+
 \def\Section{\S}
 
-\newcommand{\mycomment}[3][\color{black}]{{#1{{#2}: {#3}}}}
+\newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
 \newcommand{\tvn}[1]{\mycomment{TVN}{#1}}{}
+\newcommand{\didi}[1]{\mycomment{Didier}{#1}}{}
 \newcommand{\tl}[1]{\mycomment{ThanhLe}{#1}}{}
 \newcommand{\red}[1]{{\color{red}{#1}}}
 \renewcommand{\figurename}{Fig.}
@@ -57,20 +61,22 @@ boxrule=0.5pt
 \maketitle
 
 \begin{abstract}
-Having been involved in PhD admissions for many years and frequent interactions with international students, I've
-realized that most of these students, especially \emph{Vietnamese}, lack a clear understanding of
+Having been involved in PhD admissions for many years, I've
+realized that many international students, especially \emph{Vietnamese}, lack a clear understanding of
 the Computer Science PhD admission process at US universities. This confusion not only
 discourages students from applying but also creates the perception that
 getting admitted is difficult compared to CS PhD programs in other countries.
 
-So I want to share my opinions and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
-While this document is written for Vietnamese students interested in CS, it should applies to students in other countries as well.
+So I want to reveal some details about the PhD Admission process and share my opinions and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
+While this document is written for Vietnamese students interested in Computer Science, it should apply to students in many other countries and other majors.
 Moreover, while many examples given are for George Mason University, the writing should generalize to other R1\footnote{An \href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1 institution} in the US is a research-intensive university with a high level of research activity across various disciplines.} universities  (though \emph{very} top schools could be very selective, e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU).
+
+In addition, this document can help \emph{US faculty} to understand more about international students, e.g., questions, concerns, and various cultural differences.  By understanding, appreciating, and even leveraging these information, CS programs in the US can attract larger and stronger application pools from Vietnam and other countries.
 
 I wish you the best of luck. And if you follow these advice,
 you will at least have a good chance at GMU (see
 \href{https://github.com/dynaroars/dynaroars.github.io/wiki/About-GMU}{why
-you want to study at GMU}). Happy hunting!
+you want to study at GMU}). Happy school hunting!
 
 This document is available on \href{https://github.com/nguyenthanhvuh/phd-cs-us}{Github}. If you have questions or comments, feel free to create a \href{https://github.com/nguyenthanhvuh/phd-cs-us/issues}{GitHub issue} for discussion.
 \end{abstract}
@@ -83,15 +89,15 @@ Science \emph{do not} need to worry about funding, especially at good R1
 universities in the US. If you are admitted, you will almost certainly
 receive \emph{full funding} to support your study, including tuition,
 health insurance, and stipend. Moreover, depending on the university,
-you may even receive additional benefits such as summer salary and laptops. \S\ref{sec:funding} provides more details on funding.
+you may even receive additional benefits such as summer salary, laptops, (conference/workshop) traveling. \S\ref{sec:funding} provides more details on funding.
 
 Second, I believe that applying to a good US university \emph{should not} be any
 harder than at schools in other countries. If you think you have a
 chance at schools in other countries, e.g., South Korea, Singapore, Germany, UK, Japan and Australia, then you will surely have a chance in the US as well.
 
-\begin{commentbox}
-Vu: One of the reasons I create this post is that my colleagues at GMU are interested in 
-recruiting Vietnamese students and were surprised when seeing very few applications in Vietnam (e.g., each year our CS program receives more than 350 PhD applications, most of which are international but only 3--4 are from Vietnam). In general the number of
+\begin{commentbox}[Vu]
+One of the reasons I create this document is that my (non-Vietnamese) colleagues at GMU are interested in 
+recruiting Vietnamese students and are surprised when seeing very few applications in Vietnam (e.g., each year our CS program receives more than 350 PhD applications, most of which are international but only 3--4 are from Vietnam). In general the number of
 PhD applications from Vietnam to US universities is few and  more would be very welcomed. 
 \end{commentbox}
 
@@ -108,18 +114,21 @@ Then your application will be reviewed by a
 
 In many cases, the admission committee involves assistant professors in the department. This provides junior faculty the opportunities to recruit students. The chair of the committee will be a senior professor, but they likely will not review individual applications and instead assign them to committee members. The chair will look at various factors such as research interests or mentioning faculty names to assign the applications to appropriate faculty. 
 
-\begin{commentbox}
-Vu: We usually decide that a PhD candidate is either (i) admit with funding (TA or RA) or (ii) rejected. In other words, in most cases, we either
+\begin{commentbox}[Vu] 
+We usually decide that a PhD candidate is either (i) admit with funding (TA or RA) or (ii) rejected. In other words, in most cases, we either
 admit you with full funding, or we don't. In some rare cases, we admit
 without funding because you have funding on your own (e.g.,
 supported by your government or having external grants). We also justify
 our decision with a summary about your application, where we list
 strengths (e.g., well-known school) and weaknesses (e.g., weak
-LORs).
+LORs). 
 \end{commentbox}
 
-\begin{commentbox}
-    Hakan: At GMU, for full consideration, students should make sure to submit \textbf{ALL} required documents by the application deadline, and should never assume that some required documents (such as official TOEFL scores or official diplomas/transcripts) will be waived by the admissions office. If something is listed and not marked as "optional", it is mandatory and they should plan for submitting all those.  
+%\didi{Is there more information on typical strengths and common weaknesses of applications. This is especially useful to sophomore and junior students as they still have time to work on those strengths.}
+% tvn: the main thing is research experiences
+
+\begin{commentbox}[Hakan]
+At GMU, for full consideration, students should make sure to submit \textbf{ALL} required documents by the application deadline, and should never assume that some required documents (such as official TOEFL scores or official diplomas/transcripts) will be waived by the admissions office. If something is listed and not marked as "optional", it is mandatory and they should plan for submitting all those.  
 \end{commentbox}
 \paragraph{Why we do not waive application fee?}  This is typically a requirement of the university. Individual departments/programs do not have the flexibility to waive the application fee, even if they want to. 
 
@@ -134,31 +143,35 @@ the following key indicators, listed in order of importance.
 
 \subsection{Research Ability}
 
-The most effective evidence of research ability is having \textbf{published papers in reputable international conferences or journals}.
-Having published good papers is a sign that the applicant was involved in research.
+The most effective evidence of research ability is having \textbf{published papers in reputable international journals or conferences}.
+Having published good papers is a sign that the applicant has successfully involved in research.
 
-It's important to aim for the top conferences in your field, which you can
-find on places such as CSRankings~\cite{csrankings}, designed specifically to help CS PhD
-applicants. Local conferences and non-English journals or conferences do
-not carry as much weight since their quality is often unknown to US
-faculty.
+It's important to aim for the top venues in your field, which you can
+find on places such as CSRankings~\cite{csrankings}, which ranks CS programs based on how their faculty publish at top \emph{conferences}. Local conferences and non-English journals or conferences do
+not carry as much weight since their quality is often unknown to US faculty.
+
 
 However, I understand that many international students do not have the opportunities to publish in top places, so general confs/journals would suffice.  But be sure to upload your papers with your application and talk about them in your \hyperref[sec:research-statement]{statement}.
 
-\begin{commentbox}
-Vu: Many international students mention Scopus Q1, which consists of diverse journals from IEEE, Elsevier, and many other publishers unfamiliar to me.  Honestly, I don't know/recognize many of journals listed in Scopus Q1 and. So this might be something to be mindful of, as \textbf{CS} faculty might not be too familiar with Scopus or journals listed in there, so devote sometime in your statement to discuss the significance of your papers.
+\begin{commentbox}[Vu]
+Many international students mention Scopus Q1, which consists of various journals from IEEE, Elsevier, and many other publishers.  I don't know/recognize many of journals listed in Scopus Q1 and. This might be something to be mindful of, as \textbf{CS} faculty might not be too familiar with Scopus or journals listed in there, so devote sometime in your statement to discuss the significance of your papers.
 \end{commentbox}
 
-\begin{commentbox}
-Craig: GMU and many other universities allow you to upload your published papers and other writing samples. In many cases, even if the papers were not published at top places, we can still determine their quality by simply skimming over the paper.  
+\begin{commentbox}[Craig]
+GMU and many other universities allow you to upload your published papers and other writing samples. In many cases, even if the papers were not published at top places, we can still determine their quality by simply skimming over the paper.  
 \end{commentbox}
 
 Additionally, \textbf{work experiences at renowned research laboratories}, such as Microsoft Research, can significantly strengthen your
-application.  Unfortunately, many good international research places, e.g., VinAI in Vietnam, remain relatively unknown to most universities in the US. So you should explicit say something about them in your statement.
+application.  Unfortunately, many good research places in your countries, e.g., VinAI in Vietnam, remain relatively unknown to most universities in the US. So you should explicit say something about them in your statement.
 
 Finally, \textbf{participating internationally recognized competitions} can also demonstrate your research potential.
 For example, participating in Math Olympiads if you want to do theory or  winning ACM programming contests if you want to ``build'' stuff, e.g., software analysis.
 
+\begin{commentbox}[Thanh]
+Due to academic culture, professors in Vietnam usually aim for (international) journals instead of conferences. Could you give some tips on how to know whether a journal is good (CSrankings, unfortunately, only consider conferences)?.
+\tcblower
+Vu: One way is looking at what well-known researchers publish at. For example, if you are interested in a field X, you can use CSRankings to look at active faculty in X, and then look at their websites to see what journals they publish at.
+\end{commentbox}
 
 \subsection{Letter of Recommendation (LOR)}\label{sec:lor}
 
@@ -181,16 +194,19 @@ Many students get letters from supervisors from company where they did internshi
 working at. It is OK as long as it is a research-based personalized
 letter (once again, we are talking about PhD applications, not MS).
 
-\begin{commentbox}
-Vu: Some letter writers ask the applicants to write their own letters for them to sign. As mentioned, this will hurt the applicants (admission committee members are actually quite good at determining this)! I was also told that some people did this so that the applicants do not go abroad or only go to places where they want the students to go to.
-\end{commentbox}
 
-
-
-\begin{commentbox}
-Vu: Sometimes students would go through great length just to get letters from well-known professors in their school, but the letters are generic and carry little value, in fact, \red{red flags}. Moreover, a top professor in Vietnam might not be well-known to US faculty (see more details in \S\ref{sec:your-school}). So save the trouble and just get letters from \emph{any} professors/supervisors who knows you well and can write a good letter about your research ability. It's better to have a good personalized
+\begin{commentbox}[Vu]
+Some letter writers ask the applicants to write their own letters for them to sign. As mentioned, this will hurt the applicants (admission committee members are actually quite good at determining this)! I was also told that some people did this so that the applicants do not go abroad or only go to places where they want the students to go to.
+\tcblower
+Sometimes students would go through great length just to get letters from well-known professors in their school, but the letters are generic and carry little value, in fact, \red{red flags}. Moreover, a top professor in Vietnam might not be well-known to US faculty (see more details in \S\ref{sec:your-school}). So save the trouble and just get letters from \emph{any} professors/supervisors who knows you well and can write a good letter about your research ability. It's better to have a good personalized
 letter about your own research ability from someone who is less
 well-known than a generic/weak letter from a well-known person.
+\end{commentbox}
+
+\begin{commentbox}[Didier]
+\emph{Should letter writers have PhDs?}  In Rwanda, a lot of students interact more with teaching faculty who might not have PhD.
+\tcblower
+\textbf{Vu}: In general, at least one writer should have PhD to properly evaluate your research ability.  However, I think this is an interesting and useful detail that US faculty might not be aware of and students should mention about this in their statements.
 \end{commentbox}
 
 \subsection{Research or Personal Statement}\label{sec:research-statement}
@@ -201,29 +217,27 @@ A well-written LOR also shows that you can communicate, which is very important 
 %is important because if you need (GTA) funding, it will provide evidence
 %that you can teach and communicate with students.
 
-There are various guides on writing statement, e.g.,~\cite{blattman2022writing}, and \href{https://cs-sop.org/}{many example statements} are available. So I will not talk too much about statements. In short, discuss about your research vision and convince us that you can achieve it through your experience, e.g., published papers, or if you work on some projects by yourself, talk about it.
+There are various guides on writing statement, e.g.,~\cite{blattman2022writing}, and \href{https://cs-sop.org/}{many example statements} are available. So I will not talk too much about statements. In short, discuss about your research vision and convince us that you can achieve it through your experience, e.g., published papers, or if you work on some projects by yourself, talk about it. Also, use the statement to talk about stuff that admission committee members might not know about, e.g., your Github project with 1K+ stars or  your regular contributions to well-known open-source projects.
 
-\begin{wrapfigure}{r}{0.47\textwidth}
+\begin{wrapfigure}{r}{0.50\textwidth}
 \vspace{-0.4in}
   \begin{center}
-    \includegraphics[width=0.47\textwidth]{c2.png}
+    \includegraphics[width=0.50\textwidth]{c2.png}
   \end{center}
-\vspace{-0.35in}  
-  %\caption{Birds}
+\vspace{-0.4in}  
 \end{wrapfigure}
 Finally, this is something easy to do, but is missed by many
 applicants: \textbf{customize the statement} for the school you're applying to,
 e.g., why do you apply here? talk about a couple of professors who you're interested in working with (in many cases your application will be forwarded to them for evaluation).
 This shows that you're serious and have done homework on places you're applying to.
-Be careful not to send wrong statement to wrong school or mixing
+Be careful not to send statements to wrong schools or mixing
 facts (e.g., talking about school X but mentioned about working with
 profs. at school Y; and definitely do not talk about George Washington when applying to George Mason). I have seen such statements more time that I
 should.
 
 
-\begin{commentbox}
-\small
-Vu: I always read the research statement first and then LORs. If I am
+\begin{commentbox}[Vu]
+I always read the research statement first and then LORs. If I am
 persuaded by then, I would skim over other factors and advocate for
 admission (unless I see red flags in other parts). If I am not
 convinced, then I will likely recommend rejection (unless I see
@@ -239,12 +253,14 @@ However, if committee members do not know much about schools in your country, th
 
 So what can you do about this? several things such as asking your CS dept to put itself on CSRankings (it's the easiest way to get CS people to know about the school), explaining about your school in your statement (and asking your LOR writer to do that too), and of course, if you're interested in working with Vietnamese professors, consider a PhD program in the US that  \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{have them}.
 
-\begin{commentbox}
-Vu: Sometime PhD admission committee will share a document such as \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Foreign-Top-Schools}{this one}, which lists the top schools in several countries. I have looked at Vietnamese applications (whether they are assigned to me or not) and provide input to the reviewers of those applications, e.g., X is the top tech school in Vietnam and so it should be \emph{top} instead of \emph{unknown} foreign, which makes a huge difference.
+\begin{commentbox}[Vu]
+Sometime PhD admission committee will share a document such as \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Foreign-Top-Schools}{this one}, which lists the top schools in several countries. Personally I have looked at Vietnamese applications (whether they are assigned to me or not) and provide input to their reviewers, e.g., X is the top tech school in Vietnam and so it should be \emph{top} instead of \emph{unknown} foreign, which makes a huge difference.
 \end{commentbox}
 
 \subsection{Grades/GREs}\label{sec:grades}
-Having good grades is important, but, in general, unless your school is well-known, having top grades/ranks
+
+
+Having good grades is important, but unless your school is well-known, having top grades/ranks
 usually will not help. This is simply because we cannot evaluate them.
 
 This can be an issue for students in many top international universities where the competition is so high that very good students students can still have low ranking (and be overlooked by Admission committee).
@@ -255,14 +271,20 @@ having very bad grades will be \red{red flag} (unless your LORs or
 statements give proper explanation). This is especially true if you
 have bad grades in relevant, e.g., CS and Math, courses.
 
+\begin{commentbox}[Thanh]
+Vietnamese universities typically offer several specialized programs, such as the talented engineer program at HUST, that have highly competitive entrance exams and a limited number of available slots (e.g., 30 per year). However, these programs may present several challenges. Professors within these programs often set higher requirements for students, including more demanding tests and assignments, resulting in lower GPAs and overall rankings. For example, an 3.5 GPA students from such talented programs are easily much better than a 4.0 GPA students not in those programs.  Similarly, variations in GPA standards exist among different universities, with technical universities generally having lower GPAs than economical universities. All of these make gaining admission in the US difficult as US faculty are not familiar with these issues. I wonder if you have and advice and tips for the situations? 
+\tcblower
+\textbf{Vu} Many Vietnamese students and faculty lament how this competitive/low-grading from top Vietnamese universities hurts its own students in applying abroad. One way to mitigate this is making these issues known to admission committee.  Schools with Vietnamese profs are probably aware of them, but in general your letter writers/you can explicitly mention these in their letters/ your statement.
+\end{commentbox}
+
 \paragraph{GRE} Most CS programs in the US \emph{no longer require GREs}, so you don't need to
 take them. However, they might be useful for international students from programs we are not familiar with. 
 
 \paragraph{English Test} Unless your degrees are from certain countries such as \href{https://github.com/dynaroars/dynaroars.github.io/wiki/About-GMU#standard-tests-waiver-eligible-countries}{these}, you will need to
 take standardized English test. Just do well enough to pass minimum requirement set by the university, which nowadays has many options for you to choose from.
 
-\begin{commentbox}
-Vu: The minimum for GMU (being above this might not mean much, but below is a \red{red flag}).
+\begin{commentbox}[Vu]
+The minimum for GMU (being above this might not mean much, but below is a \red{red flag}).
 \begin{itemize}
 \item GPA: $\ge 3.0$ in your undergrad (but we also consider the rank/prestige of your school)
 \item GRE: not required, though it can help boost your profile
@@ -287,8 +309,8 @@ Sometime a faculty wants to interview an applicant to make a decision. This mean
 
 An interview lasts about 15--30 mins, and one implicit thing you will be evaluated on is whether you can communicate effectively (i.e., speak/understand English).  You will also get chance to ask questions about the university so think of something to ask (just the same as you interview at a company).
 
-\begin{commentbox}
-Vu: At GMU, we are encouraged to interview candidates. For very strong candidates, the interview is actually to recruit them.  In some cases a faculty interviews a candidate that they see potentials and wants argue for admission, i.e., without the interview, that candidate is definitely rejected. In any case, getting interview means you have a very good chance of being admitted.
+\begin{commentbox}[Vu]
+At GMU, we are encouraged to interview candidates. For very strong candidates, the interview is actually to recruit them.  In some cases a faculty interviews a candidate that they see potentials and wants argue for admission, i.e., without the interview, that candidate is definitely rejected. In any case, getting interview means you have a very good chance of being admitted.
 \end{commentbox}
 
 \section{Getting Admitted and Choosing the Right School}
@@ -300,8 +322,8 @@ Most schools will have an \textbf{Open House}, which is a great resource to lear
 
 In short, if you can come to the Open House, do come.  But if you're international student outside of the US, then likely you cannot come.  So see if you can attend it virtually and meet with individual faculty.
 
-\begin{commentbox}
-Vu: GMU has \emph{Virtual} Open House (VOH), e.g., \url{https://cs-gmu.github.io/cs-phd-voh-s23/}, which I've co-organized in the last two years. We invite all admitted PhD students to the VOH through Zoom to learn about the CS program, the department, GMU, and the DC area in general. Students also get opportunities to chat with professors and current students.
+\begin{commentbox}[Vu]
+GMU has \emph{Virtual} Open House (VOH), e.g., \url{https://cs-gmu.github.io/cs-phd-voh-s23/}, which I've co-organized in the last two years. We invite all admitted PhD students to the VOH through Zoom to learn about the CS program, the department, GMU, and the DC area in general. Students also get opportunities to chat with professors and current students.
 \end{commentbox}
 
 
@@ -337,12 +359,10 @@ The most common type of funding is \textbf{graduate assistanship}, which is eith
 
 Several about stipend. First, the amount of stipend depends on the university, which in turns depend on various factors such as location (e.g., a stipend in Washington DC is likely higher than in Lincoln, Nebraska due to higher living cost). Second, a school year is (typically) 9-month in the US, so stipend is for 9 months (so divide by 9 for each month). Third, like for most source of income in the US, you will have to pay tax on your stipend. Finally, private universities might pay more for stipend.
 
-\begin{commentbox}
-Vu: TA and RA at GMU have similar benefits in tuition waiving and insurance.  For stipend, depending on the college and department, a 9-month graduate assistant stipend is set.  TA and RA will usually be that amount (TA will definitely be that, RA might fluctuate a bit depending on the stage of the student and the prof.). 
-\end{commentbox}
-
-\begin{commentbox}
-Vu: having health insurance is a must and in many cases required in US universities.  So do not think that you're young and healthy and therefore can get around with not having insurance.  At GMU, and most CS PhD programs at good schools, your GTA or GRA \emph{will always} come with full insurance. In fact, at GMU, your spouse/children will get significant discount rate for health insurance.  So you will never have to worry much about health issues for you or your family here.
+\begin{commentbox}[Vu]
+TA and RA at GMU have similar benefits in tuition waiving and insurance.  For stipend, depending on the college and department, a 9-month graduate assistant stipend is set.  TA and RA will usually be that amount (TA will definitely be that, RA might fluctuate a bit depending on the stage of the student and the prof.). 
+\tcblower
+Having health insurance is required at many US universities.  So do not think that you're young and healthy and ignore insurance.  At GMU, and at most good CS PhD programs, your GTA or GRA \emph{will always} come with full insurance. In fact, at GMU your spouse/children will get significant discount rate for health insurance.  So you will never have to worry much about health issues for you or your family here.
 \end{commentbox}
 
 
@@ -352,7 +372,7 @@ TA is common in the beginning when you haven't found your advisor who would pay 
 
 \paragraph{How to get TA?}  Unless you have other funding such as RA or Fellowships, TA is typically a default thing. When you apply to be a full-time student,  state that you need financial assistant. It is common that the PhD committee will either admit you and give you GTA, or reject you; i.e., we do not admit a student without supporting them.  
 
-\begin{commentbox}
+\begin{commentbox}[Vu]
 At GMU CS, students admitted with TA have  4 years of GTA guaranteed and also receive  stipend for the \textbf{first} summer.
 \end{commentbox}
 
@@ -364,8 +384,8 @@ You do not need to teach as an RA, so you can focus on your research. Depending 
 \textbf{How to get RA?} When a professor recruits you, they will likely give you RA right away (e.g., when you apply).  A common scenario is that you first get admitted with TA, and then after a year or two find an advisor to support you with RA. 
 
 
-\begin{commentbox}
-Vu: If you're lucky and got recruited by a prof. who would give you RA right away, it's very likely you will get admitted.  For example, if a prof., even if not in PhD admission committee, wants to work with and funds you, the PhD admission committee will respect that decision and admit your application (unless your application has many red flags).
+\begin{commentbox}[Vu]
+If you got recruited by a prof. who would give you RA right away, it's very likely you will get admitted.  For example, if a prof., even if not in PhD admission committee, wants to work with and funds you, the PhD admission committee will respect that decision and admit your application (unless your application has many red flags).
 \end{commentbox}
 
 \subsection{Fellowship/Scholarship}
@@ -380,7 +400,7 @@ In general, fellowship is prestigious, and you will stand out if you get one.  E
 Prestigious fellowships typically require a clear and good research plan, so it is a good idea to wait until at least your second year to have research experience and even publication before applying. Remember, you're competing with the top PhD students at top universities worldwide. 
 
 
-\begin{commentbox}
+\begin{commentbox}[Vu]
 At GMU, PhD applicants are automatically eligible for a Presidential Fellowship.  It is at least as good as GTA but the most important thing is that as a fellowship it is truly free money (i.e., you are not depending on any prof. or TA duties).  PhD admission committee members nominate applicants for this fellowship and the committee will vote and give the fellowship to the top 2.
 \end{commentbox}
 
@@ -402,19 +422,29 @@ International students not familiar with US universities often put them into \em
 In some cases they rank universities based on popular states they know in the US, e.g., California and New York.  Let's just say there are so many thing wrong with these methods.
 
 You can learn about CS programs and research expertise of faculty using resources such as \href{https://csrankings.org}{CSRankings.org}, which is designed specifically to help prospective PhD students in Computer Science!  You will be very surprised to learn that a school X that you didn't know much about has very strong research in your interested field Y. This is also a good way to learn about individual faculty (who works on what) and well-known CS conferences\footnote{In CS (and only in CS), conferences, not journals, are often the main venue to publish research finding.}. \S\ref{sec:ranking} gives the top 50 CS programs in the US according to CSRankings.
-\begin{commentbox}
-    Dat: Most Vietnamese students, including those from top schools, do not know about CSRankings.  May be applicants who worked at top research places such as VinAI would know about it.
+\begin{commentbox}[Dat] Most Vietnamese students, including those from top schools, do not know about CSRankings.  May be applicants who worked at top research places such as VinAI would know about it.
 \end{commentbox}
 
 More generally, rankings can be superficial and you will want to do more research to be informed and make better decision. For example, if you get admissions to several places, you should contact profs. that you're interested in at those place and talk to them. They would be more willing to chat to you now that you have been admitted.  Ask them questions about their work, how they manage students, their expectations. You can even ask to contact their students.
 
 
 \subsection{Tenured or tenure-track faculty? Who do you choose?} 
+
 The short answer is that tenured-track faculty (e.g., assistant professors) are more likely to be young and very active in research (they have to, in order to get tenure). Thus, they will likely have more time to work with you and push you to do research and publish. The downside is that they may not have as much experience in managing students and may not have as much funding as tenured faculty.
 Tenured faculty (e.g., associate and full profs.) are more likely to be older, more well-known, and have more experience in managing students.  However, they might not push you as hard (they don't have to, they already got tenured) and expect you to figure things out yourself (so you need to be very independent).  Some tenured faculty are also no longer active in research, e.g., they are more involved in administrative duties. 
 
 You can learn about faculty and their level of research activity through the faculty's website and CSRankings.
 Ultimately, choose one that fits you the most by communicating with them, meeting them, asking them questions, even talking to their students. 
+
+
+% \subsubsection{Strong Faculty vs High-ranked School}
+% \begin{commentbox}[Thanh]
+% When considering PhD programs, we often wonder if we should prioritize a high-ranking university or a professor with a strong reputation? Of course, both are great, but it is hard to achieve both.  I believe receiving some guidance from you  would be incredibly valuable.
+% \end{commentbox}
+
+% This is a good question and there doesn't seem to be any best answer or specific algorithm that you can use.  But I'll throw out something for you to think about. To me, there are many good schools in the US and so you have some leeway in choosing.  For example, I don't believe there's much difference among schools in top 5 (e.g., CMU, UIUC, UCSD, MIT, GTech are in the same equivalent class), top 10 (e.g., Michigan,  Stanford, UWash, UC-Berkeley, Cornell is another equivalent class), top 20, top 30, top 40, and so on (though I would say schools above 100 are pretty much in the same equivalent class).  It's hard to say a top X is much much better than a top X+20 (e.g.,  Purdue at 15 is stronger than Yale at 35, but not \emph{that much} stronger as you would think).  So keep that in mind, while ranking does matter (e.g., more active faculty, stronger students), the lower ranked universities are still pretty good, might have sub fields that are extremely strong (NCState is 40th, but in Software Engineering it is easily top 5), and many unique things.  This is in contrast with universities in Vietnam where there are large gaps among the top 5, 10, and so on.  
+
+
 
 
 \subsection{Can I apply to CS PhD if my undergrad was not in CS or related areas?}
@@ -436,7 +466,7 @@ No. In fact, student with BS can get MS degree "along the way" to PhD.  However,
       \end{center}
     \vspace{-0.2in}
     \end{wrapfigure}
-    Typically, 5-7 years for PhD in CS at US universities.  The first 1.5--2 years you spend on coursework and learning research.  The next 2--3 years you focus on your research, formi dissertation topic, and get results published.  The last 1-2 years you write and defend your dissertation and look for job. The PhDComics figure on the right shows the "ambition" level of a PhD student over their years of study (they miss the 6-7th Year where the ambition is now "Just get me the ... out of here").
+    Typically, 5-7 years for PhD in CS at US universities.  The first 1.5--2 years you spend on coursework and learning research.  The next 2--3 years you focus on your research, formi dissertation topic, and get results published.  The last 1-2 years you write and defend your dissertation and look for job. The PhDComics figure on the right shows the "ambition" level of a PhD student over their years of study (they miss the 6-7th Year where the ambition is "Please just get me graduate").
 
 
 
@@ -459,10 +489,10 @@ If you don't know the prof., do not use Mr. or Mrs., or Firstname. To me it seem
 \end{commentbox}
 
 \section{How much do \emph{you} cost?}\label{sec:ra-cost}
-PhD students often wonder how their salary is so low compared to ludicrous grants their advisors get or that why their offer letters sometime mentioned that their benefits worth way more than what they actually receive (i.e., stipend).  This section aims to shed some light to these questions.
+PhD students often wonder why their salary is so low compared to ludicrous grants their advisors get or why their offer letters sometime mentioned that their benefits worth way more than what they actually receive (i.e., stipend).  This section aims to shed some light to these questions.
 
 Tab.~\ref{tab:cost} shows the budget breakdown for a GRA per year (this level of details is what faculty actually uses when applying for funding).
-These numbers are based on my experience at public universities in the US.  Private universities may have different numbers.  For simplicity, I will assume the department has a 9-month stipend of \$27000 (GMU actually pays more) and therefore a 3-month summer of \$9000. I will also use GMU tuition rate of about \$15000/year for full-time study and a 58.9\% \emph{indirect cost}, which is what GMU charges for administrative costs (yes, after all, universities are businesses!).  Finally, I assume the student will make 2 conference trips per year, one domestic and one international (so conf. registration, airline tickets, taxi, meals, etc are all included). At the end, the total budget comes out to be \$69K.  \emph{The summary is that while you're paid X, your advisor probably pays 2X for you}.
+These numbers are based on my experience at public universities in the US.  Private universities may have different numbers.  For simplicity, I will assume the department has a 9-month stipend of \$27000 (GMU actually pays more) and therefore a 3-month summer of \$9000. I will also use GMU tuition rate of about \$15,000/year for full-time study (which is quite cheap compared to private universities, e.g., MIT charges around \$50K) and a 58.9\% (overhead) rate on \emph{indirect cost}, which is what GMU charges for administrative costs (yes, after all, universities are businesses!).  Finally, I assume the student makes conference trips per year, one domestic and one international (so conf. registration, airline tickets, taxi, meals, etc are all included). At the end, the total budget comes out to be \$69K.  \emph{The summary is that while you're paid X, your advisor probably pays 2X for you}.
 
 \begin{table}
     \centering
@@ -493,6 +523,7 @@ These numbers are based on my experience at public universities in the US.  Priv
         \bottomrule
     \end{tabular}
 \end{table}
+
 
 \section{Ranking of CS PhD programs in the U.S}\label{sec:ranking}
   Tab.~\ref{tab:ranking} lists the top 50 CS programs in the US from \href{https://www.csrankings.org}{CSRankings.org}, a ranking system  based on top CS conferences.
@@ -536,9 +567,29 @@ These numbers are based on my experience at public universities in the US.  Priv
 
 Many people have contributed to this document.
 Craig Yu (GMU) and Hakan Aydin (GMU) provided valuable input in the early version. Other GMU faculty members also have provided feedback and contributions.  Many students have provided feedback and contributed questions, which provide contents for the writing.
+
+
+
 \bibliographystyle{abbrv}
 \bibliography{phd-cs-us.bib}
 \newpage
+
+\section{Virtual Research Opportunities Beyond Physical Boundaries}
+\didi{In my experience, prospective PhD students (from Rwanda) are often unaware of the information provided in this document throughout their undergraduate. For this reason they often find themselves unprepared for PhD admission process by the time they finish undergraduate and have to spend a year or more to improve their application profiles. I think it would be beneficial to expand the document to also target students who are not yet ready for the application process to help them improve on all criteria considered during admission. I drafted the short essay on how to gain research experience remotely in order to improve their research profile and potentially get LOR from experts (hopefully faculty)}\\
+In the realm of computer science, research experience plays a crucial role in securing admissions to top-tier Ph.D. programs. However, students from underrepresented small colleges, both in the United States and internationally, often encounter limited research opportunities within their institutions. Thankfully, there exists an alternative pathway for these aspiring researchers to gain valuable research experience, even without being physically present at a university. 
+
+\textbf{Virtual Research Programs}:
+Several universities, organizations, and research institutions offer virtual internships and research programs aimed at providing hands-on research experience. These programs often involve working remotely under the guidance of experienced mentors and collaborating with a team of fellow researchers. For instance, \href{https://docs.google.com/forms/d/1btIwt4HwjyKMOUk-EMy3rbkfWzFxv2lNrMm_zkd0pA4/viewform?edit_requested=true}{UIUC+ Summer Undergraduate Research in Software Engineering}  offers an unpaid remote internship for software engineering students all over the world to collaborate with mentors from University of Illinois at Urbana Champaign. 
+Virtual internships offer opportunities to contribute to ongoing research projects, conduct experiments, analyze data, and write research reports. Students can search for such programs through university websites, research institutes, or as of recently chatGPT (or Bard).
+
+\textbf{Online Research Communities and Open Source Contributions}:
+Online research communities and platforms offer a wealth of opportunities for aspiring researchers. Platforms like GitHub, GitLab, and Bitbucket host repositories spanning diverse research domains. Students can explore repositories related to their areas of interest, collaborate with other contributors, and actively engage in open source research projects. By contributing code, fixing bugs, implementing new features, or providing documentation, students can gain practical research experience and interact with experienced developers and researchers in the field.
+
+\textbf{Online Conferences and Workshops}:
+Attending online conferences and workshops is another way to gain exposure to cutting-edge research and establish connections with experts in the field. Many conferences now provide virtual participation options, enabling students to access research talks, poster sessions, and panel discussions and sometimes access designated chat rooms or networking events where participants can engage with researchers, ask questions, and seek potential research collaborations. It is beneficial to also create profiles academic collaboration platforms such as ResearchGate. By creating profiles, joining relevant research groups, and participating in discussions, students can connect with established researchers, contribute to ongoing projects, and potentially collaborate on publications or research proposals as they provide access 
+
+In conclusion, for students lacking research opportunities at their small colleges, the virtual realm offers a wealth of possibilities to gain valuable research experience. Engaging with open source projects, joining online research communities, utilizing academic collaboration platforms, participating in virtual internships, and attending online conferences are all avenues to contribute to research, connect with experts, and enhance one's research profile.
+
 
 \end{document}
 
