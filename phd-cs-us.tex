@@ -1,10 +1,12 @@
 \documentclass[11pt]{article}
-\usepackage[margin=1.1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{soul}
 %\usepackage[small,compact]{titlesec} %very powerful
 \usepackage{tcolorbox}
 \usepackage{enumitem}
 \usepackage{epigraph}
-\usepackage[T1]{fontenc}
+
 \usepackage{cite}
 \usepackage{caption}
 \captionsetup{font=small}
@@ -41,8 +43,6 @@ boxrule=0.5pt
 }
 
 
-
-
 \def\Section{\S}
 
 \newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
@@ -52,26 +52,26 @@ boxrule=0.5pt
 \newcommand{\red}[1]{{\color{red}{#1}}}
 \renewcommand{\figurename}{Fig.}
 \renewcommand{\tablename}{Tab.}
-\title{Demystifying the Computer Science \\PhD Admission in US Universities\\{\large A guide for Vietnamese and International Students}}
+\title{\vspace{-1in} Demystifying the Computer Science \\PhD Admission in US Universities\\{\large A guide for Vietnamese and International Students}}
 %\date{\today}
-\author{\small \href{https://nguyenthanhvuh.github.io}{ThanhVu (Vu) Nguyen}\\
-\href{https://cs.gmu.edu}{George Mason University}}
-%\setcounter{secnumdepth}{3}
+\author{\small \href{https://nguyenthanhvuh.github.io}{ThanhVu (Vu) Nguyen} (\href{mailto:tvn@gmu.edu}{tvn@gmu.edu})\\
+ \href{https://cs.gmu.edu}{George Mason University}}
+
 \begin{document}
 \maketitle
 
 \begin{abstract}
 Having been involved in PhD admissions for many years, I've
-realized that many international students, especially \emph{Vietnamese}, lack a clear understanding of
+realized that many \textbf{international students}, especially those from smaller countries such as \emph{Vietnamese}, lack a clear understanding of
 the Computer Science PhD admission process at US universities. This confusion not only
 discourages students from applying but also creates the perception that
 getting admitted is difficult compared to CS PhD programs in other countries.
 
-So I want to reveal some details about the PhD Admission process and share my opinions and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
+So I want to give some details about the PhD Admission process and share my opinions and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
 While this document is written for Vietnamese students interested in Computer Science, it should apply to students in many other countries and other majors.
 Moreover, while many examples given are for George Mason University, the writing should generalize to other R1\footnote{An \href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1 institution} in the US is a research-intensive university with a high level of research activity across various disciplines.} universities  (though \emph{very} top schools could be very selective, e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU).
 
-In addition, this document can help \emph{US faculty} to understand more about international students, e.g., questions, concerns, and various cultural differences.  By understanding, appreciating, and even leveraging these information, CS programs in the US can attract larger and stronger application pools from Vietnam and other countries.
+In addition, this document can help \emph{US faculty and admission committee members} understand more about international students, e.g., questions, concerns, and various cultural differences.  By understanding, appreciating, and even leveraging these information, CS programs in the US can attract larger and stronger application pools from Vietnam and other countries.
 
 I wish you the best of luck. And if you follow these advice,
 you will at least have a good chance at GMU (see
@@ -82,7 +82,7 @@ This document is available on \href{https://github.com/nguyenthanhvuh/phd-cs-us}
 \end{abstract}
 
 \section{Should You Apply?}
-\epigraph{Don't make fun of graduate students. They just made a terrible life choice.}{The Simpsons}
+\epigraph{\vspace{-0.2in} Don't make fun of graduate students. They just made a terrible life choice.}{The Simpsons}
 
 First, I want to emphasize that PhD students in Computer
 Science \emph{do not} need to worry about funding, especially at good R1
@@ -92,8 +92,7 @@ health insurance, and stipend. Moreover, depending on the university,
 you may even receive additional benefits such as summer salary, laptops, (conference/workshop) traveling. \S\ref{sec:funding} provides more details on funding.
 
 Second, I believe that applying to a good US university \emph{should not} be any
-harder than at schools in other countries. If you think you have a
-chance at schools in other countries, e.g., South Korea, Singapore, Germany, UK, Japan and Australia, then you will surely have a chance in the US as well.
+harder than at schools in other countries. If you think you have a chance in other countries, e.g., South Korea, Singapore, Germany, UK, Japan and Australia, then you will surely have a chance in the US as well.
 
 \begin{commentbox}[Vu]
 One of the reasons I create this document is that my (non-Vietnamese) colleagues at GMU are interested in 
@@ -272,7 +271,7 @@ statements give proper explanation). This is especially true if you
 have bad grades in relevant, e.g., CS and Math, courses.
 
 \begin{commentbox}[Thanh]
-Vietnamese universities typically offer specialized programs, such as the talented engineer program at HUST, that have higly competitive entrance exams and a limited number of available slots (e.g., 30 per year). However, these programs may present several challenges. Professors within these programs often set higher requirements for students, including more demanding tests and assignments, resulting in lower GPAs and overall rankings. For example, an 3.5 GPA students from such talented programs are typically much better than a 4.0 GPA students not in those programs.  Similarly, variations in GPA standards exist among different universities, with technical universities generally having lower GPAs than economical universities. All of these make gaining admission in the US difficult as US faculty are not familiar with these issues.
+Vietnamese universities typically offer specialized programs, such as the talented engineer program at HUST, that have highly competitive entrance exams and a limited number of available slots (e.g., 30 per year). However, these programs often set higher requirements for students, including more demanding tests and assignments, resulting in lower GPAs and overall rankings. For example, an 3.5 GPA students from such talented programs are typically much better than a 4.0 GPA students not in those programs.  Similarly, variations in GPA standards exist among different universities, with technical universities generally having lower GPAs than economical universities. These make gaining admission in the US difficult as US faculty are not familiar with these issues.
 \tcblower
 \textbf{Vu}: Many Vietnamese students and faculty lament how this competitive/low-grading from top Vietnamese universities hurts its own students in applying abroad. One way to mitigate this is making these issues known to admission committee.  Schools with Vietnamese profs are probably aware of them, but in general your letter writers/you can explicitly mention these in their letters/ your statement.
 \end{commentbox}
@@ -360,10 +359,10 @@ Masters and especially undergraduate studies, which typically have no funding (a
 \subsection{Graduating Assistantship (TA/RA)}
 The most common type of funding is \textbf{graduate assistanship}, which is either TA or RA. Both TA and RA come with tuition waiving (you don't have to pay tuition), health insurance (this takes care of your insurance, which is a must have in the US), and most importantly, your stipend (i.e., your salary). Some universities also pay insurance for spouse/children (or give very good discount).
 
-Several about stipend. First, the amount of stipend depends on the university, which in turns depend on various factors such as location (e.g., a stipend in Washington DC is likely higher than in Lincoln, Nebraska due to higher living cost). Second, a school year is (typically) 9-month in the US, so stipend is for 9 months (so divide by 9 for each month). Third, like for most source of income in the US, you will have to pay tax on your stipend. Finally, private universities might pay more for stipend.
+Several words about stipend. First, the amount of stipend depends on the university, which in turns depend on various factors such as location (e.g., a stipend in Washington DC is likely higher than in Lincoln, Nebraska due to higher living cost). Second, a school year is (typically) 9-month in the US, so stipend is for 9 months (so divide by 9 for each month). Third, like for most source of income in the US, you will have to pay tax on your stipend. Finally, private universities might pay more for stipend.
 
 \begin{commentbox}[Vu]
-TA and RA at GMU have similar benefits in tuition waiving and insurance.  For stipend, depending on the college and department, a 9-month graduate assistant stipend is set.  TA and RA will usually be that amount (TA will definitely be that, RA might fluctuate a bit depending on the stage of the student and the prof.). 
+TA and RA at GMU have similar benefits in tuition waiving and insurance.  For stipend, the college and department will set a 9-month graduate assistant stipend.  TA and RA will usually be that amount (TA will likely be that amount but RA might be higher depending on the stage of the student (1st year vs ABD\footnote{All but dissertation: really close to graduate.}) and the prof.). 
 \tcblower
 Having health insurance is required at many US universities.  So do not think that you're young and healthy and ignore insurance.  At GMU, and at most good CS PhD programs, your GTA or GRA \emph{will always} come with full insurance. In fact, at GMU your spouse/children will get significant discount rate for health insurance.  So you will never have to worry much about health issues for you or your family here.
 \end{commentbox}
@@ -371,7 +370,7 @@ Having health insurance is required at many US universities.  So do not think th
 
 \subsubsection{Teaching Assistant (TA)}
 
-TA is common in the beginning when you haven't found your advisor who would pay you RA. As a TA, you help professors with their classes (e.g., grading or teaching labs/recitation). Your TAship is paid through the school/department, i.e., they hire you to help teach.  During a semester, a TA might work with several courses and professors (not necessary their advisor).  TA funding typically is not available during the summer, which has no school.
+TA is common in the beginning when you haven't found your advisor who would pay you RA. As a TA, you spend up to 20 hrs/week and help professors with their classes (e.g., grading or teaching labs/recitation). Your TA is paid through the school/department, i.e., they hire you to help teach.  During a semester, a TA might work with several courses and professors (not necessary their advisor).  TA funding typically is not available during the summer, which has no school.
 
 \paragraph{How to get TA?}  Unless you have other funding such as RA or Fellowships, TA is typically a default thing. When you apply to be a full-time student,  state that you need financial assistant. It is common that the PhD committee will either admit you and give you GTA, or reject you; i.e., we do not admit a student without supporting them.  
 
@@ -379,7 +378,7 @@ TA is common in the beginning when you haven't found your advisor who would pay 
 At GMU CS, students admitted with TA have  4 years of GTA guaranteed and also receive  stipend for the \textbf{first} summer.
 \end{commentbox}
 
-Even if you have other funding and do not need TA, you still should do TA at least once.  This allows you to see what teaching is like, which is especially helpful for research career where you often have to give talks and tell people about your work. Note that GMU sometimes has classes that a more senior student can teach.  In that case, you will be paid as a lecturer, which is higher than GTA.  This is a good opportunity for students to get teaching experience and also get paid more.
+Even if you have other funding and do not need TA, you still should do TA at least once.  This allows you to see what teaching is like, which is especially helpful for research career where you often give talks and tell people about your work. Note that GMU sometimes has classes that a more senior student can teach.  In that case, you will be paid as a lecturer, which is higher than GTA.  This is a good opportunity for students to get teaching experience and also get paid more.
 \subsection{Research Assistant (RA)}
 RA is provided through a professor through their own funding so you can work on their project.  
 You do not need to teach as an RA, so you can focus on your research. Depending on the professor, RA may be available during the summer. \S\ref{sec:ra-cost} gives more details on RA budget.
@@ -431,7 +430,15 @@ You can learn about CS programs and research expertise of faculty using resource
 More generally, rankings can be superficial and you need to do more research to be informed and make better decision. For example, if you get admissions to several places, you should contact profs. that you're interested in at those place and talk to them. They would be more willing to chat to you now that you have been admitted.  Ask them questions about their work, how they manage students, their expectations. You can even ask to contact their students.
 
 
-\subsection{Tenured or tenure-track faculty? Who do you choose?} 
+\subsection{Tenured or tenure-track faculty? Who do you choose?}
+
+\begin{wrapfigure}{r}{0.48\textwidth}
+    \vspace{-0.3in}
+      \begin{center}
+        \includegraphics[width=0.48\textwidth]{c8.png}
+      \end{center}
+    \vspace{-0.2in}
+    \end{wrapfigure}
 The short answer is that tenured-track faculty (e.g., assistant professors) are more likely to be young and active in research (they have to, in order to get tenure). Thus, they will likely have more time to work with you and push you to do research and publish. However, they may not have as much experience in managing students and may not have as much funding as tenured faculty.
 Tenured faculty (e.g., associate and full profs.) are more likely to be older, more well-known, and have more experience in managing students.  However, they might not push you as hard (they don't have to, they already got tenured) and expect you to figure things out yourself (so you need to be very independent).  Some tenured faculty are also no longer active in research, e.g., they are more involved in administrative duties. 
 
