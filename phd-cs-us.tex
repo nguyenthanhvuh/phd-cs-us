@@ -43,15 +43,16 @@ boxrule=0.5pt
 }
 
 
-\def\Section{\S}
 
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Tab.}
+\def\Section{\S}
 \newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
 \newcommand{\tvn}[1]{\mycomment{TVN}{#1}}{}
 \newcommand{\didi}[1]{\mycomment{Didier}{#1}}{}
 \newcommand{\tl}[1]{\mycomment{ThanhLe}{#1}}{}
 \newcommand{\red}[1]{{\color{red}{#1}}}
-\renewcommand{\figurename}{Fig.}
-\renewcommand{\tablename}{Tab.}
+
 \title{\vspace{-1in} Demystifying the Computer Science \\PhD Admission in US Universities\\{\large A guide for International Students}}
 %\date{\today}
 \author{\small \href{https://nguyenthanhvuh.github.io}{ThanhVu (Vu) Nguyen} (\href{mailto:tvn@gmu.edu}{tvn@gmu.edu})}
@@ -67,10 +68,10 @@ discourages students from applying but also creates the perception that
 getting admitted is difficult compared to CS PhD programs in other countries.
 
 So I want to share some details about the PhD admission process and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
-While this document is primarily intended for students in Vietnam interested in CS, it may be relevant to students from various countries and disciplines.
-Moreover, although many examples are specifics for George Mason University, the information should be generalizable to other R1\footnote{An \href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1 institution} in the US is a research-intensive university with a high level of research activity across various disciplines.} institutions in the US  (though \emph{very} top schools could be very selective, e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU).
+While this document is primarily intended for students interested in CS, it may be relevant to students from various disciplines.
+Furthermore, although many examples are specifics for George Mason University, the information should be generalizable to other R1\footnote{An \href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1 institution} in the US is a research-intensive university with a high level of research activity across various disciplines.} institutions in the US  (though \emph{very} top schools could be very selective, e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU).
 
-In addition, this document can help \emph{US faculty and admission committee} gain a better understanding of international students and their cultural differences.  By appreciating and leveraging these differences, CS programs in the US can attract larger and more competitive application pools from international students.
+In addition, this document can help \textbf{US faculty and admission committee} gain a better understanding of international students and their cultural differences.  By appreciating and leveraging these differences, CS programs in the US can attract larger and more competitive application pools from international students.
 
 I wish you the best of luck. And if you follow this guideline,
 you will at least have a good chance at GMU (see
@@ -134,9 +135,9 @@ At GMU, for full consideration, students should make sure to submit \textbf{ALL}
 In my opinion, requiring applicants to pay the fee helps ensure their seriousness, as it filters out non-serious candidates. Also, if the application process were free for everyone, we would receive an overwhelming number of applications to review.
 
 
-\begin{commentbox}[Hung]
-    The application fee varies between schools, and is about \$70--\$100. I found this number pretty ridiculous. In most cases, there is no proper justification for that amount. Yes, the application fee could act as a filter, but a nominal amount would do the job. While a blanket waiver might not be feasible, universities should extend the eligibility of fee waiver applications to more countries.
-\end{commentbox}
+%\begin{commentbox}[Hung]
+%    The application fee varies between schools, and is about \$70--\$100. I found this number pretty ridiculous. In most cases, there is no proper justification for that amount. Yes, the application fee could act as a filter, but a nominal amount would do the job. While a blanket waiver might not be feasible, universities should extend the eligibility of fee waiver applications to more countries.
+%\end{commentbox}
 
 
 \section{Application}\label{sec:application}
@@ -204,7 +205,7 @@ working at. It is OK as long as it is a research-based personalized
 letter (once again, we are talking about PhD applications, not MS).
 
 \begin{commentbox}[Vu]
-Some letter writers ask the applicants to write their own letters for them to sign. As mentioned, this will hurt the applicants (admission committee members are actually quite good at determining this)! I was also told that some people did this so that the applicants do not go abroad or only go to places where they want the students to go to.
+Some letter writers ask the applicants to write their own letters for them to sign. As mentioned, this will hurt the applicants (admission committee members are actually quite good at determining this)! Multiple students mentioned that  some professor did this so that the applicants do not go abroad or only go to places where they want the students to go to.
 \tcblower
 Sometimes students would go through great length just to get letters from well-known professors in their school, but the letters are generic and carry little value, in fact, \red{red flags}. Moreover, a top professor in Vietnam might not be well-known to US faculty (see more details in \S\ref{sec:your-school}). So save the trouble and just get letters from \emph{any} professors/supervisors who knows you well and can write a good letter about your research ability. It's better to have a good personalized
 letter about your own research ability from someone who is less
@@ -252,7 +253,7 @@ Admission committee will look for this part at the end of the statement, so do n
 
 
 \begin{commentbox}[Vu]
-I always read the research statement first and then LORs. If I am
+I always read the research statement (and the LORs) first. If I am
 persuaded by then, I would skim over other factors and advocate for
 admission (unless I see red flags in other parts). If I am not
 convinced, then I will likely recommend rejection (unless I see
@@ -272,15 +273,17 @@ Graduating from top universities \emph{that we recognize} helps. For example, if
 However, if committee members do not know much about schools in your country, they will likely treat your school as
 \emph{``unknown foreign''}, which can be a minus point because we are uncertain about the quality of your school.
 
-So what can you do about this? several things including asking your CS dept to put itself on CSRankings (it's the easiest way to get CS people to know about the school) and explaining about your school in your statement (ask your LOR writer to do that too). Of course, if you're interested in working with Vietnamese professors, consider a PhD program in the US that  \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{have them}.
+So what can you do about this? several things including asking your CS dept to put itself on CSRankings (it's the easiest way to get CS people to know about the school) and explaining about your school in your statement (ask your LOR writer to do that too). Of course, if you're interested in working with Vietnamese professors, consider  \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{CS PhD programs in the US that have them}.
+
+\begin{commentbox}[Hung]
+I personally don’t care about which schools students attended. There are many other ways to evaluate an applicant.
+\end{commentbox}
 
 \begin{commentbox}[Vu]
 Sometime PhD admission committee in the US will share a document such as \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Foreign-Top-Schools}{this one}, which lists the top schools in several countries. In some cases we ask other faculty and students if we think they know about the place.  For example, when I was a postdoc at UMD, people in admission committee ask me to evaluate applicants from Vietnam.  During my time at UNL and now here at GMU, I have looked at Vietnamese applications (whether they are assigned to me or not) and provide input to their reviewers, e.g., X is the top tech school in Vietnam and so it should be \emph{top} instead of \emph{unknown} foreign, which makes a huge difference.
 \end{commentbox}
 
-\begin{commentbox}[Hung]
-I personally don’t care about which schools students attended. There are many other ways to evaluate an applicant.
-\end{commentbox}
+
 
 \subsection{Grades/GREs}\label{sec:grades}
 
@@ -302,7 +305,7 @@ Vietnamese universities typically offer specialized programs, such as the talent
 \textbf{Vu}: Vietnamese students and even faculty often lament how this competitive/low-grading system hurts Vietnamese students when applying abroad. One way to mitigate this is making these issues known to admission committee in your statement.  Universities with Vietnamese profs are probably aware of them, but in general your letter writers \emph{and} you can explicitly mention these in their letters and your statement.
 \end{commentbox}
 
-\paragraph{GRE} Most CS programs in the US \emph{no longer require GREs}, so you don't need to take them. However, they might be useful for international students from programs we are not familiar with. 
+\paragraph{GRE} Most CS programs in the US \textbf{no longer require GREs}, so you don't need to take them. However, they might be useful for international students from programs we are not familiar with. 
 
 \begin{commentbox}[Vu]
 Personally I do not pay attention to GRE scores as I do not believe they are good indicator for research. However, if you have good GRE scores then you should list them in your application.
@@ -346,9 +349,9 @@ At GMU, we are encouraged to interview candidates. For very strong candidates, t
 By around March you should hear back from most PhD programs you applied to . If you haven't heard back, reach out via email and ask about the status of your application.
 If you receive offers, congratulations!  Now you're at a different game because the schools that have admitted you will try to get you to accept them!   You will have to make your decision by around April 15.
 
-Most schools will have an \textbf{Open House}, which is a great resource to learn about the school, department, faculty, research, living, etc. During the Open House, you get a chance to talk to individual faculty and current students.  Take notes of faculty who make you excited, count those that are taking in new students (if they meet you, likely they are considering new students!).  Talk to students about their advisors, the dept, the area, funding situation etc.  Ask about anything you want to determine that they deserve \emph{you}.
+Most schools will have \textbf{Open House} events, which are a great resource to learn about the school, department, faculty, research, living, etc. During the Open House, you get a chance to talk to individual faculty and current students.  Take notes of faculty who make you excited, count those that are taking in new students (if they meet you, likely they are considering new students!).  Talk to students about their advisors, the dept, the area, funding situation etc.  Ask about anything you want to determine that they deserve \emph{you}.
 
-In short, if you can come to the Open House, do come.  But if you're international student outside of the US, then likely you cannot come.  So see if you can attend it virtually and meet with individual faculty.
+In short, if you can, do come to Open House.  Even if you can't come in person, you still can attend virtually and meet with individual faculty.
 
 \begin{commentbox}[Vu]
 GMU has \emph{Virtual} Open House (VOH), e.g., \url{https://cs-gmu.github.io/cs-phd-voh-s23/}, which I've co-organized in the last two years. We invite all admitted PhD students to the VOH through Zoom to learn about the CS program, the department, GMU, and the DC area in general. Students also get opportunities to chat with professors and current students.
@@ -380,7 +383,7 @@ Masters. Undergraduate students typically have no funding and also have to pay i
     \textbf{Cover Summer?}              & No                       & Maybe                           & Yes                                   \\
     \midrule
     \textbf{Pros}                 & Research Freedom         & Get to do research              & Research Freedom                      \\
-    \textbf{Cons}                 & TA, Uncertain            & Research restriction, Uncertain & Competitive, limited             \\
+    \textbf{Cons}                 & Teaching Duties, Uncertain            & Research Restriction, Uncertain & Competitive, Limited             \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -425,12 +428,12 @@ If you got recruited by a prof. who would give you RA right away, it's very like
 
 \subsection{Fellowship/Scholarship}
 
-Fellowship is another type of funding that the student needs to apply for (e.g., from school, industries, government). Fellowships are typically competitive and generous, and gives pretty much all benefits tuition/insurance that a TA/RA has.  Moreover, it often gives higher stipend (including summer) and opens doors for job opportunities (e.g., internship).  For example, a student with a Microsoft fellowship will likely get an internship at Microsoft.  
+Fellowship is another type of funding that students can apply for (e.g., from school, industries, government). Fellowships are typically competitive and generous, and gives pretty much all benefits tuition/insurance that a TA/RA has.  Moreover, they often give higher stipend (including summer) and open doors for job opportunities (e.g., internship).  For example, a student with a Microsoft fellowship will likely get an internship at Microsoft.  
 
 In general, fellowship is prestigious, and you will stand out if you get one.  Every PhD student has pubs, but only superstars have NSF grad or Microsoft fellowship. In fact, these are so prestigious that even if you didn't get it but make it to the final round, school will still mention you on their website and you still should put it on your CV.
 
 
-\textbf{How to get Fellowship?} You apply for them.  The US government has many fellowships that would likely require US citizenship or residency.  However, tech companies including Google, Microsoft, Facebook, IBM have fellowships that international students can apply for. 
+\textbf{How to get Fellowship?} You need to apply for them.  The US government has many fellowships, though they would likely require US citizenship or residency.  However, tech companies including Google, Microsoft, Facebook have fellowships that international students can apply for. 
 
 Prestigious fellowships typically require a clear and good research plan, so it is a good idea to wait until at least your second year to have research experience and even publication before applying. Remember, you're competing with the top PhD students at top universities worldwide. 
 
@@ -444,19 +447,28 @@ At GMU, PhD applicants are automatically eligible for a Presidential Fellowship.
 
 \subsection{What can you do to increase your admission chance?}\label{sec:improve-your-chance}
 
- Show something that makes you \textbf{stand out}, e.g., do you have a degree or background in music and want to integrate that with CS? are you a female or a minority in CS (research for this on Google)? Do you participate in outreach activities that help increase diversity and inclusion in CS? All of these are unique and would get noticed from reviewers. 
+ Show something that makes you \textbf{stand out}, e.g., do you have a degree or background in \emph{biology} or \emph{music} and want to integrate them with CS? are you a female or a minority in CS (research for "URM minority in CS in the US" on Google)? Do you participate in outreach activities that help increase diversity and inclusion in CS? All of these are unique and would get noticed from reviewers. 
     
-Even if you do not have research experience, you can talk about your personal projects. For example, if you have an open-source project on Github that is used by many people, has lots of stars in Github, do talk about it. If you write technical, research-like blogs, talk about them too.
+Even if you do not have research experience, you can talk about your personal projects, as long as they can help show you can do research. For example, if you have an open-source project on Github that is used by many people, has lots of stars in Github, do talk about it. If you write technical, research-like blogs, talk about them too.
 
-\subsection{How to rank or select a CS program?}
+\begin{commentbox}[Vu]
+In his \href{https://matt.might.net/articles/how-to-apply-and-get-in-to-graduate-school-in-science-mathematics-engineering-or-computer-science/}{post}, Matt Might was initially unsure about an application. However, upon learning that the applicant had led a 100km hike in the Himalayas, he decided to accept the applicant.
+
+\tcblower
+This shows the student has the persistence and determination required for research. I would also advocate for accepting that student!
+\end{commentbox}
+
+%It is worth noting that in many cases,  an application could be rejected by most reviewers, however have a "champion", who doesn't even have to be in the Admission comittee, that strongly advocate for your profile.
+
+\subsection{How to rank or select a CS graduate program?}
    \begin{center}
     \includegraphics[scale=0.4]{c1.png}
    \end{center}
 
-International students not familiar with US universities often put them into \emph{two} bins:  (i) very top school that they dream about such as Stanford, MIT, Princeton, Harvard and (ii) everything else.  Sometimes they rank CS programs using the reputations non-CS programs such as medical, math, or physics.
+International students not familiar with US universities often put them into \emph{two} bins:  (i) very top schools that they dream about such as Stanford, MIT, Princeton, Harvard and (ii) everything else.  Sometimes they rank CS programs using the reputations non-CS programs such as medical, math, or physics.
 In some cases they rank universities based on popular states they know in the US, e.g., California and New York.  Let's just say there are so many thing wrong with these methods.
 
-You can learn about CS programs and research expertise of faculty using resources such as \href{https://csrankings.org}{CSRankings.org}, which is designed specifically to help prospective PhD students in Computer Science!  You will be very surprised to learn that a school that you didn't know much about can have very strong research in your interested topic (and vice versa, a school you thought highly about has no one works in the research field you're interested in). This is also a good way to learn about individual faculty (who works on what) and well-known CS conferences\footnote{In CS (and only in CS), conferences, not journals, are often the main venue to publish research finding.}. \S\ref{sec:ranking} gives the top 50 CS programs in the US according to CSRankings.
+You can learn about CS programs and research expertise of faculty using resources such as \href{https://csrankings.org}{CSRankings.org}, which is designed specifically to help prospective PhD students in Computer Science!  You will be very surprised to learn that a school that you didn't know much about can have very strong research in your interested topic (and vice versa, a school you thought highly about has no one works in the research field you're interested in). This is also a good way to learn about individual faculty (who works on what) and well-known CS conferences\footnote{In CS (and probablyo nly in CS), conferences, not journals, are often the main venue to publish research finding.}. \S\ref{sec:ranking} gives the top 50 CS programs in the US according to CSRankings.
 
 \begin{commentbox}[Dat] Most Vietnamese students, including those from top schools, \textbf{do not know} about CSRankings.  May be applicants who worked at top research places such as VinAI would know about it.
 \end{commentbox}
@@ -473,9 +485,9 @@ However, in general, rankings can be superficial and you need to do more researc
       \end{center}
       \vspace{-0.2in}
     \end{wrapfigure}
-The short answer is that tenured-track faculty (e.g., assistant professors) are more likely to be young and active in research (they have to, in order to get tenure). Thus, they will likely have more time to work with you and push you to do research and publish. However, they may not have as much experience in managing students and may not have as much funding as tenured faculty.
+The short answer is that tenured-track faculty such as assistant professors are more likely to be young and active in research (they have to, in order to get tenure). Thus, they will likely have more time to work with you and push you to do research and publish. However, they may not have as much experience in managing students and may not have as much funding (yet).
 
-Tenured faculty (e.g., associate and full profs.) are more likely to be older, more well-known, and have more experience in managing students.  However, they might not push you as hard (they don't have to, they already got tenured). They might also expect you to figure things out yourself (so you need to be very independent).  Some tenured faculty are also no longer active in research and more involved with administrative duties or with their startup companies. 
+Tenured faculty, e.g., associate and full profs., are more likel older, more well-known, and have more experience in managing students.  However, they might not push you as hard (they don't have to, they already got tenured). They might also expect you to figure things out yourself (so you need to be very independent).  Some tenured faculty are also no longer active in research and more involved with administrative duties or with their startup companies. 
 
 You can learn about faculty and their level of research activity through the faculty's website and CSRankings.
 Ultimately, choose one that fits you the most by communicating with them, meeting them, asking them questions, even talking to their students. 
@@ -504,7 +516,7 @@ So what to do if you want someone to look at your profile and give input? You co
 
 If you want to contact a prof. to ask about \emph{research opportunities}, or \emph{GTA/GRA} support, then \emph{yes}, I believe you should---it is \emph{worth it}. However, you need to do it in a right way.
 
-First, read the prof's website, see if they say something about contacting them. Many profs. indicate how prospective students should contact them (e.g., specific email subjects). 
+First, read the prof's website, see if they say something about contacting them. Many profs. indicate how prospective students should contact them (e.g., using specific email subjects). 
 In general, the best way to catch the prof.'s attention is to \emph{customize your email} to that faculty.  For example, read their papers, know what they work on, and see if you are interested in their research. Then send them an email talking how/why their work would match yours.
 In contrast, if you write a generic email that can be sent to multiple professors (e.g., if you just change some names and keywords in the email), you will not get a response. 
 
@@ -531,7 +543,7 @@ Finally, profs. are very busy so don't take it personally if you don't get anyth
 
 \subsection{Can I apply to CS PhD if my undergrad was not in CS or related areas?}
 
-Yes, as long as you can demonstrate you are ready for CS PhD research through research experiences, LoRs, statements, etc as mentioned. You might be even able to leverage this to make your profile stand out as mentioned in \S\ref{sec:improve-your-chance}. 
+Absolutely, as long as you can demonstrate you are ready for CS PhD research through research experiences, LoRs, statements, etc as mentioned. You might be even able to leverage this to make your profile stand out as mentioned in \S\ref{sec:improve-your-chance}. 
 
 \subsection{Is an MS degree required for admission to PhD in CS?}
 No. In fact, student with BS can get MS degree ``along the way'' to PhD.  However, MS can help if it gives research experience or is from a more well-known school than your undergrad institution. 
@@ -558,9 +570,9 @@ If you have an MS then some course work \emph{might be} transferred for course c
 
 \subsection{PhD in other related field such as CE, IST, Cybersecurity, and Stats}
 
-In many cases you do not need to do a PhD in CS to work in your area of interested. For example, in addition to having a traditional CS department, GMU has IST and Cybersecurity departments with faculty who have PhD in CS and work on CS topics (e.g., AI, Security, Robotics).  In short, it is totally possible that you still get to do CS research and publish in CS-related venues even if you're not in a traditional CS program.  It is very common to see faculty with CS PhD in a non-CS department as well as faculty with non-CS PhD in CS department.  
+In many cases you do not need to do a PhD in CS to work in your area of interested. For example, in addition to having a traditional CS department, GMU has IST and Cybersecurity departments, which have faculty  with PhD in CS and work on CS topics (e.g., AI, Security, Robotics).  In short, it is totally possible that you still get to do CS research and publish in CS-related venues even if you're not in a traditional CS program.  It is very common to see faculty with CS PhD in a non-CS department as well as faculty with non-CS PhD in CS department.  
 
-It is worth it to note that if your intention is a PhD in CS, then you likely need to be in the CS dept \emph{and} advised by a CS faculty. For example, if your advisor is not in CS, then you likely cannot not get a CS degree. In fact, if a faculty is not in CS, they likely cannot be the main advisor of a CS PhD student---they may \emph{co-advise} or be in the PhD dissertation committee, but your main advisor will need to be a tenured or tenure-track faculty in CS. If in doubt, you should check with the CS department for their requirements.  For this specific reason,  CSRankings only includes tenured or tenured track faculty who can advise CS PhD students. I also have compiled a \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{list} of Vietnamese faculty who can advise PhD students. 
+However, if your intention is a PhD in CS, then you likely need to be in the CS dept \emph{and} advised by a CS faculty. In fact, if a faculty is not in CS, it is unlikely that they can be the \emph{main} advisor of a CS PhD student---they may \emph{co-advise} or be in the PhD dissertation committee, but your main advisor will need to be a tenured or tenure-track faculty in CS. If in doubt, you should check with the CS department for their requirements.  For this specific reason,  CSRankings includes only tenured or tenured track faculty who can advise CS PhD students. I also have compiled a \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{list} of Vietnamese faculty who can advise PhD students. 
 
 \subsection{How do I address a professor?}
 
@@ -671,7 +683,7 @@ These numbers are based on my experience at public universities in the US.  Priv
 I started writing this document in May 2023 and have been updating it since then (mostly around deadline time when I tend to procrastinate!). I have put the source code of this document on \href{https://github.com/nguyenthanhvuh/phd-cs-us}{GitHub} so that anyone can contribute to it.  
 
 \paragraph{Acknowledgement} Many people have contributed to this document.
-Craig Yu (GMU), Hakan Aydin (GMU), Hung Le (UMass) provided valuable input in the early version. Other GMU faculty members also have provided feedback and contributions.  Many students including Didier (GMU), Thanh (Melbourne), and Dat (Melbourne) have contributed valuable questions and feedback. 
+Profs. Craig Yu (GMU), Hakan Aydin (GMU), and Hung Le (UMass) provided valuable input in the early version. Other GMU faculty members also have provided feedback and contributions.  Many students including Didier (GMU), Thanh (Melbourne), and Dat (Melbourne) also have contributed valuable questions and feedback. 
 \textbf{Thank you!}
 
 
