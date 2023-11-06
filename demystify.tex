@@ -3,7 +3,7 @@
 \usepackage[margin=1.0in]{geometry}
 \usepackage{soul}
 %\usepackage[small,compact]{titlesec} %very powerful
-\usepackage{tcolorbox}
+\usepackage[most]{tcolorbox}
 \usepackage{enumitem}
 \usepackage{epigraph}
 \usepackage{cite}
@@ -28,19 +28,28 @@
 \usepackage{booktabs}
 
 
-\newtcolorbox{cbox}[1][]
-{
-left=1pt,right=1pt,top=1pt,bottom=1pt,
-colback=gray!10,
-boxrule=0.5pt
+% \newtcolorbox{cbox}[1][]
+% {
+% left=1pt,right=1pt,top=1pt,bottom=1pt,
+% colback=gray!10,
+% boxrule=0.5pt
+% }
+
+\newtcolorbox{mybox}{
+enhanced,
+boxrule=0pt,frame hidden,
+borderline west={2pt}{0pt}{green!75!black},
+colback=green!10!white,
+sharp corners
 }
+
 
 \newenvironment{commentbox}[1][]{
 \small
-    \begin{cbox}
-    \textbf{#1} 
+    \begin{mybox}
+    {\small \textbf{#1}}
  }{
-   \end{cbox}
+   \end{mybox}
 }
 
 \renewcommand{\figurename}{Fig.}
@@ -86,6 +95,9 @@ boxrule=0.5pt
 
 
 \section{Summary}\label{sec:summary}
+
+
+
 Here we summarize the main points of the document. This allows you to quickly skim through the document and decide which parts you want to read in detail.
 \begin{enumerate}
 \item Should you apply to a PhD in CS in the US?
@@ -286,7 +298,7 @@ A well-written LOR also shows that you can communicate, which is very important 
 %is important because if you need (GTA) funding, it will provide evidence
 %that you can teach and communicate with students.
 
-There are various guides on writing statement, e.g.,~\cite{blattman2022writing}, and \href{https://cs-sop.org/}{many example statements} are available. So I will not talk too much about statements. In short, talk about your research goal and vision, and convince us that you can achieve it through your experience, e.g., published papers, or if you work on some projects by yourself, talk about it. Also, use the statement to talk about stuff that admission committee members might not know about, e.g., your Github project with 1K+ stars or  your regular contributions to well-known open-source projects. Finally, talk about what makes you different than the other 1000 applicants that we are reviewing (e.g., see \S\ref{sec:improve-your-chance} for increasing your admission chance).
+There are various guides on writing statement, e.g.,~\cite{blattman2022writing}, and \href{https://cs-sop.org/}{many example statements} are available. So I will not talk too much about statements. In short, talk about your research goal and vision, and convince us that you can achieve it through your experience, e.g., published papers, or if you work on some projects by yourself, talk about it. Also, use the statement to talk about things that admission committee members might not know about, e.g., your Github project with 1K+ stars or your regular contributions to well-known open-source projects. Finally, talk about what makes you different than the other 1000 applicants that we are considering (e.g., see \S\ref{sec:improve-your-chance} for increasing your admission chance).
 
 \begin{commentbox}[Hung:]
 I think asking for a “research vision” from a Ph.D. applicant is too much. Even people graduated with a Ph.D. have a great difficulty in explicating their researh vision. In my opinion, you should focus on showing (not telling) your research passion (if you do have).
@@ -349,7 +361,7 @@ have bad grades in relevant courses (e.g., Math and CS).
 \begin{commentbox}[Thanh:]
 Vietnamese universities typically offer specialized programs, such as the talented engineer program at HUST, that have highly competitive entrance exams and a limited number of available slots (e.g., 30 per year). However, these programs often set higher requirements for students, including more demanding tests and assignments, resulting in lower GPAs and overall rankings. For example, an 3.5 GPA students from such talented programs are typically much better than a 4.0 GPA students not in those programs.  Similarly, variations in GPA standards exist among different universities, with technical universities generally having lower GPAs than economical universities. These make gaining admission in the US difficult as US faculty are not familiar with these issues.
 \tcblower
-\textbf{Vu}: Vietnamese students and even faculty often lament how this competitive/low-grading system hurts Vietnamese students when applying abroad. One way to mitigate this is making these issues known to admission committee in your statement.  Universities with Vietnamese profs are probably aware of them, but in general your letter writers \emph{and} you can explicitly mention these in their letters and your statement.
+\textbf{Vu}: Vietnamese students and even faculty often lament how this grading system hurts Vietnamese students applying abroad. One way to mitigate this is making these issues known to admission committee in your statement.  Universities with Vietnamese profs are probably aware of them, but in general your letter writers \emph{and} you can explicitly mention these in their letters and your statement.
 \end{commentbox}
 
 \paragraph{GRE} Most good CS PhD programs in the US \textbf{no longer require GREs}, so you don't need to take them. However, they might be useful for international students from programs we are not familiar with.  If you have good GRE scores then you should include them in your application.
@@ -563,7 +575,7 @@ Obviously, there is no one-size-fit-all answer to this question. The best advise
 
 Here are some general advice to find professor.  First, search for profs. that share similar research interests. You can learn about faculty and their level of research activity through the faculty's website or even from CSRankings.  For example, in CSRankings, if you want to work with PL, you can search for those publish in PL conferences.  If you want to work with SE \emph{and} AI, you can search for faculty who work in both SE and AI.   You can also go to their website, look at their papers and projects.  In any case, you should contact the professor and talk to them. For example, you can (cold) email them and ask about their research and if they are taking new students and schedule appointments to chat with them (office hrs are often the best time).  See \S\ref{sec:contact} for more details on contacting professors.  
 
-Another very effective way is taking graduate level courses in the topics you are interested in (remember: you have those 2 years to explore around).  Professors teaching these \emph{special topics courses} and \emph{research seminars} typically are recruiting students---giving you even a higher chance. Do well in the class, answer questions, talk to the profs after classes, etc---being stand out.  Many professors, including myself, prefer taking in new students this way.  It gives both the professor and student more time, e.g., a whole semester, to work and evaluate the relationship before making any commitment (sounds a bit like a marriage!).  
+Another very effective way is taking graduate level courses in the topics you are interested in (remember: you have those 2 years to explore).  Professors teaching these \emph{special topics courses} and \emph{research seminars} typically are recruiting students---giving you even a higher chance. Do well in the class, answer questions, talk to the profs after classes, etc---being stand out.  Many professors, including myself, prefer taking in new students this way.  It gives both the professor and student more time, e.g., a whole semester, to work and evaluate the relationship before making any commitment (sounds a bit like a marriage!).  
 You can also ask if you can do an independent study or research with a prof. This can be informal (no credit) and takes place during the summer or winter break.  For example, I work with multiple students, many of whom are undergrads, this way. Many will drop because they find they don't like my research, but some will stay and become my PhD students.
 
 Ultimately, choose one that fits you the most by communicating with them, taking their courses, meeting them, asking them questions, and even talking to their current students. Indeed all this takes a lot of time and effort, but remember, you will be working with this person for 4-5 years, so it is important to try to find the right one. 
@@ -828,7 +840,7 @@ Here is the typically steps: (i) a faculty suspecting a cheating case will repor
 
 \paragraph{Gifts and Professionalism} In many countries, it's customary to give professors gifts, often during holidays.  These gifts can be costly and profs. sometimes expected them. In the US, it's not a common practice, and it's perfectly OK to not to give gifts. \emph{However}, if you'd like to offer small souvenir-like tokens, it's a thoughtful gesture that's appreciated. Some professors proudly display their gifts, which can come from students and colleagues (e.g., when they travel to their home countries or conferences). In summary, small gifts are fine, but avoid anything that might make your professors uncomfortable.
 
-There's a misconception that in the US it's all business, with professors as bosses who pay students for their work, and if you do something nice implies you expect something in return. However, the reality is quite the opposite. While people can be straightforward and direct, they are also friendly and informal. You can call your professor by their first name (\S\ref{sec:address}), respectfully disagree and argue with that (and can actually gain respect doing so), seek their help (even on personal matters), come to their houses for parties or gathering, and give them small thoughtful gifts that they put on their desks.  Many students and professors maintain lifelong relationships, staying in touch through cards, emails, and calls, even after their academic journey ends. These connections are genuine and meaningful.
+There's a misconception that in the US it's all business, with professors as bosses who pay students for their work, and you doing something nice implying you expect something in return. However, the reality is quite the opposite. While people can be straightforward and direct, they are also friendly and informal. You can call your professor by their first name (\S\ref{sec:address}), respectfully disagree and argue with that (and can actually gain respect doing so), seek their help (even on personal matters), come to their houses for parties or gathering, and give them small thoughtful gifts that they put on their desks.  Many students and professors maintain lifelong relationships, staying in touch through cards, emails, and calls, even after their academic journey ends. These connections are genuine and meaningful.
 
 \section{Ranking of CS PhD programs in the U.S}\label{sec:ranking}
   Tab.~\ref{tab:ranking} lists the top 50 CS programs in the US from \href{https://www.csrankings.org}{CSRankings.org}, a ranking system  based on top CS conferences.
