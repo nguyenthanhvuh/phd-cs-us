@@ -1,8 +1,9 @@
 \documentclass[oneside,11pt]{memoir}
 \setsecnumdepth{subsection}
 
+
 \usepackage[T1]{fontenc}
-\usepackage[margin=1.2in]{geometry}
+\usepackage[margin=1.5in]{geometry}
 \usepackage{soul}
 %\usepackage[small,compact]{titlesec} %very powerful
 \usepackage[most]{tcolorbox}
@@ -60,14 +61,42 @@ sharp corners
 \newcommand{\red}[1]{{\color{red}{#1}}}
 \newcommand{\xz}[1]{\mycomment{Xiaokuan}{[#1]}}{}
 
-\title{Demystifying the Computer Science \\PhD Admission in US Universities\\{\large A Guide for International Students}}
+\title{Demystifying the Computer Science PhD Admission\\in US Universities\\{\large A Guide for International Students}}
 
-\author{\href{https://nguyenthanhvuh.github.io}{ThanhVu (Vu) Nguyen} (\href{mailto:tvn@gmu.edu}{tvn@gmu.edu})\\{\small George Mason University, Dept. of Computer Science}}
+\author{\href{https://nguyenthanhvuh.github.io}{ThanhVu (Vu) Nguyen}\\{\small George Mason University, Dept. of Computer Science}}
+
+
+\chapterstyle{pedersen}
+
+
+\makeatletter
+\def\maketitle{%
+  \null
+  \thispagestyle{empty}%
+  \vfill
+  \begin{center}\leavevmode
+    \normalfont
+    {\LARGE\raggedright \@title\par}%
+    \vfill%
+    %\hrulefill\par
+    {\Large \@author\par}%
+    \vfill%
+    {\large\raggedleft \@date\par}%
+  \end{center}%
+  \vfill
+  \null
+  \cleardoublepage
+  }
+\makeatother
+%\author{ThanhVu H. Nguyen}
+%\title{TITLE OF BOOK}
+%\date{}
+
 
 \begin{document}
+\maketitle
 \frontmatter
 
-\maketitle
 \chapter{Preface}
 Having been involved in PhD admissions for many years, I've
 realized that many \textbf{international students}, especially those from smaller countries like Vietnam, lack a clear understanding of
@@ -734,8 +763,8 @@ If you have an MS then some course work \emph{might be} transferred for course c
     The PhDComics figure on top shows the ``ambition'' level of a PhD student over their years of study (they miss the 6--7th year where the ambition is \emph{``Just let me graduate''}).
 
 
-\section{Difference between PhD in the US and other countries}\label{sec:non-us-differences}
-Here we summarize the main differences between CS PhD in the US and other countries.  This is based on my experience and what I heard from others who did PhD in other countries. 
+\section{Differences between PhD in the US and other countries}\label{sec:non-us-differences}
+This summarizes the main differences between CS PhD in the US and other countries. % This is based on my experience and what I heard from others who did PhD in other countries. 
 
 \emph{MS Degree requirement}:  as mentioned in \S\ref{sec:msrequirement} and \ref{sec:time}, US PhD programs do not require MS degree.  In contrast, many other countries do require MS degree before joining a PhD program.  This means that US PhD programs are longer (5--7 years, 2 of which are coursework) than other countries (3--4 years, no coursework).  
 
@@ -749,11 +778,11 @@ Here we summarize the main differences between CS PhD in the US and other countr
 
 \emph{Work-life balance}: I believe that PhD students are often overworked in the US compared to other countries, e.g., in Europe.  This is partly due to the longer PhD program and that US PhD students are often paid through TA, which requires them to do TA in addition to their own research. In contrast, PhD students in other countries are often paid through fellowships, which do not require them to do TA work.
 
-\section{How do I address a professor?}\label{sec:address}
+\section{How do I call or address a professor?}\label{sec:address}
 
-      \begin{center}
-        \includegraphics[scale=0.7]{c5.png}
-      \end{center}
+\begin{center}
+\includegraphics[scale=0.6]{c5.png}
+\end{center}
 
 If you're reaching out to a professor for the first time,  address them as either Prof. Lastname or Dr. Lastname. Many international students use Prof. or Dr. FirstName LastName, but this can come across as if you're simply copying and pasting names. It's not necessary, so stick with Prof. or Dr. Lastname.
 
