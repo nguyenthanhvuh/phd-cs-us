@@ -61,7 +61,7 @@ sharp corners
 \newcommand{\red}[1]{{\color{red}{#1}}}
 \newcommand{\xz}[1]{\mycomment{Xiaokuan}{[#1]}}{}
 
-\title{Demystifying the Computer Science PhD Admission\\in US Universities\\{\large A Guide for International Students}}
+\title{Demystifying the Computer Science PhD Admission in the US\\{\large A Guide for International Students}}
 
 \author{\href{https://nguyenthanhvuh.github.io}{ThanhVu (Vu) Nguyen}\\{\small George Mason University, Dept. of Computer Science}}
 
@@ -76,7 +76,7 @@ sharp corners
   \vfill
   \begin{center}\leavevmode
     \normalfont
-    {\LARGE\raggedright \@title\par}%
+    {\LARGE\raggedright \textbf{\@title}\par}%
     \vfill%
     %\hrulefill\par
     {\Large \@author\par}%
@@ -105,7 +105,7 @@ discourages students from applying but also creates the perception that
 getting admitted to a CS PhD program in the US is difficult compared to other countries.
 
 So I want to share some details about the PhD admission process and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
-While this document is primarily intended for students interested in CS, it may be relevant to students from various disciplines.
+While this document is primarily intended for students interested in CS, it may be relevant to students from various disciplines. 
 Furthermore, although many examples are specifics for schools that I and other contributors of this document know about, the information should be generalizable to other R1\footnote{An \href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1 institution} in the US is a research-intensive university with a high level of research activity across various disciplines. Currently, 146 (out of 4000) universities are classified as R1.} institutions in the US  (though \emph{very} top schools could be very selective, e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU).
 
 In addition, this document can help \textbf{US faculty and admission committee} gain a better understanding of international students and their cultural differences.  By recognizing and leveraging these differences, CS programs in the US can attract larger and more competitive application pools from international students.
@@ -134,10 +134,10 @@ Here we summarize the main points of the document. This allows you to quickly sk
 \item Application Materials
 \begin{itemize}
     \item The committee will look at various factors, but the most important ones are research ability, e.g., publications, personal statement, and recommendation letters.
-    \item LORs are important, but only if they are personalized and talk about your research ability (\S\ref{sec:lor}).
-    \item GRE \emph{is not} required by most schools (\S\ref{sec:grades}).
-    \item Grades are important, but only if your school is well-known (\S\ref{sec:grades}).
+    \item LORs are very important, but only if they are personalized and talk about your research ability (\S\ref{sec:lor}).
     \item Personal statement is very important. Write it in such a way that makes you \emph{stand out} (\S\ref{sec:research-statement} and \S\ref{sec:improve-your-chance})
+    \item GRE \emph{is not} required (\S\ref{sec:grades}). Spend your time on something else.
+    \item Grades are important, but depend on the reputation of your school (\S\ref{sec:grades}).
     \item Getting an interview is typically a \emph{good sign} (no one interviews weak candidates).
 \end{itemize}
 \item What to do after getting admitted?
@@ -178,10 +178,10 @@ health insurance, and stipend (monthly salary). Moreover, depending on the unive
 you may even receive additional benefits such as summer pay, laptops, (conference/workshop) traveling. \S\ref{sec:funding} provides more details on funding.
 
 Second, I believe that applying to a good US university \emph{should not} be any
-harder than at schools in other countries. If you believe you have a chance in other countries, e.g., South Korea, Singapore, Germany, UK, Japan and Australia, then you will surely have a chance in the US as well\footnote{\S\ref{sec:non-us-differences} compares CS PhD study in the US to other countries.}.
+harder than at schools in other countries. If you believe you have a chance in other countries, e.g., South Korea, Singapore, Germany, UK, Japan and Australia, then you will surely have a chance in the US as well. \S\ref{sec:non-us-differences} compares CS PhD study in the US to other countries.
 
 \begin{commentbox}[Vu:]
-One of the reasons I create this document is that my colleagues at GMU are interested in recruiting Vietnamese students and are surprised when seeing very few applications in Vietnam (e.g., each year our CS program receives more than 350 PhD applications, most of which are international but only 3--4 are from Vietnam). In general the number of CS PhD applications from Vietnam to US universities is low and more would be welcomed. 
+One of the reasons I create this document is that my colleagues at GMU are interested in recruiting Vietnamese students and are surprised when seeing very few applications in Vietnam (see \S\ref{sec:ack}). Each year our CS program receives more than 350 PhD applications, most of which are international but only 3--4 are from Vietnam. In general the number of CS PhD applications from Vietnam to US universities is very low and more would be welcome. 
 \end{commentbox}
 
 %% Vu: *what's a PhD?*  This [[https://matt.might.net/articles/phd-school-in-pictures/][series of pictures]] from [[https://matt.might.net][Matt Might]] illustrates what a PhD means.
@@ -225,7 +225,7 @@ In my opinion, requiring applicants to pay the fee helps ensure their seriousnes
 %\end{commentbox}
 
 
-\chapter{Application}\label{sec:application}
+\chapter{Your Application}\label{sec:application}
 
 \epigraph{Son, if you really want something in this life, you have to work for it. Now quiet! They’re about to announce the lottery numbers.}{\textsc{The Simpsons}}
 
@@ -233,7 +233,7 @@ In my opinion, requiring applicants to pay the fee helps ensure their seriousnes
 The primary focus of the admissions committee is to \textbf{evaluate your background and interest in research} since a PhD in Computer Science and determine if you would \textbf{fit into} the program. To evaluate your profile, we consider
 the following key indicators, listed in order of importance.
 
-\section{Research Ability}
+\section{Research Ability}\label{sec:research-ability}
 
 The most effective evidence of research ability is having \textbf{published papers in reputable international journals or conferences}.
 Having published good papers is a sign that the applicant has successfully involved in research.
@@ -607,7 +607,7 @@ Ultimately, choose one that fits you the most by communicating with them, taking
     
     In other fields, e.g. Software Engineering, Vietnamese students face challenges in reaching US professors. Do you have any tips for Vietnamese students who want to connect with US professors and work as research assistants? 
     \tcblower
-    \textbf{Vu}: \S\ref{sec:contact} shows how to contact a professor for research opportunities. Many probably will say no as they do not have the bandwidth to take on random students, but some may say yes if they see potential fits.  
+    \textbf{Vu}: \S\ref{sec:contact} shows how to contact a professor for research opportunities. Many probably will say no as they do not have the bandwidth to take on random students, but some may say yes if they see potential fit.  
 \end{commentbox}
 
 
@@ -858,9 +858,9 @@ This section lists various cultural issues that international students might wan
 
 \section{Academic Integrity} 
 
-Plagiarism and cheating (e.g., exams, coding) is a BIG no-no in the US.  If you're caught cheating, you will face very heavy consequence and likely be expelled from the university (e.g., after the second time at GMU).   This is quite different from many international countries where cheating is common and often tolerated.  Faculty is extremely good at detecting cheating (we have been dealing with these situations so many times over so many years), and \emph{will} report cheating cases.  In short, whatever you do, don't cheat---not worth it.
+Plagiarism and cheating (e.g., exams, assignments) is a BIG no-no in the US.  If you're caught cheating, you will face very heavy consequence and likely be expelled from the university (e.g., after the second time at GMU).   This is quite different from many international countries where cheating is common and often tolerated.  Faculty is extremely good at detecting cheating (we have been dealing with these situations so many times over so many years), and \emph{will} report cheating cases.  In short, whatever you do, don't cheat---not worth it.
 
-Here is the typically steps: (i) a faculty suspecting a cheating case will report it to the Office of Academic Integrity (OAI) at the university---the report often has supporting evidence and suggested penalty (e.g., receive a failing grade);  (ii)  OAI will take over and investigate the case; and (iii) OAI will make the final decision.  It is important to note that after receiving the report from your prof., OAI \emph{completely} takes over and makes decision.  This means begging your professor will not help because they simply are no longer involved in the case.
+Here is the typically steps: (i) a faculty suspecting a cheating case will report it to the Office of Academic Integrity (OAI) at the university---the report often has supporting evidence and suggested penalty (e.g., a failing grade);  (ii)  OAI will take over and investigate the case; and (iii) OAI will make the final decision.  It is important to note that after receiving the report from your prof., OAI \emph{completely} takes over and makes decision.  This means begging your professor will not help because they simply are no longer involved in the case.
     
 \section{Illegal Software} Using illegal/cracked software is very common in many countries (and even in the US). However, \emph{do not} install or use them on university computers (e.g., those given by your department or adviser).  It is unlikely that the university will track you down, but it is the \emph{software company} that will.  They have very sophisticated tools to detect illegal software and will sue your university/department.  Imagine your department or adviser being sued for a large sum of money, and it is \emph{you} who caused it.  If you need software, ask your adviser or the department.
 
@@ -916,7 +916,7 @@ Tab.~\ref{tab:ranking} lists the top 50 CS programs in the US from \href{https:/
 % \item \bibentry{nlpphd}
 % \end{itemize}
 
-\chapter{History and Acknowledgement}
+\chapter{History and Acknowledgement}\label{sec:ack}
 
 \paragraph{History} This document was conceived during a lunch with Craig Yu at GMU.  We talked on about why GMU were not able to attract good Vietnamese and other international students, despite having a much stronger CS program than many schools that these students want to go to (part of the reason is described in \S\ref{sec:ranking}). We wished there were a way for international students to know about the US PhD programs (as well as for US faculty to understand more about international students and therefore have better chance of recruiting and working with them). I was also  a member of the large VietPhD group on Facebook and saw many questions from students about PhD programs.  However, most active participant are students in non-CS fields or not in US. Like ChatGPT, their answers to CS PhD program in the US could be informative and helpful, but unfortunately not always accurate and sometimes leading to more confusion. So I thought it would be useful to have a document that is specific to CS PhD programs in the US from an insider prospective.  
 
