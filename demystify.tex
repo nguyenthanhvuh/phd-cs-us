@@ -3,7 +3,7 @@
 
 
 \usepackage[T1]{fontenc}
-\usepackage[margin=1.5in]{geometry}
+%\usepackage[margin=1.5in]{geometry}
 \usepackage{soul}
 %\usepackage[small,compact]{titlesec} %very powerful
 \usepackage[most]{tcolorbox}
@@ -51,6 +51,24 @@ sharp corners
  }{
    \end{mybox}
 }
+
+
+\newtcolorbox{mydomesticbox}{
+enhanced,
+boxrule=0pt,frame hidden,
+borderline west={2pt}{0pt}{red!75!black},
+colback=blue!10!white,
+sharp corners
+}
+
+\newenvironment{domesticbox}[1][]{
+\small
+    \begin{mydomesticbox}
+    {\small \textbf{#1}}
+ }{
+   \end{mydomesticbox}
+}
+
 \renewcommand{\figurename}{Fig.}
 \renewcommand{\tablename}{Tab.}
 \def\Section{\S}
@@ -60,6 +78,7 @@ sharp corners
 \newcommand{\tl}[1]{\mycomment{ThanhLe}{#1}}{}
 \newcommand{\red}[1]{{\color{red}{#1}}}
 \newcommand{\xz}[1]{\mycomment{Xiaokuan}{[#1]}}{}
+
 
 \title{Demystifying the Computer Science PhD Admission in the US\\{\large A Guide for International Students}}
 
@@ -165,8 +184,6 @@ Here we summarize the main points of the document. This allows you to quickly sk
 \end{enumerate}
 
 
-
-
 \mainmatter
 \chapter{Should You Apply to a CS PhD Program in the US?}\label{sec:should}
 
@@ -184,6 +201,9 @@ harder than at schools in other countries. If you believe you have a chance in o
 \begin{commentbox}[Vu:]
 One of the reasons I create this document is that my colleagues at GMU are interested in recruiting Vietnamese students and are surprised when seeing very few applications in Vietnam (see \S\ref{sec:ack}). Each year our CS program receives more than 350 PhD applications, most of which are international but only 3--4 are from Vietnam. In general the number of CS PhD applications from Vietnam to US universities is very low and more would be welcome. 
 \end{commentbox}
+
+\begin{domesticbox}[Domestic students:] If you're a domestic student, you actually have several advantages in your application.  First, we already know about your school (see \S\ref{sec:your-school}), and you are also more familiar with the US education system and culture.  You also have more opportunities for funding, e.g., through government scholarships for US citizens and residents. Finally, compared to international students, PhD applications in CS from domestic students are also few and that can help your case.
+\end{domesticbox}
 
 %% Vu: *what's a PhD?*  This [[https://matt.might.net/articles/phd-school-in-pictures/][series of pictures]] from [[https://matt.might.net][Matt Might]] illustrates what a PhD means.
 %% \end{commentbox}
@@ -278,7 +298,7 @@ CS PhD programs will require at least \textbf{two LORs}. Having a letter from an
 can be challenging for international students, who might not have much interactions with such experts. So it is fine to have a letter from people (e.g., profs, researchers, mentors) that know you well enough to talk about \emph{your specific research experience and capabilities}. This person can be a postdoc or even graduate student who has mentored you.  
 
 \begin{center}
-\includegraphics[width=0.6\linewidth]{c6.png}
+\includegraphics[width=0.6\linewidth]{files/c6.png}
 \end{center}
 
 Many students have letters written by themselves and signed by their professors. These have little
@@ -312,7 +332,7 @@ For Vietnamese students, it's worth mentioning about the \href{https://vef2.org/
 
 
     \begin{center}
-      \includegraphics[scale=0.5]{c2.png}
+      \includegraphics[scale=0.5]{files/c2.png}
     \end{center}
 
 While you might not have control over LORs or \hyperref[sec:your-school]{where your go to school}, you do over your
@@ -439,6 +459,9 @@ During the Open House, you get a chance to talk to individual faculty and curren
 GMU has \emph{Virtual} Open House (VOH), e.g., \url{https://cs-gmu.github.io/cs-phd-voh-s23/}. We invite all admitted PhD students to the VOH through Zoom to learn about the CS program, the department, GMU, and the DC area in general. Students also get opportunities to chat with professors and current students.
 \end{commentbox}
 
+\paragraph{If you do not get admitted} If you do not get admitted to any schools (or don't want to go to the ones that you got it), try again next time.  Graduate admission can involve randomness and noise.  Don't bother asking for feedback, you will not likely get any.  In the meantime, you can work on improving your profile, e.g., publish more papers, get more research experiences, etc.  
+
+You can also consider applying to MS programs, which are typically easier to get in (but you need to pay).  If you get in an MS at a school of your choice, you can contact professors to work with them. If you do well, you can ask the professor to support you to convert to PhD.  This is a common path for many students. 
 
 
 \chapter{Funding}\label{sec:funding}
@@ -545,7 +568,7 @@ While this can be confusing due to the large number of universities in the US, a
 
 \subsection{Selecting and Ranking Schools for CS}
    \begin{center}
-    \includegraphics[scale=0.5]{c1.png}
+    \includegraphics[scale=0.5]{files/c1.png}
    \end{center}
 
 International students not familiar with US universities often put them into \emph{two} bins:  (i) very top schools that they dream about, and (ii) everything else.  In many cases, they use resources such as rankings from US News, which are not very transparent and \emph{highly} questionable\footnote{\url{https://cra.org/cra-statement-us-news-world-report-rankings-computer-science-universities/}}.  Sometimes these students evaluate CS programs using the reputations non-CS programs such as medical, math, or physics.
@@ -596,9 +619,9 @@ Obviously, there is no one-size-fit-all answer to this question. The best advise
     instead of \emph{dictating} their research.
     \end{commentbox}
 
-Here are some general advice to find professor.  First, search for profs. that share similar research interests. You can learn about faculty and their level of research activity through the faculty's website or even from CSRankings.  For example, in CSRankings, if you want to work with PL, you can search for those publish in PL conferences.  If you want to work with SE \emph{and} AI, you can search for faculty who work in both SE and AI.   You can also go to their website, look at their papers and projects.  In any case, you should contact the professor and talk to them. For example, you can (cold) email them and ask about their research and if they are taking new students and schedule appointments to chat with them (office hrs are often the best time).  See \S\ref{sec:contact} for more details on contacting professors.  
+Here are some general advice to find professor.  First, search for profs. that share similar research interests. You can learn about faculty and their level of research activity through the faculty's website or even from CSRankings.  For example, in CSRankings, if you want to work with PL, you can search for those publish in PL conferences.  If you want to work with SE \emph{and} AI, you can search for faculty who work in both SE and AI.   You can also go to their website, look at their papers and projects.  In any case, you should contact the professor and talk to them. For example, you can (cold) email them and ask about their research and if they are taking new students (\S\ref{sec:contact}) and schedule appointments to chat with them (office hrs are often the best time).
 
-Another very effective way is taking graduate level courses in the topics you are interested in (remember: you have those 2 years to explore).  Professors teaching these \emph{special topics courses} and \emph{research seminars} typically are recruiting students---giving you even a higher chance. Do well in the class, answer questions, talk to the profs after classes, etc---being stand out.  Many professors, including myself, prefer taking in new students this way.  It gives both the professor and student more time, e.g., a whole semester, to work and evaluate the relationship before making any commitment (sounds a bit like a marriage!).  
+Another effective way is taking graduate level courses in the topics you are interested in (remember: you have those 2 years to explore).  Professors teaching these \emph{special topics courses} and \emph{research seminars} typically are recruiting students---giving you even a higher chance. Do well in the class, answer questions, talk to the profs after classes, etc---being stand out.  Many professors, including myself, prefer taking in new students this way.  It gives both the professor and student more time, e.g., a whole semester, to work and evaluate the relationship before making any commitment (sounds a bit like a marriage!).
 You can also ask if you can do an independent study or research with a prof. This can be informal (no credit) and takes place during the summer or winter break.  For example, I work with multiple students, many of whom are undergrads, this way. Many will drop because they find they don't like my research, but some will stay and become my PhD students.
 
 Ultimately, choose one that fits you the most by communicating with them, taking their courses, meeting them, asking them questions, and even talking to their current students. Indeed all this takes a lot of time and effort, but remember, you will be working with this person for 4-5 years, so it is important to try to find the right one. 
@@ -632,7 +655,7 @@ Adjunct faculty not full-time faculty, e.g., they might be working in industry a
 \subsection{Tenured or tenure-track faculty? Who do you choose?}\label{sec:tenure-vs-tenure-track}
 
       \begin{center}
-        \includegraphics[scale=0.4]{c8.png}
+        \includegraphics[scale=0.4]{files/c8.png}
       \end{center}
 
 
@@ -650,7 +673,13 @@ Tenured faculty, e.g., associate and full profs., are likely older, more well-kn
 
 \subsection{Should you contact a professor? What to do to get a desired reply?}\label{sec:contact}
 
-Faculty received many "cold" e-mails from international students seeking for admission, TA, and RA. Most of the time, we ignore these emails, but in some rare occasions we do answer them. So how to write an email that can get our attention?
+
+\begin{center}
+\includegraphics[scale=0.5]{files/emails.png}
+\end{center}
+
+
+Faculty received many "cold" e-mails from international students seeking for admission, TA, and RA. Most of the time, we ignore these emails, but in some rare occasions we do answer them. So why do we ignore some but reply to others and how to write an email that get our attention?
 
 
 
@@ -711,7 +740,7 @@ However, if your intention is a PhD in CS, then you likely need to be in the CS 
 
 
 \begin{center}
-    \includegraphics[scale=0.2]{alpinist-climbing-peak-mountain-comic-hand-drawn-vector-illustration.jpg}
+    \includegraphics[scale=0.2]{files/alpinist-climbing-peak-mountain-comic-hand-drawn-vector-illustration.jpg}
   \end{center}
 
 
@@ -753,7 +782,7 @@ If you have an MS then some course work \emph{might be} transferred for course c
 
 
 \begin{center}
-\includegraphics[scale=0.3]{c4a.png}
+\includegraphics[scale=0.3]{files/c4a.png}
 \end{center}
 
 
@@ -782,7 +811,7 @@ This summarizes the main differences between CS PhD in the US and other countrie
 \section{How do I call or address a professor?}\label{sec:address}
 
 \begin{center}
-\includegraphics[scale=0.6]{c5.png}
+\includegraphics[scale=0.6]{files/c5.png}
 \end{center}
 
 If you're reaching out to a professor for the first time,  address them as either Prof. Lastname or Dr. Lastname. Many international students use Prof. or Dr. FirstName LastName, but this can come across as if you're simply copying and pasting names. It's not necessary, so stick with Prof. or Dr. Lastname.
@@ -803,7 +832,7 @@ Do not include ranking (e.g., Assistant, Associate, Scientist, ...) when referri
 PhD students often ask why their salary is so low compared to ludicrous grants their advisers get. They also wonder why their offer letters sometime mentioned that their benefits appear better than what they actually receive (i.e., stipend).  This section aims to shed some light to these questions.
 
       \begin{center}
-        \includegraphics[scale=0.3]{c6.png}
+        \includegraphics[scale=0.3]{files/c6.png}
       \end{center}
 
 \begin{table}
@@ -916,6 +945,10 @@ Tab.~\ref{tab:ranking} lists the top 50 CS programs in the US from \href{https:/
 % \begin{itemize}
 % \item \bibentry{nlpphd}
 % \end{itemize}
+
+\chapter{References}
+
+
 
 \chapter{History and Acknowledgement}\label{sec:ack}
 
