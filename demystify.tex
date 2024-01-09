@@ -1,11 +1,14 @@
 \documentclass[oneside,11pt]{memoir}
-\setsecnumdepth{subsection}
-\setcounter{tocdepth}{3}
+\chapterstyle{pedersen}
+
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[margin=1.5in]{geometry}
 \usepackage{soul}
 % \usepackage[small,compact]{titlesec} %very powerful
 \usepackage[most]{tcolorbox}
+\setsecnumdepth{subsection}
+\setcounter{tocdepth}{3}
 \usepackage{enumitem}
 \usepackage{epigraph}
 \usepackage{cite}
@@ -15,7 +18,7 @@
 \usepackage{hyperref}
 \usepackage{wrapfig}
 \setlength\intextsep{0pt} % remove extra space above and below in-line float
-\usepackage{xcolor}
+\usepackage[svgnames]{xcolor}
 \usepackage{hyperref}
 \hypersetup{
   colorlinks,
@@ -69,11 +72,10 @@
 \newcommand{\xz}[1]{\mycomment{Xiaokuan}{[#1]}}{}
 
 
-\title{Demystifying the Computer Science PhD Admission in the US\\{\large A Guide for International Students}}
+\title{Demystifying the Computer Science \\
+  PhD Admission in the US\\{\large A Guideline for International Students}}
 
 \author{\href{https://nguyenthanhvuh.github.io}{ThanhVu (Vu) Nguyen}\\{\small George Mason University, Dept. of Computer Science}}
-
-\chapterstyle{pedersen}
 
 
 \makeatletter
@@ -95,10 +97,6 @@
   \cleardoublepage
 }
 \makeatother
-% \author{ThanhVu H. Nguyen}
-% \title{TITLE OF BOOK}
-% \date{}
-
 
 \begin{document}
 \maketitle
@@ -125,7 +123,7 @@ I wish you the best of luck. And if you follow this guidance, you will at least 
 This document is available at 
 
 \begin{center}
-\url{nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf}, 
+  \href{https://nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf}{nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf},
 \end{center}
 
 \noindent and its \LaTeX{} source is also on \href{https://github.com/nguyenthanhvuh/phd-cs-us}{Github}. If you have questions or comments, feel free to create a \href{https://github.com/nguyenthanhvuh/phd-cs-us/issues}{GitHub issue} for discussion.
@@ -139,7 +137,7 @@ The main points of this guideline are summarized here. This gives you an overvie
 
 
 \begin{enumerate}
-  \item Should you apply to a CS PhD in the US?
+  \item Should you apply?
         \begin{itemize}
           \item \emph{Yes, definitely}.  CS PhD study in the US is fully funded and admission into good universities is not any harder than non-US schools (\S\ref{sec:should}).
         \end{itemize}
@@ -159,11 +157,12 @@ The main points of this guideline are summarized here. This gives you an overvie
         \end{itemize}
   \item What to do after getting admitted?
         \begin{itemize}
+                \item  Celebrating! Now it is your turn to evaluate the school!
           \item Attend \emph{Open House} to learn more about the place and \emph{interview} profs---they would be much more willing to talk to you now (\S\ref{sec:accepted}).
         \end{itemize}
   \item Funding
         \begin{itemize}
-          \item TA and RA are two main sources of funding.  TA (teaching assistantship) is provided by the department to help profs. with classes (e.g., grading). RA (research assistantship) is provided by profs. to help them with their research (\S\ref{sec:funding}).
+          \item TA and RA are two main funding sources.  TA (teaching assistantship) is provided by the department to help profs. with classes (e.g., grading). RA (research assistantship) is provided by profs. to help them with their research (\S\ref{sec:funding}).
         \end{itemize}
   \item Choosing School and Professors
         \begin{itemize}
@@ -206,7 +205,7 @@ Second, applying to a good US university \emph{should not} be any harder than at
 
 \section*{Additional Resources}
 \begin{itemize}
-    \item \href{https://parentheticallyspeaking.org/articles/us-cs-phd-faq/}{Getting a Computer Science PhD in the USA} by Shriram Krishnamurthi
+  \item \href{https://parentheticallyspeaking.org/articles/us-cs-phd-faq/}{Getting a Computer Science PhD in the USA} by Shriram Krishnamurthi
 \end{itemize}
 
 \chapter{How is Your Application Evaluated?}\label{sec:evalapps}
@@ -217,8 +216,8 @@ After you submit your PhD application (usually November--December), it will firs
 for general requirements, e.g., did you submit your transcripts and standard scores? did your reference writers submit their letters? Usually, this screen process is done through a central university system (i.e., not by the CS department).  If you pass this screen, your application will be forwarded to the CS department for further evaluation. If you don't, then the system will inform you what is missing and what you need to do. 
 
 \begin{commentbox}[Hakan:]
-    At GMU, for full consideration, students should make sure to submit \textbf{ALL} required documents by the application deadline, and should never assume that some required documents (such as official TOEFL scores or official diplomas/transcripts) will be waived by the admissions office. If something is listed and not marked as ``optional'', it is mandatory and they should plan for submitting all those.
-  \end{commentbox}
+  At GMU, for full consideration, students should make sure to submit \textbf{ALL} required documents by the application deadline, and should never assume that some required documents (such as official TOEFL scores or official diplomas/transcripts) will be waived by the admissions office. If something is listed and not marked as ``optional'', it is mandatory and they should plan for submitting all those.
+\end{commentbox}
 
 Then, applications are reviewed by a \textbf{PhD admission committee} (adcom) that consists of faculty members in CS (in some cases the committee can involve affiliated faculty from different disciplines). These faculty have a wide-range of expertise and background to ensure diverse perspectives in the evaluation process. The size and the review load of the adcom depends on the department size. At GMU, the PhD adcom typically has 15--20 faculty, and each committee member is assigned to review 25--30 applications. Note that GMU, UMass, and probably many other schools, have separate adcom for MS programs.
 
@@ -262,7 +261,7 @@ The most effective evidence of research ability is having \textbf{published pape
 Having papers published is a sign that the applicant has successfully involved in research.
 
 \begin{commentbox}[Vu:]
-    Many international students mention Scopus Q1, which consists of various journals from IEEE, Elsevier, and many other publishers.  I don't know/recognize many of journals listed in Scopus Q1. This might be something to be mindful of, as \textbf{CS} faculty might not be too familiar with Scopus or journals listed there, so devote some part in your statement to discuss the significance of your papers.
+  Many international students mention Scopus Q1, which consists of various journals from IEEE, Elsevier, and many other publishers.  I don't know/recognize many of journals listed in Scopus Q1. This might be something to be mindful of, as \textbf{CS} faculty might not be too familiar with Scopus or journals listed there, so devote some part in your statement to discuss the significance of your papers.
 \end{commentbox}
 
 However, it is understandable that many students do not have the opportunities to publish in top places. Thus, general writings, even those under submissions or rejected, would still be good (and much better than nothing).  But be sure to upload your papers with your application and talk about them in your statement (see \S\ref{sec:research-statement}).  Note that local conferences and non-English journals or conferences do
@@ -297,18 +296,18 @@ For example, participating in Math Olympiads if you want to do theory or  winnin
 \section{Letter of Recommendation (LOR)}\label{sec:lor}
 
 \begin{center}
-    \includegraphics[width=0.6\linewidth]{files/c6.png}
-  \end{center}
-  
+  \includegraphics[width=0.6\linewidth]{files/c6.png}
+\end{center}
 
-  
+
+
 Most PhD programs will require at least \textbf{two LORs}. Having a letter from an internationally recognized researcher can greatly strengthen your application. However, obtaining such letters
 can be challenging for international students, who might not have much interactions with such experts. So it is fine to have a letter from people (e.g., profs, researchers, postdocs who mentored you) that know you well enough to talk about \emph{your research experience and capabilities}. Many students get letters from supervisors from companies where they did internships or are working at. It is OK as long as it is a research-based personalized letter (once again, we are talking about PhD applications, not MS).
 
 
 
 \begin{commentbox}[Vu:]
-    If your grading system is not US standard or you are from a good school unknown outside of your country, you can ask your reference writers to explain about that in their letters.  For example, "Bach Khoa" are the top universities in Vietnam for STEM studies but few people outside Vietnam know about them.  So if you are from there, you should ask your reference writers to mention that.
+  If your grading system is not US standard or you are from a good school unknown outside of your country, you can ask your reference writers to explain about that in their letters.  For example, "Bach Khoa" are the top universities in Vietnam for STEM studies but few people outside Vietnam know about them.  So if you are from there, you should ask your reference writers to mention that.
 \end{commentbox}
 
 \paragraph{Self-written Letters} Many international students write letters themselves, typically due to the requests of their profs., and have them signed by their profs. Such letters have little values and are considered weak by reviewers (why can you not even find someone who cares or knows enough about you to write a candid personal reference letter?).  Instead of the reference writer talking about you, in this case it is you who write about yourself (and they just sign the letter).
@@ -321,14 +320,14 @@ can be challenging for international students, who might not have much interacti
 
 \begin{commentbox}[Vu:]
 
-    Another sad reality is that some professors are unwilling to write letters or write weak ones because they do not want (good) students to go abroad or only go to places where they want the students to go to. If you are in this situation, you should find someone else to write for you.
-    \tcblower
-    
-    Sometimes students would go through great length just to get letters from well-known professors in their school (e.g., department head). But as mentioned, if these professors do not know you, the letters are generic and carry little value, in fact, \red{red flags}. Moreover, a top professor in Vietnam might not be well-known to US faculty (see more details in \S\ref{sec:your-school}). So save the trouble and just get letters from \emph{any} professors/supervisors who knows you well and can write a good letter about \emph{your} research ability. It's better to have a good personalized
-    letter about your own research ability from someone who is less
-    well-known than a generic/weak letter from a well-known person.
+  Another sad reality is that some professors are unwilling to write letters or write weak ones because they do not want (good) students to go abroad or only go to places where they want the students to go to. If you are in this situation, you should find someone else to write for you.
+  \tcblower
+
+  Sometimes students would go through great length just to get letters from well-known professors in their school (e.g., department head). But as mentioned, if these professors do not know you, the letters are generic and carry little value, in fact, \red{red flags}. Moreover, a top professor in Vietnam might not be well-known to US faculty (see more details in \S\ref{sec:your-school}). So save the trouble and just get letters from \emph{any} professors/supervisors who knows you well and can write a good letter about \emph{your} research ability. It's better to have a good personalized
+  letter about your own research ability from someone who is less
+  well-known than a generic/weak letter from a well-known person.
   
-  \end{commentbox}
+\end{commentbox}
 
 \paragraph{Waiving your Right}  Choosing not to look at a reference letter is pretty standard in school and job applications. When you waive your right to see the letter, it adds a layer of trust, showing you're confident in your choice of referees and that you're not trying to twist their words. It's also about keeping things open and honest between you and your letter writers, and encourages them to be real about your strengths and qualifications. Plus, it keeps things private.
 
@@ -392,7 +391,7 @@ Admission committee will look for this part at the end of the statement, so do n
 
 \subsection*{Additional Resources}
 \begin{itemize}
-\item \href{http://www.pl-enthusiast.net/2022/10/03/how-to-write-a-grad-school-personal-statement/}{How to Write a Grad School Personal Statement} by Mike Hicks
+  \item \href{http://www.pl-enthusiast.net/2022/10/03/how-to-write-a-grad-school-personal-statement/}{How to Write a Grad School Personal Statement} by Mike Hicks
 \end{itemize}
 % \subsection{Outline of a LOR}\label{sec:lor-outline}
 
@@ -409,7 +408,7 @@ So what can you do about this? several things including asking your CS dept to p
   Sometime PhD admission committee in the US will share a document such as \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Foreign-Top-Schools}{this one}, which lists the top schools in several countries. In some cases we ask other faculty and students if we think they know about the place.  For example, when I was a postdoc at UMD, people in admission committee ask me to evaluate applicants from Vietnam.  During my time at UNL and now here at GMU, I have looked at Vietnamese applications (whether they are assigned to me or not) and provide input to their reviewers, e.g., X is the top tech school in Vietnam and so it should be \emph{top} instead of \emph{unknown} foreign, which makes a huge difference.
 \end{commentbox}
 \begin{commentbox}[Deepak:] 
-If an applicant is anxious about their school not being known outside their country, they can provide information about their school and department, with independent sources where such information can be verified.
+  If an applicant is anxious about their school not being known outside their country, they can provide information about their school and department, with independent sources where such information can be verified.
 \end{commentbox}
 
 \section{Grades and GREs}\label{sec:grades}
@@ -479,14 +478,14 @@ Typically, an interview takes about 15-30 minutes, and one important aspect of e
 
   \item \textbf{LoRs}: Writer 1, Writer 2, Writer 3.  If this is a shared document, you might want to omit names and just use writer X. Under each is their status, e.g., sent/not yet/reminder needed, etc.
 
-You can then share this sheet with your reference writers and remind them to submit LoRs on your behalf (see \S\ref{sec:lor}).
+        You can then share this sheet with your reference writers and remind them to submit LoRs on your behalf (see \S\ref{sec:lor}).
 \end{itemize}
 
-%\paragraph{Communicating with LoR writers and People Who Support You} 
+% \paragraph{Communicating with LoR writers and People Who Support You}
 
-%stressfull time, rely on support from others
-%ask ppl to review your SOPs
-%provide information for LORs, ..
+% stressfull time, rely on support from others
+% ask ppl to review your SOPs
+% provide information for LORs, ..
 %
 
 
@@ -680,7 +679,7 @@ Ultimately, choose a prof. that fits you the most by communicating with them, ta
 
 \subsubsection*{Additional Resources}
 \begin{itemize}
-    \item \href{https://www.cs.columbia.edu/wp-content/uploads/2019/03/Get-Advisor.pdf}{The Definitive "what do I ask/look for" in a PhD Advisor Guide}
+  \item \href{https://www.cs.columbia.edu/wp-content/uploads/2019/03/Get-Advisor.pdf}{The Definitive "what do I ask/look for" in a PhD Advisor Guide}
 \end{itemize}
 \subsection{Types of Faculty: Who can serve as a PhD adviser?}\label{sec:faculty-types}
 
@@ -772,14 +771,14 @@ Finally, profs. are very busy so don't take it personally if you don't get anyth
 
 
 \begin{commentbox}
-    [Deepak:]
-    In my view, cold emails are not welcome by most faculty members and should be avoided. However, if one is already admitted to a program in some department, by all means, send an email to the faculty you may be interested in working with, but do mention right at the beginning that you are already admitted to the program as well as several other universities. State specific areas (preferably specific topics-ML, robotics instead of AI).
+  [Deepak:]
+  In my view, cold emails are not welcome by most faculty members and should be avoided. However, if one is already admitted to a program in some department, by all means, send an email to the faculty you may be interested in working with, but do mention right at the beginning that you are already admitted to the program as well as several other universities. State specific areas (preferably specific topics-ML, robotics instead of AI).
 \end{commentbox}
 
 \subsubsection*{Additional Resources}
 \begin{itemize}
-    \item \href{https://yonatanbisk.com/emailing_professors.html}{A Note about Emailing Professors} by Yonatan Bisk
-    \item \S\ref{sec:accept-postpone-decline} How to accept/postpone/decline PhD offers (and do it gracefully)
+  \item \href{https://yonatanbisk.com/emailing_professors.html}{A Note about Emailing Professors} by Yonatan Bisk
+  \item \S\ref{sec:accept-postpone-decline} How to accept/postpone/decline PhD offers (and do it gracefully)
 \end{itemize}
 
 \subsection{PhD in other related fields: CE, IST, Cybersecurity}\label{sec:related-fields}
@@ -979,21 +978,21 @@ There are many stories on how students are mistreated, stressed, and miserable. 
     \bottomrule
   \end{tabular}
 \end{table}
-%Virginia Tech\red{$^*$}  \\
+% Virginia Tech\red{$^*$}  \\
 Tab.~\ref{tab:ranking} lists the top 50 CS programs in the US from \href{https://www.csrankings.org}{CSRankings.org}, a ranking system  based on faculty publications at top CS conferences.
 
 % \section{Additional Resources}
 % \begin{itemize}
-          %     \item \bibentry{nlpphd}
-          %   \end{itemize}
+%   \item \bibentry{nlpphd}
+% \end{itemize}
 
-%\chapter{Additional Resources}
+% \chapter{Additional Resources}
 
 
 % \chapter{Undergraduate Research Opportunities}
 
 % Prospective PhD students are often unaware of the importance of research experience in their application.  This provides both concrete research experiences and potential LOR writers that can talk about your research ability.
-% %This is especially true for students from small colleges where research opportunities are limited.  
+% % This is especially true for students from small colleges where research opportunities are limited.
 % This section aims to provide some guidance on how to gain research experience as an undergraduate student. %This section is written together Didier, a PhD student at GMU who did his undergraduate study in Rwanda.
 
 % \paragraph{Locally} There are many ways to find research opportunities right in your own institution.  If you did well or like a class, you can check with the professor of that class for research opportunities.  Sometimes professors would mention that they look for undergraduates on their websites, so do check those out! Even if they say they are looking for graduate students, you still should contact them and ask.  You can also ask your academic adviser or other faculty members for suggestions.  Finally, you can also ask your peers who are already doing research.  You can use the method described in \S\ref{sec:contact} to contact professors
@@ -1001,25 +1000,25 @@ Tab.~\ref{tab:ranking} lists the top 50 CS programs in the US from \href{https:/
 % In short, the most important thing is that you need to \emph{ask}!  Don't be shy, don't be afraid of rejection, and don't be afraid of being ignored or that you're not good enough.  Just ask!  The worst thing that can happen is that you get a ``no'' or no response.  But you will never know if you don't ask.  And if you get a ``no'', you can always ask again later.  There are students who got rejected the first time but got accepted the second time.  So don't give up!
 
 % \paragraph{Online Research Communities and Open Source Contributions}:
-%                     Places such as Github offer many opportunities for research, even though they might not appear so (e.g., they do not explicitly mention research). Students can explore repositories related to their areas of interest, collaborate with other contributors, and actively engage in open source research projects. By contributing code, fixing bugs, implementing new features, or providing documentation, students can gain practical research experience and interact with experienced developers and researchers in the field.
+% Places such as Github offer many opportunities for research, even though they might not appear so (e.g., they do not explicitly mention research). Students can explore repositories related to their areas of interest, collaborate with other contributors, and actively engage in open source research projects. By contributing code, fixing bugs, implementing new features, or providing documentation, students can gain practical research experience and interact with experienced developers and researchers in the field.
 
 % \paragraph{Paid or Unpaid}  travel opportunities, publishing opportunities, etc
 
 
-%                    \section{Virtual Research Opportunities Beyond Physical Boundaries (written by Didier)}
-%                     \didi{In my experience, prospective PhD students (from Rwanda) are often unaware of the information provided in this document throughout their undergraduate. For this reason they often find themselves unprepared for PhD admission process by the time they finish undergraduate and have to spend a year or more to improve their application profiles. I think it would be beneficial to expand the document to also target students who are not yet ready for the application process to help them improve on all criteria considered during admission. I drafted the short essay on how to gain research experience remotely in order to improve their research profile and potentially get LOR from experts (hopefully faculty)}\\
-%                     In the realm of computer science, research experience plays a crucial role in securing admissions to top-tier Ph.D. programs. However, students from underrepresented small colleges, both in the United States and internationally, often encounter limited research opportunities within their institutions. Thankfully, there exists an alternative pathway for these aspiring researchers to gain valuable research experience, even without being physically present at a university.
+% \section{Virtual Research Opportunities Beyond Physical Boundaries (written by Didier)}
+% \didi{In my experience, prospective PhD students (from Rwanda) are often unaware of the information provided in this document throughout their undergraduate. For this reason they often find themselves unprepared for PhD admission process by the time they finish undergraduate and have to spend a year or more to improve their application profiles. I think it would be beneficial to expand the document to also target students who are not yet ready for the application process to help them improve on all criteria considered during admission. I drafted the short essay on how to gain research experience remotely in order to improve their research profile and potentially get LOR from experts (hopefully faculty)}\\
+% In the realm of computer science, research experience plays a crucial role in securing admissions to top-tier Ph.D. programs. However, students from underrepresented small colleges, both in the United States and internationally, often encounter limited research opportunities within their institutions. Thankfully, there exists an alternative pathway for these aspiring researchers to gain valuable research experience, even without being physically present at a university.
 
-%                     \textbf{Virtual Research Programs}:
-%                     Several universities, organizations, and research institutions offer virtual internships and research programs aimed at providing hands-on research experience. These programs often involve working remotely under the guidance of experienced mentors and collaborating with a team of fellow researchers. For instance, \href{https://docs.google.com/forms/d/1btIwt4HwjyKMOUk-EMy3rbkfWzFxv2lNrMm_zkd0pA4/viewform?edit_requested=true}{UIUC+ Summer Undergraduate Research in Software Engineering}  offers an unpaid remote internship for software engineering students all over the world to collaborate with mentors from University of Illinois at Urbana Champaign.
-%                     Virtual internships offer opportunities to contribute to ongoing research projects, conduct experiments, analyze data, and write research reports. Students can search for such programs through university websites, research institutes, or as of recently chatGPT (or Bard).
+% \textbf{Virtual Research Programs}:
+% Several universities, organizations, and research institutions offer virtual internships and research programs aimed at providing hands-on research experience. These programs often involve working remotely under the guidance of experienced mentors and collaborating with a team of fellow researchers. For instance, \href{https://docs.google.com/forms/d/1btIwt4HwjyKMOUk-EMy3rbkfWzFxv2lNrMm_zkd0pA4/viewform?edit_requested=true}{UIUC+ Summer Undergraduate Research in Software Engineering}  offers an unpaid remote internship for software engineering students all over the world to collaborate with mentors from University of Illinois at Urbana Champaign.
+% Virtual internships offer opportunities to contribute to ongoing research projects, conduct experiments, analyze data, and write research reports. Students can search for such programs through university websites, research institutes, or as of recently chatGPT (or Bard).
 
-                    
 
-%                     \textbf{Online Conferences and Workshops}:
-%                     Attending online conferences and workshops is another way to gain exposure to cutting-edge research and establish connections with experts in the field. Many conferences now provide virtual participation options, enabling students to access research talks, poster sessions, and panel discussions and sometimes access designated chat rooms or networking events where participants can engage with researchers, ask questions, and seek potential research collaborations. It is beneficial to also create profiles academic collaboration platforms such as ResearchGate. By creating profiles, joining relevant research groups, and participating in discussions, students can connect with established researchers, contribute to ongoing projects, and potentially collaborate on publications or research proposals as they provide access
 
-%                     In conclusion, for students lacking research opportunities at their small colleges, the virtual realm offers a wealth of possibilities to gain valuable research experience. Engaging with open source projects, joining online research communities, utilizing academic collaboration platforms, participating in virtual internships, and attending online conferences are all avenues to contribute to research, connect with experts, and enhance one's research profile.
+% \textbf{Online Conferences and Workshops}:
+% Attending online conferences and workshops is another way to gain exposure to cutting-edge research and establish connections with experts in the field. Many conferences now provide virtual participation options, enabling students to access research talks, poster sessions, and panel discussions and sometimes access designated chat rooms or networking events where participants can engage with researchers, ask questions, and seek potential research collaborations. It is beneficial to also create profiles academic collaboration platforms such as ResearchGate. By creating profiles, joining relevant research groups, and participating in discussions, students can connect with established researchers, contribute to ongoing projects, and potentially collaborate on publications or research proposals as they provide access
+
+% In conclusion, for students lacking research opportunities at their small colleges, the virtual realm offers a wealth of possibilities to gain valuable research experience. Engaging with open source projects, joining online research communities, utilizing academic collaboration platforms, participating in virtual internships, and attending online conferences are all avenues to contribute to research, connect with experts, and enhance one's research profile.
 
 
 \chapter{Cultural Differences and Other Issues}\label{sec:cultural}
@@ -1034,19 +1033,19 @@ Students, especially international ones, often get confused on what to do after 
 
 \paragraph{Accepting an offer} If you decide to accept an offer, you can say something like: \emph{``Thank you for the offer.  I am very excited about it and would like to accept it.  I look forward to working with you.  Can you please send me more details about the offer and what to do next?''} .  Here you are not only accepting the offer but also asking for more details.  This is perfectly fine and professors will understand and appreciate your enthusiasm.  They will likely send you more details about the offer and what to do next.  If you decide to accept an offer, you should do so quickly.
 
- If you have better offers, you might mention them to the professor and ask if they could match them. It is unlikely they can do so as RA might be fixed by the department and not negotiable. They might recommend you for departmental fellowships or some additional perks. 
+If you have better offers, you might mention them to the professor and ask if they could match them. It is unlikely they can do so as RA might be fixed by the department and not negotiable. They might recommend you for departmental fellowships or some additional perks.
 
 \paragraph{Postponing an offer} If you need more time to decide, you can ask for more time.  You can say something like: \emph{``Thank you for the offer.  I am very excited about it.  However, I am still waiting for other offers and need more time to decide.  Would it be possible to postpone the decision for a few weeks?''}.  This is perfectly fine and professors will understand and might even appreciate your honesty.  They will likely give you a few weeks to decide.  If you need more time, you can ask for more time.  But do not ask for too much time, e.g., more than a month.  You also should not postpone the offers multiple times, which will likely annoy people.   
 
 \paragraph{Declining an offer} If you decide to decline or reject an offer, you can say something like: \emph{``Thank you for the offer.  I am very excited about it.  However, I have decided to accept another offer.  I appreciate your time and consideration.  I hope we can work together in the future.''}  Professors will understand and will likely wish you good luck.  If you decide to reject an offer, you should do so quickly.  
 
 This is very similar to a professional job offer.  You should be serious about it and communicate promptly. Importantly, do not accept an offer and then later reject it.  If you do this with a company, you might face legal consequences.  If you do this with a professor, they will likely not do anything about it (i.e., not worth their time) but they will not want to work with you in the future.
- 
 
-%1. I'm fine if I extend an offer and you request a delay, even if it's because you're exploring other programs. No issue here, it's similar to job offerings. Of course, I may not be able to wait indefinitely and may extend the offer to another student, but I'll let you know that.
-%2. I'm also okay if you find a program or professor that's a better fit. Similar to the first point, no hard feelings at all. However, I'd appreciate a prompt notification of your decision so I can extend an offer to another student.
-%3. I'm NOT okay if you accept my offer but then, upon finding something better, tell me of your decision to withdraw Just like in job offers, once you are committed to an offer, there should be a compelling reason to withdraw (and claiming "I found somewhere better" is the weakest excuse).
-%While I won't take any actions against you (a company might), I naturally will remember this and may be cautious in future interactions. I'll also reconsider making similar offers to students in similar situations.
+
+% 1. I'm fine if I extend an offer and you request a delay, even if it's because you're exploring other programs. No issue here, it's similar to job offerings. Of course, I may not be able to wait indefinitely and may extend the offer to another student, but I'll let you know that.
+% 2. I'm also okay if you find a program or professor that's a better fit. Similar to the first point, no hard feelings at all. However, I'd appreciate a prompt notification of your decision so I can extend an offer to another student.
+% 3. I'm NOT okay if you accept my offer but then, upon finding something better, tell me of your decision to withdraw Just like in job offers, once you are committed to an offer, there should be a compelling reason to withdraw (and claiming "I found somewhere better" is the weakest excuse).
+% While I won't take any actions against you (a company might), I naturally will remember this and may be cautious in future interactions. I'll also reconsider making similar offers to students in similar situations.
 
 
 \section{Academic Integrity (Cheating and Plagiarism)} 
@@ -1064,7 +1063,7 @@ Here is the typically steps: (i) a faculty suspecting a cheating case will repor
 There's a misconception that in the US it's all business, with professors as bosses who pay students for their work, and you doing something nice implying you expect something in return. However, the reality is quite the opposite. While people can be straightforward and direct, they are also friendly and informal. You can call your professor by their first name (\S\ref{sec:address}), disagree with them and argue (and gain respect doing so), seek their help (even on personal matters), come to their houses for parties or gathering, and give them small thoughtful gifts that they put on their desks (\S\ref{sec:gifts}).  Many students and professors maintain lifelong relationships, staying in touch through cards, emails, and calls, even after their academic journey ends. %These connections are genuine and meaningful.
 
 % \begin{commentbox}
-%     [DK:] Here are a few items you may consider addressing: putting international students in touch with other students from their countries, assuring them that they would be picked up from airports upon their arrival and that their initial stay will be taken care of. Most universities have other resources for these, but it is worth mentioning that they would be taken care of upon arrival and can get help during the transition phase. Learning to cook was a big deal when I arrived over 50 years ago-August 1973. But things have changed as one can find many ethnic food places, a big contrast from 1973, when there were two Indian restaurants in Greater Boston area.
+%   [DK:] Here are a few items you may consider addressing: putting international students in touch with other students from their countries, assuring them that they would be picked up from airports upon their arrival and that their initial stay will be taken care of. Most universities have other resources for these, but it is worth mentioning that they would be taken care of upon arrival and can get help during the transition phase. Learning to cook was a big deal when I arrived over 50 years ago-August 1973. But things have changed as one can find many ethnic food places, a big contrast from 1973, when there were two Indian restaurants in Greater Boston area.
 % \end{commentbox}
 
 
