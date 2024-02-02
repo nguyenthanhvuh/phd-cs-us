@@ -64,6 +64,14 @@
 \renewcommand{\figurename}{Fig.}
 \renewcommand{\tablename}{Tab.}
 \def\Section{\S}
+\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\tableautorefname}{Tab.}
+\makeatletter
+\renewcommand{\chapterautorefname}{\S\@gobble}
+\renewcommand{\sectionautorefname}{\S\@gobble}
+\renewcommand{\subsectionautorefname}{\S\@gobble}
+\makeatother
+
 \newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
 \newcommand{\tvn}[1]{\mycomment{TVN}{#1}}{}
 \newcommand{\didi}[1]{\mycomment{Didier}{#1}}{}
@@ -110,8 +118,8 @@ discourages students from applying but also creates the perception that
 getting admitted to a CS PhD program in the US is difficult compared to other countries.
 
 % though \emph{very} top schools could be very selective, e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU
-So I want to share some details about the PhD admission process and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
-While this document is primarily intended for students interested in CS, it may be relevant to students from various disciplines. 
+So I want to share some details about the admission process and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
+While this document is primarily intended for students interested in CS, it might be relevant to students from various disciplines.
 Furthermore, although many examples are specifics for schools that I and other contributors of this document know about, the information should be generalizable to other R1\footnote{An \href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1 institution} in the US is a research-intensive university with a high level of research activity across various disciplines. Currently, 146 (out of 4000) universities are classified as R1.} institutions in the US (and universities in other countries).
 
 In addition, this document can help \textbf{US faculty and admission committee} gain a better understanding of international students and their cultural differences.  By recognizing and leveraging these differences, CS programs in the US can attract larger and more competitive application pools from international students.
@@ -133,49 +141,49 @@ This document is available at
 
 \chapter{Summary}\label{sec:summary}
 
-The main points of this guideline are summarized here. This gives you an overview to decide which specific topics you want to explore more thoroughly.
+Below we summarize the main points of this guideline. This gives you an overview to decide which specific topics you want to explore more thoroughly.
 
 
 \begin{enumerate}
   \item Should you apply?
         \begin{itemize}
-          \item \emph{Yes, definitely}.  CS PhD study in the US is fully funded and admission into good universities is not any harder than non-US schools (\S\ref{sec:should}).
+          \item \emph{Yes, definitely}.  CS PhD study in the US is fully funded and admission into good universities is not any harder than non-US schools (\autoref{sec:should}).
         \end{itemize}
   \item How is your application evaluated?
         \begin{itemize}
-          \item Applications are evaluated by the \emph{PhD Admission} committee and each application is reviewed by typically three faculty (\S\ref{sec:evalapps}).
-          \item Individually faculty \emph{cannot directly admit} a student---so do not email and ask if you have a chance. However, faculty can \emph{advocate} for a student and therefore increase their admission chance---so contact and introduce yourself (\S\ref{sec:contact}).
-        \end{itemize}
+          \item Applications are evaluated by the \emph{PhD Admission} committee and each application is reviewed by typically three faculty (\autoref{sec:evalapps}).
+          \item Individually faculty \emph{cannot directly admit} a student---so do not email and ask if you have a chance. However, faculty can \emph{advocate} for a student and therefore increase their admission chance---so do contact and introduce yourself (\autoref{sec:contact}).
+         \end{itemize}
   \item Application Materials
         \begin{itemize}
-          \item The committee will look at various factors, but the most important ones are research ability, e.g., publications, personal statement, and recommendation letters.
-          \item LORs are very important, but only if they are personalized and talk about your research ability (\S\ref{sec:lor}).
-          \item Personal statement is very important. Write it in such a way that makes you \emph{stand out} (\S\ref{sec:research-statement} and \S\ref{sec:improve-your-chance})
-          \item GRE \emph{is not} required (\S\ref{sec:grades}). Spend your time on something else.
-          \item Grades are important, but depend on the reputation of your school (\S\ref{sec:grades}).
-          \item Getting an interview is typically a \emph{good sign} (no one wants to interview weak candidates) (\S\ref{sec:interview}).
+          \item The committee will look at various factors, but the most important ones are research ability, e.g., publications, statement of purpose (SOP), and  letters of recommendation (LORs).
+          \item LORs are very important, but only if they are personalized and talk about your research ability (\autoref{sec:lor}).
+          \item SOP is very important. Write it in such a way that makes you \emph{stand out} (\autoref{sec:research-statement} and \autoref{sec:improve-your-chance})
+          \item GRE \emph{is not} required (\autoref{sec:grades}). Spend your time on something else!
+          \item Grades are important, but depend on the reputation of your school (\autoref{sec:grades}).
+          \item Getting an interview is typically a \emph{good sign} as no one wants to interview weak candidates (\autoref{sec:interview}).
         \end{itemize}
   \item What to do after getting admitted?
         \begin{itemize}
                 \item  Celebrating! Now it is your turn to evaluate the school!
-          \item Attend \emph{Open House} to learn more about the place and \emph{interview} profs---they would be much more willing to talk to you now (\S\ref{sec:accepted}).
+          \item Attend \emph{Open House} to learn more about the place and \emph{interview} profs---they would be much more willing to talk to you now (\autoref{sec:accepted}).
         \end{itemize}
   \item Funding
         \begin{itemize}
-          \item TA and RA are two main funding sources.  TA (teaching assistantship) is provided by the department to help profs. with classes (e.g., grading). RA (research assistantship) is provided by profs. to help them with their research (\S\ref{sec:funding}).
+          \item TA and RA are two main funding sources.  TA (teaching assistantship) is provided by the department to help profs. with classes (e.g., grading). RA (research assistantship) is provided by profs. to help with their research (\autoref{sec:funding}).
         \end{itemize}
   \item Choosing School and Professors
         \begin{itemize}
-          \item Many schools do not offer PhD studies in CS and many CS professors \emph{cannot} advise or graduate PhD students  (\S\ref{sec:schoolsandprofs}).
-          \item Contacting a prof. for research opportunities is recommended, but do it \emph{properly} (\S\ref{sec:contact}).
+          \item Many schools do not offer PhD studies in CS and many CS professors \emph{cannot} formally advise or graduate PhD students  (\autoref{sec:schoolsandprofs}).
+          \item Contacting a prof. for research opportunities is recommended, but do it \emph{properly} (\autoref{sec:contact}).
         \end{itemize}
   \item Miscs and FAQS
         \begin{itemize}
-          \item Increasing your admission chance by being unique and standing out (\S\ref{sec:improve-your-chance}).
-          \item You can successfully apply to CS PhD even if you have non-STEM background (\S\ref{sec:non-stem}).
-          \item Compared to other countries, CS PhD in the US does not require an MS degree but has longer PhD study time (\S\ref{sec:non-us-differences}).
-          \item Your 5--6 year PhD program costs about \$400K in total, but you \emph{do not} pay for it (\S\ref{sec:ra-cost}).
-          \item Despite some miserable stories on social media, many PhD students have good mentors, supportive lab mates, healthy working environment ... and are happy (\S\ref{sec:happy}).
+          \item Increasing your admission chance by being unique and standing out (\autoref{sec:improve-your-chance}).
+          \item You can successfully apply to CS PhD even if you have non-STEM background (\autoref{sec:non-stem}).
+          \item Compared to other countries, CS PhD in the US does not require an MS degree but has longer PhD study time (\autoref{sec:non-us-differences}).
+          \item Your 5--6 year PhD program costs about \$400K in total, but you \emph{do not} pay for it (\autoref{sec:ra-cost}).
+          \item Despite some miserable stories on social media, many PhD students have good mentors, supportive lab mates, healthy working environment ... and are happy (\autoref{sec:happy}).
         \end{itemize}
 \end{enumerate}
 
@@ -189,15 +197,15 @@ First, I want to emphasize that PhD students in Computer Science \emph{do not} n
 universities in the US. If you are admitted, you will almost certainly
 receive \emph{full funding} to support your study, including tuition,
 health insurance, and stipend (monthly salary). Moreover, depending on the university,
-you may even receive additional benefits such as summer pay, laptops, (conference/workshop) traveling. \S\ref{sec:funding} provides more details on funding.
+you may even receive additional benefits such as summer pay, laptops, (conference/workshop) traveling. \autoref{sec:funding} provides more details on funding.
 
-Second, applying to a good US university \emph{should not} be any harder than at schools in other countries. In fact, it might even be more flexible since CS PhD in the US \emph{do not} require having an MS or a topic/proposal/adviser in advance. If you believe you have a chance in other countries, e.g., South Korea, Singapore, Germany, UK, Japan, and Australia, then you will surely have a chance in the US as well. \S\ref{sec:non-us-differences} compares CS PhD study in the US to other countries.
+Second, applying to a good US university \emph{should not} be any harder than at schools in other countries. In fact, it might even be more flexible since CS PhD in the US \emph{do not} require having an MS or a topic/proposal/adviser in advance. If you believe you have a chance in other countries, e.g., South Korea, Singapore, Germany, UK, Japan, and Australia, then you will surely have a chance in the US as well. \autoref{sec:non-us-differences} compares CS PhD study in the US to other countries.
 
 \begin{commentbox}[Vu:]
-  One of the reasons I create this document is that my colleagues at GMU are interested in recruiting Vietnamese students and are surprised when seeing very few applications in Vietnam (see \S\ref{sec:ack}). Each year our CS program receives more than 350 PhD applications, most of which are international but only 3--4 are from Vietnam. In general the number of CS PhD applications from Vietnam to US universities is very low and more would be welcome.
+  One of the reasons I create this document is that my colleagues at GMU are interested in recruiting Vietnamese students and are surprised when seeing very few applications in Vietnam (see \autoref{sec:ack}). Each year our CS program receives more than 350 PhD applications, most of which are international but only 3--4 are from Vietnam. In general the number of CS PhD applications from Vietnam to US universities is very low and more would be welcome.
 \end{commentbox}
 
-\begin{domesticbox}[Domestic students:] If you're a domestic student, you have several advantages in your application.  First, we already know about your school (see \S\ref{sec:your-school}), and you are also more familiar with the US education system and culture.  You also have more opportunities for funding, e.g., through government scholarships for US citizens and residents. Finally, compared to international students, PhD applications in CS from domestic students are few and that can really help your case.
+\begin{domesticbox}[Domestic students:] If you're a domestic student, you have several advantages in your application.  First, we already know about your school (see \autoref{sec:your-school}), and you are also more familiar with the US education system and culture.  You also have more opportunities for funding, e.g., through government scholarships for US citizens and residents. Finally, compared to international students, PhD applications in CS from domestic students are few and that can really help your case.
 \end{domesticbox}
 
 %% Vu: *what's a PhD?*  This [[https://matt.might.net/articles/phd-school-in-pictures/][series of pictures]] from [[https://matt.might.net][Matt Might]] illustrates what a PhD means.
@@ -225,9 +233,9 @@ Then, applications are reviewed by a \textbf{PhD admission committee} (\emph{adc
 
 Each application is assigned to about \emph{three} faculty members, who will evaluate your profile and reach a consensus.  Note that while the assigned reviewers are likely the main ones deciding your application, \emph{every} faculty in the department will have access to your application and can provide inputs and opinions on your profile.
 
-The PhD adcom typically involves assistant professors in the department (see \S\ref{sec:faculty-types} for various faculty titles). This provides junior faculty the opportunities to recruit students. The chair of the committee will be a senior professor, but they likely will not review individual applications and instead assign them to committee members. The chair will look at various factors such as research interests or mentioning faculty names to assign the applications to appropriate faculty. 
+The PhD adcom typically involves assistant professors in the department (see \autoref{sec:faculty-types} for various faculty titles). This provides junior faculty the opportunities to recruit students. The chair of the committee will be a senior professor, but they likely will not review individual applications and instead assign them to committee members. The chair will look at various factors such as research interests or mentioning faculty names to assign the applications to appropriate faculty.
 
-At GMU, we usually decide that a full-time PhD candidate is either (i) admit with funding (TA or RA, see \S\ref{sec:funding}) or (ii) rejected. In other words, in most cases, we either
+At GMU, we usually decide that a full-time PhD candidate is either (i) admit with funding (TA or RA, see \autoref{sec:funding}) or (ii) rejected. In other words, in most cases, we either
 admit you with full funding, or we reject your application. In some rare cases, we admit
 without funding because you have funding on your own, e.g.,
 supported by your government or having external fellowships. We justify
@@ -266,10 +274,10 @@ Having papers published is a sign that the applicant has successfully involved i
   Many international students mention Scopus Q1, which consists of various journals from IEEE, Elsevier, and many other publishers.  I don't know/recognize many of journals listed in Scopus Q1. This might be something to be mindful of, as \textbf{CS} faculty might not be too familiar with Scopus or journals listed there, so devote some part in your statement to discuss the significance of your papers.
 \end{commentbox}
 
-However, it is understandable that many students do not have the opportunities to publish in top places. Thus, general writings, even those under submissions or rejected, would still be good (and much better than nothing).  But be sure to upload your papers with your application and talk about them in your statement (see \S\ref{sec:research-statement}).  Note that local conferences and non-English journals or conferences do
+However, it is understandable that many students do not have the opportunities to publish in top places. Thus, general writings, even those under submissions or rejected, would still be good (and much better than nothing).  But be sure to upload your papers with your application and talk about them in your statement (see \autoref{sec:research-statement}).  Note that local conferences and non-English journals or conferences do
 not carry as much weight since their quality is often unknown to US faculty. However, if you have published in such places, you should still mention them in your statement and explain why they are good.
 
-% In CS, conferences are important and top conferences are prestigious. You can find top CS conferences at places such as \href{https://csrankings.org}{CSRankings}, which ranks CS programs based on how their faculty publish at top \emph{conferences} (see more in \S\ref{sec:ranking}).
+% In CS, conferences are important and top conferences are prestigious. You can find top CS conferences at places such as \href{https://csrankings.org}{CSRankings}, which ranks CS programs based on how their faculty publish at top \emph{conferences} (see more in \autoref{sec:ranking}).
 
 
 
@@ -325,7 +333,7 @@ can be challenging for international students, who might not have much interacti
   Another sad reality is that some professors are unwilling to write letters or write weak ones because they do not want (good) students to go abroad or only go to places where they want the students to go to. If you are in this situation, you should find someone else to write for you.
   \tcblower
 
-  Sometimes students would go through great length just to get letters from well-known professors in their school (e.g., department head). But as mentioned, if these professors do not know you, the letters are generic and carry little value, in fact, \red{red flags}. Moreover, a top professor in Vietnam might not be well-known to US faculty (see more details in \S\ref{sec:your-school}). So save the trouble and just get letters from \emph{any} professors/supervisors who knows you well and can write a good letter about \emph{your} research ability. It's better to have a good personalized
+  Sometimes students would go through great length just to get letters from well-known professors in their school (e.g., department head). But as mentioned, if these professors do not know you, the letters are generic and carry little value, in fact, \red{red flags}. Moreover, a top professor in Vietnam might not be well-known to US faculty (see more details in \autoref{sec:your-school}). So save the trouble and just get letters from \emph{any} professors/supervisors who knows you well and can write a good letter about \emph{your} research ability. It's better to have a good personalized
   letter about your own research ability from someone who is less
   well-known than a generic/weak letter from a well-known person.
   
@@ -355,13 +363,13 @@ Note that most places only have deadlines for the applicant, but are very flexib
 \end{center}
 
 While you might not have control over LORs or \hyperref[sec:your-school]{where your go to school}, you do over your
-statement of purpose (SOP) or personal statement! So write it well because it could make a big difference.
+statement of purpose (SOP) or personal statement\footnote{Some schools separate these documents and ask you to write both: SOP, which focuses on research experiences, and Personal Statement, which is everything more personal, e.g., why PhD, challenges, diversity, etc}! So write it well because it could make a big difference.
 In your statement, you have the opportunity to make your application stand out and unique, which can make you \emph{fit} the CS program you're applying to, even if you don't have very strong research experience.
-A well-written SOP also shows that you can communicate, which is very important in research, and that you can effectively teach and communicate with students, which is important for TA funding (see \S\ref{sec:funding}).
+A well-written SOP also shows that you can communicate, which is very important in research, and that you can effectively teach and communicate with students, which is important for TA funding (see \autoref{sec:funding}).
 % is important because if you need (GTA) funding, it will provide evidence
 % that you can teach and communicate with students.
 
-There are various guides on writing statement, e.g.,~\cite{blattman2022writing}, and \href{https://cs-sop.org/}{many example statements} are available. So I will not talk too much about statements. In short, focus on your research goal and vision, and convince us that you can achieve it through your experience, e.g., published papers, or if you work on some projects by yourself, talk about it. Also, talk about things that adcom members might not know about, e.g., your Github project with 1K+ stars or your regular contributions to well-known open-source projects. Finally, talk about what makes you different than the other 1000 applicants that we are considering (e.g., see \S\ref{sec:improve-your-chance} for increasing your admission chance).
+There are various guides on writing statement, e.g.,~\cite{blattman2022writing}, and \href{https://cs-sop.org/}{many example statements} are available. So I will not talk too much about statements. In short, focus on your research goal and vision, and convince us that you can achieve it through your experience, e.g., published papers, or if you work on some projects by yourself, talk about it. Also, talk about things that adcom members might not know about, e.g., your Github project with 1K+ stars or your regular contributions to well-known open-source projects. Finally, talk about what makes you different than the other 1000 applicants that we are considering (e.g., see \autoref{sec:improve-your-chance} for increasing your admission chance).
 
 
 
@@ -371,7 +379,7 @@ There are various guides on writing statement, e.g.,~\cite{blattman2022writing},
 
 Finally, this is something easy to do, but is neglected by many
 applicants: \textbf{customize the statement} for the school you're applying to,
-e.g., why do you apply \emph{here}? provide names of professors who you're interested in (in many cases your application will be forwarded to them for evaluation).
+e.g., why do you apply \emph{here}? provide names of professors who you're interested in (if they are not already in the adcom, your application might get forwarded to them for evaluation; and they will likely be those who interview you).
 This shows that you're serious and have done homework on places you're applying to.
 Adcom will look for this part at the end of the statement, so do not skip it.
 
@@ -384,7 +392,7 @@ Adcom will look for this part at the end of the statement, so do not skip it.
   convinced, then I will likely recommend rejection (unless I see
   something standout in other parts).
   \tcblower
-  Do careful research on professors, don't mention \emph{emeritus} or  adjunct faculty.
+  Do careful research on professors, don't mention \emph{emeritus} or  adjunct faculty (see more about various types of faculty in \autoref{sec:faculty-types}).
   Also, be careful not to send statements to wrong schools or mixing
   facts (e.g., talking about school X but mentioned about working with
   profs. at school Y; and definitely do not talk about George Washington when applying to George Mason). I have seen such statements more time that I
@@ -401,8 +409,7 @@ Adcom will look for this part at the end of the statement, so do not skip it.
 \section{Your School}\label{sec:your-school}
 
 Graduating from top universities \emph{that we recognize} helps. For example, if your school is well-known, then it is \emph{``top foreign''}, which is definitely a plus.
-However, if committee members do not know much about schools in your country, they will likely treat your school as
-\emph{``unknown foreign''}, which can be a minus point because we are uncertain about the quality of your school.
+However, if we do not know much about schools in your country, then we are uncertain about the quality of your school and  likely treat your school as \emph{``unknown foreign''}, which can be a minus point.
 
 
 So what can you do about this? several things including asking your CS dept to put itself on CSRankings (it's the easiest way to get CS people to know about the school and its CS faculty)  and explaining about your school in your statement (ask your LOR writer to do that too). Of course, if you're interested in working with Vietnamese, consider  \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{CS PhD programs in the US that have Vietnamese professors}.
@@ -421,7 +428,7 @@ Having good grades is good, but unless your school is well-known, having top gra
 usually will not help because we cannot evaluate them.
 
 This can be an issue for students in many top international universities where the competition is so high that very good students can still have low rankings from these schools (and be overlooked by the adcom).
-So what to do with this? as mentioned in \S\ref{sec:your-school} you can put a note about this in your statement and ask your LoR writers to talk about it.
+So what to do with this? as mentioned in \autoref{sec:your-school} you can put a note about this in your statement and ask your LoR writers to talk about it.
 
 Note that while having good grades at unknown school might not help,
 having bad grades will be \red{red flag} (unless your LORs or
@@ -471,7 +478,7 @@ Typically, an interview takes about 15--30 minutes, and one important aspect of 
   At GMU, we are encouraged to interview candidates. For very strong candidates, the interview is actually to recruit them.  In some cases a faculty interviews a candidate that they see potentials and want to advocate for their admission. Without the interview, such applications may be more likely to be rejected.
 \end{commentbox}
 
-In short, getting an interview is a good sign; it means that someone is considering you. If they are not interested in your application, they will not proceed with an interview.
+In short, getting an interview is a good sign; it means that someone is considering you. If we are not interested in your application, we will not proceed with an interview.
 However, do not worry much if you do not get an interview! For example, at GMU, most of our admitted students with TA do not go through any interviews.
 
 
@@ -486,7 +493,7 @@ However, do not worry much if you do not get an interview! For example, at GMU, 
 
   \item \textbf{LoRs}: Writer 1, Writer 2, Writer 3.  If this is a shared document, you might want to omit names and just use writer X. Under each is their status, e.g., sent/not yet/reminder needed, etc.
 
-        You can then share this sheet with your reference writers and remind them to submit LoRs on your behalf (see \S\ref{sec:lor}).
+        You can then share this sheet with your reference writers and remind them to submit LoRs on your behalf (see \autoref{sec:lor}).
 \end{itemize}
 
 % \paragraph{Communicating with LoR writers and People Who Support You}
@@ -502,7 +509,7 @@ However, do not worry much if you do not get an interview! For example, at GMU, 
 \epigraph{"Oh... and how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine-making course and I forgot how to drive?"}{\textsc{The Simpsons}}
 
 By around March you should hear back from most PhD programs you applied to. If you haven't heard back, reach out via email and ask about the status of your application.
-If you receive offers, congratulations!  Now you're at a different game because the schools that have admitted you will try to get you to accept them!  Important factors to consider are the reputation of schools and professors (\S\ref{sec:schoolsandprofs}), and funding availability (\S\ref{sec:funding}). You will have to make your decision by around \emph{April 15}.
+If you receive offers, congratulations!  Now you're at a different game because the schools that have admitted you will try to get you to accept them!  Important factors to consider are the reputation of schools and professors (\autoref{sec:schoolsandprofs}), and funding availability (\autoref{sec:funding}). You will have to make your decision by around \emph{April 15}.
 
 \paragraph{Open House} Most schools will have \textbf{Open House} events, which are a great resource to learn about the school, department, faculty, research, living, etc. Even if you can't come in person, you should attend virtually and meet with individual faculty.
 During the Open House, you get a chance to talk to individual faculty and current students.  Take notes of faculty who make you excited, count those that are taking in new students (if they meet you, likely they are considering new students!).  Talk to students about their advisers, the dept, the area, funding situation etc.  Ask about anything you want to determine that they deserve \emph{you}.
@@ -522,7 +529,7 @@ You can also consider applying to MS programs, which are typically easier to get
 
 As mentioned, if you're admitted to a \emph{good} CS PhD program, you should not have to worry about funding!  
 In the US, the common types of funding for PhD are \emph{graduate teaching assistant} (GTA or TA), \emph{graduate research assistant} (GRA or RA), and \emph{Fellowship}.
-RA is paid by a prof. for you to do their research. TA is paid by the department for you to help with teaching. Finally, fellowship is an independent funding that can come from a school, a company, or an organization. Tab.~\ref{tab:funding} summarizes the differences.
+RA is paid by a prof. for you to do their research. TA is paid by the department for you to help with teaching. Finally, fellowship is an independent funding that can come from a school, a company, or an organization. \autoref{tab:funding} summarizes the differences.
 Note that funding is typically more available for PhD students than 
 Masters. %Undergraduates typically have no funding and also have to pay international tuition, which is very expensive!.  
 
@@ -552,7 +559,7 @@ Several things about stipends.  First, the amount of stipend depends on the univ
 
 Students often complain their stipend being too low, but it is actually not bad and you can live comfortably with it.  In many cases, it is also enough to support your spouse and kids (many CS PhD students have their family with them). So don't worry too much about stipend.  If you're admitted to a good CS PhD program, you will be fine. A good school would know that it has to be competitive to attract students.  For example, at GMU, every year we discuss about improving the benefits, and especially stipend, for our graduate students. 
 
-For a full breakdown of how much a graduate student costs, see \S\ref{sec:ra-cost}.
+For a full breakdown of how much a graduate student costs, see \autoref{sec:ra-cost}.
 
 \begin{commentbox}[Vu:]
   TA and RA at GMU have similar benefits in tuition waiving and insurance.  The college and department will set the rate for 9-month graduate assistant stipend.  TA, which is paid by the department, will likely be that amount but RA might be higher depending on the stage of the student (1st year vs ABD\footnote{All but dissertation: really close to graduate.}) and the prof.
@@ -575,9 +582,9 @@ Even if you have other funding and do not need TA, you still should do TA at lea
 
 \subsection{Research Assistant (RA)}
 RA is provided through a professor through their own funding so you can work on their project.  
-You do not need to teach as an RA, so you can focus on your research. Depending on the professor, RA may be available during the summer. \S\ref{sec:ra-cost} gives more details on RA budget.
+You do not need to teach as an RA, so you can focus on your research. Depending on the professor, RA may be available during the summer. \autoref{sec:ra-cost} gives more details on RA budget.
 
-\textbf{How to get RA?} When a professor recruits you, they will likely give you RA right away (e.g., when you apply).  A common scenario is that you first get admitted with TA, and then after a year or two find an adviser to support you with RA. See how to contact a prof. in \S\ref{sec:contact} for research opportunities.
+\textbf{How to get RA?} When a professor recruits you, they will likely give you RA right away (e.g., when you apply).  A common scenario is that you first get admitted with TA, and then after a year or two find an adviser to support you with RA. See how to contact a prof. in \autoref{sec:contact} for research opportunities.
 
 
 \begin{commentbox}[Vu:]
@@ -614,7 +621,7 @@ Most universities the US have CS programs.
 However, while many universities offer PhD in their CS programs, many do not.  These universities might offer just Bachelor degrees (e.g., BS) and no graduate studies (i.e., no MS or Ph.D degrees), or they just offer MS programs (but no PhD). For example, Penn State in University Park has Ph.D. in CS,  but Penn State in Harrisburg only has BS and MS in CS, and Penn State in York only has BS in CS.  On the other hand, multiple locations of the University of Texas, e.g., Austin, Dallas, Arlington, have PhDs in CS. 
 
 Thus, if your goal is Ph.D. in CS, you have to aim only for schools offering such a degree.  %This might sound obvious but many students (even those in the US) get confused due to the large number of universities. 
-While this can be confusing due to the large number of universities in the US, a little research, e.g., searching for PhD in CS from the school website, will help you find out. All schools listed in \S\ref{sec:ranking} have PhD studies in CS, so you can start there.
+While this can be confusing due to the large number of universities in the US, a little research, e.g., searching for PhD in CS from the school website, will help you find out. All schools listed in \autoref{sec:ranking} have PhD studies in CS, so you can start there.
 
 % \subsection{R1, R2, ...}
 
@@ -626,12 +633,12 @@ While this can be confusing due to the large number of universities in the US, a
 International students not familiar with US universities often put them into \emph{two} bins:  (i) very top schools that they dream about, and (ii) everything else.  In many cases, they use resources such as rankings from US News, which are not very transparent and \emph{highly} questionable\footnote{\url{https://cra.org/cra-statement-us-news-world-report-rankings-computer-science-universities/}}.  Sometimes these students evaluate CS programs using the reputations non-CS programs such as medical, math, or physics.
 They even rank universities based on popular states they know in the US, e.g., California and New York.  Clearly, there are so many thing wrong with these methods. 
 
-You can learn about CS programs and research expertise of faculty using resources such as \href{https://csrankings.org}{CSRankings.org}, which is designed specifically to help prospective PhD students in Computer Science!  You will be very surprised to learn that a school that you didn't know much about can have very strong research in your interested topic (and vice versa, a school you thought highly about might have no faculty working in the research field you're interested in). This is also a good way to learn about individual faculty (who works on what) and well-known CS conferences\footnote{In CS (and probably only in CS), conferences, not journals, are often the main venue to publish research finding.}. \S\ref{sec:ranking} gives the top 50 CS programs in the US according to CSRankings.
+You can learn about CS programs and research expertise of faculty using resources such as \href{https://csrankings.org}{CSRankings.org}, which is designed specifically to help prospective PhD students in Computer Science!  You will be very surprised to learn that a school that you didn't know much about can have very strong research in your interested topic (and vice versa, a school you thought highly about might have no faculty working in the research field you're interested in). This is also a good way to learn about individual faculty (who works on what) and well-known CS conferences\footnote{In CS (and probably only in CS), conferences, not journals, are often the main venue to publish research finding.}. \autoref{sec:ranking} gives the top 50 CS programs in the US according to CSRankings.
 
 \begin{commentbox}[Dat:] Most Vietnamese students, including those from top schools, \textbf{do not know} about CSRankings.  May be applicants who worked at top research places such as VinAI would know about it.
 \end{commentbox}
 
-However, in general, rankings can be superficial and you need to do more research to be informed and make better decision. For example, if you get admissions to several places, you should consider attending Open Houses and contact profs. that you're interested in at those place and talk to them. They would be more willing to chat with you now that you have been admitted.  Ask them questions about their work, how they manage students, their expectations. You can even ask to contact their students. See more in \S\ref{sec:accepted} on what to do after getting admitted.
+However, in general, rankings can be superficial and you need to do more research to be informed and make better decision. For example, if you get admissions to several places, you should consider attending Open Houses and contact profs. that you're interested in at those place and talk to them. They would be more willing to chat with you now that you have been admitted.  Ask them questions about their work, how they manage students, their expectations. You can even ask to contact their students. See more in \autoref{sec:accepted} on what to do after getting admitted.
 
 
 \begin{commentbox}[Hung:]
@@ -656,11 +663,11 @@ However, in general, rankings can be superficial and you need to do more researc
 \end{commentbox}
 
 \section{Choosing an Adviser}
-Obviously, there is no one-size-fit-all answer to this question. The best adviser is the one that you can work well with, i.e., \emph{fits} you.  This is difficult and takes time. Fortunately, unlike many countries that require finding an adviser and research topic before starting the PhD (\S\ref{sec:non-us-differences}), CS PhD programs in the US will typically give you a couple of years to search for advisers and research topics.  This is especially true if you're admitted with TA (\S\ref{sec:ta}), which gives you time to explore and find adviser.
+Obviously, there is no one-size-fit-all answer to this question. The best adviser is the one that you can work well with, i.e., \emph{fits} you.  This is difficult and takes time. Fortunately, unlike many countries that require finding an adviser and research topic before starting the PhD (\autoref{sec:non-us-differences}), CS PhD programs in the US will typically give you a couple of years to search for advisers and research topics.  This is especially true if you're admitted with TA (\autoref{sec:ta}), which gives you time to explore and find adviser.
 
 \subsection{Finding the right adviser}
 
-Here are some general advice to find professor.  First, search for profs. that share similar research interests. You can learn about faculty and their level of research activity through the faculty's website or even from CSRankings.  For example, in CSRankings, if you want to work with PL, you can search for those publish in PL conferences.  If you want to work with SE \emph{and} AI, you can search for faculty who work in both SE and AI.   You can also go to their website, look at their papers and projects.  In any case, you should contact the professor and talk to them. For example, you can (cold) email them and ask about their research and if they are taking new students (\S\ref{sec:contact}), and schedule appointments to chat with them (office hrs are often the best time).
+Here are some general advice to find professor.  First, search for profs. that share similar research interests. You can learn about faculty and their level of research activity through the faculty's website or even from CSRankings.  For example, in CSRankings, if you want to work with PL, you can search for those publish in PL conferences.  If you want to work with SE \emph{and} AI, you can search for faculty who work in both SE and AI.   You can also go to their website, look at their papers and projects.  In any case, you should contact the professor and talk to them. For example, you can (cold) email them and ask about their research and if they are taking new students (\autoref{sec:contact}), and schedule appointments to chat with them (office hrs are often the best time).
 
 \begin{commentbox}[Xiaokuan:]
   Whether the student's research interest matches that of the adviser is very important;
@@ -682,7 +689,7 @@ Ultimately, choose a prof. that fits you the most by communicating with them, ta
 
   In other fields, e.g. Software Engineering, Vietnamese students face challenges in reaching US professors. Do you have any tips for Vietnamese students who want to connect with US professors and work as research assistants?
   \tcblower
-  \textbf{Vu}: \S\ref{sec:contact} shows how to contact a professor for research opportunities. Many probably will say no (or do not reply) as they do not have the bandwidth to take on random students, but some may say yes if they see potential fit.
+  \textbf{Vu}: \autoref{sec:contact} shows how to contact a professor for research opportunities. Many probably will say no (or do not reply) as they do not have the bandwidth to take on random students, but some may say yes if they see potential fit.
 \end{commentbox}
 
 \subsubsection*{Additional Resources}
@@ -691,17 +698,17 @@ Ultimately, choose a prof. that fits you the most by communicating with them, ta
 \end{itemize}
 \subsection{Types of Faculty: Who can serve as a PhD adviser?}\label{sec:faculty-types}
 
-Not every faculty can serve as your formal adviser. Let's try to understand the different types of faculty and their roles. For example, you might hear about tenured,  tenure track, teaching faculty.  You might also things such as assistant, associate, full, adjunct, emeritus, teaching, research professors. Here is a primer on these terminologies.
+Not every faculty can serve as your formal adviser. Let's try to understand the different types of faculty and their roles. For example, you might hear about tenured,  tenure track, and teaching faculty.  You might also hear about assistant, associate, full, adjunct, emeritus, teaching, research professors. Here is a primer on these terminologies.
 
-\paragraph{Tenure-line and teaching faculty} Tenure line faculty, consisting of tenured and tenured-track profs., focus on research, which includes publishing papers, obtaining grants, mentoring Ph.D students.  They often have very low teaching load (e.g., 1 per semester). \emph{Tenured} faculty are professors who have been promoted to have a permanent position (informally, very hard to fire them).   \emph{Tenure-track} faculty are (more likely young) professors who are on the track to get tenure.  \textbf{Both tenure and tenured track faculty can serve as a formal adviser of Ph.D. students}. This is very important because you need to have a tenure line faculty as your main PhD adviser. \S\ref{sec:tenure-vs-tenure-track} talks more about choosing between tenure and tenured-track professor as your adviser.
+\paragraph{Tenure-line and teaching faculty} Tenure line faculty, consisting of tenured and tenured-track profs., focus on research, which includes publishing papers, obtaining grants, mentoring Ph.D students.  They often have very low teaching load (e.g., 1 per semester). \emph{Tenured} faculty are professors who have been promoted to have a permanent position (informally, very hard to fire them).   \emph{Tenure-track} faculty are (more likely young) professors who are on the track to get tenure.  \textbf{Both tenure and tenured track faculty can serve as a formal adviser of Ph.D. students}. This is very important because you need to have a tenure line faculty as your main PhD adviser. \autoref{sec:tenure-vs-tenure-track} talks more about choosing between tenure and tenured-track professor as your adviser.
 
-In contrast, \emph{teaching} (or instructional faculty or professor of practice) mainly focus on teaching. They typically teach 3--4 classes per semester (which is quite a lot) and \emph{do not} have research responsibilities (e.g., they do not have to worry much about publishing papers, obtaining grants).  They can mentor Ph.D. students but they typically cannot serve as a formal adviser of Ph.D. students (i.e., they \emph{cannot graduate} PhD students).
+In contrast, \emph{teaching} (or instructional faculty or professor of practice) mainly focus on teaching. They typically teach 3--4 classes per semester (which is quite a lot) and \emph{do not} have research responsibilities (e.g., they do not have to worry much about publishing papers or obtaining grants).  They can mentor Ph.D. students but they typically cannot serve as a formal adviser of Ph.D. students (i.e., they \emph{cannot graduate} PhD students).
 
-It is worth noting that professors in a non-CS department also unlikely can serve as formal PhD advisers for CS students (see \S\ref{sec:related-fields}).
+It is worth noting that professors in a non-CS department also unlikely can serve as formal PhD advisers for CS students (see \autoref{sec:related-fields}).
 
-\paragraph{Titles} Faculty have titles, e.g., assistant, associate, full, regardless if they are tenure line or teaching.  Assistant means new faculty, associate means they have been promoted, and full means they are senior. A tenure track faculty starts with being an assistant professor and then gets tenure and promoted to associate (typically after 6 years) and then full (time varies, some become full within 3-4 years, some 10+ years, some remain associate). 
+\paragraph{Titles} Faculty have rankings, e.g., assistant, associate, full, regardless if they are tenure line or teaching.  Assistant means new faculty, associate means they have been promoted, and full means they are senior. A tenure track faculty starts with being an assistant professor and then gets tenure and promoted to associate (typically after 6 years) and then full (time varies, some become full within 3-4 years, some 10+ years, some remain associate).
 
-Adjunct faculty not full-time faculty, e.g., they might be working in industry and teach a class or two for fun.  Emeritus means they are retired but still have some affiliation with the university.  Research faculty (or scientist) are typically non-tenure line faculty who focus on research.  Due to their roles, adjunct, emeritus, and research faculty typically do not advise Ph.D. students.
+Adjunct faculty is not full-time, e.g., they might be working in industry and teach a class or two for fun.  Emeritus means they are retired but still have some affiliation with the university.  Research faculty (or research scientist) are typically non-tenure line faculty who focus on research.  Due to their roles, adjunct, emeritus, and research faculty typically do not advise Ph.D. students.
 
 \subsection{Tenured or tenure-track faculty? Who do you choose?}\label{sec:tenure-vs-tenure-track}
 
@@ -734,7 +741,7 @@ Faculty received many "cold" e-mails from international students seeking for adm
 
 
 
-First, if you want to contact a prof. to \emph{ask about your admission chance}, please \textbf{don't}. We don't know and can't answer because as explained in \S\ref{sec:evalapps}, we don't make individual decisions and might not even be assigned to evaluate your application.  It is the same as sending a paper draft to a journal editor and ask them if your paper has a chance.  
+First, if you want to contact a prof. to \emph{ask about your admission chance}, please \textbf{don't}. We don't know and can't answer because as explained in \autoref{sec:evalapps}, we don't make individual decisions and might not even be assigned to evaluate your application.  It is the same as sending a paper draft to a journal editor and ask them if your paper has a chance.
 
 So what to do if you want someone to look at your profile and give input? You could ask your professors, collaborators, or those who have previously applied. For these kind of feedback,  don't ask strangers like random profs., instead ask someone you have personal connection with.  
 
@@ -786,14 +793,14 @@ Finally, profs. are very busy so don't take it personally if you don't get anyth
 \subsubsection*{Additional Resources}
 \begin{itemize}
   \item \href{https://yonatanbisk.com/emailing_professors.html}{A Note about Emailing Professors} by Yonatan Bisk
-  \item \S\ref{sec:accept-postpone-decline} How to accept/postpone/decline PhD offers (and do it gracefully)
+  \item \autoref{sec:accept-postpone-decline} How to accept/postpone/decline PhD offers (and do it gracefully)
 \end{itemize}
 
 \subsection{PhD in other related fields: CE, IST, Cybersecurity}\label{sec:related-fields}
 
 In many cases you do not need to do a PhD in CS to work in your area of interested. For example, in addition to a traditional CS department, GMU has IST and Cybersecurity departments, which have faculty  with PhD in CS and work on CS topics (e.g., AI, Security, Robotics).  So it is totally possible that you still get to do CS research and publish in CS-focused venues even if you're not in a traditional CS program.  It is  common to see faculty with CS PhD in a non-CS department as well as faculty with non-CS PhD in CS department.  
 
-However, if your goal is a PhD in CS, then you likely need to be in the CS dept \emph{and} advised by a CS faculty. In fact, if a faculty is not in CS, it is unlikely that they can be the \emph{main} adviser of a CS PhD student. They may \emph{co-advise} or be in the PhD dissertation committee, but your main adviser will need to be a tenured or tenure-track faculty in CS. If in doubt, you should check with the CS department for their requirements.  For this specific reason,  CSRankings includes only tenure line faculty who can advise CS PhD students. I also have compiled a \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{list} of Vietnamese faculty who can advise PhD students. \S\ref{sec:faculty-types} talks more about who can serve as your PhD adviser. 
+However, if your goal is a PhD in CS, then you likely need to be in the CS dept \emph{and} advised by a CS faculty. In fact, if a faculty is not in CS, it is unlikely that they can be the \emph{main} adviser of a CS PhD student. They may \emph{co-advise} or be in the PhD dissertation committee, but your main adviser will need to be a tenured or tenure-track faculty in CS. If in doubt, you should check with the CS department for their requirements.  For this specific reason,  CSRankings includes only tenure line faculty who can advise CS PhD students. I also have compiled a \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{list} of Vietnamese faculty who can advise PhD students. \autoref{sec:faculty-types} talks more about who can serve as your PhD adviser.
 
 
 \chapter{Miscs and FAQs}
@@ -820,7 +827,7 @@ In his \href{https://matt.might.net/articles/how-to-apply-and-get-in-to-graduate
 
 \section{Can I apply to CS PhD if my undergrad was not in CS or related areas?}\label{sec:non-stem}
 
-Yes, \emph{as long as} you can demonstrate you are ready for CS PhD research through research experiences, LoRs, statements, etc as mentioned. You might be even able to leverage this to make your profile stand out as mentioned in \S\ref{sec:improve-your-chance}. 
+Yes, \emph{as long as} you can demonstrate you are ready for CS PhD research through research experiences, LoRs, statements, etc as mentioned. You might be even able to leverage this to make your profile stand out as mentioned in \autoref{sec:improve-your-chance}.
 
 One main concern for non-CS or non-STEM students is if you have the sufficient technical background, typically obtained through core CS courses.  So you will want to show that you have such knowledge through your coursework, projects, or research. 
 For example, if you have taken a course on Algorithms, even online ones like Coursera, you can talk about it in your statement.  If you have done a project that requires knowledge of OS or have a professional certification (e.g., A+) through work, you can talk about it in your statement.  If you have done research that requires knowledge of Discrete Maths, you can talk about it in your statement.  You can also ask your LoR writers to talk about your technical background.  
@@ -858,7 +865,7 @@ The PhDComics figure on top shows the ``ambition'' level of a PhD student over t
 
 This summarizes the main differences between CS PhD in the US and other countries. % This is based on my experience and what I heard from others who did PhD in other countries. 
 
-\emph{MS Degree requirement}:  as mentioned in \S\ref{sec:msrequirement} and \ref{sec:time}, CS PhD programs in the US do not require MS degree.  In contrast, many other countries do require MS degree before joining a PhD program.  This means that US PhD programs are longer (5--7 years, 2 of which are coursework) than other countries (3--4 years, no coursework).  
+\emph{MS Degree requirement}:  as mentioned in \autoref{sec:msrequirement} and \ref{sec:time}, CS PhD programs in the US do not require MS degree.  In contrast, many other countries do require MS degree before joining a PhD program.  This means that US PhD programs are longer (5--7 years, 2 of which are coursework) than other countries (3--4 years, no coursework).
 
 \emph{Project proposal}: in many countries, you have to choose a project and adviser \emph{during} the application process (e.g., you write a proposal to a potential adviser). In the US, you often start your PhD without an adviser or project and find them later. This is because as someone who just finished your undergraduate study, it is unlikely that you know enough about research to do proposal or picking an adviser.  This is also why US PhD programs are longer.
 
@@ -893,7 +900,7 @@ Note that in some universities the formal title Dr. Lastname is preferred over P
 
 \paragraph{Referring to professors you know} Because you are already familiar with these individuals, you can just informally use their names if they are OK with it as mentioned above (or Dr./Prof., if you want to be formal). You can also include their institution if it makes it more precise.  For example, I can say:  \emph{"I did my postdoc with Jeff Foster at Univ. of Maryland"}.   
 
-Do not include ranking (e.g., Assistant, Associate, Scientist, ...) when referring to someone. I see many international students include a lengthy title of people they know, e.g., \emph{I am advised by Asst. Prof. X, and I also collaborate with Distinguished Scientist Y}.  This is \emph{not necessary} and makes it look like you're trying to show off your connections. These nuances represent some cultural differences that you may encounter and will gradually adapt to. More on cultural differences in \S\ref{sec:cultural}.
+Do not include ranking (e.g., Assistant, Associate, Scientist, ...) when referring to someone. I see many international students include a lengthy title of people they know, e.g., \emph{I am advised by Asst. Prof. X, and I also collaborate with Distinguished Scientist Y}.  This is \emph{not necessary} and makes it look like you're trying to show off your connections. These nuances represent some cultural differences that you may encounter and will gradually adapt to. More on cultural differences in \autoref{sec:cultural}.
 
 \section{How much do \emph{you} cost?}\label{sec:ra-cost}
 PhD students often ask why their salary is so low compared to ludicrous grants their advisers get. They also wonder why their offer letters sometimes show that their benefits higher than what they actually receive (i.e., stipend).  This section aims to shed some light to these questions.
@@ -932,7 +939,7 @@ PhD students often ask why their salary is so low compared to ludicrous grants t
   \end{tabular}
 \end{table}
 
-Tab.~\ref{tab:cost} shows the budget breakdown for a GRA per year (this level of details is what faculty actually uses when applying for grants).
+\autoref{tab:cost} shows the budget breakdown for a GRA per year (this level of details is what faculty actually uses when applying for grants).
 These numbers are based on my experience at public universities in the US.  Private universities may have different numbers.  For simplicity, in this table I will assume the department has a 9-month stipend of \$27000 (GMU actually pays more) and therefore a 3-month summer of \$9000. I will also use GMU tuition rate of about \$15,000/year for full-time study (which is quite cheap compared to private universities, e.g., MIT charges around \$50K) and a 58.9\% rate on \emph{indirect cost}, which is what GMU charges for overhead or administrative costs (yes, after all, universities are businesses!).  Finally, I assume the student take two conference trips per year, one domestic and one international (conf. registration, airline tickets, taxi, meals, etc are all included). 
 
 At the end, the total budget comes out to be \$69K/year to support a PhD student. \emph{The summary is that over your 5-6 year of your PhD, you cost about \$350K--400K, and while you're paid X, your adviser probably pays 2X for you}.  
@@ -974,8 +981,8 @@ There are many stories on how students are mistreated, stressed, and miserable. 
     14 & University of Wisconsin - Madison\red{$^*$} &39 & Univ. of California - Santa Cruz \\
     15 & University of Texas at Austin &40& Brown University \\ 
     16 & University of Pennsylvania &41 & Harvard University \\
-    17 & Columbia University \red{$^*$} &42 & Boston University  \\
-    18 & Princeton University  & 43& Rice University\\
+    17 & Columbia University\red{$^*$} &42 & Boston University  \\
+    18 & Princeton University\red{$^*$}  & 43& Rice University\\
     19 & New York University  & 44&  University at Buffalo\red{$^*$}\\
     20 &  University of Massachusetts-Amherst\red{$^*$} &45& University of Colorado-Boulder \\
     21 & Univ. of California - Los Angeles &46& University of Illinois at Chicago  \\
@@ -987,7 +994,7 @@ There are many stories on how students are mistreated, stressed, and miserable. 
   \end{tabular}
 \end{table}
 % Virginia Tech\red{$^*$}  \\
-Tab.~\ref{tab:ranking} lists the top 50 CS programs in the US from \href{https://www.csrankings.org}{CSRankings.org}, a ranking system  based on faculty publications at top CS conferences.
+\autoref{tab:ranking} lists the top 50 CS programs in the US from \href{https://www.csrankings.org}{CSRankings.org}, a ranking system  based on faculty publications at top CS conferences.
 
 % \section{Additional Resources}
 % \begin{itemize}
@@ -1003,7 +1010,7 @@ Tab.~\ref{tab:ranking} lists the top 50 CS programs in the US from \href{https:/
 % % This is especially true for students from small colleges where research opportunities are limited.
 % This section aims to provide some guidance on how to gain research experience as an undergraduate student. %This section is written together Didier, a PhD student at GMU who did his undergraduate study in Rwanda.
 
-% \paragraph{Locally} There are many ways to find research opportunities right in your own institution.  If you did well or like a class, you can check with the professor of that class for research opportunities.  Sometimes professors would mention that they look for undergraduates on their websites, so do check those out! Even if they say they are looking for graduate students, you still should contact them and ask.  You can also ask your academic adviser or other faculty members for suggestions.  Finally, you can also ask your peers who are already doing research.  You can use the method described in \S\ref{sec:contact} to contact professors
+% \paragraph{Locally} There are many ways to find research opportunities right in your own institution.  If you did well or like a class, you can check with the professor of that class for research opportunities.  Sometimes professors would mention that they look for undergraduates on their websites, so do check those out! Even if they say they are looking for graduate students, you still should contact them and ask.  You can also ask your academic adviser or other faculty members for suggestions.  Finally, you can also ask your peers who are already doing research.  You can use the method described in \autoref{sec:contact} to contact professors
 
 % In short, the most important thing is that you need to \emph{ask}!  Don't be shy, don't be afraid of rejection, and don't be afraid of being ignored or that you're not good enough.  Just ask!  The worst thing that can happen is that you get a ``no'' or no response.  But you will never know if you don't ask.  And if you get a ``no'', you can always ask again later.  There are students who got rejected the first time but got accepted the second time.  So don't give up!
 
@@ -1068,7 +1075,7 @@ Here is the typically steps: (i) a faculty suspecting a cheating case will repor
 \section{Gifts}\label{sec:gifts} In many countries, it is customary to give professors gifts, often during holidays.  These gifts can be costly and profs. sometimes expected them. In the US, it is uncommon and perfectly OK to not to give gifts. \emph{However}, if you'd like to offer small souvenir-like tokens, it's a thoughtful gesture that's appreciated. Some professors proudly display their gifts, which can come from students and colleagues (e.g., when they travel to their home countries or conferences). In summary, small gifts are fine, but avoid anything that might make your professors uncomfortable.
 
 \section{Relationships with your Profs.}
-There's a misconception that in the US it's all business, with professors as bosses who pay students for their work, and you doing something nice implying you expect something in return. However, the reality is quite the opposite. While people can be straightforward and direct, they are also friendly and informal. You can call your professor by their first name (\S\ref{sec:address}), disagree with them and argue (and gain respect doing so), seek their help (even on personal matters), come to their houses for parties or gathering, and give them small thoughtful gifts that they put on their desks (\S\ref{sec:gifts}).  Many students and professors maintain lifelong relationships, staying in touch through cards, emails, and calls, even after their academic journey ends. %These connections are genuine and meaningful.
+There's a misconception that in the US it's all business, with professors as bosses who pay students for their work, and you doing something nice implying you expect something in return. However, the reality is quite the opposite. While people can be straightforward and direct, they are also friendly and informal. You can call your professor by their first name (\autoref{sec:address}), disagree with them and argue (and gain respect doing so), seek their help (even on personal matters), come to their houses for parties or gathering, and give them small thoughtful gifts that they put on their desks (\autoref{sec:gifts}).  Many students and professors maintain lifelong relationships, staying in touch through cards, emails, and calls, even after their academic journey ends. %These connections are genuine and meaningful.
 
 % \begin{commentbox}
 %   [DK:] Here are a few items you may consider addressing: putting international students in touch with other students from their countries, assuring them that they would be picked up from airports upon their arrival and that their initial stay will be taken care of. Most universities have other resources for these, but it is worth mentioning that they would be taken care of upon arrival and can get help during the transition phase. Learning to cook was a big deal when I arrived over 50 years ago-August 1973. But things have changed as one can find many ethnic food places, a big contrast from 1973, when there were two Indian restaurants in Greater Boston area.
@@ -1080,14 +1087,14 @@ There's a misconception that in the US it's all business, with professors as bos
 
 \chapter{History and Acknowledgement}\label{sec:ack}
 
-\paragraph{History} This document was conceived during a lunch with Craig Yu at GMU.  We talked on about why GMU were not able to attract good Vietnamese and other international students, despite having a much stronger CS program than many schools that these students want to go to (part of the reason is described in \S\ref{sec:selecting-ranking-schools}). We wished there were a way for international students to know about the US PhD programs (also for US faculty to understand more about international students and therefore have better chance of recruiting and working with them). I was also a member of the large VietPhD group on Facebook and saw many questions from students about PhD programs.  However, most active participant are students in non-CS fields or not in US, and their answers are unfortunately not always accurate and sometimes leading to more confusion. So I thought it would be useful to have a document that is specific to CS PhD programs in the US from an insider prospective.
+\paragraph{History} This document was conceived during a lunch with Craig Yu at GMU.  We talked on about why GMU were not able to attract good Vietnamese and other international students, despite having a much stronger CS program than many schools that these students want to go to (part of the reason is described in \autoref{sec:selecting-ranking-schools}). We wished there were a way for international students to know about the US PhD programs (also for US faculty to understand more about international students and therefore have better chance of recruiting and working with them). I was also a member of the large VietPhD group on Facebook and saw many questions from students about PhD programs.  However, most active participant are students in non-CS fields or not in US, and their answers are unfortunately not always accurate and sometimes leading to more confusion. So I thought it would be useful to have a document that is specific to CS PhD programs in the US from an insider prospective.
 
 I started writing this document in May 2023 and have been updating it since then (mostly around deadline time when I tend to procrastinate, i.e., \emph{productive procrastination}!). I have put the source code of this document on \href{https://github.com/nguyenthanhvuh/phd-cs-us}{GitHub} so that anyone can contribute to it.  
 
 \paragraph{About Me} I am an assistant professor in the CS dept at George Mason University (GMU). Prior to GMU, I was at the University of Nebraska-Lincoln (UNL). I have been in the PhD admission process at GMU and UNL for many years.  Currently I serve as the program director of the MS program in Software Engineering at GMU (thus also have some experience with the MS admission process--which is quite different than PhD). My personal and lab website is at \href{https://dynaroars.github.io}{dynaroars.github.io}.
 
 Though I'm not an international student, many of my students and collaborators are. I also mentor multiple students from Vietnam, and have close colleagues and friends who were once international students. I hope to capture the diverse challenges and experiences they've faced in this document, so that it  can be a valuable resource for prospective international students. 
-Finally, my upbringing in the US provides a perspective aligned with American culture, allowing me to shed light on various issues, particularly those related to cultural differences (\S\ref{sec:cultural}).
+Finally, my upbringing in the US provides a perspective aligned with American culture, allowing me to shed light on various issues, particularly those related to cultural differences (\autoref{sec:cultural}).
 
 
 
