@@ -1,0 +1,252 @@
+\documentclass[oneside,11pt]{memoir}
+\chapterstyle{pedersen}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{soul}
+% \usepackage[small,compact]{titlesec} %very powerful
+\usepackage[most]{tcolorbox}
+\setsecnumdepth{subsection}
+\setcounter{tocdepth}{3}
+\usepackage{enumitem}
+\usepackage{epigraph}
+\usepackage{cite}
+\usepackage{caption}
+\captionsetup{font=small}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\setlength\intextsep{0pt} % remove extra space above and below in-line float
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=blue,
+  urlcolor=blue,
+}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[makeroom]{cancel}
+
+\newtcolorbox{mybox}{
+  enhanced,
+  boxrule=0pt,frame hidden,
+  borderline west={2pt}{0pt}{green!75!black},
+  colback=green!10!white,
+  sharp corners
+}
+
+\newenvironment{commentbox}[1][]{
+  \small
+  \begin{mybox}
+    {\small \textbf{#1}}
+  }{
+  \end{mybox}
+}
+
+\newtcolorbox{mydomesticbox}{
+  enhanced,
+  boxrule=0pt,frame hidden,
+  borderline west={2pt}{0pt}{red!75!black},
+  colback=blue!10!white,
+  sharp corners
+}
+
+\newenvironment{domesticbox}[1][]{
+  \small
+  \begin{mydomesticbox}
+    {\small \textbf{#1}}
+  }{
+  \end{mydomesticbox}
+}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Tab.}
+\def\Section{\S}
+\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\tableautorefname}{Tab.}
+\makeatletter
+\renewcommand{\chapterautorefname}{\S\@gobble}
+\renewcommand{\sectionautorefname}{\S\@gobble}
+\renewcommand{\subsectionautorefname}{\S\@gobble}
+\makeatother
+
+\newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
+\newcommand{\tvn}[1]{\mycomment{TVN}{#1}}{}
+\newcommand{\didi}[1]{\mycomment{Didier}{#1}}{}
+\newcommand{\tl}[1]{\mycomment{ThanhLe}{#1}}{}
+\newcommand{\red}[1]{{\color{red}{#1}}}
+\newcommand{\xz}[1]{\mycomment{Xiaokuan}{[#1]}}{}
+
+
+\title{Demystifying the Computer Science \\
+  PhD Admission in the US\\{\large A Guideline for International \emph{and Domestic} Students}}
+
+\author{\href{https://nguyenthanhvuh.github.io}{ThanhVu (Vu) Nguyen}\\{\small George Mason University, Dept. of Computer Science}}
+
+
+\makeatletter
+\def\maketitle{%
+  \null
+  \thispagestyle{empty}%
+  \vfill
+  \begin{center}\leavevmode
+    \normalfont
+    {\LARGE\raggedright \textbf{\@title}\par}%
+    \vfill%
+    % \hrulefill\par
+    {\Large \@author\par}%
+    \vfill%
+    {\large\raggedleft \@date\par}%
+  \end{center}%
+  \vfill
+  \null
+  \cleardoublepage
+}
+\makeatother
+
+\begin{document}
+\maketitle
+\frontmatter
+
+\chapter{Preface}
+Having been involved in PhD admissions for many years, I've
+realized that many \textbf{international students} (and also domestic ones), especially those in  smaller countries or less well-known universities, lack a clear understanding of
+the Computer Science PhD admission process at US universities. This confusion not only
+discourages students from applying but also creates the perception that
+getting admitted to a CS PhD program in the US is difficult compared to other countries.
+
+% though \emph{very} top schools could be very selective, e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU
+So I want to share some details about the admission process and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
+While this document is primarily intended for students interested in CS, it might be relevant to students from various disciplines.
+Furthermore, although many examples are specifics for schools that I and other contributors of this document know about, the information should be generalizable to other R1\footnote{An \href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1 institution} in the US is a research-intensive university with a high level of research activity across various disciplines. Currently, 146 (out of 4000) universities are classified as R1.} institutions in the US (and universities in other countries).
+
+In addition, this document can help \textbf{US faculty and admission committee} gain a better understanding of international students and their cultural differences.  By recognizing and leveraging these differences, CS programs in the US can attract larger and more competitive application pools from international students.
+
+I wish you the best of luck. And if you follow this guidance, you will at least have a good chance at GMU (see
+\href{https://github.com/dynaroars/dynaroars.github.io/wiki/About-GMU}{why
+  you want to study at here}). Happy school hunting!
+
+This document is available at 
+
+\begin{center}
+  \href{https://nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf}{nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf},
+\end{center}
+
+\noindent and its \LaTeX{} source is also on \href{https://github.com/nguyenthanhvuh/phd-cs-us}{Github}. If you have questions or comments, feel free to create a \href{https://github.com/nguyenthanhvuh/phd-cs-us/issues}{GitHub issue} for discussion.
+
+\newpage
+\tableofcontents*
+
+\chapter{Summary}\label{sec:summary}
+
+Below we summarize the main points of this guideline. This gives you an overview to decide which specific topics you want to explore more thoroughly.
+
+
+\begin{enumerate}
+  \item Should you apply?
+        \begin{itemize}
+          \item \emph{Yes, definitely}.  CS PhD study in the US is fully funded and admission into good universities is not any harder than non-US schools (\autoref{sec:should}).
+        \end{itemize}
+  \item How is your application evaluated?
+        \begin{itemize}
+          \item Applications are evaluated by the \emph{PhD Admission} committee and each application is reviewed by typically three faculty (\autoref{sec:evalapps}).
+          \item Individually faculty \emph{cannot directly admit} a student---so do not email and ask if you have a chance. However, faculty can \emph{advocate} for a student and therefore increase their admission chance---so do contact and introduce yourself (\autoref{sec:contact}).
+         \end{itemize}
+  \item Application Materials
+        \begin{itemize}
+          \item The committee will look at various factors, but the most important ones are research ability, e.g., publications, statement of purpose (SOP), and  letters of recommendation (LORs).
+          \item LORs are very important, but only if they are personalized and talk about your research ability (\autoref{sec:lor}).
+          \item SOP is very important. Write it in such a way that makes you \emph{stand out} (\autoref{sec:research-statement} and \autoref{sec:improve-your-chance})
+          \item GRE \emph{is not} required (\autoref{sec:grades}). Spend your time on something else!
+          \item Grades are important, but depend on the reputation of your school (\autoref{sec:grades}).
+          \item Getting an interview is typically a \emph{good sign} as no one wants to interview weak candidates (\autoref{sec:interview}).
+        \end{itemize}
+  \item What to do after getting admitted?
+        \begin{itemize}
+                \item  Celebrating! Now it is your turn to evaluate the school!
+          \item Attend \emph{Open House} to learn more about the place and \emph{interview} profs---they would be much more willing to talk to you now (\autoref{sec:accepted}).
+        \end{itemize}
+  \item Funding
+        \begin{itemize}
+          \item TA and RA are two main funding sources.  TA (teaching assistantship) is provided by the department to help profs. with classes (e.g., grading). RA (research assistantship) is provided by profs. to help with their research (\autoref{sec:funding}).
+        \end{itemize}
+  \item Choosing School and Professors
+        \begin{itemize}
+          \item Many schools do not offer PhD studies in CS and many CS professors \emph{cannot} formally advise or graduate PhD students  (\autoref{sec:schoolsandprofs}).
+          \item Contacting a prof. for research opportunities is recommended, but do it \emph{properly} (\autoref{sec:contact}).
+        \end{itemize}
+  \item Miscs and FAQS
+        \begin{itemize}
+          \item Increasing your admission chance by being unique and standing out (\autoref{sec:improve-your-chance}).
+          \item You can successfully apply to CS PhD even if you have non-STEM background (\autoref{sec:non-stem}).
+          \item Compared to other countries, CS PhD in the US does not require an MS degree but has longer PhD study time (\autoref{sec:non-us-differences}).
+          \item Your 5--6 year PhD program costs about \$400K in total, but you \emph{do not} pay for it (\autoref{sec:ra-cost}).
+          \item Despite some miserable stories on social media, many PhD students have good mentors, supportive lab mates, healthy working environment ... and are happy (\autoref{sec:happy}).
+        \end{itemize}
+\end{enumerate}
+
+
+\mainmatter
+
+\chapter{Research}
+\chapter{Obtaining Funding}
+\section{NSF and other Government Funding}
+
+\paragraph{Other Government Funding}
+
+\section{Internal Funding}
+
+\section{Industrial Gifts}
+
+\chapter{Teaching}
+\section{Teaching Load}
+\section{Teaching Evaluation}
+\section{Teaching Philosophy}
+\section{Teaching Awards}
+
+
+
+\chapter{Mentoring}
+\section{Mentoring Undergraduate Students}
+\section{Mentoring Graduate Students}
+\section{Mentoring Postdocs}
+\section{Mentoring Junior Faculty}
+
+\chapter{Services}
+
+\section{Service to your Professional Community}
+\section{Service to the Department}
+\section{Service to the University}
+\section{Service to the Community}
+
+
+\section{Serving on NSF Panels}
+You should serve on NSF panels.  It is a great way to learn about the grant process: how to distinguish between good and bad proposals and how people review propsoals.
+It is also a good way learn what other people are doing, what is hot, and what is not.
+
+\chapter{History and Acknowledgement}\label{sec:ack}
+
+\paragraph{History} This document was conceived during a lunch with Craig Yu at GMU.  We talked on about why GMU were not able to attract good Vietnamese and other international students, despite having a much stronger CS program than many schools that these students want to go to (part of the reason is described in \autoref{sec:selecting-ranking-schools}). We wished there were a way for international students to know about the US PhD programs (also for US faculty to understand more about international students and therefore have better chance of recruiting and working with them). I was also a member of the large VietPhD group on Facebook and saw many questions from students about PhD programs.  However, most active participant are students in non-CS fields or not in US, and their answers are unfortunately not always accurate and sometimes leading to more confusion. So I thought it would be useful to have a document that is specific to CS PhD programs in the US from an insider prospective.
+
+I started writing this document in May 2023 and have been updating it since then (mostly around deadline time when I tend to procrastinate, i.e., \emph{productive procrastination}!). I have put the source code of this document on \href{https://github.com/nguyenthanhvuh/phd-cs-us}{GitHub} so that anyone can contribute to it.  
+
+\paragraph{About Me} I am an assistant professor in the CS dept at George Mason University (GMU). Prior to GMU, I was at the University of Nebraska-Lincoln (UNL). I have been in the PhD admission process at GMU and UNL for many years.  Currently I serve as the program director of the MS program in Software Engineering at GMU (thus also have some experience with the MS admission process--which is quite different than PhD). My personal and lab website is at \href{https://dynaroars.github.io}{dynaroars.github.io}.
+
+Though I'm not an international student, many of my students and collaborators are. I also mentor multiple students from Vietnam, and have close colleagues and friends who were once international students. I hope to capture the diverse challenges and experiences they've faced in this document, so that it  can be a valuable resource for prospective international students. 
+Finally, my upbringing in the US provides a perspective aligned with American culture, allowing me to shed light on various issues, particularly those related to cultural differences (\autoref{sec:cultural}).
+
+
+
+
+\paragraph{Acknowledgement} Many people have contributed to this document.
+Profs. Craig Yu (GMU), Hakan Aydin (GMU), 
+Xiaokuan Zhang (GMU), Hung Le (UMass), and Deepak Kapur (UNM) provided valuable input in the early version. Other GMU faculty members also have provided feedback and contributions.  Many students including Didier (GMU), Thanh (Melbourne), and Dat (Melbourne) have contributed valuable questions and feedback.
+\textbf{Thank you!}
+
+\bibliographystyle{abbrv}
+\bibliography{demystify.bib}
+
+\end{document}
