@@ -1,0 +1,361 @@
+\documentclass[oneside,11pt]{memoir}
+\chapterstyle{pedersen}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{soul}
+% \usepackage[small,compact]{titlesec} %very powerful
+\usepackage[most]{tcolorbox}
+\setsecnumdepth{subsection}
+\setcounter{tocdepth}{3}
+\usepackage{enumitem}
+\usepackage{epigraph}
+\usepackage{cite}
+\usepackage{caption}
+\captionsetup{font=small}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\setlength\intextsep{0pt} % remove extra space above and below in-line float
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=blue,
+  urlcolor=blue,
+}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[makeroom]{cancel}
+
+\newtcolorbox{mybox}{
+  enhanced,
+  boxrule=0pt,frame hidden,
+  borderline west={2pt}{0pt}{green!75!black},
+  colback=green!10!white,
+  sharp corners
+}
+
+\newenvironment{commentbox}[1][]{
+  \small
+  \begin{mybox}
+    {\small \textbf{#1}}
+  }{
+  \end{mybox}
+}
+
+\newtcolorbox{mydomesticbox}{
+  enhanced,
+  boxrule=0pt,frame hidden,
+  borderline west={2pt}{0pt}{red!75!black},
+  colback=blue!10!white,
+  sharp corners
+}
+
+\newenvironment{domesticbox}[1][]{
+  \small
+  \begin{mydomesticbox}
+    {\small \textbf{#1}}
+  }{
+  \end{mydomesticbox}
+}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Tab.}
+\def\Section{\S}
+\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\tableautorefname}{Tab.}
+\makeatletter
+\renewcommand{\chapterautorefname}{\S\@gobble}
+\renewcommand{\sectionautorefname}{\S\@gobble}
+\renewcommand{\subsectionautorefname}{\S\@gobble}
+\makeatother
+
+\newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
+\newcommand{\tvn}[1]{\mycomment{TVN}{#1}}{}
+\newcommand{\didi}[1]{\mycomment{Didier}{#1}}{}
+\newcommand{\tl}[1]{\mycomment{ThanhLe}{#1}}{}
+\newcommand{\red}[1]{{\color{red}{#1}}}
+\newcommand{\xz}[1]{\mycomment{Xiaokuan}{[#1]}}{}
+
+
+\title{Demystifying the Computer Science \\
+  PhD Admission in the US\\{\large A Guideline for International \emph{and Domestic} Students}}
+
+\author{\href{https://nguyenthanhvuh.github.io}{ThanhVu (Vu) Nguyen}\\{\small George Mason University, Dept. of Computer Science}}
+
+
+\makeatletter
+\def\maketitle{%
+  \null
+  \thispagestyle{empty}%
+  \vfill
+  \begin{center}\leavevmode
+    \normalfont
+    {\LARGE\raggedright \textbf{\@title}\par}%
+    \vfill%
+    % \hrulefill\par
+    {\Large \@author\par}%
+    \vfill%
+    {\large\raggedleft \@date\par}%
+  \end{center}%
+  \vfill
+  \null
+  \cleardoublepage
+}
+\makeatother
+
+\begin{document}
+\maketitle
+\frontmatter
+
+\chapter{Preface}
+
+\newpage
+\tableofcontents*
+
+\mainmatter
+
+\chapter{Admission}
+
+Admission is competitive among students who fulfill admission requirements for graduate study at the Computer Science Department of George Mason University.
+Students seeking admission to the MS in Software Engineering program must satisfy the following requirements:
+\begin{itemize}
+    \item Hold a four-year (120-credit) baccalaureate degree from an accredited institution
+    \item Have a cumulative grade point average of 3.0 for the last two years of undergraduate work (60 credits)
+    \item Submit transcripts of all post-secondary education
+        \begin{itemize}
+            \item Unofficial copies of transcripts are acceptable for application review. However, upon admission, applicants will need to provide official transcripts before enrolling in the program.
+        \end{itemize}
+    \item A one-page goals statement, and a work résumé
+        \begin{itemize}
+            \item Your goals statement should be one to two pages, including a statement of career goals.
+        \end{itemize}
+    \item The MS in Software Engineering program \textbf{does not} require letters of recommendation.
+    \item Complete the self-evaluation section of the online application
+    \begin{itemize}
+        \item This information is used by the admissions committee to assess an applicant’s academic preparation for the MS program. In some cases, students with deficiencies in preparation may be admitted provisionally. See “Foundation Requirements” below for more information.
+        \end{itemize}
+    \item GRE is \textbf{not required}
+    \item TOEFL or IELTS is required of all applicants whose native language is not English, and who have not received a degree from a university in the United States, Canada, United Kingdom, Australia, or New Zealand.
+    \begin{itemize}
+        \item Required TOEFL iBT score: \textbf{80 points total overall with no section minimum}
+        \item Required IELTS score: \textbf{6.5 overall}
+    \end{itemize}
+\end{itemize}
+
+% Foundation Requirements
+
+% To ensure that students have an adequate background in mathematical methods and computer science, the program requires the following four foundation courses, or their equivalents:
+
+%     INFS 501 Discrete and Logical Structures for Information Systems
+%     INFS 515 Computer Organization
+%     INFS 519 Program Design and Data Structures
+%     SWE 510 Object Oriented Programming in Java
+
+% Prospective students are asked to indicate on their application if previously taken courses may satisfy these foundation requirements. Provisional admission is offered if a student has some deficiencies in preparation, but is otherwise a strong applicant. (Note: Due to federal requirements, students on F1/J1 visas are not eligible for provisional admission.) In such cases, students are advised of the necessary foundation courses to be satisfactorily completed with a grade of B or better before beginning the core curriculum. Foundation courses do not earn credit toward the MS degree.
+
+% Students have one opportunity to test out of their required foundation courses before beginning their first semester. The exams are given before classes begin in January and August and may only be taken once. Students failing any one of the exams must take the equivalent course before enrolling in the core curriculum courses.
+
+% More information regarding the foundation courses and test out exams can be found on this page.
+
+
+\chapter{Foundation and Required Courses}
+
+Students entering the MS-ISA, MS-ISYS, and MS-SWE programs must have course work or equivalent knowledge in the following five foundation areas: (1) introductory programming in any programming language; (2) knowledge of an object-oriented programming language such as Java and C++; (3) data structures and algorithms; (4) machine organization such as those given in computer system architecture or assembly language courses; (5) and topics in discrete mathematics, including sets, propositional and predicate logic,  relations, functions, trees, graphs, and inductive proofs. The level of knowledge required in these areas is equivalent to that taught in undergraduate courses, and may be achieved by taking the following George Mason University graduate courses:
+
+\begin{itemize}
+\item COMP 501 Computer Programming Foundations I or SWE 510 Object Oriented Programming in Java
+\item COMP 502 Mathematical Foundations of Computing I or INFS 501 Discrete and Logical Structures for Information Systems
+\item COMP 503 Computer Systems Foundations I or INFS 515 Computer Organization
+\item COMP 511 Computer Programming Foundations II or INFS 519 Program Design and Data Structures
+\end{itemize}
+
+\textbf{Provisional admission} is offered if a student has some deficiencies in preparation, but is otherwise a strong applicant. (Note: \emph{Due to federal requirements, students on F1/J1 visas are not eligible for provisional admission.}) In such cases, students are advised of the necessary foundation courses to be satisfactorily completed with a grade of B or better before beginning the core curriculum. Foundation courses \emph{do not} earn credit toward the MS degree. 
+%More information regarding the foundation courses and test out exams can be found on this page.
+
+Students have one opportunity to \emph{test out} of their required foundation courses before beginning their first semester. 
+The exams are given before classes begin in January and August and may only be taken once. Students failing any one of the exams must take the equivalent course before enrolling in the core curriculum courses.
+
+Additionally, if a student feels they have taken an equivalent course that was overlooked, an \emph{appeal process} is available. More information on these options can be found on the \href{https://cs.gmu.edu/current-students/ms-students/foundation-courses/policies-and-procedures/}{policies and procedures page}.
+
+\autoref{tab:foundation-courses} shows undergraduate courses offered at GMU serving as equivalents for the corresponding foundation courses.
+
+\begin{table}[]
+    \centering
+    \footnotesize
+    \begin{tabular}{c|c|c|c|c}
+      Foundation Topics   & GMU Grad  &	GMU Undergrad CS &	GMU Undergrad IT &	NVCC\\
+      \midrule
+      OO programming & 	COMP 501 or SWE 510 & 	CS 211 & 	IT 206 or IT 209 &	CSC 202\\
+      Discrete math              &	COMP 502 or INFS 501 & 	MATH 125 & 	MATH 125 (not MATH 112) & 	MATH 288\\
+      Machine org. 	& COMP 503 or INFS 515 &	CS 367 	&IT 342 	& none\\
+      Data structures &	COMP 511 or INFS 519 &	CS 310 	& IT 306 or IT 309 &	none\\
+    \end{tabular}
+    \caption{Foundation Courses and Equivalences}
+    \label{tab:foundation-courses}
+\end{table}
+
+
+\chapter{MS SWE}
+
+The MS in Software Engineering (MS-SWE) program prepares students to become leaders in engineering high quality, large scale, computing solutions to real life problems. The MS-SWE program prioritizes working professionals—as such, all SWE courses are taught \emph{late afternoon} or \emph{early evening}.
+
+\section{Degree Requirements}
+
+Students are required to complete 30 credits corresponding to 10 graduate courses. Students are encouraged to download the course planner spreadsheet, and update it as they proceed through the program.
+
+The course work is divided into three categories: 12 credits of core courses, software engineering related courses of 9 credits, and 9 credits of elective courses.
+
+\subsection{Core Courses (12 credits)}
+
+\textbf{Four core courses} are required of all MS-SWE graduates:
+
+\begin{enumerate}
+    \item SWE 619 Object-Oriented Software Specification and Construction
+    \item SWE 621 Software Modeling and Architectural Design
+    \item SWE 632 User Interface Design and Development
+    \item SWE 637 Software Testing
+\end{enumerate}
+
+\subsection{Software Engineering Related Courses (9 credits)}
+
+Students must take \textbf{three courses} from the following list:
+
+\begin{itemize} 
+\item Software Engineering (SWE)
+\begin{itemize}
+    \item Any SWE courses at the \href{https://catalog.gmu.edu/courses/swe/}{600 level or above}
+\end{itemize}
+\item Computer Science (CS)
+
+\begin{itemize}
+    \item CS 540 Language Processors
+    \item CS 550 Database Systems
+    \item CS 555 Computer Communications and Networking
+    \item CS 571 Operating Systems
+    \item CS 584 Theory and Applications of Data Mining
+    \item CS 675 Distributed Systems
+    \item CS 678 Advanced Natural Language Processing
+\end{itemize}
+
+\item Information Security \& Assurance (ISA)
+
+\begin{itemize}
+    \item ISA 562 Information Security Theory and Practice
+    \item ISA 650 Security Policy
+    \item ISA 673 Operating Systems Security
+\end{itemize}
+
+\item Information Systems (INFS)
+\begin{itemize}
+    \item INFS 740 Database Programming for the World Wide Web
+\end{itemize}
+
+\item Operations Research (OR)
+\begin{itemize}
+    \item OR 542 Operations Research: Stochastic Models
+\end{itemize}
+
+\end{itemize}
+
+\textbf{Note}: Credit will not be given for both INFS 614 and CS 550, or both SWE 622 and CS 675
+
+
+\subsection{Elective Courses (9 credits)}
+
+Students may select the remaining courses from the following list. Students may select courses not on this list with approval from the faculty advisor. Students, with the consent of a faculty sponsor and faculty advisor, may also complete a 6-credit thesis, which is primarily intended for students considering pursuing a PhD.
+
+\begin{itemize}
+    \item All Software Engineering (SWE) courses at the 600-level or above.
+    \item All Information Security and Assurance (ISA) courses at the 500-level or above.
+    \item All Information Systems (INFS) courses at the 600-level or above.
+    \item Any of the following Electrical and Computer Engineering courses:
+    \begin{itemize}
+        \item ECE 542 Computer Network Architectures and Protocols
+        \item ECE 612 Real-Time Embedded Systems
+\end{itemize}        
+    \item Any of the following Operations Research courses:
+    \begin{itemize}
+        \item OR 531 Analytics and Decision Analysis
+        \item OR 541 Operations Research: Deterministic Models
+        \item OR 542 Operations Research: Stochastic Models
+\end{itemize}        
+    \item Any of the following Statistics courses:
+    \begin{itemize}
+        \item STAT 544 Applied Probability
+        \item STAT 554 Applied Statistics I
+\end{itemize}        
+    \item Any of the following Systems Engineering courses:
+    \begin{itemize}
+        \item SYST 560 Introduction to Air Traffic Control
+        \item SYST 659 Topics in Systems Engineering
+        \item SYST 680 Principles of Command, Control, Communications, Computing, and Intelligence (C4I)
+\end{itemize}        
+    \item Any of the following Psychology courses:
+    \begin{itemize}
+        \item PSYC 530 Cognitive Engineering: Cognitive Science Applied to Human Factors
+        \item PSYC 734 Seminar in Human Factors and Applied Cognition
+\end{itemize}        
+\end{itemize}
+Additional Information
+
+For additional information on the degree requirements of the MS in Software Engineering
+\begin{itemize}
+    \item The MS-SWE section of the Mason Catalog is the official source for the degree requirements of the program.
+    \item These slides from the orientation for new MS students provide an overview of the program, as well as additional useful information.
+\end{itemize}
+
+\section{Academic Advising}
+
+A plan of study form for the MS Software Engineering degree should be completed by the student and approved by their academic advisor before the end of their second semester in the program. This serves as a planning guide for the student and should be kept up to date by regular consultation with their academic advisor. A final signed version of the plan must be included when the student submits a graduation application.
+
+Plan of Study forms for all the MS degrees offered by the CS department are available at this \href{https://cs.gmu.edu/resources/student-forms/}{web page}.
+
+For more information, please see the \href{https://cs.gmu.edu/current-students/ms-students/advising/}{academic advising pages} and \href{https://cs.gmu.edu/current-students/ms-students/faqs/}{the FAQ for Masters students}.
+
+
+\chapter{Obtaining Funding}
+\section{NSF and other Government Funding}
+
+\paragraph{Other Government Funding}
+
+\section{Internal Funding}
+
+\section{Industrial Gifts}
+
+\chapter{Teaching}
+\section{Teaching Load}
+\section{Teaching Evaluation}
+\section{Teaching Philosophy}
+\section{Teaching Awards}
+
+
+
+\chapter{Mentoring}
+\section{Mentoring Undergraduate Students}
+\section{Mentoring Graduate Students}
+\section{Mentoring Postdocs}
+\section{Mentoring Junior Faculty}
+
+\chapter{Services}
+
+\section{Service to your Professional Community}
+\section{Service to the Department}
+\section{Service to the University}
+\section{Service to the Community}
+
+
+
+\chapter{History and Acknowledgement}\label{sec:ack}
+
+
+\paragraph{Acknowledgement} Many people have contributed to this document.
+\textbf{Thank you!}
+
+\bibliographystyle{abbrv}
+\bibliography{demystify.bib}
+
+\end{document}
