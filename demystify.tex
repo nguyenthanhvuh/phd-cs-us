@@ -75,6 +75,7 @@
 \renewcommand{\chapterautorefname}{\S\@gobble}
 \renewcommand{\sectionautorefname}{\S\@gobble}
 \renewcommand{\subsectionautorefname}{\S\@gobble}
+\renewcommand{\appendixautorefname}{\S\@gobble}
 \makeatother
 
 \newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
@@ -198,7 +199,7 @@
     \end{tikzpicture}
 
     
-\chapter{Preface}
+\chapter*{Preface}
 Having been involved in PhD admissions for many years, I've
 realized that many \textbf{international students} (and also domestic ones), especially those in  smaller countries or less well-known universities, lack a clear understanding of
 the Computer Science PhD admission process at US universities. This confusion not only
@@ -212,9 +213,7 @@ Furthermore, although many examples are specifics for schools that I and other c
 
 In addition, this handbook can help \textbf{US faculty and admission committee} gain a better understanding of international students and their cultural differences.  By recognizing and leveraging these differences, CS programs in the US can attract larger and more competitive application pools from international students.
 
-I wish you the best of luck. And if you follow this guidance, you will at least have a good chance at GMU (see
-\href{https://github.com/dynaroars/dynaroars.github.io/wiki/About-GMU}{why
-  you want to study at here}). Happy school hunting!
+I wish you the best of luck. Happy school hunting!
 
 This handbook is available at
 
@@ -225,7 +224,7 @@ This handbook is available at
 \noindent and its \LaTeX{} source is also on \href{https://github.com/nguyenthanhvuh/phd-cs-us}{Github}. If you have questions or comments, feel free to create a \href{https://github.com/nguyenthanhvuh/phd-cs-us/issues}{GitHub issue} for discussion.
 
 \newpage
-\tableofcontents*
+\tableofcontents
 
 \chapter{Summary}\label{sec:summary}
 
@@ -325,11 +324,11 @@ for general requirements, e.g., did you submit your transcripts and standard sco
 
 Then, applications are reviewed by a \emph{PhD admission committee} (\textbf{adcom}) that consists of faculty members in CS (in some cases the committee can involve affiliated faculty from different disciplines). These faculty have a wide-range of expertise and background to ensure diverse perspectives in the evaluation process. The size and the review load of the adcom depends on the department size. At GMU, the PhD adcom typically has 15--20 faculty, and each committee member is assigned to review 25--30 applications. Note that many schools, including GMU, have separate adcoms for MS programs.
 
-Each application is assigned to 2--3 faculty members, who will evaluate your profile and reach a consensus.  Note that while the assigned reviewers are likely the main ones deciding your application, other faculty in the department will likely have access to your application and can provide inputs and opinions on your profile.
+Each application is assigned to 2--3 faculty members, who will evaluate your profile and reach a consensus.  Note that while the assigned reviewers are the main ones deciding your application, other faculty in the department will likely have access to your application and can provide inputs and opinions on your profile.
 
-The PhD adcom typically involves assistant professors in the department (see \autoref{sec:faculty-types} for various faculty titles). This provides junior faculty the opportunities to recruit students. Some members can be tenured faculty. The chair of the committee will likely a senior faculty, but they likely will not review individual applications and instead assign them to committee members. The chair will look at various factors such as research interests or mentioning faculty names to assign the applications to appropriate faculty.
+The PhD adcom typically involves assistant professors in the department (see \autoref{sec:faculty-types} for various faculty titles). This provides junior faculty the opportunities to recruit students. Some members can be tenured faculty. The chair of the committee will likely a senior faculty, but they will not review individual applications and instead assign them to committee members. The chair will look at various factors such as research interests or mentioning faculty names to assign the applications to appropriate faculty.
 
-At GMU, we usually decide that a full-time PhD candidate is either (i) admit with funding (TA or RA, see \autoref{sec:funding}) or (ii) rejected. In other words, in most cases, we either
+At GMU, we usually decide that a full-time PhD candidate is either (i) admit with funding (\autoref{sec:funding}) or (ii) rejected. In other words, in most cases, we either
 admit you with full funding, or we reject your application. In some rare cases, we admit
 without funding because you have funding on your own, e.g.,
 supported by your government or having external fellowships. We justify
@@ -962,7 +961,7 @@ overwhelmed and cannot consider many, even those with excellent profiles.
 \paragraph{Should I ask for feedback?}
 No, don't bother.  You will likely not get any useful feedback.  We are not willing to reveal your evaluation results or give you advice on how to improve. So it is best to just move on.  If you really want feedback, ask your professors, collaborators, ref writers, or those who have previously applied.
 
-\section{Increasing your admission chance}\label{sec:improve-your-chance}
+\section{Increasing my admission chance}\label{sec:improve-your-chance}
 
 \begin{center}
   \includegraphics[scale=0.2]{files/alpinist-climbing-peak-mountain-comic-hand-drawn-vector-illustration.jpg}
@@ -980,7 +979,7 @@ In his \href{https://matt.might.net/articles/how-to-apply-and-get-in-to-graduate
 % It is worth noting that in many cases,  an application could be rejected by most reviewers, however have a "champion", who doesn't even have to be in the Admission comittee, that strongly advocate for your profile.
 
 \section{Member of an underrepresented or LBGTQ+ groups}\label{sec:urm}
-A common question is whether you should mention, e.g., in SOP, that you are a member of an underrepresented and minority (URM) group\footnote{URM in CS in the US include African Americans, Hispanic Americans, American Indians/Native Alaskans, Native Hawaiians/Pacific Islanders (excluding Asian Americans), and multiracial students identifying with at least one of the previously listed URM categories.} and LBGTQ+ group. 
+A common question is whether you should mention that you are a member of an underrepresented and minority (URM) group\footnote{URM in CS in the US include African Americans, Hispanic Americans, American Indians/Native Alaskans, Native Hawaiians/Pacific Islanders (excluding Asian Americans), and multiracial students identifying with at least one of the previously listed URM categories.} and LBGTQ+ group (, e.g., in your SOP). 
 This is a strong concern for international (and even domestic) students, who may have encountered discrimination in their countries or personal experiences.
 %This question arises often for international (and even domestic) students. The main worry is that they might get discriminated against, as often happen in their countries or personal experiences. %, and (ii) mentioning this might make them look like they are asking for special treatment.
 
@@ -1223,7 +1222,7 @@ There are many stories on how students are mistreated, stressed, and miserable. 
 
 \chapter{Domestic Students}\label{sec:domestic-students}
 
-Most of what is written in this document is applicable to both domestic\footnote{Here domestic means you did your undergrad (or MS) at a US university.} and international students.  However, there are some differences and benefits that domestic students should be aware of.  This section lists some of these.
+Most of what is written in this document is applicable to both domestic\footnote{For simplicity domestic means you did your undergrad (or MS) at a US university.} and international students.  However, there are some differences and benefits that domestic students should be aware of.
 
 \paragraph{Fee Waiving} Some school might offer application fee waiver for domestic students.  You should check with the school you're applying to. 
 
@@ -1233,14 +1232,14 @@ Most of what is written in this document is applicable to both domestic\footnote
 
 \paragraph{Transcripts} You do not need to get your transcripts evaluated (which can be a hassle and inaccurate).  You can just send your official transcripts directly to the school you're applying to.
 
-\paragraph{Funding \S\ref{sec:funding}} You have more opportunities for funding, e.g., through government scholarships for US citizens and permanent residents.  You can also apply to specific programs \emph{before} you start your PhD, e.g., NSF Graduate Research Fellowship Program (GRFP) and Hertz Foundation Fellowship.  These fellowships can be very competitive and will improve your admission chance if you get them.
+\paragraph{Funding \autoref{sec:funding}} You have more opportunities for funding, e.g., through government scholarships for US citizens and permanent residents.  You can also apply to specific programs \emph{before} you start your PhD, e.g., NSF Graduate Research Fellowship Program (GRFP) and Hertz Foundation Fellowship.  These fellowships can be very competitive and will improve your admission chance if you get them.
 
-\paragraph{Research Experiences} You might have more research experiences than international students. For example, you likely have many opportunities to do research as an undergraduates, e.g., through REUs and internships.  Highlight such experiences in your application.
+\paragraph{Research Experiences \autoref{sec:undergrad-research}} You might have more research experiences than international students. For example, you likely have many opportunities to do research as an undergraduates, e.g., through REUs and internships.  Highlight such experiences in your application.
 
-\paragraph{Standing out} There are \emph{very few} domestic applications compared to international ones, i.e., domestic students are minority (\autoref{sec:urm}) in the CS PhD application pool. Many US universities want to increase the number of domestic students in their programs (and as mentioned above, there are specific fellowships for domestic students).
+\paragraph{Standing out \autoref{sec:improve-your-chance}} There are \emph{very few} domestic applications compared to international ones, i.e., domestic students are minority (\autoref{sec:urm}) in the CS PhD application pool. Many US universities want to increase the number of domestic students in their programs (and as mentioned above, there are specific fellowships for domestic students).
 That makes you stand out and can help your case.
 
-\paragraph{Open House} (\autoref{sec:accepted}) It is easier for you to attend open house events in person.  This can help you make a better decision on which school to attend.
+\paragraph{Open House \autoref{sec:accepted}} It is easier for you to attend open house events in person.  This can help you make a better decision on which school to attend.
 
 % \begin{domesticbox}[Domestic students:] If you're a domestic student, you have several advantages in your application.   You also have more opportunities for funding, e.g., through government scholarships for US citizens and residents. Finally,
 % \end{domesticbox}
@@ -1263,11 +1262,14 @@ You can also take honor thesis or independent study courses with a professor.  T
 
 
 \begin{commentbox}[Vu:] 
-    I enjoy working with undergrads (e.g., have mentored over 10 undergrads) and actively recruit them.
-    I often recruit undergraduate researchers through my classes, e.g., asking students who did well in my class if they are interested in research.  Occasionally I was introduced to students by other students or faculty.
+    I enjoy working with undergrads (e.g., have mentored over 10 undergrads) and always actively recruit.
+    I often get undergraduate researchers through my classes, e.g., asking students who did well in my class if they are interested in research.  Occasionally I was introduced to students by other students or faculty.
 
-    AT GMU we pay undergrads about \$15/hr and about 10 hrs/week. This is a good way to make some money and get research experience.
-  \end{commentbox}
+    While most undergrads are understandably not super productive in research, some are and I have published multiple papers with them.  I also have written strong LoRs for them and have helped them get into PhD programs, including top ones. 
+
+    \tcblower
+    At GMU we pay undergrads about \$15/hr and about 10 hrs/week. This is flexible and can be increased as needed.
+\end{commentbox}
 
 % \paragraph{Online Research Communities and Open Source Contributions} Places such as Github offer many opportunities for research, even though they might not appear so (e.g., they do not explicitly mention research). 
 % In many cases, projects are directly related to research (e.g., open-source software from professors' or research labs). For example, my research group has a many open-source projects that undergrads can contribute to (see \url{https://github.com/dynaroars/}).
@@ -1331,15 +1333,15 @@ There's a misconception that in the US it's all business, with professors as bos
 
 
 
-\chapter{History and Acknowledgement}\label{sec:ack}
+\chapter*{History and Acknowledgement}\label{sec:ack}
 
-\paragraph{History} This handbook was conceived during a lunch with Craig Yu at GMU.  We talked on about why GMU were not able to attract good Vietnamese and other international students, despite having a much stronger CS program than many schools that these students want to go to (part of the reason is described in \autoref{sec:selecting-ranking-schools}). We wished there were a way for international students to know about the US PhD programs (also for US faculty to understand more about international students and therefore have better chance of recruiting and working with them). I was also a member of the large VietPhD group on Facebook and saw many questions from students about PhD programs.  However, most active participant are students in non-CS fields or not in US, and their answers are unfortunately not always accurate and sometimes leading to more confusion. So I thought it would be useful to have a document that is specific to CS PhD programs in the US from an insider prospective.
+\paragraph{History} This handbook was conceived during a lunch with a faculty at GMU.  We talked on about why GMU were not able to attract good Vietnamese and other international students, despite having a much stronger CS program than many schools that these students want to go to (part of the reason is described in \autoref{sec:selecting-ranking-schools}). We wished there were a way for international students to know about the US PhD programs (also for US faculty to understand more about international students and therefore have better chance of recruiting and working with them). I was also a member of the large VietPhD group on Facebook and saw many questions from students about PhD programs.  However, most active participant are students in non-CS fields or not in US, and their answers are unfortunately not always accurate and sometimes leading to more confusion. So I thought it would be useful to have a document that is specific to CS PhD programs in the US from an insider prospective.
 
 I started writing this handbook in May 2023 and have been updating it since then (mostly around deadline time when I tend to procrastinate, i.e., \emph{productive procrastination}!). I have put the source code of this document on \href{https://github.com/nguyenthanhvuh/phd-cs-us}{GitHub} so that others can contribute to it.
 
-\paragraph{About Me} I am an assistant professor in the CS dept at George Mason University (GMU). Prior to GMU, I was at the University of Nebraska-Lincoln (UNL). I have been in the PhD admission process at GMU and UNL for many years.  Currently I serve as the program director of the MS program in Software Engineering at GMU (thus also have some experience with the MS admission process--which is quite different than PhD). My personal and lab website is at \href{https://dynaroars.github.io}{dynaroars.github.io}.
+\paragraph{About Me} I am an assistant professor in the CS dept at George Mason University (GMU). Prior to GMU, I was at the University of Nebraska-Lincoln (UNL). I have been in the PhD admission process at GMU and UNL for many years.  Currently I serve as the program director of the MS program in Software Engineering at GMU (thus also have some experience with the MS admission process---which is quite different than PhD). My personal and lab website is at \href{https://dynaroars.github.io}{dynaroars.github.io}.
 
-Though I'm not an international student, many of my students and collaborators are. I also mentor multiple students from Vietnam, and have close colleagues and friends who were once international students. I hope to capture the diverse challenges and experiences they've faced in this handbook, so that it  can be a valuable resource for prospective international students.
+Though I was not an international student, many of my students and collaborators are/were. I also mentor multiple students from Vietnam, and have close colleagues and friends who were once international students. I hope to capture the diverse challenges and experiences they've faced in this handbook, so that it  can be a valuable resource for prospective international students.
 Finally, my upbringing in the US provides a perspective aligned with American culture, allowing me to shed light on various issues, particularly those related to cultural differences (\autoref{sec:cultural}).
 
 
@@ -1347,8 +1349,7 @@ Finally, my upbringing in the US provides a perspective aligned with American cu
 
 \paragraph{Acknowledgement} Many people have contributed to this work.
 Profs. Craig Yu (GMU), Hakan Aydin (GMU), 
-Xiaokuan Zhang (GMU), Hung Le (UMass), and Deepak Kapur (UNM) provided valuable input in the early version. Other GMU faculty members also have provided feedback and contributions.  Many students including Didier (GMU), Thanh (Melbourne), and Dat (Melbourne) have contributed valuable questions and feedback.
-\textbf{Thank you!}
+Xiaokuan Zhang (GMU), Hung Le (UMass), and Deepak Kapur (UNM) provided valuable input in the early version. Other GMU faculty members also have provided feedback and contributions.  Many students including Didier (GMU), Thanh (Melbourne), and Dat (Melbourne) have contributed valuable questions and feedback. \textbf{Thank you!}
 
 \bibliographystyle{abbrv}
 \bibliography{demystify.bib}
