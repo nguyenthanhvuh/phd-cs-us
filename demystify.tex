@@ -1,5 +1,4 @@
-\documentclass[oneside,11pt]{memoir}
-\chapterstyle{pedersen}
+\documentclass[oneside,11pt]{book}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -7,7 +6,7 @@
 \usepackage{soul}
 % \usepackage[small,compact]{titlesec} %very powerful
 \usepackage[most]{tcolorbox}
-\setsecnumdepth{subsection}
+%\setsecnumdepth{subsection}
 \setcounter{tocdepth}{3}
 \usepackage{enumitem}
 \usepackage{epigraph}
@@ -27,7 +26,12 @@
   urlcolor=blue,
 }
 \usepackage{booktabs}
-\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc} 
+\usepackage{anyfontsize}
+\usepackage{sectsty}
+
 \usepackage[makeroom]{cancel}
 
 \newtcolorbox{mybox}{
@@ -81,37 +85,119 @@
 \newcommand{\xz}[1]{\mycomment{Xiaokuan}{[#1]}}{}
 
 
-\title{Demystifying the Computer Science \\
-  PhD Admission in the US\\{\large A Handbook for International \emph{and Domestic} Students}}
-
-
-\author{\href{https://nguyenthanhvuh.github.io}{ThanhVu (Vu) Nguyen}\\{\small George Mason University, Dept. of Computer Science}}
-
-
-\makeatletter
-\def\maketitle{%
-  \null
-  \thispagestyle{empty}%
-  \vfill
-  \begin{center}\leavevmode
-    \normalfont
-    {\LARGE\raggedright \textbf{\@title}\par}%
-    \vfill%
-    % \hrulefill\par
-    {\Large \@author\par}%
-    \vfill%
-    {\large\raggedleft \@date\par}%
-  \end{center}%
-  \vfill
-  \null
-  \cleardoublepage
-}
-\makeatother
-
 \begin{document}
-\maketitle
-\frontmatter
 
+\pagestyle{empty}
+\begin{tikzpicture}[overlay,remember picture]
+
+    % Background color
+    \fill[
+    black!2]
+    (current page.south west) rectangle (current page.north east);
+    
+    % Rectangles
+    \shade[
+    left color=Dandelion, 
+    right color=Dandelion!40,
+    transform canvas ={rotate around ={45:($(current page.north west)+(0,-6)$)}}] 
+    ($(current page.north west)+(0,-6)$) rectangle ++(9,1.5);
+    
+    \shade[
+    left color=lightgray,
+    right color=lightgray!50,
+    rounded corners=0.75cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}]
+    ($(current page.north west)+(0.5,-10)$) rectangle ++(15,1.5);
+    
+    \shade[
+    left color=lightgray,
+    rounded corners=0.3cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}] ($(current page.north west)+(1.5,-9.55)$) rectangle ++(7,.6);
+    
+    \shade[
+    left color=orange!80,
+    right color=orange!60,
+    rounded corners=0.4cm,
+    transform canvas ={rotate around ={45:($(current page.north)+(-1.5,-3)$)}}]
+    ($(current page.north)+(-1.5,-3)$) rectangle ++(9,0.8);
+    
+    \shade[
+    left color=red!80,
+    right color=red!80,
+    rounded corners=0.9cm,
+    transform canvas ={rotate around ={45:($(current page.north)+(-3,-8)$)}}] ($(current page.north)+(-3,-8)$) rectangle ++(15,1.8);
+    
+    \shade[
+    left color=orange,
+    right color=Dandelion,
+    rounded corners=0.9cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(4,-15.5)$)}}]
+    ($(current page.north west)+(4,-15.5)$) rectangle ++(30,1.8);
+    
+    \shade[
+    left color=RoyalBlue,
+    right color=Emerald,
+    rounded corners=0.75cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(13,-10)$)}}]
+    ($(current page.north west)+(13,-10)$) rectangle ++(15,1.5);
+    
+    \shade[
+    left color=ForestGreen,
+    rounded corners=0.3cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(18,-8)$)}}]
+    ($(current page.north west)+(18,-8)$) rectangle ++(15,0.6);
+    
+    \shade[
+    left color=ForestGreen,
+    rounded corners=0.4cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(19,-5.65)$)}}]
+    ($(current page.north west)+(19,-5.65)$) rectangle ++(15,0.8);
+    
+    \shade[
+    left color=OrangeRed,
+    right color=red!80,
+    rounded corners=0.6cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(20,-9)$)}}] 
+    ($(current page.north west)+(20,-9)$) rectangle ++(14,1.2);
+    
+    % Year
+    \draw[ultra thick,gray]
+    ($(current page.center)+(5,2)$) -- ++(0,-3cm) 
+    node[
+    midway,
+    left=0.25cm,
+    text width=5cm,
+    align=right,
+    black!75
+    ]
+    {
+    {\fontsize{25}{30} \selectfont \bf Computer\\[8pt] Science}
+    } 
+    node[
+    midway,
+    right=0.25cm,
+    text width=6cm,
+    align=left,
+    ForestGreen]
+    {
+    {\fontsize{48}{50} \selectfont PhD}
+    };
+    
+    % Title
+    \node[align=center] at ($(current page.center)+(0,-5)$) 
+    {
+    {\fontsize{28}{28} \selectfont {{Demystifying the Computer Science}}} \\[0.15in]
+    {\fontsize{28}{28} \selectfont {{PhD Admission in the US}}} \\[0.2in]    
+    {\fontsize{18}{18} \selectfont {{A Handbook for International \emph{and Domestic} Students}}} \\[0.5in]    
+
+
+    {\fontsize{16}{19.2} \selectfont \textcolor{ForestGreen}{ \bf ThanhVu (Vu) Nguyen}}\\[0.1in]
+    George Mason University, Dept. of Computer Science\\[0.1in]
+    \today{} (latest version available on  \href{https://github.com/nguyenthanhvuh/phd-cs-us}{Github})
+    };
+    \end{tikzpicture}
+
+    
 \chapter{Preface}
 Having been involved in PhD admissions for many years, I've
 realized that many \textbf{international students} (and also domestic ones), especially those in  smaller countries or less well-known universities, lack a clear understanding of
@@ -161,8 +247,8 @@ Below we summarize the main points of this guideline. This gives you an overview
           \item The committee will look at various factors, but the most important ones are research ability, e.g., publications, statement of purpose (SOP), and  letters of recommendation (LORs).
           \item LORs are very important, but only if they are personalized and talk about your research ability (\autoref{sec:lor}).
           \item SOP is very important. Write it in such a way that makes you \emph{stand out} (\autoref{sec:research-statement} and \autoref{sec:improve-your-chance})
-          \item GRE \emph{is not} required (\autoref{sec:grades}). Spend your time on something else!
-          \item Grades are important, but depend on the reputation of your school (\autoref{sec:grades}).
+          \item Grades are important, but depend on the reputation of your school (\autoref{sec:your-school}).
+          \item GRE \emph{is not} required (\autoref{sec:standard-tests}). Spend your time on something else!
           \item Getting an interview is typically a \emph{good sign}; but no interview does not mean rejection (\autoref{sec:interview}).
            
         \end{itemize}
@@ -417,9 +503,9 @@ Finally, you should get your SOP reviewed by LoR writers, professors (especially
 \end{itemize}
 % \subsection{Outline of a LOR}\label{sec:lor-outline}
 
-\section{Your School}\label{sec:your-school}
+\section{Your School and Grades}\label{sec:your-school}
 
-Graduating from top universities \emph{that we recognize} helps. For example, if you are an international student and your school is well-known, then it is \emph{``top foreign''}, which is definitely a plus.
+\paragraph{School} Graduating from top universities \emph{that we recognize} helps. For example, if you are an international student and your school is well-known, then it is \emph{``top foreign''}, which is definitely a plus.
 However, if we do not know much about schools in your country, then we are uncertain about the quality of your school and  likely treat your school as \emph{``unknown foreign''}, which can be a minus point.
 
 
@@ -432,10 +518,7 @@ What can you do about this? You can explain about your school in your SOP (and a
   If an applicant is anxious about their school not being known outside their country, they can provide information about their school and department, with independent sources where such information can be verified.
 \end{commentbox}
 
-\section{Grades and GREs}\label{sec:grades}
-
-
-Having good grades is good, but unless your school is well-known, having top grades or rankings
+\paragraph{Grades} Having good GPA is good. However if your school is not well-known, having top grades or rankings
 usually will not help because we cannot evaluate them.
 
 This can be an issue for students in many top international universities where the competition is so high that very good students can still have low rankings from these schools (and be overlooked by the adcom).
@@ -452,10 +535,13 @@ have bad grades in relevant courses (e.g., Math and CS).
   \textbf{Vu}: Vietnamese students and even faculty often lament how this grading system hurts Vietnamese students applying abroad. One way to mitigate this is making these issues known in your SOP.  \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{Universities with Vietnamese profs} are probably aware of them, but in general your letter writers \emph{and} you can explicitly mention these in their letters and your statement.
 \end{commentbox}
 
-\paragraph{GRE} Most good CS PhD programs in the US \textbf{no longer require GREs}, so you don't need to take them. However, they might be useful for international students from programs we are not familiar with.  If you have good GRE scores then you should include them in your application.
+\section{Standard Tests (GREs, IELTS, etc) and Work Experiences}\label{sec:standard-tests}
 
+
+\paragraph{GRE} Most good CS PhD programs in the US \textbf{no longer require GREs}, so you don't need to take them. However, they might be useful for international students from programs we are not familiar with.  If you have good GRE scores then you should include them in your application (but don't expect them to make much difference).  
 \paragraph{English Test} Unless your degrees are from specific countries such as \href{https://github.com/dynaroars/dynaroars.github.io/wiki/About-GMU#standard-tests-waiver-eligible-countries}{these}, you will need to
-take standardized English test. Just do well enough to pass minimum requirement set by the university, which is required for TA (\autoref{sec:funding}).
+take standardized English test. Just do well enough to pass minimum requirement set by the university, which is required for TA (\autoref{sec:funding}). Just as with grades, having a high school in these tests might not help, but having too low scores can a \red{red flag} and sometimes results in an automatic rejection (\autoref{sec:why-rejected}), e.g., below the minimum requirement.
+
 
 \begin{commentbox}[Vu:]
   The minimum for GMU (being above this might not mean much, but below is a \red{red flag}).
@@ -473,6 +559,10 @@ take standardized English test. Just do well enough to pass minimum requirement 
   \end{itemize}
 \end{commentbox}
 
+\paragraph{Work Experiences} Work experiences, especially if they are not research-based, do not carry much weight. So do not spend much time talking about them in your SOP (and similarly, LoR from your supervisor for non-research experience will not count much).  
+
+However, if you have research-based work experiences, then they can be useful and should be mentioned in your SOP and LORs. For example, if you have worked at a research lab (e.g., Microsoft, VinAI in Vietnam, etc), then you should mention that in your SOP and ask your supervisor to write about your research experiences and potentials in their LOR (\autoref{sec:lor}).
+
 
 \section{CV/Resume}
 The CV/Resume should provide a summary of the applicant's achievements.  It should allow the reviewers to quickly scan to identify major achievements (e.g., Publications, Programming Competition Awards, Teaching Experience).
@@ -481,12 +571,13 @@ The CV/Resume should provide a summary of the applicant's achievements.  It shou
 
 After you submitted your applications, the waiting game begins! For many students, this is a very stressful time. This section provides some information and tips to help you get through this time.
 
-\paragraph{Interviews} Just like a job application, you might get interviews from schools. The most common case is that a professor is interested in working with you and wants to chat to make decision (e.g., to offer RA). In some cases, the interview is done by several professors, e.g., to see if a student fits to their group or to recruit a very strong student to their program. The interview can also be done by adcom members to see if the student fit their program.
+\paragraph{Interviews} Just like a job application, you likely will get interviews from schools. The most common case is that a professor is interested in working with you and wants to chat to make decision e.g., to offer RA (\autoref{sec:ra})). In some cases, the interview is done by several professors, e.g., to see if a student fits to their group or to recruit a very strong student to their program. The interview can also be done by adcom members to see if the student fit their program.
 %The professor might include one of their current students as part of the interview.
 
 Typically, an interview takes about 15--30 minutes, and one important aspect of evaluation is your ability to effectively communicate, including speaking and understanding English. 
-In general treat it as an informal chat, but be prepared to talk about your research experiences and interests (so do have \emph{elevator pitch} about your experiences and research). 
-A professor might want to know more about your research background or even ask you to read a paper (so be sure to do it!). During the interview, you will have the opportunity to ask questions about the university. It's essential to prepare some thoughtful questions, similar to a job interview.
+In general, just treat the interview as an informal chat, but be prepared to talk about your research experiences and interests (so do have \emph{elevator pitch} about your experiences and research). 
+A professor might want to know more about your research background or even ask you to read a paper (so be sure to do it!). Some prof. can ask you to solve a problem, e.g., a coding problem (so you might want to ask if you need to prepare for that).
+During the interview, you will have the opportunity to ask questions about the university. It's essential to prepare some thoughtful questions, similar to a job interview.
 
 \begin{commentbox}[Vu:]
   At GMU, faculty are encouraged to interview candidates. For very strong candidates, the interview is actually to recruit them.  In some cases a faculty interviews a candidate that they see potentials and want to advocate for their admission. Without the interview, such applications may be more likely to be rejected.
@@ -494,9 +585,9 @@ A professor might want to know more about your research background or even ask y
   In short, getting an interview is a good sign; it means that someone is considering you. If we are not interested in your application, we will not proceed with an interview.
 \end{commentbox}
 
-\paragraph{Not getting interviews} While it is generally good to get interview, not getting an interview does not mean you're out.  Many programs do not have the tradition of interviewing applicants. For example, at GMU, most of our admitted students with TA do not go through interviews. 
+\paragraph{Not getting interviews} While it is generally good to get interview, not getting an interview does not mean you're out.  Many programs do not have the tradition of interviewing applicants. For example, at GMU, most of our admitted students with TA (\autoref{sec:ta}) do not go through interviews. 
 
-However, no interviews typically means that you will not likely get an RA (\autoref{sec:funding}), which is offered by an individual faculty (if they want to pay you to do research for them, then likely they want to talk to you first).  In this case, your application (and TA/fellowship funding) will be reviewed and decided by the adcom.
+However, no interviews typically means that you will not likely get an RA (\autoref{sec:ra}), which is offered by an individual faculty (if they want to pay you to do research for them, then likely they want to talk to you first).  In this case, your application (and TA/fellowship funding) will be reviewed and decided by the adcom.
 
 \paragraph{Follow Up Emails} If you had an interview and have not heard back, you can send an email to ask about the status of your application Don't send this too soon though, perhaps wait at least 2 weeks. 
 
@@ -588,7 +679,7 @@ Masters.
   \end{tabular}
 \end{table}
 
-\section{Graduate Assistantship (TA/RA)}
+\section{Graduate Assistantship (TA/RA)}\label{sec:ta-ra}
 The most common type of funding is \textbf{graduate assistantship}, which is either TA or RA. Both TA and RA come with tuition waiving (you don't have to pay tuition), health insurance (this takes care of your insurance, which is a must have in the US), and most importantly, your stipend (i.e., your salary). Some universities also give significant discount or pay insurance for spouse/children.
 
 Several things about stipends.  First, the amount of stipend \emph{varies} and depends on factors such as location (e.g., a stipend in Washington DC is likely higher than in Lincoln, Nebraska due to higher living cost). Second, an academic year (AY)  year is typically \emph{9-month} in the US, so stipend is for 9 months (so divide by 9 for each month). Third, you might get paid over the summer through funding from your professor or fellowship (typically no TA over the summer). Fourth, like most source of income in the US, you will have to \emph{pay tax} on your stipend.  Finally, private universities might pay more for stipend, but they could have extra "activity" fee or some other hidden ones (e.g., you may need to pay some fees for each credit hour).
@@ -620,7 +711,7 @@ During a semester, a TA might work with several courses and professors (not nece
 
 Even if you have other funding and do not need TA, you still should do TA at least once.  This allows you to see what teaching is like, which is especially helpful for research career where you often give talks and tell people about your work. GMU sometimes has classes that a more senior student can teach.  In that case, you will be paid as GTA or even sometimes as a lecturer.  This is a good opportunity for students to get teaching experience and also get paid more (as a lecturer).
 
-\subsection{Research Assistant (RA)}
+\subsection{Research Assistant (RA)}\label{sec:ra}
 RA is provided through a professor through their own funding so you can work on their project.  
 You do not need to teach as an RA, so you can focus on your research. Depending on the professor, RA may be available during the summer. \autoref{sec:ra-cost} gives more details on RA budget.
 
@@ -633,7 +724,7 @@ It is important to note that RA is never guaranteed as it depends on the funding
   If you got recruited an offered an RA by a prof., it's very likely you will get admitted.  For example, if a prof., even if not in PhD adcom, wants to fund you, the PhD adcom will respect that decision and admit you (unless your application has many red flags).
 \end{commentbox}
 
-\section{Fellowship/Scholarship}
+\section{Fellowships/Scholarships}\label{sec:fellowships}
 
 Fellowship is another type of funding that students can get (e.g., from the university, industries, government).
 Fellowships are typically competitive and generous, and gives pretty much all benefits tuition/insurance that a TA/RA has.  They might even give higher stipend (including summer) and open doors for job opportunities such as internships.
@@ -665,7 +756,7 @@ Most universities the US have a CS program.
 However, while many universities offer PhD in their CS programs, many do not.  These universities might offer just Bachelor degrees (e.g., BS) and no graduate studies (i.e., no MS or Ph.D degrees), or they just offer MS programs (but no PhD). For example, Penn State in University Park has Ph.D. in CS,  but Penn State in Harrisburg only has BS and MS in CS, and Penn State in York only has BS in CS.  On the other hand, multiple locations of the University of Texas, e.g., Austin, Dallas, Arlington, have PhDs in CS. 
 
 Thus, if your goal is Ph.D. in CS, you have to aim only for schools offering such a degree.  %This might sound obvious but many students (even those in the US) get confused due to the large number of universities. 
-While this can be confusing due to the large number of universities in the US, a little research, e.g., searching for PhD in CS from the school website, will help you find out. All schools listed in \autoref{sec:ranking} have PhD studies in CS, so you can start there.
+While this can be confusing due to the large number of universities in the US, a little research, e.g., searching for PhD in CS from the school website, will help you find out. All schools listed in \autoref{sec:ranking} have PhD programs in CS, so you can start there.
 
 % \subsection{R1, R2, ...}
 
@@ -1138,7 +1229,7 @@ Most of what is written in this document is applicable to both domestic\footnote
 
 \paragraph{School \autoref{sec:your-school}} We already know about your school, which is a plus (see \autoref{sec:your-school}). You are also more familiar with the US education system and culture (so hopefully you are aware of the cultural issues listed in \autoref{sec:cultural}). 
 
-\paragraph{Standard Tests \autoref{sec:grades}} You do not need to take TOEFL or IELTS because you already did your undergrad (or MS) at a US university.  You might also be more comfortable communicating in English, e.g., contacting professors (\autoref{sec:contact}).
+\paragraph{Standard Tests \autoref{sec:standard-tests}} You do not need to take TOEFL or IELTS because you already did your undergrad (or MS) at a US university.  You might also be more comfortable communicating in English, e.g., contacting professors (\autoref{sec:contact}).
 
 \paragraph{Transcripts} You do not need to get your transcripts evaluated (which can be a hassle and inaccurate).  You can just send your official transcripts directly to the school you're applying to.
 
