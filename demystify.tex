@@ -1,4 +1,4 @@
-\documentclass[oneside,11pt]{book}
+\documentclass[oneside,11pt,dvipsnames]{book}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -26,9 +26,12 @@
   urlcolor=blue,
 }
 \usepackage{booktabs}
-%\usepackage[dvipsnames]{xcolor}
+
+
 \usepackage{tikz}
-\usetikzlibrary{calc} 
+\usetikzlibrary{calc}
+\usepackage{xcolor}
+
 \usepackage{anyfontsize}
 \usepackage{sectsty}
 
@@ -251,7 +254,7 @@ Below we summarize the main points of this guideline. This gives you an overview
           \item Grades are important, but depend on the reputation of your school (\autoref{sec:your-school}).
           \item GRE \emph{is not} required (\autoref{sec:standard-tests}). Spend your time on something else!
           \item Getting an interview is typically a \emph{good sign}; but no interview does not mean rejection (\autoref{sec:interview}).
-           
+
         \end{itemize}
   \item What to do after getting admitted?
         \begin{itemize}
@@ -267,7 +270,7 @@ Below we summarize the main points of this guideline. This gives you an overview
           \item Many schools do not offer PhD studies in CS and many CS professors do not advise or graduate PhD students  (\autoref{sec:schoolsandprofs}).
           \item Contacting a prof. for research opportunities is recommended, but do it \emph{properly} (\autoref{sec:contact}).
         \end{itemize}
-  
+
     \item Miscs and FAQS
         \begin{itemize}
           \item Why you were rejected (\autoref{sec:why-rejected})
@@ -342,7 +345,7 @@ LORs.
 % tvn: the main thing is research experiences
 
 
-\paragraph{Why CS depts do not waive application fee?}  Note that some universities do waive application fee (e.g., for domestic students (\autoref{sec:domestic-students})), however most do not.  In any case, application fee is typically a requirement of the university. Individual departments and programs do not have the flexibility to waive the application fee, even if they want to. 
+\paragraph{Why CS depts do not waive application fee?}  Note that some universities do waive application fee (e.g., for domestic students (\autoref{sec:domestic-students})), however most do not.  In any case, application fee is typically a requirement of the university. Individual departments and programs do not have the flexibility to waive the application fee, even if they want to.
 
 In my opinion, requiring applicants to pay the fee helps ensure their seriousness, as it filters out non-serious candidates. Also, if the application process were free for everyone, most good CS programs would receive an overwhelming number of applications to review.
 
@@ -363,7 +366,7 @@ the following key indicators.
 \section{Research Ability}\label{sec:research-ability}
 
 A concrete evidence of research ability is having \textbf{papers in reputable international journals or conferences}.
-Having published papers, especially at top venues, is a sign that the applicant has successfully involved in research.  Students  accepted to top schools often have multiple first-authored papers at top venues. 
+Having published papers, especially at top venues, is a sign that the applicant has successfully involved in research.  Students  accepted to top schools often have multiple first-authored papers at top venues.
 
 \begin{commentbox}[Vu:]
   Many international students mention Scopus Q1, which consists of various journals from IEEE, Elsevier, and many other publishers.  I don't know/recognize many of journals listed in Scopus Q1. This might be something to be mindful of, as \textbf{CS} faculty might not be too familiar with Scopus or journals listed there, so devote some part in your statement to discuss the significance of your papers.
@@ -408,7 +411,7 @@ For example, participating in Math Olympiads if you want to do theory or  winnin
 Most PhD programs will require at least \textbf{two LORs}. Having a strong letter from an internationally recognized researcher will \emph{greatly strengthen} your application. In fact, a strong letter from a well-known researcher can outweigh the lack of publications (or low GPA or unknown school).
 
 
-However, obtaining letters from famous people 
+However, obtaining letters from famous people
 can be challenging for international students, who might not have much interactions with such experts. So it is fine to have a letter from people (e.g., profs, researchers, postdocs who mentored you) that know you well enough to talk about \emph{your research experience and capabilities}. Many students get letters from supervisors from companies where they did internships or are working at. It is OK as long as it is a research-based personalized letter (once again, we are talking about PhD applications, not MS). Again, the emphasis here is \emph{research}, i.e., the letters should describe your research experiences and potentials. Letters focusing your course work or non-research projects at a company won't carry much weight.
 
 \begin{commentbox}[Vu:]
@@ -434,7 +437,7 @@ can be challenging for international students, who might not have much interacti
   Sometimes students would go through great length just to get letters from well-known professors in their school (e.g., department head). But as mentioned, if these professors do not know you, their letters would likely be generic and carry little value, in fact, \red{red flags}. Moreover, a top professor at your university might not be well-known to US faculty (see more details in \autoref{sec:your-school}). So save the trouble and  get letters from \emph{any} professors/supervisors who knows you well and can write a good letter about \emph{your} research ability. It's better to have a good personalized
   letter about your own research ability from someone who is less
   well-known than a generic/weak letter from a well-known person.
-  
+
 \end{commentbox}
 
 \paragraph{Waiving Your Right}  Choosing not to look at a reference letter is pretty standard in school and job applications. When you waive your right to see the letter, it adds a layer of trust, showing you're confident in your choice of referees and that you're not trying to twist their words. It's also about keeping things open and honest between you and your letter writers, and encourages them to be real about your strengths and qualifications. Plus, it keeps things private.
@@ -467,7 +470,7 @@ A well-written SOP also shows that you can communicate, which is very important 
 % is important because if you need (GTA) funding, it will provide evidence
 % that you can teach and communicate with students.
 
-There are various guides on writing SOP , and \href{https://cs-sop.org/}{many example statements} are available. In short, focus on your research motivation and goal, and convince us that you can achieve it through your experience, e.g., published papers. You should also back up your claims with concrete evidences. For example, if you say you have experience with teaching, then show what you did, e.g., undergrad TA or mentoring someone.  If you say you work on project X, then show some results (paper submitted (or even rejected), achieved X\% performance improvement over ..). 
+There are various guides on writing SOP , and \href{https://cs-sop.org/}{many example statements} are available. In short, focus on your research motivation and goal, and convince us that you can achieve it through your experience, e.g., published papers. You should also back up your claims with concrete evidences. For example, if you say you have experience with teaching, then show what you did, e.g., undergrad TA or mentoring someone.  If you say you work on project X, then show some results (paper submitted (or even rejected), achieved X\% performance improvement over ..).
 
 You should also talk about things that adcom members might not know about and can help make you different than the other 1000 applicants, e.g., you are member of a minority or LBGTQ+ group (\autoref{sec:urm}), your personal Github project with 1K+ stars or your regular contributions to well-known open-source projects (see \autoref{sec:improve-your-chance} for increasing your admission chance).
 
@@ -478,7 +481,7 @@ e.g., why do you apply \emph{here}? provide names of professors who you're inter
 This shows that you're serious and have done homework on places you're applying to.
 Adcom will look for this part, so do not skip it.
 
-Finally, you should get your SOP reviewed by LoR writers, professors (especially those who have served in adcom), or even graduate PhD students (because they have been through this process).  
+Finally, you should get your SOP reviewed by LoR writers, professors (especially those who have served in adcom), or even graduate PhD students (because they have been through this process).
 
 \begin{commentbox}[Vu:]
   I often read the research statement and LORs first. If I am
@@ -498,7 +501,7 @@ Finally, you should get your SOP reviewed by LoR writers, professors (especially
 
 \subsection*{Additional Resources}
 \begin{itemize}
-    \item \href{https://chrisblattman.com/blog/2022/01/11/}{Writing your statement of purpose} by Chris Blattman 
+    \item \href{https://chrisblattman.com/blog/2022/01/11/}{Writing your statement of purpose} by Chris Blattman
   \item \href{http://www.pl-enthusiast.net/2022/10/03/how-to-write-a-grad-school-personal-statement/}{How to Write a Grad School Personal Statement} by Mike Hicks
   \item     \href{https://cs-sop.notion.site/cs-sop/CS-PhD-Statements-of-Purpose-df39955313834889b7ac5411c37b958d?p=f5d5980a71524ebaa4e6ae57266b847c&pm=s}{CS PhD SOP database} by cs-sop.org
 \end{itemize}
@@ -515,7 +518,7 @@ However, if we do not know much about schools in your country, then we are uncer
 \begin{commentbox}[Vu:]
   Sometime PhD adcom in the US will share a document such as \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Foreign-Top-Schools}{this one}, which lists the top schools in several countries. In some cases we ask other faculty and students if we think they know about the place.  For example, when I was a postdoc at UMD, members in their CS PhD adcom ask me to evaluate applicants from Vietnam.  During my time at UNL and now here at GMU, I have looked at Vietnamese applications (whether they are assigned to me or not) and provide input to their reviewers, e.g., X is the top tech school in Vietnam and so it should be \emph{top} instead of \emph{unknown} foreign, which makes a huge difference.
 \end{commentbox}
-\begin{commentbox}[Deepak:] 
+\begin{commentbox}[Deepak:]
   If an applicant is anxious about their school not being known outside their country, they can provide information about their school and department, with independent sources where such information can be verified.
 \end{commentbox}
 
@@ -537,9 +540,9 @@ have bad grades in relevant courses, e.g., Math and CS.
 \section{Standard Tests (GREs, IELTS, etc) and Work Experiences}\label{sec:standard-tests}
 
 
-\paragraph{GRE} Most good CS PhD programs in the US (e.g., R1 universities) \textbf{no longer require GREs}, so you don't need to take them. 
+\paragraph{GRE} Most good CS PhD programs in the US (e.g., R1 universities) \textbf{no longer require GREs}, so you don't need to take them.
 
-\textbf{Advice}: In general, don't waste your time taking GRE.  However, if you took it and have good scores then you can include and talk about them in your application (but don't expect them to make much difference).  
+\textbf{Advice}: In general, don't waste your time taking GRE.  However, if you took it and have good scores then you can include and talk about them in your application (but don't expect them to make much difference).
 
 \paragraph{English Test} Unless your degrees are from specific countries such as \href{https://github.com/dynaroars/dynaroars.github.io/wiki/About-GMU#standard-tests-waiver-eligible-countries}{these}, you will need to
 take standardized English test.
@@ -565,12 +568,12 @@ take standardized English test.
 
 \paragraph{Work Experiences} Work experiences, especially if they are not research-based, do not carry much weight. Similarly, LoR from your supervisor for non-research experience will not count much.
 
-\textbf{Advice}: do not spend much time talking about non-research related job in your SOP.  
+\textbf{Advice}: do not spend much time talking about non-research related job in your SOP.
 However, if you have research-based work experiences, then they can be useful and should be mentioned in your SOP and LORs. For example, if you have worked at a research lab (e.g., Microsoft, DoE, VinAI in Vietnam, etc) (\autoref{sec:research-ability}), then you should mention that in your SOP and ask your supervisor to write about your research experiences and potentials in their LOR (\autoref{sec:lor}).
 
 
 \section{CV/Resume}
-The CV/Resume provides a summary of the applicant's achievements.  
+The CV/Resume provides a summary of the applicant's achievements.
 
 \textbf{Advice}: Prepare your CV in such away that it allows the reviewers to quickly scan to identify major achievements (e.g., Publications, Programming Competition Awards, Teaching Experience).
 
@@ -581,9 +584,9 @@ After you submitted your applications, the waiting game begins! For many student
 \paragraph{Interviews} Just like a job application, you likely will get interviews from schools. The most common case is that a professor is interested in working with you and wants to chat to make decision e.g., to offer RA (\autoref{sec:ra})). In some cases, the interview is done by several professors, e.g., to see if a student fits to their group or to recruit a very strong student to their program. The interview can also be done by adcom members to see if the student fit their program.
 %The professor might include one of their current students as part of the interview.
 
-Typically, an interview takes about 15--30 minutes, and one important aspect of evaluation is your ability to effectively communicate, including speaking and understanding English. 
+Typically, an interview takes about 15--30 minutes, and one important aspect of evaluation is your ability to effectively communicate, including speaking and understanding English.
 
-\textbf{Advice}: In general, just treat the interview as an informal chat, but be prepared to talk about your research experiences and interests (so do have \emph{elevator pitch} about your experiences and research). 
+\textbf{Advice}: In general, just treat the interview as an informal chat, but be prepared to talk about your research experiences and interests (so do have \emph{elevator pitch} about your experiences and research).
 A professor might want to know more about your research background or even ask you to read a paper (so be sure to do it!). Some prof. can ask you to solve a problem, e.g., a coding problem, so you might want to ask if you need to prepare for that.
 During the interview, you will have the opportunity to ask questions about the university. It's essential to prepare some thoughtful questions, similar to a job interview.
 
@@ -593,11 +596,11 @@ During the interview, you will have the opportunity to ask questions about the u
   In short, getting an interview is a good sign; it means that someone is considering you. If we are not interested in your application, we will not proceed with an interview.
 \end{commentbox}
 
-\paragraph{Not getting interviews} While it is generally good to get interview, not getting an interview does not mean you're out.  Many programs do not have the tradition of interviewing applicants. For example, at GMU, most of our admitted students with TA (\autoref{sec:ta}) do not go through interviews. 
+\paragraph{Not getting interviews} While it is generally good to get interview, not getting an interview does not mean you're out.  Many programs do not have the tradition of interviewing applicants. For example, at GMU, most of our admitted students with TA (\autoref{sec:ta}) do not go through interviews.
 
 However, no interviews typically means that you will not likely get an RA (\autoref{sec:ra}), which is offered by an individual faculty (if they want to pay you to do research for them, then likely they want to talk to you first).  In this case, your application (and TA/fellowship funding) will be reviewed and decided by the adcom.
 
-\paragraph{Follow Up Emails} If you had an interview and have not heard back, you can send an email to ask about the status of your application Don't send this too soon though, perhaps wait at least 2 weeks. 
+\paragraph{Follow Up Emails} If you had an interview and have not heard back, you can send an email to ask about the status of your application Don't send this too soon though, perhaps wait at least 2 weeks.
 
 You can also send an email to ask about the status of your application if you have received offers from other schools and need to make a decision soon. See \autoref{sec:accept-postpone-decline} for how to accept/postpone/decline offers.
 
@@ -662,10 +665,10 @@ You can also consider applying to MS programs, which are typically easier to get
 
 \epigraph{Bart, with \$10,000, we’d be millionaires! We could buy all kinds of useful things like…love!’}{\textsc{The Simpsons}}
 
-As mentioned, if you're admitted to a \emph{good} CS PhD program, you should not have to worry about funding!  
+As mentioned, if you're admitted to a \emph{good} CS PhD program, you should not have to worry about funding!
 In the US, the common types of funding for PhDs are \emph{graduate teaching assistant} (GTA or TA), \emph{graduate research assistant} (GRA or RA), and \emph{Fellowship}.
 RA is paid by a prof. for you to do their research. TA is paid by the department for you to help with teaching. Finally, fellowship is an independent funding that can come from a school, a company, or an organization. \autoref{tab:funding} summarizes the differences.
-Note that funding is typically more available for PhD students than 
+Note that funding is typically more available for PhD students than
 Masters.
 
 \begin{table}
@@ -692,7 +695,7 @@ The most common type of funding is \textbf{graduate assistantship}, which is eit
 
 Several things about stipends.  First, the amount of stipend \emph{varies} and depends on factors such as location (e.g., a stipend in Washington DC is likely higher than in Lincoln, Nebraska due to higher living cost). Second, an academic year (AY)  year is typically \emph{9-month} in the US, so stipend is for 9 months (so divide by 9 for each month). Third, you might get paid over the summer through funding from your professor or fellowship (typically no TA over the summer). Fourth, like most source of income in the US, you will have to \emph{pay tax} on your stipend.  Finally, private universities might pay more for stipend, but they could have extra "activity" fee or some other hidden ones (e.g., you may need to pay some fees for each credit hour).
 
-\paragraph{Low Stipend?} Students often complain their stipend being too low. However, in most cases it is actually not bad and you can live comfortably with it.  It might also be enough to support your spouse and kids (many CS PhD students have their family with them). So don't worry too much about stipend.  If you're admitted to a good CS PhD program, you will be fine. A good school would know that it has to be competitive to attract students.  For example, at GMU, every year we discuss about improving the benefits, and especially stipend, for our graduate students. 
+\paragraph{Low Stipend?} Students often complain their stipend being too low. However, in most cases it is actually not bad and you can live comfortably with it.  It might also be enough to support your spouse and kids (many CS PhD students have their family with them). So don't worry too much about stipend.  If you're admitted to a good CS PhD program, you will be fine. A good school would know that it has to be competitive to attract students.  For example, at GMU, every year we discuss about improving the benefits, and especially stipend, for our graduate students.
 
 For a full breakdown of how much a graduate student costs, see \autoref{sec:ra-cost}.
 
@@ -711,7 +714,7 @@ Your TA is paid through the school or department, i.e., they hire you to help te
 As a TA, you spend up to 20 hrs/week and help with classes (e.g., grading or teaching labs/recitation).
 During a semester, a TA might work with several courses and professors (not necessary their adviser).  TA funding is not typically available during the summer, which has few courses.
 
-\paragraph{How to get TA?}  Unless you have other funding such as RA or Fellowships, TA is typically default for CS PhD programs. When you apply to be a full-time student,  state that you need financial assistant. It is common that the PhD committee will either admit you and give you GTA, or reject you; i.e., we do not admit a student without supporting them.  
+\paragraph{How to get TA?}  Unless you have other funding such as RA or Fellowships, TA is typically default for CS PhD programs. When you apply to be a full-time student,  state that you need financial assistant. It is common that the PhD committee will either admit you and give you GTA, or reject you; i.e., we do not admit a student without supporting them.
 
 \begin{commentbox}[Vu:]
   At GMU CS, PhD students admitted TA has a 4 years of GTA guaranteed, and in also receive  stipend for the first summer.
@@ -720,10 +723,10 @@ During a semester, a TA might work with several courses and professors (not nece
 Even if you have other funding and do not need TA, you still should do TA at least once.  This allows you to see what teaching is like, which is especially helpful for research career where you often give talks and tell people about your work. GMU sometimes has classes that a more senior student can teach.  In that case, you will be paid as GTA or even sometimes as a lecturer.  This is a good opportunity for students to get teaching experience and also get paid more (as a lecturer).
 
 \subsection{Research Assistant (RA)}\label{sec:ra}
-RA is provided through a professor through their own funding so you can work on their project.  
+RA is provided through a professor through their own funding so you can work on their project.
 You do not need to teach as an RA, so you can focus on your research. Depending on the professor, RA may be available during the summer. \autoref{sec:ra-cost} gives more details on RA budget.
 
-\textbf{How to get RA?} When a professor recruits you, they might offer you an RA right away (so you start with an RA).  However, a more common scenario is that you first get admitted with TA, and then after a year or two find an adviser to support you with RA. 
+\textbf{How to get RA?} When a professor recruits you, they might offer you an RA right away (so you start with an RA).  However, a more common scenario is that you first get admitted with TA, and then after a year or two find an adviser to support you with RA.
 
 It is important to note that RA is never guaranteed as it depends on the funding situation of the prof. So you should also pay attention to TA, which is a good backup plan (remember, typically TA and RA have similar benefits). This means you should also ask if TA is readily available for PhD students in the program.
 
@@ -758,12 +761,12 @@ Choosing a school and an adviser is clearly among the most important things in y
 
 We will first discuss about universities in the US that offer PhD in CS. Then we will talk about how to rank and select them.
 
-\subsection{Schools that offer PhD in CS}  
+\subsection{Schools that offer PhD in CS}
 
 Most universities the US have a CS program.
-However, while many universities offer PhD in their CS programs, many do not.  These universities might offer just Bachelor degrees (e.g., BS) and no graduate studies (i.e., no MS or Ph.D degrees), or they just offer MS programs (but no PhD). For example, Penn State in University Park has Ph.D. in CS,  but Penn State in Harrisburg only has BS and MS in CS, and Penn State in York only has BS in CS.  On the other hand, multiple locations of the University of Texas, e.g., Austin, Dallas, Arlington, have PhDs in CS. 
+However, while many universities offer PhD in their CS programs, many do not.  These universities might offer just Bachelor degrees (e.g., BS) and no graduate studies (i.e., no MS or Ph.D degrees), or they just offer MS programs (but no PhD). For example, Penn State in University Park has Ph.D. in CS,  but Penn State in Harrisburg only has BS and MS in CS, and Penn State in York only has BS in CS.  On the other hand, multiple locations of the University of Texas, e.g., Austin, Dallas, Arlington, have PhDs in CS.
 
-Thus, if your goal is Ph.D. in CS, you have to aim only for schools offering such a degree.  %This might sound obvious but many students (even those in the US) get confused due to the large number of universities. 
+Thus, if your goal is Ph.D. in CS, you have to aim only for schools offering such a degree.  %This might sound obvious but many students (even those in the US) get confused due to the large number of universities.
 While this can be confusing due to the large number of universities in the US, a little research, e.g., searching for PhD in CS from the school website, will help you find out. Schools listed in \autoref{sec:ranking} have PhD programs in CS, so you can start there.
 
 % \subsection{R1, R2, ...}
@@ -774,7 +777,7 @@ While this can be confusing due to the large number of universities in the US, a
 \end{center}
 
 International\footnote{Even domestic students who have done their undergrad in the US might not know much about CS PhD programs in the US.} students often put schools into two bins: (i) very top schools that they dream about, and (ii) everything else.  In many cases, they use rankings from US News, which are not very transparent and highly questionable\footnote{\url{https://cra.org/cra-statement-us-news-world-report-rankings-computer-science-universities/}}.  Sometimes these students evaluate CS programs using the reputations non-CS programs such as medical, math, or physics.
-They even rank universities based on popular states they know in the US, e.g., California and New York.  Clearly, there are so many thing wrong with these methods. 
+They even rank universities based on popular states they know in the US, e.g., California and New York.  Clearly, there are so many thing wrong with these methods.
 
 You can learn about CS programs and research expertise of faculty using resources such as \href{https://csrankings.org}{CSRankings.org}. You will be very surprised to learn that a school that you didn't know much about can have very strong research in your interested topic (and vice versa, a school you thought highly about might have no faculty working in the research field you're interested in). This is also a good way to learn about individual faculty (who works on what) and well-known CS conferences\footnote{In CS (and probably only in CS), conferences, not journals, are often the main venue to publish research finding (see \href{https://homes.cs.washington.edu/~mernst/advice/conferences-vs-journals.html}{why here}).}. %\autoref{sec:ranking} gives the top 50 CS programs in the US according to CSRankings.
 
@@ -871,7 +874,7 @@ Tenured faculty, e.g., associate and full profs., are likely older, more well-kn
 %   When considering PhD programs, we often wonder if we should prioritize a high-ranking university or a professor with a strong reputation? Of course, both are great, but it is hard to achieve both.  I believe receiving some guidance from you  would be incredibly valuable.
 % \end{commentbox}
 
-% This is a good question and there doesn't seem to be any best answer or specific algorithm that you can use.  But I'll throw out something for you to think about. To me, there are many good schools in the US and so you have some leeway in choosing.  For example, I don't believe there's much difference among schools in top 5 (e.g., CMU, UIUC, UCSD, MIT, GTech are in the same equivalent class), top 10 (e.g., Michigan,  Stanford, UWash, UC-Berkeley, Cornell is another equivalent class), top 20, top 30, top 40, and so on (though I would say schools above 100 are pretty much in the same equivalent class).  It's hard to say a top X is much much better than a top X+20 (e.g.,  Purdue at 15 is stronger than Yale at 35, but not \emph{that much} stronger as you would think).  So keep that in mind, while ranking does matter (e.g., more active faculty, stronger students), the lower ranked universities are still pretty good, might have sub fields that are extremely strong (NCState is 40th, but in Software Engineering it is easily top 5), and many unique things.  This is in contrast with universities in Vietnam where there are large gaps among the top 5, 10, and so on.  
+% This is a good question and there doesn't seem to be any best answer or specific algorithm that you can use.  But I'll throw out something for you to think about. To me, there are many good schools in the US and so you have some leeway in choosing.  For example, I don't believe there's much difference among schools in top 5 (e.g., CMU, UIUC, UCSD, MIT, GTech are in the same equivalent class), top 10 (e.g., Michigan,  Stanford, UWash, UC-Berkeley, Cornell is another equivalent class), top 20, top 30, top 40, and so on (though I would say schools above 100 are pretty much in the same equivalent class).  It's hard to say a top X is much much better than a top X+20 (e.g.,  Purdue at 15 is stronger than Yale at 35, but not \emph{that much} stronger as you would think).  So keep that in mind, while ranking does matter (e.g., more active faculty, stronger students), the lower ranked universities are still pretty good, might have sub fields that are extremely strong (NCState is 40th, but in Software Engineering it is easily top 5), and many unique things.  This is in contrast with universities in Vietnam where there are large gaps among the top 5, 10, and so on.
 
 
 \subsection{Should you contact a professor? How to get a desired reply?}\label{sec:contact}
@@ -888,7 +891,7 @@ Faculty often receive "cold" e-mails from prospective students. Most of the time
 
 First, if you want to contact a prof. to \emph{ask about your admission chance}, please \textbf{don't}. We don't know and can't answer because as explained in \autoref{sec:evalapps}, we don't make individual decisions and might not even be assigned to evaluate your application.  It is the same as sending a paper draft to a journal editor and ask them if your paper has a chance.
 
-So how to get someone to look at your profile and give input? You could ask your professors, LoR writers, collaborators, or those who have previously applied. For these kind of feedback, ask someone you have personal connection with.  
+So how to get someone to look at your profile and give input? You could ask your professors, LoR writers, collaborators, or those who have previously applied. For these kind of feedback, ask someone you have personal connection with.
 
 On the other hand, if you want to contact a prof. to ask about \emph{research opportunities}, or \emph{GTA/GRA} support, then \emph{yes}, I believe you should---it is \emph{worth it}. However, you really need to put effort into it and do it the \emph{right way}.
 
@@ -910,7 +913,7 @@ Below is a good example that I would likely reply.
   This is a good example because it is clearly written just for me.  It shows that the student knows about my work on invariant generation and has related  background (paper C and project G).
 \end{commentbox}
 
-Finally, profs. are very busy so don't take it personally if you don't get anything from them (though I would be very surprised if such thoughtful emails get no replies!). 
+Finally, profs. are very busy so don't take it personally if you don't get anything from them (though I would be very surprised if such thoughtful emails get no replies!).
 
 
 \begin{commentbox}[Xiaokuan]
@@ -941,7 +944,7 @@ Finally, profs. are very busy so don't take it personally if you don't get anyth
 
 \subsection{PhD in other related fields: CE, IST, Cybersecurity}\label{sec:related-fields}
 
-In many cases you do not need to do a PhD in CS to work in your area of interest. For example, in addition to a traditional CS department, GMU has IST and Cybersecurity departments, both of which have faculty  with PhD in CS and work on CS topics (e.g., AI, Security, Robotics).  So it is totally possible that you still get to do CS research and publish in CS-focused venues even if you're not in a traditional CS program.  It is  common to see faculty with CS PhD in a non-CS department as well as faculty with non-CS PhD in CS department.  
+In many cases you do not need to do a PhD in CS to work in your area of interest. For example, in addition to a traditional CS department, GMU has IST and Cybersecurity departments, both of which have faculty  with PhD in CS and work on CS topics (e.g., AI, Security, Robotics).  So it is totally possible that you still get to do CS research and publish in CS-focused venues even if you're not in a traditional CS program.  It is  common to see faculty with CS PhD in a non-CS department as well as faculty with non-CS PhD in CS department.
 
 However, if your goal is a PhD in CS, then you likely need to be in the CS dept \emph{and} advised by a CS faculty. A non-CS faculty may \emph{co-advise} or be in the PhD dissertation committee, but your main PhD adviser will likely be a tenured or tenure-track faculty in CS (\autoref{sec:faculty-types}). If in doubt, check with the CS department for their requirements.
 
@@ -970,9 +973,9 @@ For example, 2024 admission cycle has a huge surge in students interested in AI 
 No, don't bother.  You will likely not get any useful feedback.  We are not willing to reveal your evaluation results or give you advice on how to improve. So it is best to just move on.  If you really want feedback, ask your professors, collaborators, ref writers, or those who have previously applied.
 
 % \section{How much time did you spend looking at an application?}\label{sec:time-spent}
-% Short answer: less than 5 mins for quick rejection; 15+ mins for an acceptance.  On average, about 10 mins.  
+% Short answer: less than 5 mins for quick rejection; 15+ mins for an acceptance.  On average, about 10 mins.
 
-% The GMU evaluation system allows us to download a single pdf that consists of a summary page (e.g., school info, GPA, testscores), then transcripts, standard test results, LoRs, CV, SOP, writing samples So I typically read the application in this order.  Then I make notes on what I've seen, basically evidence that support my evaluation.  
+% The GMU evaluation system allows us to download a single pdf that consists of a summary page (e.g., school info, GPA, testscores), then transcripts, standard test results, LoRs, CV, SOP, writing samples So I typically read the application in this order.  Then I make notes on what I've seen, basically evidence that support my evaluation.
 
 % I first look at the summary for school, GPA, est scores (essentially looking for very low GPA or testscores that do not meet the minimum requirements. Then I skim on transcripts look for low/failing grades on CS and related courses.  For these I make comments such as "unknown international school with good GPA, too many low grades on CS and related courses" or "good GPA from top school XYZ". I do not look at details on tests (the main scores are already given in the first summary page).
 
@@ -981,7 +984,7 @@ No, don't bother.  You will likely not get any useful feedback.  We are not will
 
 % Then the SOP, which I read carefully (of course if it is bad then it would a quick read). Then my notes for SOP include things such as "SOP mostly on course work, no clear motivation, generic" , or "very enjoyable SOP talking about XYZ, customized for GMU, mentioned profs. X,Y,Z".  If the SOP mentioned about publications then I'll make notes such as "has X papers at top venues" or "has X papers but at unknown places".  I will not go online search for the papers (unless they upload them as sample papers) .
 
-% I also skim over sampling papers, essentially looking over the abstract to see if reads well.  I would make notes such as "have a paper under submission to unknown venue, but reads well".  
+% I also skim over sampling papers, essentially looking over the abstract to see if reads well.  I would make notes such as "have a paper under submission to unknown venue, but reads well".
 
 
 
@@ -990,7 +993,7 @@ No, don't bother.  You will likely not get any useful feedback.  We are not will
 
 
 
-%At GMU we use an evaluation system that allows us to download a single, large pdf that consists of everything submitted by the applicant, e.g., GPA, transcripts, test scores, CV, LoRs, SOP, sample writings, etc.   The first couple of pages show the summary including school, major, GPA, test scores. 
+%At GMU we use an evaluation system that allows us to download a single, large pdf that consists of everything submitted by the applicant, e.g., GPA, transcripts, test scores, CV, LoRs, SOP, sample writings, etc.   The first couple of pages show the summary including school, major, GPA, test scores.
 
 \section{Increasing my admission chance}\label{sec:improve-your-chance}
 
@@ -1010,16 +1013,16 @@ In his \href{https://matt.might.net/articles/how-to-apply-and-get-in-to-graduate
 % It is worth noting that in many cases,  an application could be rejected by most reviewers, however have a "champion", who doesn't even have to be in the Admission comittee, that strongly advocate for your profile.
 
 \section{Member of an underrepresented or LBGTQ+ groups}\label{sec:urm}
-A common question is whether you should mention that you are a member of an underrepresented and minority (URM) group\footnote{URM in CS in the US include African Americans, Hispanic Americans, American Indians/Native Alaskans, Native Hawaiians/Pacific Islanders (excluding Asian Americans), and multiracial students identifying with at least one of the previously listed URM categories.} or LBGTQ+ group (, e.g., in your SOP). 
+A common question is whether you should mention that you are a member of an underrepresented and minority (URM) group\footnote{URM in CS in the US include African Americans, Hispanic Americans, American Indians/Native Alaskans, Native Hawaiians/Pacific Islanders (excluding Asian Americans), and multiracial students identifying with at least one of the previously listed URM categories.} or LBGTQ+ group (, e.g., in your SOP).
 This is a strong concern for international (and even domestic) students, who may have encountered discrimination in their countries or personal experiences.
 %This question arises often for international (and even domestic) students. The main worry is that they might get discriminated against, as often happen in their countries or personal experiences. %, and (ii) mentioning this might make them look like they are asking for special treatment.
 
-In my personal opinion, highlighting URM or LBGTQ+ identity can \emph{indeed be beneficial}, especially if you can articulate how your diverse experiences contribute to diversity and inclusion in academic.  Many universities have a strong commitment to diversity and inclusion and actively 
+In my personal opinion, highlighting URM or LBGTQ+ identity can \emph{indeed be beneficial}, especially if you can articulate how your diverse experiences contribute to diversity and inclusion in academic.  Many universities have a strong commitment to diversity and inclusion and actively
 \emph{recruit students from underepresentative backgrounds} (e.g., some \href{https://cse-climate.engin.umich.edu/reports/climate-dei-reports/cse-climate-and-dei-report-2022-2023/#grad-ethnicity}{stats from UMich CSE} and \href{https://www.gmu.edu/news/2022-09/mason-now-top-10-public-university-diversity-innovation-and-cybersecurity-education-us}{GMU} often promotes itself as one of the most diverse universities in the US). Moreover, many scholarships and fellowships are created specifically for URM and LBGTQ+ students, which you should explore if qualify.
 
 It is understandable that you might feel uncomfortable disclosing this, fearing you would lost a chance of working with a faculty due to their bias.  However, if someone has this issue, then you might not want to work with them anyway (and such bias is not acceptable in academic and likely would not be tolerated by the university). In my experience, it is the opposite: \emph{many profs. actively seek out to work with students from diverse backgrounds and view diversity as an asset to their research group}.
 
-Moreover, promoting diversity aligns with the goal of broadening participation in computing (BPC) that is strongly supported within academia (e.g., see the \href{https://plans.bpcnet.org/GeorgeMasonUniversity_ComputerScience_DepartmentalBPCPlan.pdf}{BPC plan at GMU CS}) and government funding agencies such as NSF (e.g., see \href{https://new.nsf.gov/cise/broadening-participation}{here} and \href{https://www.nsf.gov/pubs/2022/nsf22125/nsf22125.jsp}{here}). 
+Moreover, promoting diversity aligns with the goal of broadening participation in computing (BPC) that is strongly supported within academia (e.g., see the \href{https://plans.bpcnet.org/GeorgeMasonUniversity_ComputerScience_DepartmentalBPCPlan.pdf}{BPC plan at GMU CS}) and government funding agencies such as NSF (e.g., see \href{https://new.nsf.gov/cise/broadening-participation}{here} and \href{https://www.nsf.gov/pubs/2022/nsf22125/nsf22125.jsp}{here}).
 Also, sometimes providing this information can make it easier for faculty to apply for certain scholarships or fellowships to support you, e.g., from a private donor that has offered a fellowship only to students from certain background.
 
 Ultimately, this is a personal choice and you do what you feel comfortable. Seeking guidance from your close professors and collaborators is a good idea. However, it is important to recognize that diversity is strongly valued and celebrated within CS programs in the US, and that you should feel empowered to share your unique experiences and perspectives.
@@ -1037,8 +1040,8 @@ Ultimately, this is a personal choice and you do what you feel comfortable. Seek
 Yes, \emph{as long as} you can demonstrate you are ready for CS PhD research through research experiences, LoRs, statements, etc as mentioned. You might be even able to leverage this to make your profile stand out as mentioned in \autoref{sec:improve-your-chance}.
 
 One main concern for non-CS or non-STEM students is if you have the sufficient technical background obtained through core CS courses.  You need to show that you have such knowledge through your coursework, projects, or research.
-For example, if you have taken a course on Algorithms, even online ones like Coursera, you can talk about it in your SOP.  If you have done a project that requires knowledge of OS or have a professional certification (e.g., A+) through work, you can talk about it.  If you have done research that requires knowledge of Discrete Maths, you can talk about it.  You can also ask your LoR writers to talk about your technical background.  
-In summary, in your application, convince us that you have the background to do CS PhD research. 
+For example, if you have taken a course on Algorithms, even online ones like Coursera, you can talk about it in your SOP.  If you have done a project that requires knowledge of OS or have a professional certification (e.g., A+) through work, you can talk about it.  If you have done research that requires knowledge of Discrete Maths, you can talk about it.  You can also ask your LoR writers to talk about your technical background.
+In summary, in your application, convince us that you have the background to do CS PhD research.
 
 In short, you \emph{do not need} to formally taking CS courses, you just need to show that you have these essential knowledge, e.g., through the mentioned ways. Many universities are well-aware that incoming graduate students might not have all the technical background, so they often have a "bridge" courses to help students catch up.  For example, GMU has four bridge courses (Data Structures and Algorithms, Computer Systems, Discrete Math, and Programming Foundation) that incoming students can take to catch up on their CS knowledge.
 
@@ -1047,9 +1050,9 @@ In short, you \emph{do not need} to formally taking CS courses, you just need to
 \end{commentbox}
 
 \section{Is an MS required for admission to PhD in CS?}\label{sec:msrequirement}
-No. In fact, student can get MS degree ``along the way'' to PhD, e.g., after finishing course work in the first 2 years.  However, MS can help admission if it gives research experience or is from a more well-known school than your undergrad institution. 
+No. In fact, student can get MS degree ``along the way'' to PhD, e.g., after finishing course work in the first 2 years.  However, MS can help admission if it gives research experience or is from a more well-known school than your undergrad institution.
 
-If you have an MS then some course work \emph{might be} transferred for course credits, which save a bit of time. But overall don't count on this, especially if your MS is not from the US. 
+If you have an MS then some course work \emph{might be} transferred for course credits, which save a bit of time. But overall don't count on this, especially if your MS is not from the US.
 
 
 \section{How long does to complete the CS PhD program?}\label{sec:time}
@@ -1069,7 +1072,7 @@ The PhDComics figure on top shows the ``ambition'' level of a PhD student over t
 
 \section{PhDs in the US vs. Other Countries}\label{sec:non-us-differences}
 
-This summarizes the main differences between CS PhD in the US and other countries. % This is based on my experience and what I heard from others who did PhD in other countries. 
+This summarizes the main differences between CS PhD in the US and other countries. % This is based on my experience and what I heard from others who did PhD in other countries.
 
 \emph{MS Degree requirement}:  as mentioned in \autoref{sec:msrequirement} and \autoref{sec:time}, CS PhD programs in the US do not require MS degree.  In contrast, many other countries do require MS degree before joining a PhD program.  This means that US PhD programs are longer (5--7 years, 2 of which are coursework) than other countries (3--4 years, no coursework).
 
@@ -1095,7 +1098,7 @@ If you're reaching out to a professor for the first time,  address them as Prof.
 
 
 Furthermore, avoid using Mr. or Mrs., or the professor's first name if you're not acquainted with them yet.  As you become more familiar with your prof and depending on their preferences, you may transition to addressing them by their first name.
-For example, I prefer that my students and colleague call me Vu. Some students call me \emph{Dr. Vu}, which I find a bit amusing but am totally fine with it. 
+For example, I prefer that my students and colleague call me Vu. Some students call me \emph{Dr. Vu}, which I find a bit amusing but am totally fine with it.
 
 \begin{commentbox}[DK:]
   I was amused to read this as if I recall correctly, you never called me by my first name when you were at UNM. You always called me Prof. And, many times, I would jokingly call you back as Prof. Vu.
@@ -1106,7 +1109,7 @@ For example, I prefer that my students and colleague call me Vu. Some students c
 Note that in some universities the formal title Dr. Lastname is preferred over Prof. You just need to observe and follow the conventions at your particular institution. Additionally, be aware that not all faculty members may hold a Ph.D., in which case using Prof. Lastname is a suitable alternative.
 
 
-\paragraph{Referring to professors you know} Because you are already familiar with these individuals, you can just informally use their names if they are OK with it as mentioned above (or Dr./Prof., if you want to be formal). You can also include their institution if it makes it more precise.  For example, I can say:  \emph{"I did my postdoc with Jeff Foster at Univ. of Maryland"}.   
+\paragraph{Referring to professors you know} Because you are already familiar with these individuals, you can just informally use their names if they are OK with it as mentioned above (or Dr./Prof., if you want to be formal). You can also include their institution if it makes it more precise.  For example, I can say:  \emph{"I did my postdoc with Jeff Foster at Univ. of Maryland"}.
 
 Do not include ranking (e.g., Assistant, Associate, Scientist, ...) when referring to someone. I see many international students include a lengthy title of people they know, e.g., \emph{I am advised by Asst. Prof. X, and I also collaborate with Distinguished Scientist Y}.  This is \emph{not necessary} and makes it look like you're trying to show off your connections. These nuances represent some cultural differences that you may encounter and will gradually adapt to. More on cultural differences in \autoref{sec:cultural}.
 
@@ -1181,27 +1184,27 @@ There are many stories on how students are mistreated, stressed, and miserable. 
   \begin{tabular}{rl|rl}
     \toprule
     1 & Carnegie Mellon & 26 & Duke University \\
-    2 & Univ. of Illinois at Urbana-Champaign\red{$^*$}  & 27 & Univ. of California - Santa Barbara \\  
+    2 & Univ. of Illinois at Urbana-Champaign\red{$^*$}  & 27 & Univ. of California - Santa Barbara \\
     3 & Univ. of California-San Diego & 28 & Rutgers University\red{$^*$} \\
     4 & Georgia Institute of Technology & 29 & Univ. of California - Riverside\\
     5 & MIT                            & 30 & Pennsylvania State University  \\
     6 & Univ. of California - Berkeley& 31 & Northwestern University\\
-    7 & University of Michigan - Ann Arbor\red{$^*$}   & 32& George Mason University\red{$^*$}\\  
+    7 & University of Michigan - Ann Arbor\red{$^*$}   & 32& George Mason University\red{$^*$}\\
     8 & University of Washington      &33 &  Texas A\&M University\red{$^*$} \\
     9 &  Stanford University  &34&  University of Utah \\
-    10 & Cornell University  & 35 &  North Carolina State University\\\  
-    11 & University of Maryland - College Park &  36& Ohio State \\ 
-    12 & Northeastern University\red{$^*$} &37& University of Virginia  \\ 
-    13 & Purdue University &38& Yale University \\ 
+    10 & Cornell University  & 35 &  North Carolina State University\\\
+    11 & University of Maryland - College Park &  36& Ohio State \\
+    12 & Northeastern University\red{$^*$} &37& University of Virginia  \\
+    13 & Purdue University &38& Yale University \\
     14 & University of Wisconsin - Madison\red{$^*$} &39 & Univ. of California - Santa Cruz \\
-    15 & University of Texas at Austin &40& Brown University \\ 
+    15 & University of Texas at Austin &40& Brown University \\
     16 & University of Pennsylvania &41 & Harvard University \\
     17 & Columbia University\red{$^*$} &42 & Boston University  \\
     18 & Princeton University\red{$^*$}  & 43& Rice University\\
     19 & New York University  & 44&  University at Buffalo\red{$^*$}\\
     20 &  University of Massachusetts-Amherst\red{$^*$} &45& University of Colorado-Boulder \\
     21 & Univ. of California - Los Angeles &46& University of Illinois at Chicago  \\
-    22 & University of Southern California &47& University of Minnesota \\ 
+    22 & University of Southern California &47& University of Minnesota \\
     23 & University of Chicago &48& University of North Carolina\red{$^*$} \\
     24 & Stony Brook University\red{$^*$} &49& Arizona State University\red{$^*$} \\
     25 &  Univ. of California - Irvine&50& Univ. Of California - Davis \\
@@ -1254,9 +1257,9 @@ There are many stories on how students are mistreated, stressed, and miserable. 
 
 Most of what is written in this document is applicable to both domestic\footnote{For simplicity domestic means you did your undergrad (or MS) at a US university.} and international students.  However, there are some differences and benefits that domestic students should be aware of.
 
-\paragraph{Fee Waiving} Some school might offer application fee waiver for domestic students.  You should check with the school you're applying to. 
+\paragraph{Fee Waiving} Some school might offer application fee waiver for domestic students.  You should check with the school you're applying to.
 
-\paragraph{School \autoref{sec:your-school}} We already know about your school, which is a plus (see \autoref{sec:your-school}). You are also more familiar with the US education system and culture (so hopefully you are aware of the cultural issues listed in \autoref{sec:cultural}). 
+\paragraph{School \autoref{sec:your-school}} We already know about your school, which is a plus (see \autoref{sec:your-school}). You are also more familiar with the US education system and culture (so hopefully you are aware of the cultural issues listed in \autoref{sec:cultural}).
 
 \paragraph{Standard Tests \autoref{sec:standard-tests}} You do not need to take TOEFL or IELTS because you already did your undergrad (or MS) at a US university.  You might also be more comfortable communicating in English, e.g., contacting professors (\autoref{sec:contact}).
 
@@ -1277,31 +1280,31 @@ That makes you stand out and can help your case.
 \chapter{Research Opportunities for Undergraduates}\label{sec:undergrad-research}
 
 
-As discussed in \autoref{sec:undergrad-research}, research experience is a crucial component of a strong PhD application. It gives you opportunities to try out research, determine what research area you're interested in, publish papers (\autoref{sec:research-ability}), and get strong LoRs (\autoref{sec:lor}). 
+As discussed in \autoref{sec:undergrad-research}, research experience is a crucial component of a strong PhD application. It gives you opportunities to try out research, determine what research area you're interested in, publish papers (\autoref{sec:research-ability}), and get strong LoRs (\autoref{sec:lor}).
 
  This section provides some guidance on how to gain research experience as an undergraduate student.  It also gives advice to international students or domestic ones from small colleges where research opportunities are limited.
 
-\paragraph{Locally} Start looking for research opportunities at your own institution.  
-If you did well or like a class, you can check with the professor of that class for research opportunities.  
+\paragraph{Locally} Start looking for research opportunities at your own institution.
+If you did well or like a class, you can check with the professor of that class for research opportunities.
 You can also go to the department directory and then professors' websites and see if they are looking for undergraduate researchers.
-Even if they say they are looking for graduate students, you still should contact them and ask.  
+Even if they say they are looking for graduate students, you still should contact them and ask.
 
-There might be also special programs for undergraduate research from the university, e.g., GMU has the OSCAR program, UNL has UCARE, NSF has REUs (Research Experience for Undergraduates) for US citizen and permanent residents. 
+There might be also special programs for undergraduate research from the university, e.g., GMU has the OSCAR program, UNL has UCARE, NSF has REUs (Research Experience for Undergraduates) for US citizen and permanent residents.
 
 You can also take honor thesis or independent study courses with a professor.  This is a good way to get research experience and also get a LoR from the professor.  You can also ask your academic adviser or other faculty members for suggestions.  Finally, you can also ask your peers who are already doing research.  Use the method described in \autoref{sec:contact} to contact professors
 
 
-\begin{commentbox}[Vu:] 
+\begin{commentbox}[Vu:]
     I enjoy working with undergrads (e.g., have mentored over 10 undergrads) and always actively recruit.
     I often get undergraduate researchers through my classes, e.g., asking students who did well in my class if they are interested in research.  Occasionally I was introduced to students by other students or faculty.
 
-    While most undergrads are understandably not super productive in research, some are and I have published multiple papers with them.  I also have written strong LoRs for them and have helped them get into PhD programs, including top ones. 
+    While most undergrads are understandably not super productive in research, some are and I have published multiple papers with them.  I also have written strong LoRs for them and have helped them get into PhD programs, including top ones.
 
     \tcblower
     At GMU we pay undergrads about \$15/hr and about 10 hrs/week. This is flexible and can be increased as needed.
 \end{commentbox}
 
-\paragraph{Online Research Communities and Open Source Contributions} Places such as Github offer many opportunities for research, even though they might not appear so (e.g., they do not explicitly mention research). 
+\paragraph{Online Research Communities and Open Source Contributions} Places such as Github offer many opportunities for research, even though they might not appear so (e.g., they do not explicitly mention research).
 In many cases, professors' or research labs put their research projects on Github. For example, my research group has a many open-source projects that undergrads can contribute to (see \url{https://github.com/dynaroars/}).
 
 By contributing code, fixing bugs, implementing new features, or providing documentation, students can gain practical research experience and interact with experienced developers and researchers in the field. Not only you gain research experience, you might be able to get a LoR from the project maintainer and definitely should write about this experience in your SOP (\autoref{sec:research-statement}.)
@@ -1341,7 +1344,7 @@ This is very similar to a professional job offer.  You should be serious about i
 % While I won't take any actions against you (a company might), I naturally will remember this and may be cautious in future interactions. I'll also reconsider making similar offers to students in similar situations.
 
 
-\section{Academic Integrity (Cheating and Plagiarism)} 
+\section{Academic Integrity (Cheating and Plagiarism)}
 
 Plagiarism and cheating (e.g., exams, assignments) is a BIG no-no in the US.  If you're caught cheating, you will face serious consequence and likely be expelled from the university (e.g., after the second time at GMU).   This is quite different from many international countries where cheating is common and often tolerated.  Faculty is extremely good at detecting cheating (we have been dealing with these situations so many times over so many years), and \emph{will} report cheating cases.  In short, whatever you do, don't cheat---not worth it.
 
