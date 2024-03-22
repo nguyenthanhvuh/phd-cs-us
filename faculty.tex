@@ -1,5 +1,4 @@
-\documentclass[oneside,11pt]{memoir}
-\chapterstyle{pedersen}
+\documentclass[oneside,11pt,dvipsnames]{book}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -7,8 +6,8 @@
 \usepackage{soul}
 % \usepackage[small,compact]{titlesec} %very powerful
 \usepackage[most]{tcolorbox}
-\setsecnumdepth{subsection}
-\setcounter{tocdepth}{3}
+% \setsecnumdepth{subsection}
+% \setcounter{tocdepth}{3}
 \usepackage{enumitem}
 \usepackage{epigraph}
 \usepackage{cite}
@@ -27,7 +26,15 @@
   urlcolor=blue,
 }
 \usepackage{booktabs}
+
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
 \usepackage{xcolor}
+
+\usepackage{anyfontsize}
+\usepackage{sectsty}
+
 \usepackage[makeroom]{cancel}
 
 \newtcolorbox{mybox}{
@@ -71,6 +78,7 @@
 \renewcommand{\chapterautorefname}{\S\@gobble}
 \renewcommand{\sectionautorefname}{\S\@gobble}
 \renewcommand{\subsectionautorefname}{\S\@gobble}
+\renewcommand{\appendixautorefname}{\S\@gobble}
 \makeatother
 
 \newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
@@ -81,34 +89,116 @@
 \newcommand{\xz}[1]{\mycomment{Xiaokuan}{[#1]}}{}
 
 
-\title{A Handbook for Tenured Track Faculty in Computer Science in the US}
-
-\author{\href{https://nguyenthanhvuh.github.io}{ThanhVu (Vu) Nguyen}\\{\small George Mason University, Dept. of Computer Science}}
-
-
-\makeatletter
-\def\maketitle{%
-  \null
-  \thispagestyle{empty}%
-  \vfill
-  \begin{center}\leavevmode
-    \normalfont
-    {\LARGE\raggedright \textbf{\@title}\par}%
-    \vfill%
-    % \hrulefill\par
-    {\Large \@author\par}%
-    \vfill%
-    {\large\raggedleft \@date\par}%
-  \end{center}%
-  \vfill
-  \null
-  \cleardoublepage
-}
-\makeatother
-
 \begin{document}
-\maketitle
-\frontmatter
+
+\pagestyle{empty}
+\begin{tikzpicture}[overlay,remember picture]
+
+    % Background color
+    \fill[
+    black!2]
+    (current page.south west) rectangle (current page.north east);
+    
+    % Rectangles
+    \shade[
+    left color=Dandelion, 
+    right color=Dandelion!40,
+    transform canvas ={rotate around ={45:($(current page.north west)+(0,-6)$)}}] 
+    ($(current page.north west)+(0,-6)$) rectangle ++(9,1.5);
+    
+    \shade[
+    left color=lightgray,
+    right color=lightgray!50,
+    rounded corners=0.75cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}]
+    ($(current page.north west)+(0.5,-10)$) rectangle ++(15,1.5);
+    
+    \shade[
+    left color=lightgray,
+    rounded corners=0.3cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}] ($(current page.north west)+(1.5,-9.55)$) rectangle ++(7,.6);
+    
+    \shade[
+    left color=orange!80,
+    right color=orange!60,
+    rounded corners=0.4cm,
+    transform canvas ={rotate around ={45:($(current page.north)+(-1.5,-3)$)}}]
+    ($(current page.north)+(-1.5,-3)$) rectangle ++(9,0.8);
+    
+    \shade[
+    left color=red!80,
+    right color=red!80,
+    rounded corners=0.9cm,
+    transform canvas ={rotate around ={45:($(current page.north)+(-3,-8)$)}}] ($(current page.north)+(-3,-8)$) rectangle ++(15,1.8);
+    
+    \shade[
+    left color=orange,
+    right color=Dandelion,
+    rounded corners=0.9cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(4,-15.5)$)}}]
+    ($(current page.north west)+(4,-15.5)$) rectangle ++(30,1.8);
+    
+    \shade[
+    left color=RoyalBlue,
+    right color=Emerald,
+    rounded corners=0.75cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(13,-10)$)}}]
+    ($(current page.north west)+(13,-10)$) rectangle ++(15,1.5);
+    
+    \shade[
+    left color=ForestGreen,
+    rounded corners=0.3cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(18,-8)$)}}]
+    ($(current page.north west)+(18,-8)$) rectangle ++(15,0.6);
+    
+    \shade[
+    left color=ForestGreen,
+    rounded corners=0.4cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(19,-5.65)$)}}]
+    ($(current page.north west)+(19,-5.65)$) rectangle ++(15,0.8);
+    
+    \shade[
+    left color=OrangeRed,
+    right color=red!80,
+    rounded corners=0.6cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(20,-9)$)}}] 
+    ($(current page.north west)+(20,-9)$) rectangle ++(14,1.2);
+    
+    % Year
+    \draw[ultra thick,gray]
+    ($(current page.center)+(5,2)$) -- ++(0,-3cm) 
+    node[
+    midway,
+    left=0.25cm,
+    text width=5cm,
+    align=right,
+    black!75
+    ]
+    {
+    {\fontsize{25}{30} \selectfont \bf Computer\\[8pt] Science}
+    } 
+    node[
+    midway,
+    right=0.25cm,
+    text width=6cm,
+    align=left,
+    ForestGreen]
+    {
+    {\fontsize{48}{50} \selectfont PhD}
+    };
+    
+    % Title
+    \node[align=center] at ($(current page.center)+(0,-5)$) 
+    {
+    {\fontsize{24}{24} \selectfont {{Demystifying the Computer Science}}} \\[0.15in]
+    {\fontsize{24}{24} \selectfont {{PhD Admission in the US}}} \\[0.2in]    
+    {\fontsize{18}{18} \selectfont {{A Handbook for International and Domestic Students}}} \\[0.5in]    
+
+    {\fontsize{16}{19.2} \selectfont \textcolor{ForestGreen}{ \bf ThanhVu (Vu) Nguyen}}\\[0.1in]
+    George Mason University, Dept. of Computer Science\\[0.1in]
+    \today{} (latest version available on  \href{https://github.com/nguyenthanhvuh/phd-cs-us}{Github})
+    };
+    \end{tikzpicture}
 
 \chapter{Preface}
 Having been involved in PhD admissions for many years, I've
@@ -202,357 +292,357 @@ Cons:
 
 \section{Industrial Gifts}
 
-Chapter 3: Funding
-Let’s talk about what, for many professors, is the least favorite part of the job: making sure you
-have enough money to keep the lights on in the lab. Essentially, a professor applies for grants
-(money from the government, industry, or other charitable foundations) by writing a proposal as
-the Principal Investigator (PI). The funding agency reviews the proposal. If they decide to fund it,
-they send the money to your university. The university then takes its cut of the funding
-(essentially to pay for common services like buildings, admins, etc) and gives you the rest. You
-then spend it on your summer salary, the salaries of your students, equipment, travel,
-registration costs and other expenses associated with your research.
-There are some nuances about the different types of funding, and how you can spend different
-kinds of funding. So let us get into the details. Unfortunately, these details tend to vary a lot by
-country, so everything I’m talking about in this chapter applies only to the US.
-3.1 An example budget
-Let me walk you through an example budget. Let us say you are writing a proposal for \$100,000
-USD (100K USD). The budget will talk about how you plan to spend this money. The following
-table (Table 1) shows the example budget.
-Budget
-Graduate Research Assistant - 1
-Total Salary 40,000
-Fringe Benefits 12,000
-Total Salary and Fringe Benefits 52,000
-Total Materials \& Supplies 0
-International travel to a conference 2500
-Domestic travel to a conference 1481
-Total Travel Costs 3,981
-Tuition for Fall or Spring 4,746
-Tuition for Summer 1,778
-GRA Tuition for 1 year 11,270
-Total Direct Costs 67,251
-Modified Total Direct Cost (MTDC) 55,981
-Indirect Costs 58.5% of MTDC 32,749
-Total Cost (Direct + indirect costs) 100,000
-37
-I will explain the various parts of this example budget. I will be talking about terms such as
-direct costs and indirect costs as defined by the University of Texas – I believe it is similar at
-most other US universities, but there might be differences. Please check with your university to
-make sure.
-Fringe. Let us say you want to support a student on this grant. In addition to paying for the
-student’s salary, you also have to pay for non-wage expenses: things like health insurance, social
-security, and medicare. This is usually expressed as a percentage of the student’s salary. At the
-University of Texas at Austin, this was 30% in 2022 (For a comparison point, it was 32% at
-Princeton). The stipend of a graduate research assistant (GRA) at UT is about \$30K USD for the
-fall and spring semesters ($40K USD including summer). So salary and fringe for a GRA for a
-year is \$52K.
-You also have to pay the tuition of the GRA, and at UT, this is about \$11.2K USD for a year. To
-keep things simple, I am using a single number for the tuition, but this depends on factors such
-as whether you are in-state or out-of-state, your progress in the PhD program (if you are
-all-but-dissertation, your tuition is lower), and whether you are a US citizen or not. It also
-depends on the fraction of time spent as GRA/TA: if this drops below 20 hours a week
-(considered full-time for students), tuition might have to be charged at the out-of-state rate. If
-the student is only doing 5 hours a week as GRA, it might also impact how much of their tuition
-can be covered by the grant; at 5 hours a week, the student might not be eligible for insurance. I
-highly recommend talking to your admin if you are accounting for less than 20 hours a week for
-your student on the project. Some schools also calculate tuition as a % of the stipend.
-So the total cost for supporting a GRA for one year is \$63.2K USD. While you are paying \$63.2K
-for each student for a year, the student's take-home pay is only the stipend part (minus taxes
-that are withheld): \$35.2K assuming a 12% tax rate.
-Note that fringe also applies to you (the PI) when you pay yourself out of your grants for your
-summer months.
-Direct costs. The direct cost part of your budget includes salaries, fringe benefits, travel, and
-equipment and supplies that contribute directly towards performing the proposed research.
-Direct costs are exclusive to each proposal: a piece of equipment can only be a direct cost on
-one proposal, and a GRA can be assigned only to one proposal at a given time. In our example,
-let us assume the only direct costs are supporting the student and paying for the student’s
-travel (including registration, transportation, lodging, and food) for one international and one
-domestic conference.
-Modified Total Direct Costs (MTDC). MTDC is a portion of the total direct costs used for
-calculating the indirect costs. It is the direct costs minus tuition, fellowships, equipment, and
-capital expenditures. Travel also counts as MTDC. In this budget, we are not spending anything
-38
-on materials and supplies in this budget, but if we did, it would be part of MTDC. Check with
-your university to determine exactly what is counted as MTDC – this can be surprisingly tricky.
-For example, you might expect computers to not count towards MTDC as it is “equipment”, but it
-may be counted as a “supply” if the university is unable to amortize its cost. In the example
-above, total direct costs is \$67.2K USD (63.2K for one GRA plus 4K for travel), but MTDC is only
-$56K (leaving out the \$11.2K for tuition).
-Indirect costs. The university takes a portion of all the money you receive, to pay for centralized
-functions such as building costs, utilities, admin, and libraries. This is termed as the “indirect”
-cost, usually expressed as a percentage of the MTDC. At most universities in the US, indirect
-costs are more than 50% of the MTDC. At UT, it is 58.5% (Mike Freedman reports it is 63% at
-Princeton). Thus, in our budget, we would have .585 * 56K = \$32.7K added as indirect costs. As
-a result, it would cost 67.2 + 32.7 = \$100K USD for supporting a single GRA and some travel on
-this grant. Note that even though the 58.5% number is scary, you are only paying 33% of your
-budget for indirect costs; in other words, you don’t lose 58.5% of the total budget to indirect
-costs.
-As you can see from the preceding table, the \$100K USD budget only covers one student for one
-year. At some universities, a GRA costs more, requiring more funding.
-This should give you a picture of how expensive it is to maintain large groups! If you had ten
-students, you would need to pull in a million dollars each year to fund your students.
-It is useful to think of your budget in terms of student-years. \$400K is simply two students for
-two years. A dissertation, roughly five student years, is \$500K. If you get the NSF CAREER grant,
-you would typically be able to support one dissertation. This helps determine the scope of your
-proposal: if you need five students to work on it for two years, a grant that provides \$250K will
-not be a good match.
-Summer months in your budget. PIs at most R1 universities in the US are expected to fund
-themselves via grants in the summer. When you are drawing up your budget, you are expected
-to estimate how much of your summer months you will dedicate to this project. This is taken as
-an indication of PI commitment at the funding agency – you don’t want to write a budget where
-your estimated time involvement is zero. So if you have one NSF grant where you estimate your
-time commitment to be one month, you can only put in one more month for another NSF grant
-proposal (since NSF limits total PI compensation to be two months per year across all NSF
-grants).
-3.2 Types of grants
-Broadly speaking, there are four different kinds of grants or funding, each with different
-restrictions on how you can use the money. The differences come down to what you can spend
-the money on, how long you can keep the money, and what the overhead is.
-39
-We can term the four kinds of funding as grants, contracts, university funding, and gift funding.
-Let me go over each type of funding.
-Grants. The National Science Foundation (NSF), the Defense Advanced Research Projects
-Agency (DARPA), the Army, the Navy, and the Air Force all fund research related to computer
-science. These grants are competitive – NSF has a 25% acceptance rate (though this varies by
-the directorate), and I imagine the other programs are similar.
-This money can typically only be used for funding students, yourself, travel, and equipment
-purchases that you had already put in the budget. For example, if you suddenly want to
-purchase equipment not in the original budget, it needs to be approved by the Office of
-Sponsored Research at your university (which makes sure you are spending the money in the
-right way). You cannot use government funding to pay for things like a meal with your students
-during the semester (meals during travel is allowed).
-Government funding has strict timelines by which the money has to be spent. Typically, the
-money is released on a yearly basis. You have to show that you have used the previous
-installment to get the next round of funding. This sometimes results in professors making last
-minute purchases to exhaust their grant!
-In some cases, you can ask your funding program manager for a no-cost extension to your
-grant. This typically means that you don’t need extra money, but you want extra time to use the
-money. This is usually considered on a case-by-case basis, and I would not recommend
-counting on getting a no-cost extension.
-Indirect costs are levied on government funding (more generally, on all funding that goes
-through the Office of Sponsored Research). The example budget I showed in the previous
-section assumes funding is via sponsored research.
-Grant proposals typically have reporting requirements (for example, you have to submit a report
-once a year for an NSF grant). However, grants typically do not expect any concrete deliverables
-to be provided at the end of the funding period. Essentially, the grant allows you to carry out the
-proposed research: the act of publishing itself is the desired outcome. As a result, grants have a
-strong alignment between the PIs and the funding agency: they both just want to get research
-done.
-Contracts. The second kind of funding is via contracts. Contract funding comes with an explicit
-contract you must fulfill to keep and obtain more funding. For example, there may be quarterly
-or monthly reports, or on-site visits by the sponsor. Contract funding typically also has
-deliverables that are expected at regular intervals during the funding period. One example of
-contract funding is DARPA funding, which comes with a number of deliverables and reporting
-requirements. Contract funding is less aligned with the PIs than grant funding: apart from doing
-the core research, the PI’s students will have to spend time on creating the deliverables, and the
-PI herself has to spend a significant amount of time on reports and meetings.
-40
-NSF vs DARPA. NSF is a good example of grant funding, while DARPA is a good example of
-contract funding. Both these agencies fund a lot of computer science research. DARPA requires
-deliverables and reports to be produced regularly during the grant duration. NSF only requires a
-report to be submitted for each year of the grant duration. You can apply for NSF funds as
-someone on a visa, while DARPA and other similar government funding programs might require
-you to be a US citizen or a permanent resident.
-University funding. Your university, or your college, or your department may choose to give you
-funding. Typically when you start, you get a “startup” package that allows you to kickstart your
-research group. University funding is “internal” funding in a way, and as such has fewer
-restrictions than government funding. But this really depends on the specific university. I know
-universities where startup funding cannot be used for covering summer salary of PIs. Apart
-from startup funding, your university might have internal competitions to award “seed” funding
-(typically under 50K) that you can then use to get preliminary results and later apply for
-traditional grants.
-University funding is also associated with timelines. For example, startup funding usually has to
-be spent before you get tenure. However, university funding deadlines might be a little more
-flexible than grant or contract funding deadlines.
-University funding typically does not have associated indirect costs (as it is already university
-money). You still have to pay fringe support for your students and your own summer salary.
-An interesting sub-category of university funding are Research Centers. A research center is
-funded by sponsors to carry out a certain mission over a span of around 5 years. The research
-center has a program director who is responsible for allocating the funding. PIs at the university
-apply for funding from the research center (a sort of internal grant), and are allocated funding.
-Obtaining funding in this manner is easier than competing for an external grant. Particularly for
-assistant professors who are just starting, research centers can provide seed funding before the
-first grants are obtained. Check out the ADA center at Michigan for a good example.
-Gift funding or unrestricted research funding. Companies or charitable foundations may
-choose to fund your research in the form of “gifts” or unrestricted research grants. This is the
-best kind of funding, for three reasons: indirect costs are typically not levied on these gifts, there
-is no associated timeline by when you should spend them, and you can use them for a broader
-range of things than university and grant/contract funding.
-Indirect costs are not levied because the gift-giver can specify that it cannot be used for indirect
-costs (the university has to honor this). Since it is an unrestricted gift, there are no limits on
-what you can spend them on, or by when you should spend them. This doesn’t mean you can
-spend the money on personal expenses. All expenses still have to be approved by the university,
-and should be used for research-related expenses. But things like taking your research group
-out for a meal can be expensed during gift funding (but not government funding).
-41
-Indirect costs not being levied can make a huge difference. For example, in our budget from
-earlier, if you were using gift funding to fund the student, you don’t have to pay indirect costs,
-and thus get over \$30K back. Considering a student costs \$63K, you get to sponsor the student
-for 1.5 years rather than 1 year!
-How should you use your funding? Let us say that you are lucky enough to have all four kinds of
-funding. And you have an expense that could be assigned to any of these funding (note that this
-is often not the case: you can’t use a grant on topic X to support a student working on Y if X and
-Y are not closely related). What should you use?
-The typical rule is “Use the most restricted funding that will expire the earliest”. Thus, you should
-always use the appropriate grant/contract funding first, then your university funding, and finally
-gift funding. Gift funding is the most flexible, so use it only when you have no other option.
-Always spend your gift funding on expenses that will have overhead (if funded from grants),
-such as students. Do not spend it on things like equipment (be careful to ask what counts as
-equipment at your university) which do not have overhead even when expensed to grants.
-Writing a grant with other PIs. While you could write smaller grants as the sole PI, typically for
-larger grants, you need to collaborate with other PIs and submit as a team. For example, you
-cannot submit NSF Large grants as a solo PI. One thing to remember though: all the funding is
-shared between the PIs. For example, imagine a grant for one million USD. It sounds amazing!
-However, if the grant was awarded to a team of two PIs, and the grant duration is five years,
-each PI can only support one student on it for the grant duration (100K * 2 * 5). Similarly, if a
-grant of 10 million USD was won by a team of five PIs, each PI can only support one student for
-four years (100K * 5 * 4). So in the end, the share of each PI is similar or lower than that of an
-NSF CAREER.
-This is not to say you should not collaborate with other PIs to write grants. Collaboration often
-brings new ideas and research directions that are unlikely or impossible when working alone.
-And bigger grants often provide prestige: for example, landing an NSF Large grant is significant
-and puts you on the map. But it is useful to calculate how much you expect to receive if a grant
-proposal is funded.
-3.3 The grant application process
-So how does one go about submitting a grant? There are several steps in the process:
-1. The funding agency first puts out a call for proposals. For example, check out the NSF
-call for CRII grants, a startup grant meant for new PIs who have not yet received a grant.
-Note that PIs at many R1 universities are not eligible for CRII. This was posted on May 18,
-2022. Each call has a solicitation page with details about the program and how the
-proposal should be structured – you should read this carefully.
-42
-2. In some cases, there are webinars where the program managers explain the grant
-opportunity. CRII had such a webinar on Jul 13 2022. I highly recommend attending
-these webinars if it is your first time submitting for a particular grant opportunity.
-3. In some cases, the funding agency might want you to submit a preliminary proposal.
-They will review the preliminary proposals and inform you if they would like you to go
-ahead with the full proposal. This is not the case for CRII.
-4. There will be a due date by which you need to submit the proposal. For the CRII, this is
-Sep 19 2022. The proposal will have a number of parts, and the solicitation will clearly lay
-out what the proposal should look like.
-5. You write the proposal, and sometime before you submit, you send it to the Office of
-Sponsored Research (OSP or OSR) at your university. They have to approve the proposal
-before you can submit, and they may request to see your proposal a week or 10 days
-before you submit. Please make sure you get a draft to the OSP on time!
-6. Finally, you submit the proposal, and you wait. To be exact, your admin/OSP submits for
-you, so you want to let them know when you are done. You and your admin/OSP will be
-submitting a lot of proposals together; make sure you get to know the folks doing this. I
-only have experience with NSF proposals, but these usually take 6-8 months to be
-reviewed. In some cases, it might take even longer.
-7. If you are lucky enough to get your proposal funded, you might get an email or a call from
-the NSF program manager. They might ask you to slightly modify your budget. For
-example, I was asked to reduce my NSF CAREER budget (and appropriately reduce the
-scope of my tasks as well). You will be asked to provide an abstract that will be displayed
-on the NSF website. For example, check out the abstract for my CAREER award.
-8. Finally, you will get an official email that your grant has been awarded, it will become
-public on the NSF website, and you will get the first installment delivered to your
-university. You can then begin spending it in accordance with what you proposed.
-9. In the unlucky case that your proposal is not funded, you will get back three or more
-reviews from NSF. These reviews tend to be short, and nowhere as detailed as paper
-reviews. As such, it can be hard to figure out what to do after getting a rejection. My
-advice is to go talk to senior faculty in your department if this happens, and they should
-be able to guide you in the right direction.
-3.3 Writing your first grant proposal
-Writing your first grant can be a stressful experience, since it is quite different from writing a
-research paper. There are a number of differences.
-First, the audience for a grant proposal is broader than that of a research paper; it is guaranteed
-that non-experts in your area will be reading and evaluating your proposal (for example, if I write
-43
-a grant proposal about storage research, I can expect it to be read by someone working in
-systems broadly, but not necessarily someone doing storage research). As a result, it has to be
-much broader and more accessible than a research paper. Proposal reviewers might also have a
-smaller amount of time to spend on each proposal – some funding agencies ask reviewers to
-read a dozen proposals in around a month when you serve on their panel. You can imagine how
-much time each proposal would get. Thus, your proposal must be easy to skim and read, must
-get to the major points quickly, and must be accessible to a broad audience.
-Second, in a research paper, you are reporting on something that is already done. The focus is
-on the technical details: how you were able to achieve the result, what are the drawbacks, etc.
-However, in a grant proposal, you are talking about things that you will do in the future. In a grant
-proposal, the most important thing is to be able to inspire the reviewer, and convince them that
-this is a thing worth doing (and funding). In this respect, it is much more similar to a founder
-pitching before an investor, than a professor talking to her peers about her research. While the
-details do matter to some extent, what is much more important is that you paint a big picture of
-how your proposed research will make the world a better place. This is quite different from
-writing a research paper, and takes some practice.
-For writing your first grant proposal, I’d recommend two things. First, talk to folks who have
-gotten the grant you are submitting for, and ask if you could see their grant proposal. Many folks
-are happy to share privately. Some folks, like Jeff Bigham and Gillian Hayes, are publicly sharing
-some of their proposals. Second, write up your draft proposal, and show it to senior folks in your
-department. They would be able to catch errors that could cause rejection.
-When submitting grant proposals, do not be disheartened if it gets rejected. As far as I can tell,
-most proposals, even from experienced faculty, get rejected a few times before getting
-accepted. Grant rejections are a bit more painful because the waiting time is high, you might
-only get to submit to a grant opportunity once per year. But with time and repeated submissions,
-many grant proposals do get funded.
+% Chapter 3: Funding
+% Let’s talk about what, for many professors, is the least favorite part of the job: making sure you
+% have enough money to keep the lights on in the lab. Essentially, a professor applies for grants
+% (money from the government, industry, or other charitable foundations) by writing a proposal as
+% the Principal Investigator (PI). The funding agency reviews the proposal. If they decide to fund it,
+% they send the money to your university. The university then takes its cut of the funding
+% (essentially to pay for common services like buildings, admins, etc) and gives you the rest. You
+% then spend it on your summer salary, the salaries of your students, equipment, travel,
+% registration costs and other expenses associated with your research.
+% There are some nuances about the different types of funding, and how you can spend different
+% kinds of funding. So let us get into the details. Unfortunately, these details tend to vary a lot by
+% country, so everything I’m talking about in this chapter applies only to the US.
+% 3.1 An example budget
+% Let me walk you through an example budget. Let us say you are writing a proposal for \$100,000
+% USD (100K USD). The budget will talk about how you plan to spend this money. The following
+% table (Table 1) shows the example budget.
+% Budget
+% Graduate Research Assistant - 1
+% Total Salary 40,000
+% Fringe Benefits 12,000
+% Total Salary and Fringe Benefits 52,000
+% Total Materials \& Supplies 0
+% International travel to a conference 2500
+% Domestic travel to a conference 1481
+% Total Travel Costs 3,981
+% Tuition for Fall or Spring 4,746
+% Tuition for Summer 1,778
+% GRA Tuition for 1 year 11,270
+% Total Direct Costs 67,251
+% Modified Total Direct Cost (MTDC) 55,981
+% Indirect Costs 58.5% of MTDC 32,749
+% Total Cost (Direct + indirect costs) 100,000
+% 37
+% I will explain the various parts of this example budget. I will be talking about terms such as
+% direct costs and indirect costs as defined by the University of Texas – I believe it is similar at
+% most other US universities, but there might be differences. Please check with your university to
+% make sure.
+% Fringe. Let us say you want to support a student on this grant. In addition to paying for the
+% student’s salary, you also have to pay for non-wage expenses: things like health insurance, social
+% security, and medicare. This is usually expressed as a percentage of the student’s salary. At the
+% University of Texas at Austin, this was 30% in 2022 (For a comparison point, it was 32% at
+% Princeton). The stipend of a graduate research assistant (GRA) at UT is about \$30K USD for the
+% fall and spring semesters ($40K USD including summer). So salary and fringe for a GRA for a
+% year is \$52K.
+% You also have to pay the tuition of the GRA, and at UT, this is about \$11.2K USD for a year. To
+% keep things simple, I am using a single number for the tuition, but this depends on factors such
+% as whether you are in-state or out-of-state, your progress in the PhD program (if you are
+% all-but-dissertation, your tuition is lower), and whether you are a US citizen or not. It also
+% depends on the fraction of time spent as GRA/TA: if this drops below 20 hours a week
+% (considered full-time for students), tuition might have to be charged at the out-of-state rate. If
+% the student is only doing 5 hours a week as GRA, it might also impact how much of their tuition
+% can be covered by the grant; at 5 hours a week, the student might not be eligible for insurance. I
+% highly recommend talking to your admin if you are accounting for less than 20 hours a week for
+% your student on the project. Some schools also calculate tuition as a % of the stipend.
+% So the total cost for supporting a GRA for one year is \$63.2K USD. While you are paying \$63.2K
+% for each student for a year, the student's take-home pay is only the stipend part (minus taxes
+% that are withheld): \$35.2K assuming a 12% tax rate.
+% Note that fringe also applies to you (the PI) when you pay yourself out of your grants for your
+% summer months.
+% Direct costs. The direct cost part of your budget includes salaries, fringe benefits, travel, and
+% equipment and supplies that contribute directly towards performing the proposed research.
+% Direct costs are exclusive to each proposal: a piece of equipment can only be a direct cost on
+% one proposal, and a GRA can be assigned only to one proposal at a given time. In our example,
+% let us assume the only direct costs are supporting the student and paying for the student’s
+% travel (including registration, transportation, lodging, and food) for one international and one
+% domestic conference.
+% Modified Total Direct Costs (MTDC). MTDC is a portion of the total direct costs used for
+% calculating the indirect costs. It is the direct costs minus tuition, fellowships, equipment, and
+% capital expenditures. Travel also counts as MTDC. In this budget, we are not spending anything
+% 38
+% on materials and supplies in this budget, but if we did, it would be part of MTDC. Check with
+% your university to determine exactly what is counted as MTDC – this can be surprisingly tricky.
+% For example, you might expect computers to not count towards MTDC as it is “equipment”, but it
+% may be counted as a “supply” if the university is unable to amortize its cost. In the example
+% above, total direct costs is \$67.2K USD (63.2K for one GRA plus 4K for travel), but MTDC is only
+% $56K (leaving out the \$11.2K for tuition).
+% Indirect costs. The university takes a portion of all the money you receive, to pay for centralized
+% functions such as building costs, utilities, admin, and libraries. This is termed as the “indirect”
+% cost, usually expressed as a percentage of the MTDC. At most universities in the US, indirect
+% costs are more than 50% of the MTDC. At UT, it is 58.5% (Mike Freedman reports it is 63% at
+% Princeton). Thus, in our budget, we would have .585 * 56K = \$32.7K added as indirect costs. As
+% a result, it would cost 67.2 + 32.7 = \$100K USD for supporting a single GRA and some travel on
+% this grant. Note that even though the 58.5% number is scary, you are only paying 33% of your
+% budget for indirect costs; in other words, you don’t lose 58.5% of the total budget to indirect
+% costs.
+% As you can see from the preceding table, the \$100K USD budget only covers one student for one
+% year. At some universities, a GRA costs more, requiring more funding.
+% This should give you a picture of how expensive it is to maintain large groups! If you had ten
+% students, you would need to pull in a million dollars each year to fund your students.
+% It is useful to think of your budget in terms of student-years. \$400K is simply two students for
+% two years. A dissertation, roughly five student years, is \$500K. If you get the NSF CAREER grant,
+% you would typically be able to support one dissertation. This helps determine the scope of your
+% proposal: if you need five students to work on it for two years, a grant that provides \$250K will
+% not be a good match.
+% Summer months in your budget. PIs at most R1 universities in the US are expected to fund
+% themselves via grants in the summer. When you are drawing up your budget, you are expected
+% to estimate how much of your summer months you will dedicate to this project. This is taken as
+% an indication of PI commitment at the funding agency – you don’t want to write a budget where
+% your estimated time involvement is zero. So if you have one NSF grant where you estimate your
+% time commitment to be one month, you can only put in one more month for another NSF grant
+% proposal (since NSF limits total PI compensation to be two months per year across all NSF
+% grants).
+% 3.2 Types of grants
+% Broadly speaking, there are four different kinds of grants or funding, each with different
+% restrictions on how you can use the money. The differences come down to what you can spend
+% the money on, how long you can keep the money, and what the overhead is.
+% 39
+% We can term the four kinds of funding as grants, contracts, university funding, and gift funding.
+% Let me go over each type of funding.
+% Grants. The National Science Foundation (NSF), the Defense Advanced Research Projects
+% Agency (DARPA), the Army, the Navy, and the Air Force all fund research related to computer
+% science. These grants are competitive – NSF has a 25% acceptance rate (though this varies by
+% the directorate), and I imagine the other programs are similar.
+% This money can typically only be used for funding students, yourself, travel, and equipment
+% purchases that you had already put in the budget. For example, if you suddenly want to
+% purchase equipment not in the original budget, it needs to be approved by the Office of
+% Sponsored Research at your university (which makes sure you are spending the money in the
+% right way). You cannot use government funding to pay for things like a meal with your students
+% during the semester (meals during travel is allowed).
+% Government funding has strict timelines by which the money has to be spent. Typically, the
+% money is released on a yearly basis. You have to show that you have used the previous
+% installment to get the next round of funding. This sometimes results in professors making last
+% minute purchases to exhaust their grant!
+% In some cases, you can ask your funding program manager for a no-cost extension to your
+% grant. This typically means that you don’t need extra money, but you want extra time to use the
+% money. This is usually considered on a case-by-case basis, and I would not recommend
+% counting on getting a no-cost extension.
+% Indirect costs are levied on government funding (more generally, on all funding that goes
+% through the Office of Sponsored Research). The example budget I showed in the previous
+% section assumes funding is via sponsored research.
+% Grant proposals typically have reporting requirements (for example, you have to submit a report
+% once a year for an NSF grant). However, grants typically do not expect any concrete deliverables
+% to be provided at the end of the funding period. Essentially, the grant allows you to carry out the
+% proposed research: the act of publishing itself is the desired outcome. As a result, grants have a
+% strong alignment between the PIs and the funding agency: they both just want to get research
+% done.
+% Contracts. The second kind of funding is via contracts. Contract funding comes with an explicit
+% contract you must fulfill to keep and obtain more funding. For example, there may be quarterly
+% or monthly reports, or on-site visits by the sponsor. Contract funding typically also has
+% deliverables that are expected at regular intervals during the funding period. One example of
+% contract funding is DARPA funding, which comes with a number of deliverables and reporting
+% requirements. Contract funding is less aligned with the PIs than grant funding: apart from doing
+% the core research, the PI’s students will have to spend time on creating the deliverables, and the
+% PI herself has to spend a significant amount of time on reports and meetings.
+% 40
+% NSF vs DARPA. NSF is a good example of grant funding, while DARPA is a good example of
+% contract funding. Both these agencies fund a lot of computer science research. DARPA requires
+% deliverables and reports to be produced regularly during the grant duration. NSF only requires a
+% report to be submitted for each year of the grant duration. You can apply for NSF funds as
+% someone on a visa, while DARPA and other similar government funding programs might require
+% you to be a US citizen or a permanent resident.
+% University funding. Your university, or your college, or your department may choose to give you
+% funding. Typically when you start, you get a “startup” package that allows you to kickstart your
+% research group. University funding is “internal” funding in a way, and as such has fewer
+% restrictions than government funding. But this really depends on the specific university. I know
+% universities where startup funding cannot be used for covering summer salary of PIs. Apart
+% from startup funding, your university might have internal competitions to award “seed” funding
+% (typically under 50K) that you can then use to get preliminary results and later apply for
+% traditional grants.
+% University funding is also associated with timelines. For example, startup funding usually has to
+% be spent before you get tenure. However, university funding deadlines might be a little more
+% flexible than grant or contract funding deadlines.
+% University funding typically does not have associated indirect costs (as it is already university
+% money). You still have to pay fringe support for your students and your own summer salary.
+% An interesting sub-category of university funding are Research Centers. A research center is
+% funded by sponsors to carry out a certain mission over a span of around 5 years. The research
+% center has a program director who is responsible for allocating the funding. PIs at the university
+% apply for funding from the research center (a sort of internal grant), and are allocated funding.
+% Obtaining funding in this manner is easier than competing for an external grant. Particularly for
+% assistant professors who are just starting, research centers can provide seed funding before the
+% first grants are obtained. Check out the ADA center at Michigan for a good example.
+% Gift funding or unrestricted research funding. Companies or charitable foundations may
+% choose to fund your research in the form of “gifts” or unrestricted research grants. This is the
+% best kind of funding, for three reasons: indirect costs are typically not levied on these gifts, there
+% is no associated timeline by when you should spend them, and you can use them for a broader
+% range of things than university and grant/contract funding.
+% Indirect costs are not levied because the gift-giver can specify that it cannot be used for indirect
+% costs (the university has to honor this). Since it is an unrestricted gift, there are no limits on
+% what you can spend them on, or by when you should spend them. This doesn’t mean you can
+% spend the money on personal expenses. All expenses still have to be approved by the university,
+% and should be used for research-related expenses. But things like taking your research group
+% out for a meal can be expensed during gift funding (but not government funding).
+% 41
+% Indirect costs not being levied can make a huge difference. For example, in our budget from
+% earlier, if you were using gift funding to fund the student, you don’t have to pay indirect costs,
+% and thus get over \$30K back. Considering a student costs \$63K, you get to sponsor the student
+% for 1.5 years rather than 1 year!
+% How should you use your funding? Let us say that you are lucky enough to have all four kinds of
+% funding. And you have an expense that could be assigned to any of these funding (note that this
+% is often not the case: you can’t use a grant on topic X to support a student working on Y if X and
+% Y are not closely related). What should you use?
+% The typical rule is “Use the most restricted funding that will expire the earliest”. Thus, you should
+% always use the appropriate grant/contract funding first, then your university funding, and finally
+% gift funding. Gift funding is the most flexible, so use it only when you have no other option.
+% Always spend your gift funding on expenses that will have overhead (if funded from grants),
+% such as students. Do not spend it on things like equipment (be careful to ask what counts as
+% equipment at your university) which do not have overhead even when expensed to grants.
+% Writing a grant with other PIs. While you could write smaller grants as the sole PI, typically for
+% larger grants, you need to collaborate with other PIs and submit as a team. For example, you
+% cannot submit NSF Large grants as a solo PI. One thing to remember though: all the funding is
+% shared between the PIs. For example, imagine a grant for one million USD. It sounds amazing!
+% However, if the grant was awarded to a team of two PIs, and the grant duration is five years,
+% each PI can only support one student on it for the grant duration (100K * 2 * 5). Similarly, if a
+% grant of 10 million USD was won by a team of five PIs, each PI can only support one student for
+% four years (100K * 5 * 4). So in the end, the share of each PI is similar or lower than that of an
+% NSF CAREER.
+% This is not to say you should not collaborate with other PIs to write grants. Collaboration often
+% brings new ideas and research directions that are unlikely or impossible when working alone.
+% And bigger grants often provide prestige: for example, landing an NSF Large grant is significant
+% and puts you on the map. But it is useful to calculate how much you expect to receive if a grant
+% proposal is funded.
+% 3.3 The grant application process
+% So how does one go about submitting a grant? There are several steps in the process:
+% 1. The funding agency first puts out a call for proposals. For example, check out the NSF
+% call for CRII grants, a startup grant meant for new PIs who have not yet received a grant.
+% Note that PIs at many R1 universities are not eligible for CRII. This was posted on May 18,
+% 2022. Each call has a solicitation page with details about the program and how the
+% proposal should be structured – you should read this carefully.
+% 42
+% 2. In some cases, there are webinars where the program managers explain the grant
+% opportunity. CRII had such a webinar on Jul 13 2022. I highly recommend attending
+% these webinars if it is your first time submitting for a particular grant opportunity.
+% 3. In some cases, the funding agency might want you to submit a preliminary proposal.
+% They will review the preliminary proposals and inform you if they would like you to go
+% ahead with the full proposal. This is not the case for CRII.
+% 4. There will be a due date by which you need to submit the proposal. For the CRII, this is
+% Sep 19 2022. The proposal will have a number of parts, and the solicitation will clearly lay
+% out what the proposal should look like.
+% 5. You write the proposal, and sometime before you submit, you send it to the Office of
+% Sponsored Research (OSP or OSR) at your university. They have to approve the proposal
+% before you can submit, and they may request to see your proposal a week or 10 days
+% before you submit. Please make sure you get a draft to the OSP on time!
+% 6. Finally, you submit the proposal, and you wait. To be exact, your admin/OSP submits for
+% you, so you want to let them know when you are done. You and your admin/OSP will be
+% submitting a lot of proposals together; make sure you get to know the folks doing this. I
+% only have experience with NSF proposals, but these usually take 6-8 months to be
+% reviewed. In some cases, it might take even longer.
+% 7. If you are lucky enough to get your proposal funded, you might get an email or a call from
+% the NSF program manager. They might ask you to slightly modify your budget. For
+% example, I was asked to reduce my NSF CAREER budget (and appropriately reduce the
+% scope of my tasks as well). You will be asked to provide an abstract that will be displayed
+% on the NSF website. For example, check out the abstract for my CAREER award.
+% 8. Finally, you will get an official email that your grant has been awarded, it will become
+% public on the NSF website, and you will get the first installment delivered to your
+% university. You can then begin spending it in accordance with what you proposed.
+% 9. In the unlucky case that your proposal is not funded, you will get back three or more
+% reviews from NSF. These reviews tend to be short, and nowhere as detailed as paper
+% reviews. As such, it can be hard to figure out what to do after getting a rejection. My
+% advice is to go talk to senior faculty in your department if this happens, and they should
+% be able to guide you in the right direction.
+% 3.3 Writing your first grant proposal
+% Writing your first grant can be a stressful experience, since it is quite different from writing a
+% research paper. There are a number of differences.
+% First, the audience for a grant proposal is broader than that of a research paper; it is guaranteed
+% that non-experts in your area will be reading and evaluating your proposal (for example, if I write
+% 43
+% a grant proposal about storage research, I can expect it to be read by someone working in
+% systems broadly, but not necessarily someone doing storage research). As a result, it has to be
+% much broader and more accessible than a research paper. Proposal reviewers might also have a
+% smaller amount of time to spend on each proposal – some funding agencies ask reviewers to
+% read a dozen proposals in around a month when you serve on their panel. You can imagine how
+% much time each proposal would get. Thus, your proposal must be easy to skim and read, must
+% get to the major points quickly, and must be accessible to a broad audience.
+% Second, in a research paper, you are reporting on something that is already done. The focus is
+% on the technical details: how you were able to achieve the result, what are the drawbacks, etc.
+% However, in a grant proposal, you are talking about things that you will do in the future. In a grant
+% proposal, the most important thing is to be able to inspire the reviewer, and convince them that
+% this is a thing worth doing (and funding). In this respect, it is much more similar to a founder
+% pitching before an investor, than a professor talking to her peers about her research. While the
+% details do matter to some extent, what is much more important is that you paint a big picture of
+% how your proposed research will make the world a better place. This is quite different from
+% writing a research paper, and takes some practice.
+% For writing your first grant proposal, I’d recommend two things. First, talk to folks who have
+% gotten the grant you are submitting for, and ask if you could see their grant proposal. Many folks
+% are happy to share privately. Some folks, like Jeff Bigham and Gillian Hayes, are publicly sharing
+% some of their proposals. Second, write up your draft proposal, and show it to senior folks in your
+% department. They would be able to catch errors that could cause rejection.
+% When submitting grant proposals, do not be disheartened if it gets rejected. As far as I can tell,
+% most proposals, even from experienced faculty, get rejected a few times before getting
+% accepted. Grant rejections are a bit more painful because the waiting time is high, you might
+% only get to submit to a grant opportunity once per year. But with time and repeated submissions,
+% many grant proposals do get funded.
 
-3.4 Serving on grant panels
-44
-3.5 Getting funding from industry
-Since I started at UT, I have been fortunate to receive funding from a number of companies:
-Meta, Google, VMware, and Toyota. How did I get this funding? Unlike with government
-agencies, there is no set process to follow in general (exception being Google with the Google
-Research award).
-Giving talks and networking. The process is more organic: I give talks at various companies
-about my research, and talk to their engineers about how my group’s research can impact them.
-This is useful to gain an understanding of how our work will play out in the real world, and to
-understand the problems they are facing.
-Sometimes after talks like these, the company reaches out to see if they can sponsor our
-research. At other times, the company is looking for academic groups to invest in, and my talk
-puts our group on their radar. Note that you might sometimes receive funding even without
-doing this – good work is always noticed and rewarded (especially if close to the company’s
-interests).
-In rare cases, if you know the folks at the company really well, you can also reach out and say I
-am trying to achieve research goal X, is your company looking to fund anybody in this space.
-But you only do this after building up strong ties with the company over a long period of time.
-You can’t start out by saying “can you give me some money”.
-Networking and building connections always pay out over the long term. So you shouldn’t have
-the mindset of “I gave a talk at company X, I should get some funding from them soon”. Rather,
-you should aim to get your group’s research out there and known by companies in that space.
-The funding will follow later, but time spent networking and giving talks is never wasted.
-3.6 Financial planning for your research group
-Finally, I want to talk a little bit about financial planning for your group. As a professor, you are
-now a manager, and you should ensure that the students working with you are adequately
-funded. If you are unable to fund your graduate students, your department might be able to fund
-them as TAs, though the dept would need some advance notice. For postdocs, this option is not
-there, so you need to make sure you have funding for your postdocs.
-Runway. In general, it is good practice to think six months to 1 year ahead, and make sure you
-have enough funding for existing students/postdocs and folks you are planning to hire. Initially,
-you will have your startup funding, so you start with a full tank of gas. For every
-student/postdoc you hire, you should check how much runway your group has: how long until
-your group runs out of funding. You should ensure you have a runway of 6 months to 1 year.
-45
-This means that if you have 1 year of runway, you need to write grant proposals now (since it
-usually takes about a year to be reviewed and funded). At the start of every semester, review
-your finances with your admin and make sure you have enough of a runway.
-Savings. An important part of financial planning is to always have a little bit extra in your coffers
-than your anticipated expenses. For example, imagine that you got a paper accepted, and there
-is no associated grant you can expense it to. If you don’t have some money left over, you would
-not be able to sponsor your student attending the conference and presenting the paper.
-Summers. Part of this financial planning is also deciding what to do in your summers. I strongly
-advocate ensuring that you can both pay yourself for the summer, and pay your students. This
-might require being conservative in taking on students until you are sure you can pay them.
-There is the temptation to cut back on your own summer salary so that you can pay your
-students; I would recommend avoiding this. While it can be a temporary fix, it is necessary for
-your long-term health, and that of your group, if you maintain your own summer payment.
-If you are able to work at a company for the summer, this can reduce the strain on your group’s
-finances while also helping your research become more grounded. I spent one summer at
-VMware after joining UT Austin, and that time spent was useful for my research. You would
-probably need to reach out much earlier to set this up – the group hosting you would need to
-make sure they have the budget to host you for the summer.
-Coordinating with admins. You want to make sure you and your admin are on the same page
-regarding what funding to use for each expense (sometimes it can be hard to move expenses
-between accounts). Most admins are experienced and get the picture quickly once you describe
-your overall strategy.
-Acknowledgements
-Thanks to Gabriel Parmer, Indranil Gupta, Jeff Bigham, Michael Ekstrand, Michael Freedman,
-Satish Puri, Siddharth Joshi, Solel Pirelli, and Stefan Savage for pointing out errors and providing
-suggestions for the chapter.
-Summary
-In this chapter, we talked about how grants work, what the application process looks like, and
-different sources of funding for research. We went over an example budget that shows all the
-different overheads involved in funding research.
-We have now discussed two of the four main big roles of a professor: managing students and
-managing funding. Next, we will discuss teaching
+% 3.4 Serving on grant panels
+% 44
+% 3.5 Getting funding from industry
+% Since I started at UT, I have been fortunate to receive funding from a number of companies:
+% Meta, Google, VMware, and Toyota. How did I get this funding? Unlike with government
+% agencies, there is no set process to follow in general (exception being Google with the Google
+% Research award).
+% Giving talks and networking. The process is more organic: I give talks at various companies
+% about my research, and talk to their engineers about how my group’s research can impact them.
+% This is useful to gain an understanding of how our work will play out in the real world, and to
+% understand the problems they are facing.
+% Sometimes after talks like these, the company reaches out to see if they can sponsor our
+% research. At other times, the company is looking for academic groups to invest in, and my talk
+% puts our group on their radar. Note that you might sometimes receive funding even without
+% doing this – good work is always noticed and rewarded (especially if close to the company’s
+% interests).
+% In rare cases, if you know the folks at the company really well, you can also reach out and say I
+% am trying to achieve research goal X, is your company looking to fund anybody in this space.
+% But you only do this after building up strong ties with the company over a long period of time.
+% You can’t start out by saying “can you give me some money”.
+% Networking and building connections always pay out over the long term. So you shouldn’t have
+% the mindset of “I gave a talk at company X, I should get some funding from them soon”. Rather,
+% you should aim to get your group’s research out there and known by companies in that space.
+% The funding will follow later, but time spent networking and giving talks is never wasted.
+% 3.6 Financial planning for your research group
+% Finally, I want to talk a little bit about financial planning for your group. As a professor, you are
+% now a manager, and you should ensure that the students working with you are adequately
+% funded. If you are unable to fund your graduate students, your department might be able to fund
+% them as TAs, though the dept would need some advance notice. For postdocs, this option is not
+% there, so you need to make sure you have funding for your postdocs.
+% Runway. In general, it is good practice to think six months to 1 year ahead, and make sure you
+% have enough funding for existing students/postdocs and folks you are planning to hire. Initially,
+% you will have your startup funding, so you start with a full tank of gas. For every
+% student/postdoc you hire, you should check how much runway your group has: how long until
+% your group runs out of funding. You should ensure you have a runway of 6 months to 1 year.
+% 45
+% This means that if you have 1 year of runway, you need to write grant proposals now (since it
+% usually takes about a year to be reviewed and funded). At the start of every semester, review
+% your finances with your admin and make sure you have enough of a runway.
+% Savings. An important part of financial planning is to always have a little bit extra in your coffers
+% than your anticipated expenses. For example, imagine that you got a paper accepted, and there
+% is no associated grant you can expense it to. If you don’t have some money left over, you would
+% not be able to sponsor your student attending the conference and presenting the paper.
+% Summers. Part of this financial planning is also deciding what to do in your summers. I strongly
+% advocate ensuring that you can both pay yourself for the summer, and pay your students. This
+% might require being conservative in taking on students until you are sure you can pay them.
+% There is the temptation to cut back on your own summer salary so that you can pay your
+% students; I would recommend avoiding this. While it can be a temporary fix, it is necessary for
+% your long-term health, and that of your group, if you maintain your own summer payment.
+% If you are able to work at a company for the summer, this can reduce the strain on your group’s
+% finances while also helping your research become more grounded. I spent one summer at
+% VMware after joining UT Austin, and that time spent was useful for my research. You would
+% probably need to reach out much earlier to set this up – the group hosting you would need to
+% make sure they have the budget to host you for the summer.
+% Coordinating with admins. You want to make sure you and your admin are on the same page
+% regarding what funding to use for each expense (sometimes it can be hard to move expenses
+% between accounts). Most admins are experienced and get the picture quickly once you describe
+% your overall strategy.
+% Acknowledgements
+% Thanks to Gabriel Parmer, Indranil Gupta, Jeff Bigham, Michael Ekstrand, Michael Freedman,
+% Satish Puri, Siddharth Joshi, Solel Pirelli, and Stefan Savage for pointing out errors and providing
+% suggestions for the chapter.
+% Summary
+% In this chapter, we talked about how grants work, what the application process looks like, and
+% different sources of funding for research. We went over an example budget that shows all the
+% different overheads involved in funding research.
+% We have now discussed two of the four main big roles of a professor: managing students and
+% managing funding. Next, we will discuss teaching
 
 \chapter{Teaching}
 \section{Teaching Load}
@@ -569,22 +659,21 @@ managing funding. Next, we will discuss teaching
 \section{Mentoring Junior Faculty}
 
 \chapter{Services}
-These are the services that you are expected to do as a faculty member.  They are not as important as research, but they are still important.  They are also a good way to get to know people in your department and in your field.
 
-Moreover, while some services are required (e.g., when your department chair assigns you to some committee), some are not and you can decline (e.g., an invitation to be a PC member).  You should be strategic about which services you accept.
+You are expected to have certain types of services as a faculty member.  While some services are required (e.g., when your department chair assigns you to some committee), some are not and you can decline (e.g., an invitation to be a PC member).  You should be strategic about which services you accept.
 
 
 \section{Service to your Professional Community}
 
 These are services that you do for your professional community. They will help you to get to know people in your field, and to get your name out.  Common examples include serving on the program committees of conferences, serving on editorial boards of journal, reviewing papers for journals, serving on grant panels.
 
-\paragraph{Serving on Program Committees (PC)} This is a good way to get to know what is hot in your field, and to get to know people in your field.  It is also a good way to get your name out.
+\subsection{Serving on Program Committees (PC)} This is a good way to get to know what is hot in your field, and to get to know people in your field.  It is also a good way to get your name out.
 You should try to serve on the program committee of the top conferences in your field.
 
 \textbf{Advice}: You can ask senior colleagues or even your PhD advisor/collaborators to recommend you to serve on a PC. You can also directly email the PC chairs and ask to serve on the PC.  For example, I directly email OOPSLA and PLDI PC chairs and asked to serve on the PC, and they accepted my request (I do have papers at OOPSLA and PLDI when I asked). I tried this with SE conferences  e.g., ICSE (and of course also nominate myself through the official form), and it never work, even though I have many papers at ICSE.
 
 
-\section{Serving on NSF Panels} You should serve on NSF panels.  It is a great way to learn about the grant process: how to distinguish between good and bad proposals and how people review propsoals.
+\subsection{Serving on NSF Panels} You should serve on NSF panels.  It is a great way to learn about the grant process: how to distinguish between good and bad proposals and how people review proposals.
 It is also a good way learn what other people are doing, what is hot, and what is not. In short, it is a good way to learn how to write successful proposals.
 
 Just like serving on a PC, you will review proposals and you will have to argue for why a proposal should be funded or not.  Unlike PC where discussions can spread over many days (and there are also rebuttals), NSF panels are usually a two-day event.  You do get paid a bit for serving on NSF panels and you get to travel to NSF headquarters in Virginia (except during the pandemic where everything is remote).
@@ -592,10 +681,17 @@ Just like serving on a PC, you will review proposals and you will have to argue 
 In general, I enjoy serving on NSF panels much more than serving on PC. While the work is more intense and takes more time, I found it to be more rewarding and learned a lot from it. Since my first NSF panel in 2019, I have served 7 panels (at least once every year since '19) and I look forward to serving more.
 
 
-\textbf{Advice}: Similarly to serving in PC, you can cold email progarm managers in your area and ask to be on a panel. Once you have served, you will likly be invited to serve again.  Unfortunately, I do not have much experience with non-NSF panels or proposals.
+\textbf{Advice}: Similarly to serving in PC, you can cold email program managers in your area and ask to be on a panel. Once you have served, you will likely be invited to serve again.  Unfortunately, I do not have much experience with non-NSF panels or proposals.
+
+
+\subsection{Volunteer for more Leadership roles} Once you have served on a few PCs and NSF panels, you should aim for more leadership roles.  For example, you can volunteer to be a chair of certain sessions/tracks of a large conference, or even a general chair of a workshop or conference.  These roles are more time consuming, but they are also more rewarding (e.g., more people will know about you) and in general will help your career, especially your tenure case.
 
 
 \section{Service to the Department}
+Your department chair will assign you to some committees to help run the department.  Typically for tenure track faculty the services are lighter than tenured ones (e.g., less leadership roles). For example, I have served on the \emph{PhD and/or MS admission committee (adcom)}, \emph{faculty search committee}, and \emph{awards committee} when I was at UNL. Being a member of the PhD adcom is very common for new assistant professors, as it is a good way to recruit students and build your lab. 
+
+
+
 \section{Service to the University}
 \section{Other Types of Services}
 \paragraph{Writing Recommendation Letters} You will be asked to write a lot of recommendation letters, for both students and colleagues.
@@ -617,184 +713,184 @@ In general, I enjoy serving on NSF panels much more than serving on PC. While th
 
 
 
-One part of the professor job that doesn’t get a lot of attention is service. However,
-understanding and managing this component is important, both for your own tenure case and
-for the wider community. Let us start by talking about what service is, and why it is important.
-7.1 Defining and managing service
-So what do I mean when I say service? I would loosely define service as optional tasks that your
-community requests from you. You are free to decline these tasks without a direct impact on
-your career (there might be indirect impacts). These tasks are important to keep the community
-running.
-For example, your peer researchers may ask you to serve on the program committee for a
-conference, or review a paper for a journal. You will get a lot of these requests, and you are not
-expected to say yes to all of them. Your department will expect you to do some service each
-year, and there is an expectation that you get invited to serve on the PCs of the top conferences
-in your research area. But beyond that, you don’t get any benefits by doing a lot of service.
-Why should you do service? To put it in a nutshell, doing service is part of being a good citizen,
-both inside your department, and inside your wider academic community. This is because of the
-way academia operates, fully dependent on freely volunteered labor.
-For example, imagine that you want to run a conference. You need someone to organize the
-conference, and someone to review submissions and select papers for the program. One way
-to do this is to recruit reviewers, pay them for their time, and pay other folks to handle the
-logistics of running the conference. Speakers would get paid. All the money would come from a
-combination of sponsors and the fees that attendees provide. This is how industrial
-conferences operate.
-Academia uses a different model. People volunteer their time to act as reviewers or conference
-organizers. This allows the conference organizers to reduce the cost that needs to be paid by
-attendees (even so, the cost is usually several hundreds of US dollars). USENIX uses a slightly
-different model where the conference organizers are paid professionals, but the technical
-reviewing is still done by volunteers. This results in a slightly higher registration fee for
-attendees (compared to when everything is done by volunteers).
-Thus, almost everything in academia runs on volunteer labor. All the events you attend, the
-conferences and journals you publish in, the panels you enjoy, the awards that are given out, all
-depend on people volunteering their time. Since you get a net benefit from the time volunteered
-by others, it is only fair that you do your share of volunteering as well.
-72
-There are some other fringe benefits to volunteering. One is that you get your name out. When
-you are an assistant professor and you are struggling to establish yourself, it can be useful to
-have folks know you and recognize your name. The second benefit is that you get to meet folks
-in the course of doing service and form your network; this is particularly useful when you are
-just starting out.
-Why should you not do service? While it is important to do service, I’ve seen folks go overboard
-on this (and did too much myself in my first year). Doing service feels good: you are doing
-something for your community, and it feels like you are getting your name out. And it is hard to
-say no when folks you respect request you to join a committee.
-But you should always, always remember: you will not get tenure for service. No matter how
-good the service is. The first consideration at R1 universities is always research. If your research
-is not good, having done amazing service will not get you tenure.
-Apart from not helping you with tenure, taking on too many service commitments will make you
-bad at service. If you say yes to too many concurrent PCs, you will have a tough time doing a
-good job at reviewing papers for all of them. Nobody wins in this situation: the conferences and
-authors get crappy reviews, and you get a reputation for writing bad reviews.
-Managing service commitments. As an assistant professor, you should do enough service to be
-a good citizen, but not so much that it affects your other job responsibilities. You should
-conserve your limited energy for research and teaching. Be thoughtful and intentional about the
-service requests you accept – always think about how much time you are committing down the
-line (even if it is several months or a year away). The way to think about it is that you can do two
-to four big service requests each year. A big service request is something like an organizational
-role at a conference, or a program committee assignment where you will be reviewing 10+
-papers. You should really be doing only a few of these each year. Smaller service requests, such
-as being an external reviewer for a conference, you can do more of; but be careful that they don’t
-pile up.
-Saying no. How do you say no politely, especially when it is someone you respect and look up
-to? You should remember that folks who run conferences expect a lot of people to say no. It
-happens all the time, and if you decline, they will not take it personally. You don’t need to worry,
-“If I say no this year, maybe they will not invite me ever again”. I can relate because I had this
-exact worry at the beginning. I’m happy to report that I have declined to review at conferences,
-and still been invited the following year. As long as you do good research and write good
-reviews, you will be invited back. So do not let this consideration make you say yes when you
-don’t have the time to do a good job.
-I usually say something like: “Thank you for inviting me. Unfortunately, I am overloaded on
-service commitments this year, and I don’t think I will have enough time to do a good job.
-Therefore I will have to decline”. As you get a bit more senior, you could recommend a junior
-faculty member they could invite in your place.
-73
-7.2 Serving on program committees and editorial boards
-When you get started as an assistant professor, serving on program committees will form the
-bulk of your service. At first, it can be super flattering to be invited to a program committee: I
-definitely remember my first such invitation. You now have a voice at the table in determining
-the program! You can review papers alongside researchers you looked up to. As a result, you
-pretty much say yes to all the invitations you initially get.
-This is not a great strategy, though: you end up over-committing yourself in your initial years. I
-would recommend saying yes only in the following cases:
-1) The conference is your home venue, where you have been publishing in grad school, and
-where you hope to publish in the future.
-2) It is the top (or one of the top) conferences in your area.
-3) It is a community that you want to join, or an area that you want to publish in.
-4) It is a workshop specializing in your area.
-For example, I publish regularly at systems conferences such as ATC/FAST, so I tend to review
-papers for them. SOSP and OSDI are the top conferences in my area, so I almost always accept
-PC invitations for them. HotOS and HotStorage are the relevant workshops for my area, so I
-review papers for them as well.
-Don’t accept invitations to be on the PC for conferences that you have never published in, and
-are unlikely to do so in the future. Don’t accept invitations just because you know the PC chair if
-you are already committed to other PCs.
-Overall, a good number to aim for is about 1-2 big PCs each year (10+ papers per PC) and 1-2
-smaller ones (5+ papers per PC). Between research and teaching, it will be hard to do a good job
-with more PCs.
-University expectations regarding PCs. Generally, your department or university likes to see that
-you are being invited to serve on the PCs of the top conferences in your area. If you become an
-assistant professor and receive no PC invitations, that can be a bit of a red flag. However,
-beyond expecting to see some service (a few PCs each year), the department/university doesn’t
-really care how much service you do – they assume you will manage your service workload
-efficiently.
-How much time does reviewing a paper take? This really varies by area. I would say anywhere
-between one to four hours per paper is common. Do not spend more than half a day on a single
-paper. You should read actively, trying to get the main ideas and insights, which will enable you
-to write a good review. You should aim to read the paper only once (this gets easier with
-practice), taking notes as you go. Having questions you want to answer as you read will help
-make reviewing easier.
-74
-If you find yourself spending more than 1 day a week on average (or 8 hours per week) for
-reviewing papers, you have accepted too many PC invitations. It can be hard to properly track
-this though, since you have a lot of activity near the reviewing deadlines, and not much on other
-weeks.
-I’ve mostly talked about program committees since conferences are considered the primary
-publication venue in computer science, but much of the advice applies to journals as well. Only
-review for journals where you publish regularly, and track and manage how many submissions
-you accept to review.
-7.3 Serving on dissertation committees
-Another form of service is participating on dissertation committees, where you read the
-dissertation and attend the thesis proposal/defense. This can take up a lot more time, since you
-have to read an entire dissertation. It helps if you already know the students work, since that
-will form a significant portion of the dissertation. Still, serving on a dissertation committee can
-be an entire day’s worth of work.
-Requests for serving on dissertation committees can come from within the department or
-externally. The internal ones are harder to say no, since these are the colleagues you work with
-on a daily basis. Nevertheless, track how much time you are spending on this. Don’t say yes to
-more than one or two dissertation committees per semester/quarter.
-From the university viewpoint, I don’t think there are concrete expectations regarding serving on
-dissertation committees. Not being on dissertation committees early on in your career will not
-be seen as a red flag (to the same extent that not being on PCs would be).
-7.4 Serving as a session chair
-Another form of service is serving as the Session Chair at a conference. The session chair will
-introduce the session (typically 1 to 1.5 hours) at the front, introduce the speakers, and
-moderate the questions. The session chair also kicks off the QnA if there are no questions from
-the audience at first.
-Being a session chair is a fantastic service opportunity, and you should definitely sign up
-whenever you get the chance. It gets you face-time in front of the community, you get your name
-out, and the work required for being a good session chair is modest. Grab session chair
-opportunities with both hands when you are starting out!
-7.5 Organizational service roles
-As you become a bit more experienced, you will be offered organizational roles such as being
-the Publicity Chair, the Web Chair, the Poster Chair, or the Program Committee chair. Of these,
-being the chair of the program committee is most prestigious, since you are responsible for
-75
-delivering a high quality program in coordination with your chosen program committee. So if you
-are invited to be the PC chair of a conference or workshop you normally publish in, you should
-accept the invitation. Your university or department will care about whether you have been
-invited to be the PC chair (once you become a bit more senior).
-However, the other roles involve a lot of work and little recognition. Ideally, these would be done
-by professionals (as in the case of USENIX). However, for non-USENIX conferences, someone
-has to step up and do them. Be aware of the work-reward ratio if you choose to accept an
-assignment like this though.
-During my time as an assistant professor, I co-chaired HotStorage 2020 and SyStor 2021. I was
-also one of the General Chairs for SOSP 21. I enjoyed doing all three roles, but it was definitely a
-lot of work! I would not recommend doing any of these roles (especially being General Chair)
-early on as an assistant professor; it is a better fit when you are close to going up for tenure.
-7.6 Departmental and university service
-Apart from serving on program committees, editorial boards, and organizing conferences and
-workshops, you are also expected to do “local” service for your department and university. This
-can take multiple forms.
-At the department level, this means you will serve on one or more committees. Assistant
-professors are usually assigned to either the PhD admissions committee or the faculty
-recruiting committee. Both committees are extremely important and directly influence the future
-of the department. Other committees include Faculty Evaluation Committees, Budget
-Committees, and Promotion Committees that you can participate on once you become more
-senior. Expect to spend at least a couple of weeks (put together, it will be spread over the
-semester) on departmental committee work each year.
-At the university level, there will be committees deciding overall university policy. Typically, your
-department or college will need to be represented on these committees. As an assistant
-professor, it will be rare for you to be nominated by your department for these committees;
-typically, more senior professors participate in these committees.
-Summary
-The most important thing to remember about service is that it is like chores around the house;
-you need to regularly clean your house, water your plants, etc. You do this because you want a
-nice place to live in; similarly, service provides you a nice community to do research in. However,
-carefully manage the amount of service you do. You will be bombarded with requests, and it is
-all too easy to say yes to too many requests. Don’t accept so many service requests that it
-impacts your other responsibilities as a professor.
-76
+% One part of the professor job that doesn’t get a lot of attention is service. However,
+% understanding and managing this component is important, both for your own tenure case and
+% for the wider community. Let us start by talking about what service is, and why it is important.
+% 7.1 Defining and managing service
+% So what do I mean when I say service? I would loosely define service as optional tasks that your
+% community requests from you. You are free to decline these tasks without a direct impact on
+% your career (there might be indirect impacts). These tasks are important to keep the community
+% running.
+% For example, your peer researchers may ask you to serve on the program committee for a
+% conference, or review a paper for a journal. You will get a lot of these requests, and you are not
+% expected to say yes to all of them. Your department will expect you to do some service each
+% year, and there is an expectation that you get invited to serve on the PCs of the top conferences
+% in your research area. But beyond that, you don’t get any benefits by doing a lot of service.
+% Why should you do service? To put it in a nutshell, doing service is part of being a good citizen,
+% both inside your department, and inside your wider academic community. This is because of the
+% way academia operates, fully dependent on freely volunteered labor.
+% For example, imagine that you want to run a conference. You need someone to organize the
+% conference, and someone to review submissions and select papers for the program. One way
+% to do this is to recruit reviewers, pay them for their time, and pay other folks to handle the
+% logistics of running the conference. Speakers would get paid. All the money would come from a
+% combination of sponsors and the fees that attendees provide. This is how industrial
+% conferences operate.
+% Academia uses a different model. People volunteer their time to act as reviewers or conference
+% organizers. This allows the conference organizers to reduce the cost that needs to be paid by
+% attendees (even so, the cost is usually several hundreds of US dollars). USENIX uses a slightly
+% different model where the conference organizers are paid professionals, but the technical
+% reviewing is still done by volunteers. This results in a slightly higher registration fee for
+% attendees (compared to when everything is done by volunteers).
+% Thus, almost everything in academia runs on volunteer labor. All the events you attend, the
+% conferences and journals you publish in, the panels you enjoy, the awards that are given out, all
+% depend on people volunteering their time. Since you get a net benefit from the time volunteered
+% by others, it is only fair that you do your share of volunteering as well.
+% 72
+% There are some other fringe benefits to volunteering. One is that you get your name out. When
+% you are an assistant professor and you are struggling to establish yourself, it can be useful to
+% have folks know you and recognize your name. The second benefit is that you get to meet folks
+% in the course of doing service and form your network; this is particularly useful when you are
+% just starting out.
+% Why should you not do service? While it is important to do service, I’ve seen folks go overboard
+% on this (and did too much myself in my first year). Doing service feels good: you are doing
+% something for your community, and it feels like you are getting your name out. And it is hard to
+% say no when folks you respect request you to join a committee.
+% But you should always, always remember: you will not get tenure for service. No matter how
+% good the service is. The first consideration at R1 universities is always research. If your research
+% is not good, having done amazing service will not get you tenure.
+% Apart from not helping you with tenure, taking on too many service commitments will make you
+% bad at service. If you say yes to too many concurrent PCs, you will have a tough time doing a
+% good job at reviewing papers for all of them. Nobody wins in this situation: the conferences and
+% authors get crappy reviews, and you get a reputation for writing bad reviews.
+% Managing service commitments. As an assistant professor, you should do enough service to be
+% a good citizen, but not so much that it affects your other job responsibilities. You should
+% conserve your limited energy for research and teaching. Be thoughtful and intentional about the
+% service requests you accept – always think about how much time you are committing down the
+% line (even if it is several months or a year away). The way to think about it is that you can do two
+% to four big service requests each year. A big service request is something like an organizational
+% role at a conference, or a program committee assignment where you will be reviewing 10+
+% papers. You should really be doing only a few of these each year. Smaller service requests, such
+% as being an external reviewer for a conference, you can do more of; but be careful that they don’t
+% pile up.
+% Saying no. How do you say no politely, especially when it is someone you respect and look up
+% to? You should remember that folks who run conferences expect a lot of people to say no. It
+% happens all the time, and if you decline, they will not take it personally. You don’t need to worry,
+% “If I say no this year, maybe they will not invite me ever again”. I can relate because I had this
+% exact worry at the beginning. I’m happy to report that I have declined to review at conferences,
+% and still been invited the following year. As long as you do good research and write good
+% reviews, you will be invited back. So do not let this consideration make you say yes when you
+% don’t have the time to do a good job.
+% I usually say something like: “Thank you for inviting me. Unfortunately, I am overloaded on
+% service commitments this year, and I don’t think I will have enough time to do a good job.
+% Therefore I will have to decline”. As you get a bit more senior, you could recommend a junior
+% faculty member they could invite in your place.
+% 73
+% 7.2 Serving on program committees and editorial boards
+% When you get started as an assistant professor, serving on program committees will form the
+% bulk of your service. At first, it can be super flattering to be invited to a program committee: I
+% definitely remember my first such invitation. You now have a voice at the table in determining
+% the program! You can review papers alongside researchers you looked up to. As a result, you
+% pretty much say yes to all the invitations you initially get.
+% This is not a great strategy, though: you end up over-committing yourself in your initial years. I
+% would recommend saying yes only in the following cases:
+% 1) The conference is your home venue, where you have been publishing in grad school, and
+% where you hope to publish in the future.
+% 2) It is the top (or one of the top) conferences in your area.
+% 3) It is a community that you want to join, or an area that you want to publish in.
+% 4) It is a workshop specializing in your area.
+% For example, I publish regularly at systems conferences such as ATC/FAST, so I tend to review
+% papers for them. SOSP and OSDI are the top conferences in my area, so I almost always accept
+% PC invitations for them. HotOS and HotStorage are the relevant workshops for my area, so I
+% review papers for them as well.
+% Don’t accept invitations to be on the PC for conferences that you have never published in, and
+% are unlikely to do so in the future. Don’t accept invitations just because you know the PC chair if
+% you are already committed to other PCs.
+% Overall, a good number to aim for is about 1-2 big PCs each year (10+ papers per PC) and 1-2
+% smaller ones (5+ papers per PC). Between research and teaching, it will be hard to do a good job
+% with more PCs.
+% University expectations regarding PCs. Generally, your department or university likes to see that
+% you are being invited to serve on the PCs of the top conferences in your area. If you become an
+% assistant professor and receive no PC invitations, that can be a bit of a red flag. However,
+% beyond expecting to see some service (a few PCs each year), the department/university doesn’t
+% really care how much service you do – they assume you will manage your service workload
+% efficiently.
+% How much time does reviewing a paper take? This really varies by area. I would say anywhere
+% between one to four hours per paper is common. Do not spend more than half a day on a single
+% paper. You should read actively, trying to get the main ideas and insights, which will enable you
+% to write a good review. You should aim to read the paper only once (this gets easier with
+% practice), taking notes as you go. Having questions you want to answer as you read will help
+% make reviewing easier.
+% 74
+% If you find yourself spending more than 1 day a week on average (or 8 hours per week) for
+% reviewing papers, you have accepted too many PC invitations. It can be hard to properly track
+% this though, since you have a lot of activity near the reviewing deadlines, and not much on other
+% weeks.
+% I’ve mostly talked about program committees since conferences are considered the primary
+% publication venue in computer science, but much of the advice applies to journals as well. Only
+% review for journals where you publish regularly, and track and manage how many submissions
+% you accept to review.
+% 7.3 Serving on dissertation committees
+% Another form of service is participating on dissertation committees, where you read the
+% dissertation and attend the thesis proposal/defense. This can take up a lot more time, since you
+% have to read an entire dissertation. It helps if you already know the students work, since that
+% will form a significant portion of the dissertation. Still, serving on a dissertation committee can
+% be an entire day’s worth of work.
+% Requests for serving on dissertation committees can come from within the department or
+% externally. The internal ones are harder to say no, since these are the colleagues you work with
+% on a daily basis. Nevertheless, track how much time you are spending on this. Don’t say yes to
+% more than one or two dissertation committees per semester/quarter.
+% From the university viewpoint, I don’t think there are concrete expectations regarding serving on
+% dissertation committees. Not being on dissertation committees early on in your career will not
+% be seen as a red flag (to the same extent that not being on PCs would be).
+% 7.4 Serving as a session chair
+% Another form of service is serving as the Session Chair at a conference. The session chair will
+% introduce the session (typically 1 to 1.5 hours) at the front, introduce the speakers, and
+% moderate the questions. The session chair also kicks off the QnA if there are no questions from
+% the audience at first.
+% Being a session chair is a fantastic service opportunity, and you should definitely sign up
+% whenever you get the chance. It gets you face-time in front of the community, you get your name
+% out, and the work required for being a good session chair is modest. Grab session chair
+% opportunities with both hands when you are starting out!
+% 7.5 Organizational service roles
+% As you become a bit more experienced, you will be offered organizational roles such as being
+% the Publicity Chair, the Web Chair, the Poster Chair, or the Program Committee chair. Of these,
+% being the chair of the program committee is most prestigious, since you are responsible for
+% 75
+% delivering a high quality program in coordination with your chosen program committee. So if you
+% are invited to be the PC chair of a conference or workshop you normally publish in, you should
+% accept the invitation. Your university or department will care about whether you have been
+% invited to be the PC chair (once you become a bit more senior).
+% However, the other roles involve a lot of work and little recognition. Ideally, these would be done
+% by professionals (as in the case of USENIX). However, for non-USENIX conferences, someone
+% has to step up and do them. Be aware of the work-reward ratio if you choose to accept an
+% assignment like this though.
+% During my time as an assistant professor, I co-chaired HotStorage 2020 and SyStor 2021. I was
+% also one of the General Chairs for SOSP 21. I enjoyed doing all three roles, but it was definitely a
+% lot of work! I would not recommend doing any of these roles (especially being General Chair)
+% early on as an assistant professor; it is a better fit when you are close to going up for tenure.
+% 7.6 Departmental and university service
+% Apart from serving on program committees, editorial boards, and organizing conferences and
+% workshops, you are also expected to do “local” service for your department and university. This
+% can take multiple forms.
+% At the department level, this means you will serve on one or more committees. Assistant
+% professors are usually assigned to either the PhD admissions committee or the faculty
+% recruiting committee. Both committees are extremely important and directly influence the future
+% of the department. Other committees include Faculty Evaluation Committees, Budget
+% Committees, and Promotion Committees that you can participate on once you become more
+% senior. Expect to spend at least a couple of weeks (put together, it will be spread over the
+% semester) on departmental committee work each year.
+% At the university level, there will be committees deciding overall university policy. Typically, your
+% department or college will need to be represented on these committees. As an assistant
+% professor, it will be rare for you to be nominated by your department for these committees;
+% typically, more senior professors participate in these committees.
+% Summary
+% The most important thing to remember about service is that it is like chores around the house;
+% you need to regularly clean your house, water your plants, etc. You do this because you want a
+% nice place to live in; similarly, service provides you a nice community to do research in. However,
+% carefully manage the amount of service you do. You will be bombarded with requests, and it is
+% all too easy to say yes to too many requests. Don’t accept so many service requests that it
+% impacts your other responsibilities as a professor.
+% 76
 
 
 
