@@ -14,6 +14,7 @@
 \usepackage{caption}
 \captionsetup{font=small}
 \usepackage{graphicx}
+\usepackage{pdfpages}
 \usepackage{hyperref}
 \usepackage{wrapfig}
 \setlength\intextsep{0pt} % remove extra space above and below in-line float
@@ -218,7 +219,7 @@ This information can also help \textbf{US faculty and admission committee} gain 
 I wish you the best of luck. Happy school hunting!
 
 \begin{mybox}
-The latest version of this document is available at
+This document will be updated regularly to reflect the latest information and updates in the admission process. Its latest version is available at
 
 \begin{center}
   \href{https://nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf}{nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf},
@@ -401,7 +402,7 @@ LORs.
 
 \paragraph{Why CS depts do not waive the application fee?}  Some universities do waive, e.g., Rice does for all PhD applicants and many universities for domestic students (\autoref{sec:domestic-students}), however most do not.  In any case, the application fee is typically a requirement of the university. Individual departments and programs do not have the flexibility to waive the application fee, even if they want to.
 
-In my opinion, requiring applicants to pay the fee helps ensure their seriousness, as it filters out non-serious candidates. Also, most CS programs already receive many applications, and would be overwhelmed if the application process were free.  
+In my opinion, requiring applicants to pay the fee helps ensure their seriousness, as it filters out non-serious candidates. Also, most CS programs already receive many applications and would be overwhelmed if the application process were free.  
 
 
 \chapter{Your Application}\label{sec:application}
@@ -420,8 +421,8 @@ The focus of adcom is to evaluate your background and interest in research to se
 
 
 Most PhD programs will require at least \textbf{two LORs}. A good LoR letter should give details of the applicant's research background and achievements, all of which paint a compelling picture of the candidate to the adcom.
-
 Having a strong letter from an internationally recognized researcher will \emph{greatly strengthen} your application. A strong letter from a well-known researcher can outweigh the lack of publications (or low GPA or unknown school).
+
 
 However, obtaining letters from famous people
 can be challenging for international students, who might not have many interactions with such experts. So it is fine to have a letter from people (e.g., profs, researchers, postdocs who mentored you) who know you well enough to talk about \emph{your research experience and capabilities}. 
@@ -433,14 +434,12 @@ Many students get letters from supervisors from companies where they did interns
 \end{commentbox}
 
 
-\paragraph{Self-written Letters} Many international students write letters themselves, typically due to the requests of their profs., and have them signed by their profs. Such letters have little value and are considered weak by reviewers---why can you not even find someone who cares or knows enough about you to write a candid personal reference letter?  Instead of the reference writer talking about you, in this case it is you who write about yourself (and they just sign the letter). Moreover, experienced reviewers can easily spot (or suspect) such letters, which can be a \red{red flag}.
-
-\paragraph{Helping your LOR writer} As mentioned above, do not write your own letter. Instead, you can help your LOR writer by providing details or unique things about yourself. For example, let them know about your GPA, research and work experiences, papers (if any), or anything you want them to mention. You can also provide them with a draft of your SOP so that they can see what you are saying about yourself and complement that with their own perspective.
-Sometimes your writer will explicit ask you for such information, but if not, you should provide it anyway (especially if you have not interacted with them much or have not done much research with them).
+\paragraph{Self-written letters are bad} Many international students write letters themselves, typically due to the requests of their profs., and have them signed by their profs. Such letters have \textbf{very little value} and are considered weak by reviewers---why can you not even find someone who cares or knows enough about you to write a candid personal reference letter?  Instead of the reference writer talking about you, in this case it is you who write about yourself (and they just sign the letter). Experienced reviewers can easily spot (or suspect) such letters, which can be a \red{red flag}.
 
 
+\paragraph{Generic letters are bad} When the writers do not know much about the applicants (e.g., just taking some course with them or not making any impression to write about), they might write a generic and short letter, which is not useful and also considered weak. This does not mean the professor is not good or does not care about you, but they just do not know you well enough to write a strong letter.
+So it might be a good idea to directly ask if the prof. is willing to write a \emph{strong} letter for you. If not, then you should ask someone else.  For example, if a student I don't know well asks me to write a letter for them, I will explicitly tell them I don't know them that well to write much about them, and such a short, generic, and weak letter will not help their case.
 
-\paragraph{Generic Letters} When the writers do not know much about the applicants (e.g., just taking some course with them or not making any impression to write about), they might write a generic and short letter, which is not useful and also considered weak.  It might be a good idea to directly ask if the prof. is willing to write a \emph{strong} letter for you. If not, then you should ask someone else.  For example, if a student I don't know well asks me to write a letter for them, I will explicitly tell them I don't know them that well to write much about them, and such a short, generic, and weak letter will not help their case.
 
 \begin{commentbox}[Hung:]
   A sad reality is that most professors in Vietnam \textbf{DO NOT} know how to write a good letter, or are lazy in writing letters hence delegate the writing to the students. Unfortunately, there is no easy solution to this problem.
@@ -451,7 +450,7 @@ Sometimes your writer will explicit ask you for such information, but if not, yo
   Several international students mentioned that some professors are unwilling to write letters or write weak ones because they do not want (good) students to go abroad or only go to places where they want the students to go to. If you are in this situation, you should find someone else to write for you.
   \tcblower
 
-Sometimes students would go to great length just to get letters from well-known professors in their school (e.g., department head). But as mentioned, if these professors do not know you, their letters would likely be generic and carry little value (sometimes \red{red flags}). Moreover, a top professor at your university might not be well-known to US faculty (see more details in \autoref{sec:your-school}). So save the trouble and get letters from \emph{any} professors/supervisors who know you well and can write a good letter about \emph{your} research ability. It's better to have a good personalized letter about your own research ability from someone who is less well-known than a generic/weak letter from a well-known person.
+Sometimes students would go to great lengths just to get letters from well-known professors in their school (e.g., department head). But as mentioned, if these professors do not know you, their letters would likely be generic and carry little value (sometimes \red{red flags}). Moreover, a top professor at your university might not be well-known to US faculty (see more details in \autoref{sec:your-school}). So save the trouble and get letters from \emph{any} professors/supervisors who know you well and can write a good letter about \emph{your} research ability. It's better to have a good personalized letter about your own research ability from someone who is less well-known than a generic/weak letter from a well-known person.
 
 \end{commentbox}
 
@@ -465,9 +464,17 @@ If you do not waive your right,  the letter writer might refuse to write for you
   \textbf{Vu}: This is an interesting and useful detail that US faculty might not be aware of. Students should mention this in their statements. In general, someone with a PhD has been through the research process and therefore can better evaluate your research ability.  But if you do not have such people, then someone who can properly evaluate your research ability is still OK (and again, explain that in your SOP).
 \end{commentbox}
 
-\paragraph{Reminding Writers} After you submit your application, you should tell your writers about that and let them know they will soon receive an email from the university to submit their letters.  You should also remind them about the deadline and ask them to submit their letters on time.  But do not send too many reminders as that can be annoying to the writers.
 
-Note that most places only have deadlines for the applicant, but are very flexible with the letter writers (in many cases do not even give them any deadline).  Also, many places do not begin the admission review process right after the deadline and work on application reviews in the next semester (mid-January).
+\paragraph{Help your LOR Writer} As mentioned above, do not write your own letter and generic letters do not give much value. One thing you can do to help your writer to write a strong, customized LoR for you is to provide details or unique things about yourself. For example, let them know about your GPA, research and work experiences, papers (if any), or anything you want them to mention. You can also provide them with a draft of your SOP so that they can see what you are saying about yourself and complement that with their own perspective.
+Sometimes your writer will explicitly ask you for such information, but if not, you should provide it anyway (especially if you have not interacted with them much or have not done much research with them).
+
+
+\paragraph{Remind Your Writers} After you submit your application, you should tell your writers about that and let them know they will soon receive an email from the university to submit their letters.  You should also remind them when you submit your application and ask them to submit their letters on time if they haven't done so.  Note that most places only have deadlines for the applicant, but are very flexible with the letter writers (in many cases do not even give them any deadline).  Also, many places do not begin the admission review process right after the deadline and work on application reviews in the next semester (mid-January).  
+
+Thus you do want to send reminders because professors can be quite busy and might forget to submit their letters, especially when there is no explicit deadline. However, do not send too many reminders as that can be annoying to the writers.
+
+
+
 
 
 \paragraph{VEF 2.0} For Vietnamese students, it's worth mentioning the \href{https://vef2.org/}{VEF2.0 program}, which has helped many students gain admission to top CS PhD programs in the US. VEF2.0 invites US faculty members from leading institutions to conduct rigorous interviews with VEF students and subsequently provide reference letters on their behalf. Despite the limited interaction between the interviewer and the interviewee (primarily just the interview), these reference letters are generally effective and have helped many students get into good PhD programs.
@@ -475,18 +482,18 @@ Note that most places only have deadlines for the applicant, but are very flexib
 \section{Statement of Purpose (SOP)}\label{sec:research-statement}
 
 \begin{center}
-  \includegraphics[scale=0.4]{files/c2.png}
+  \includegraphics[scale=0.5]{files/c2.png}
 \end{center}
 
 While you might not have control over LORs (\autoref{sec:lor}) or where your go to school (\autoref{sec:your-school}), you do over your
 statement of purpose (SOP) or personal statement\footnote{Few schools separate these documents and ask you to write both: SOP, which focuses on research experiences, and personal statement, which is everything more personal, e.g., why PhD, challenges, diversity, etc}! So write it well because it could make a big difference.
 
-In your statement, you have the opportunity to connect directly with us and make your application stand out and unique. Your SOP can convince adcom members that you would \emph{fit} the program, even if you don't have very strong research experience.
+In your statement, you have the opportunity to connect directly with adcom members and make your application stand out and unique. Your SOP can convince adcom members that you would \emph{fit} the program, even if you don't have very strong research experience.
 A well-written SOP also shows that you can communicate, which is very important in research, and that you can effectively teach and communicate with students, which is important for TA funding (see \autoref{sec:funding}).
 % is important because if you need (GTA) funding, it will provide evidence
 % that you can teach and communicate with students.
 
-In your SOP, focus on research motivation and convince us that you can achieve it through your experience, e.g., published papers. You should also back up your claims with concrete evidence. For example, if you say you have experience with teaching, then show what you did, e.g., undergrad TA or mentoring someone.  If you say you work on a project, then show some results, e.g., paper submitted (or even rejected), achieved X\% performance improvement over ... Also, do not use more than two pages (references can be on the third page). Many SOP samples are \href{https://cs-sop.org/}{available here}.
+In your SOP, focus on research motivation and convince us that you can achieve it through your experience, e.g., published papers. You should also back up your claims with concrete evidence. For example, if you say you have experience with teaching, then show what you did, e.g., undergrad TA or mentoring someone.  If you say you work on a project, then show some results, e.g., paper submitted (or even rejected), achieved certain performance improvement over the state of the art. Also, do not use more than two pages (references can be on the third page). Many SOP samples are \href{https://cs-sop.org/}{available here}.
 
 You should talk about things that adcom members might not know about and can help make you \textbf{stand out} in the application pool of thousands of applicants, e.g., you are member of a minority or LGBTQ+ group (\autoref{sec:urm}), your personal Github project with hundreds of stars or your regular contributions to well-known open-source projects (see \autoref{sec:improve-your-chance} for increasing your admission chance).
 
@@ -603,11 +610,11 @@ For example, participating in Math Olympiads if you want to do theory or winning
 
 \section{Your School and Grades}\label{sec:your-school}
 
-\paragraph{School} Graduating from top universities \emph{that we recognize} helps. For example, if you are an international student and your school is well-known, then it is \emph{``top foreign''}, which is a plus.
+\subsection{School} Graduating from top universities \emph{that we recognize} helps. For example, if you are an international student and your school is well-known, then it is \emph{``top foreign''}, which is a plus.
 However, if we do not know much about schools in your country, then we are uncertain about the quality of your school and likely treat your school as \emph{``unknown foreign''}, which can be a minus point.
 
 
-\textbf{Advice}: If your school is the top in your country but you think it might not be well-known internationally, you should talk about it in your SOP (and also ask your LOR writer to do that). Of course, if you're interested in working with Vietnamese, consider  \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{CS programs in the US that have Vietnamese professors}. %It might also be helpful to have your CS dept to put itself on CSRankings so that others know about the dept, its faculty, and research.
+If your school is the top in your country but you think it might not be well-known internationally, you should talk about it in your SOP (and also ask your LOR writer to do that). Of course, if you're interested in working with Vietnamese, consider  \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{CS programs in the US that have Vietnamese professors}. %It might also be helpful to have your CS dept to put itself on CSRankings so that others know about the dept, its faculty, and research.
 
 \begin{commentbox}[Vu:]
   Sometimes PhD adcom in the US will share a document such as \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Foreign-Top-Schools}{this one}, which lists the top schools in several countries. We also ask other faculty and students if we think they know about the place.  For example, when I was a postdoc at UMD, members of their CS PhD adcom asked me to evaluate applicants from Vietnam.  During my time at UNL and now here at Mason, I have looked at Vietnamese applications (whether they are assigned to me or not) and provided input to their reviewers, e.g., X is the top tech school in Vietnam and so it should be \emph{top} instead of \emph{unknown} foreign, which makes a huge difference.
@@ -616,25 +623,36 @@ However, if we do not know much about schools in your country, then we are uncer
   If an applicant is anxious about their school not being known outside their country, they can provide information about their school and department, with independent sources where such information can be verified.
 \end{commentbox}
 
-\paragraph{Grades} Having a good GPA is good. However if your school is not well-known, having top grades or rankings
-usually will not help because we cannot evaluate them.  This can be an issue for students in many top international universities where the competition is so high that very good students can still have low rankings from these schools (and be overlooked by adcom).
+\subsection{Grades} Grades generally do not matter much for CS PhD admission. PhD in CS is a research degree and doing well in undergrad courses does not necessarily mean you can do research (other factors such as research experiences, pubs, LoRs are more important).  
 
-\textbf{Advice}: As with school reputation, you and your LoR writers can mention the grading system of your university if you think that is helpful for adcom to evaluate.
-Note that while having good grades might not help much,
-having bad grades (e.g., < 3.0) will be \red{red flag} (unless your LORs or
-statement give a proper explanation). This is especially true if you
-have bad grades in relevant courses, e.g., Math and CS.
+Nonetheless, if you are from a well-known school, having good grades do help (not a lot though), e.g., adcom members often note details such as "good GPA from well-known school (\autoref{sec:ievaluate}). However if your school is not well-known, having top grades or rankings usually will not help because we cannot evaluate them (e.g., we don't know how hard it is to get a 4.0 or A's at your school). This can be an issue for students in many top international universities where the competition is so high that very good students can still have low rankings from these schools (and be overlooked by adcom).
+
+As with school reputation, you and your LoR writers can mention the grading system of your university if you think that is helpful for adcom to evaluate.
+
 
 \begin{commentbox}[Thanh:]
-  Vietnamese universities typically offer specialized programs, such as the talented engineer program at HUST, that have highly competitive entrance exams and a limited number of available slots (e.g., 30 per year). However, these programs often set higher requirements for students, including more demanding tests and assignments, resulting in lower GPAs and overall rankings. For example, 3.5 GPA students from such talented programs are typically much better than 4.0 GPA students not in those programs.  Similarly, variations in GPA standards exist among different universities, with technical universities generally having lower GPAs than economic universities. These make gaining admission in the US difficult as US faculty are not familiar with these issues.
-  \tcblower
-  \textbf{Vu}: Vietnamese students and even faculty often lament how this grading system hurts Vietnamese students applying abroad. One way to mitigate this is to make these issues known in your SOP.  \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{Universities with Vietnamese profs} are probably aware of them, but in general your letter writers \emph{and} you can explicitly mention these in their letters and your statement.
-\end{commentbox}
+    Vietnamese universities typically offer specialized programs, such as the talented engineer program at HUST, that have highly competitive entrance exams and a limited number of available slots (e.g., 30 per year). However, these programs often set higher requirements for students, including more demanding tests and assignments, resulting in lower GPAs and overall rankings. For example, 3.5 GPA students from such talented programs are typically much better than 4.0 GPA students not in those programs.  Similarly, variations in GPA standards exist among different universities, with technical universities generally having lower GPAs than economic universities. These make gaining admission in the US difficult as US faculty are not familiar with these issues.
+    \tcblower
+    \textbf{Vu}: Vietnamese students and even faculty often lament how this grading system hurts Vietnamese students applying abroad. One way to mitigate this is to make these issues known in your SOP.  \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{Universities with Vietnamese profs} are probably aware of them, but in general your letter writers \emph{and} you can explicitly mention these in their letters and your statement.
+  \end{commentbox}
+
+  
+\paragraph{Bad Grades} 
+While having good GPA might not help much (again, because of other much more important factors),
+having bad GPA can be a \red{red flag}. In fact, many universities have a minimum GPA requirement (e.g., > 3.0) and will automatically reject applications with lower GPAs.  
+If you have bad grades, you should explain them in your SOP or have your LOR writers explain them in their letters.
+
+
+Moreover, having bad grades in relevant courses, e.g., Math and CS, can be a \red{red flag}.
+Adcom members often scan through transcripts looking for C and lower grades in Math and CS courses and might raise concerns if they see several of them.
+Note that bad grades in non-relevant courses, e.g., e.g., about politics or history, are not as concerning.
+
+A common question is whether you should be concern and explain bad grades in relevant courses in your SOP.  If you have just a few, then they do not matter much, so don't spend much time explaining them (let's face it, many of us, including faculty, have bad grades in some courses, including relevant ones). But if you have many bad grades for an entire semester or year due to some specific reasons, then you may be you should explain them in your SOP.
 
 \section{Standard Tests (GRE, IELTS, etc), Work Experiences, Online Courses, and Certificates}\label{sec:standard-tests}
 
 
-\paragraph{GRE} While a few schools still require taking the GRE (e.g., UCF), most good CS PhD programs in the US \textbf{no longer} require it. Thus, if you haven't taken the GRE or have bad scores, then don't waste time (re)taking it. It does not help much!
+\paragraph{GREs Do Not Matter} While a few schools still require taking the GRE (e.g., UCF), most good CS PhD programs in the US \textbf{no longer} require it. Thus, if you haven't taken the GRE or have bad scores, then don't waste time (re)taking it. It does not help much!
 
 However, if you took it and have really good scores then it might be worth it to include and talk about them in your application (but don't expect them to make much difference). But if your scores are bad, then you should not include them in your application, which can be a \red{red flag}.
 
@@ -687,7 +705,7 @@ Typically, an interview takes about 15--30 minutes, and one important aspect of 
 You might be asked to talk about your research experiences and interests and to read a paper and discuss it. In some rare cases you might also be asked to solve a problem, e.g., a coding problem. 
 The interview is also a good opportunity for you to ask questions about the program and the university.
 
-You should treat the interview as an informal chat. Have ``elevator pitches'' about your research experiences and interests. You might also want to have a 5-minute presentation about your research. If a prof. asks you to read a paper, do it and be prepared to discuss it. You can also ask if you need to prepare for a coding problem. Finally, prepare some thoughtful questions to ask, e.g., about the program, the university, or the professor's research.
+You should treat the interview as an informal chat. Have ``elevator pitches'' about your research experiences and interests. You might also want to have a 5-minute presentation about your research. If a prof. asks you to read a paper, do it and be prepared to discuss it. You can also ask if you need to prepare for a coding problem. Finally, prepare some thoughtful questions to ask, e.g., about the program, the university, or the professor's research (see \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Answers-to-Ph.D-Advisor-Guide}{some questions} you can ask a potential adviser).
 
 \begin{commentbox}[Vu:]
   At Mason, faculty are encouraged to interview candidates. For very strong candidates, the interview is actually to recruit them.  In some cases a faculty interviews a candidate that they see potential and want to advocate for their admission. Without the interview, such applications may be more likely to be rejected.
@@ -878,6 +896,9 @@ Finally, for fellowships (\autoref{sec:fellowships}) you might get paid over the
 
 \chapter{Choosing Schools and Professors}\label{sec:schoolsandprofs}
 
+\epigraph{\vspace{-0.2in} The answer to life's problems aren't at the bottom of a bottle. Heh heh! They're on TV!}{\textsc{The Simpsons}}
+
+
 Choosing a school and an adviser is clearly among the most important things in your mind when you apply and especially when you get admitted.  This is further complicated due to cultural differences and the unfamiliarity of international students with the US higher education system.  This section aims to mitigate some confusion and help you make informed decisions.
 
 \section{Choosing a University}\label{sec:choosing-university}
@@ -895,13 +916,14 @@ While this can be confusing due to the large number of universities in the US, a
 
 \subsection{Selecting and Ranking Schools}\label{sec:selecting-ranking-schools}
 \begin{center}
-  \includegraphics[scale=0.5]{files/c1.png}
+  \includegraphics[scale=0.6]{files/c1.png}
 \end{center}
 
-International students often put schools into two bins: (i) very top schools that they dream about, and (ii) everything else.  They commonly use rankings from US News, which is not transparent and questionable\footnote{\url{https://cra.org/cra-statement-us-news-world-report-rankings-computer-science-universities/}}.  Sometimes they evaluate based on the reputation of the school's undergrad program or the reputation of the school's non-CS programs such as medical, math, or physics.
-They even rank universities based on popular states they know in the US, e.g., California, Texas, and New York.
+International students often put schools into two bins: (i) top schools that they dream about, and (ii) everything else.  They commonly use rankings from US News, which is not transparent and questionable\footnote{\url{https://cra.org/cra-statement-us-news-world-report-rankings-computer-science-universities/}}.  Sometimes they evaluate based on the reputation of the school's undergrad program or the reputation of the school's non-CS programs such as medical, math, or physics.
+They even rank universities based on popular places they know in the US, e.g., California, Texas, and New York.
 
-You can learn about CS programs and the research interests of faculty using resources such as \href{https://csrankings.org}{CSRankings.org}. You will be very surprised to learn that a school that you didn't know much about can have very strong research in your topic (and vice versa, a school you thought highly about might have no faculty working in the research field you're interested in). This is also a good way to learn about individual faculty, e.g., who works on what, and well-known CS conferences\footnote{In CS (and probably only in CS), conferences, not journals, are often the main venue to publish research findings (see \href{https://homes.cs.washington.edu/~mernst/advice/conferences-vs-journals.html}{why here}).}. %\autoref{sec:ranking} gives the top 50 CS programs in the US according to CSRankings.
+Instead of these superficial criteria, you should consider the CS program and the research interests of faculty members.
+You can learn about these using resources such as \href{https://csrankings.org}{CSRankings.org}. You will be very surprised to learn that a school that you didn't know much about can have very strong research in your topic (and vice versa, a school you thought highly about might have no faculty working in the research field you're interested in). This is also a good way to learn about individual faculty, e.g., who works on what, and well-known CS conferences\footnote{In CS (and probably only in CS), conferences, not journals, are often the main venue to publish research findings (see \href{https://homes.cs.washington.edu/~mernst/advice/conferences-vs-journals.html}{why here}).}. %\autoref{sec:ranking} gives the top 50 CS programs in the US according to CSRankings.
 
 \begin{commentbox}[Dat:] Most Vietnamese students, including those from top schools, \textbf{do not know} about CSRankings.  Maybe applicants who worked at top research places such as VinAI would know about it.
 \end{commentbox}
@@ -930,6 +952,18 @@ If you get admission to several places, you should consider attending Open House
   You might regret it if you did not consider this seriously before applying.
   %
 \end{commentbox}
+
+
+\subsection{PhD in other related fields: CE, IST, Cybersecurity}\label{sec:related-fields}
+
+You \emph{do not} need to do a PhD in CS to work in your area of interest. For example, in addition to a traditional CS department, Mason has IST and Cybersecurity departments, both of which have faculty with PhD in CS and work on CS topics (e.g., AI, Security, Robotics).  So it is possible that you still get to do CS research and publish in CS-focused venues even if you're not in a traditional CS program.  It is common to see faculty with PhD in CS in a non-CS department as well as faculty with non-CS PhD in a CS department.
+
+However, if your goal is a PhD in CS, then you likely need to be in the CS dept \emph{and} advised by a CS faculty. A non-CS faculty can serve in the PhD dissertation committee (common) or \emph{co-advise} (somewhat rare), but your main PhD adviser will likely be a tenure-line faculty in CS (\autoref{sec:faculty-types}). 
+For example, a prof. in Stats or Math might be able to serve as a co-adviser, but not as a sole adviser of a student in a CS PhD program. 
+If in doubt, check with the CS department for their requirements.
+
+For this specific reason,  CSRankings includes only faculty who can advise CS PhD students. I also have compiled a \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{list} of Vietnamese faculty who can advise PhD students. \autoref{sec:faculty-types} talks more about who can serve as your PhD adviser.
+
 
 \section{Choosing an Adviser}
 There is no one-size-fits-all answer to this question. The best adviser is the one that you can work well with.  But how do you find such a person?
@@ -968,7 +1002,7 @@ Ultimately, choose a prof. that fits you by communicating with them, taking thei
 \begin{itemize}
   \item \href{https://www.cs.columbia.edu/wp-content/uploads/2019/03/Get-Advisor.pdf}{The Definitive ``what do I ask/look for'' in a PhD Advisor Guide}
 \end{itemize}
-\subsection{Types of Faculty: Who can serve as a PhD adviser?}\label{sec:faculty-types}
+\subsection{Who can serve as a PhD adviser?}\label{sec:faculty-types}
 
 \emph{Not} every faculty can serve as your official PhD adviser. Let's try to understand the different types of faculty and their roles. For example, you might hear about tenured,  tenure track, and teaching faculty.  You might also hear about assistant, associate, full, adjunct, emeritus, teaching, and research professors. Here is a primer on these terminologies.
 
@@ -1000,8 +1034,9 @@ For some universities, they \emph{can} solely advise and graduate PhD students, 
   \includegraphics[scale=0.4]{files/c8.png}
 \end{center}
 
+Now that you know a bit about tenured and tenure-track faculty (\autoref{sec:faculty-types}).  Which one should you choose as your adviser? The short answer is that either can be a good adviser, but they have different strengths and weaknesses.
 
-Tenure-track faculty such as assistant professors are likely young and very active in research (they have to, to get tenure). Thus, they will likely have more time to work with you and push you to do research and publish. However, they may not have as much experience in managing students and may not have as much funding (yet).
+Tenure-track faculty, e.g., assistant professors, are likely young and active in research (they have to, to get tenure). Thus, they will devote more time to work with you and push you to do research and publish. However, they may not have as much experience in managing students and may not have as much funding (yet).
 
 Tenured faculty, e.g., associate and full profs., are likely older, more well-known, and have more experience in managing students.  However, they might not push you as hard and expect you to figure things out yourself, i.e., you need to be independent.  Some tenured faculty are also no longer active in research and are more involved with administrative responsibilities or with their startup companies (this means they will likely not take new students). \autoref{sec:faculty-types} gives more details on faculty types.
 
@@ -1070,22 +1105,25 @@ Finally, profs. are very busy so don't take it personally if you don't get anyth
   In my view, cold emails are not welcome by most faculty members and should be avoided. However, if one is already admitted to a program in some department, by all means, email the faculty you may be interested in working with, but do mention right at the beginning that you are already admitted to the program as well as several other universities. State specific areas (preferably specific topics-ML, robotics instead of AI).
 \end{commentbox}
 
+
+
 \subsubsection*{Additional Resources}
 \begin{itemize}
   \item \href{https://yonatanbisk.com/emailing_professors.html}{A Note about Emailing Professors} by Yonatan Bisk
   \item \autoref{sec:accept-postpone-decline} How to accept/postpone/decline PhD offers (and do it gracefully)
 \end{itemize}
 
-\subsection{PhD in other related fields: CE, IST, Cybersecurity}\label{sec:related-fields}
 
-You \emph{do not} need to do a PhD in CS to work in your area of interest. For example, in addition to a traditional CS department, Mason has IST and Cybersecurity departments, both of which have faculty with PhD in CS and work on CS topics (e.g., AI, Security, Robotics).  So it is possible that you still get to do CS research and publish in CS-focused venues even if you're not in a traditional CS program.  It is common to see faculty with CS PhD in a non-CS department as well as faculty with non-CS PhD in a CS department.
+\subsection{Things to avoid when cold emailing a professor}
 
-However, if your goal is a PhD in CS, then you likely need to be in the CS dept \emph{and} advised by a CS faculty. A non-CS faculty can serve in the PhD dissertation committee (common) or \emph{co-advise} (somewhat rare), but your main PhD adviser will likely be a tenure-line faculty in CS (\autoref{sec:faculty-types}). 
-For example, a prof. in Stats or Math might be able to serve as a co-adviser, but not as a sole adviser of a student in a CS PhD program. 
-If in doubt, check with the CS department for their requirements.
-
-For this specific reason,  CSRankings includes only faculty who can advise CS PhD students. I also have compiled a \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Viet-CS-Profs-US}{list} of Vietnamese faculty who can advise PhD students. \autoref{sec:faculty-types} talks more about who can serve as your PhD adviser.
-
+\begin{itemize}
+    
+    \item \textbf{Not customizing the email}. These emails typically talk about the student and not why they are interested in the professor's work. See writing tips in \autoref{sec:contact}
+    \item \textbf{Sending the same email to multiple professors}. Sending emails to multiple profs. using BCC or even CC (where we can see all addresses the email is being sent to) will result in no reply or a very harsh one on how unprofessional this is.
+    \item \textbf{Too much information}. Keep your email short and to the point. If we are interested, we will ask for more information. 2--3 paragraphs are enough.  Personally I also do not want to see course transcript or CV in the first email.
+    \item \textbf{Not being professional}, e.g., do not call the professor by their first name in the first email.  Use Prof. Lastname or Dr. Lastname (\autoref{sec:address}).
+    \item \textbf{Not reading the professor's website} and asking questions that are already answered there.
+\end{itemize}
 
 \chapter{Miscs and FAQs}\label{sec:faqs}
 
@@ -1116,10 +1154,10 @@ For example, your SOP did not mention any faculty or research area at the progra
 
 \paragraph{Low English exam scores (e.g., IELTS or TOEFL)}  Profs. might not care much about these, but the college or the university often sets a minimum that you need to pass to be considered, especially for TA funding (e.g., you need to communicate well with students as a TA).  Thus, while profs. are willing to argue for your case, they might be reluctant to go against the requirement of the university on standard exams.  
 
-Note that English exams are not required for all students, e.g., domestic students and those from certain countries are waived from taking these exams.  For example, at Mason also waive the English exams for students from these \href{https://github.com/dynaroars/dynaroars.github.io/wiki/About-Mason#standard-tests-waiver-eligible-countries}{countries}.
+Note that English exams are not required for all students, e.g., domestic students and those from certain countries are waived from taking these exams.  For example, Mason waives English exams for students from these \href{https://github.com/dynaroars/dynaroars.github.io/wiki/About-Mason#standard-tests-waiver-eligible-countries}{countries}.
 
 
-\paragraph{Red flags} Various types of red flags can cause concern to the adcom (e.g., plagiarism, cheating, or other academic dishonesty). Another one is that you have a history of jumping from one program to another (e.g., you have been in multiple different programs in a short time). Adcom members might have contacts in other programs and heard about your stories, or your LoRs might mention these.
+\paragraph{Red flags} Various types of red flags can cause concern to the adcom (e.g., too many STEM courses with low or withdrawn grades, plagiarism, cheating, or other academic dishonesty). Another one is that you have a history of jumping from one program to another (e.g., you have been in multiple different programs in a short time). Adcom members might have contacts in other programs and heard about your stories, or your LoRs might mention these.
 
 If you think you have these issues, you should address them in your SOP or ask your letter writers to do so.
 In general, these things are rare, but they do happen and cause concern to the adcom.
@@ -1137,7 +1175,7 @@ Some universities have rolling admissions, meaning they send out acceptance lett
 
 \paragraph{Waitlist} Most CS programs have a limited number of slots for PhD students, and thus put many good students on a waitlist.  If accepted students decline the offer, then offers are sent to students on the waitlist. So if you see people getting accepted, that does not mean you are out yet.
 
-\paragraph{Rejection Letters} Typically, schools start sending out rejection letters to remaining applicants after they have finalized their admissions decisions. Thus, rejection letters are often sent out late (e.g., after April 15th or even much later). Not much you can do here, you can try to contact the school to ask about your status, but they might not reply, they might say they are still reviewing applications, or give you inaccurate information (e.g., you will hear in two weeks). In short, you just have to be patient and wait.
+\paragraph{Rejection Letters} Schools typically start sending out rejection letters to remaining applicants \emph{after they have finalized their admissions decisions}. Thus, rejection letters are often sent out late (e.g., after April 15th or even much later). Not much you can do here, you can try to contact the school to ask about your status, but they might not reply, they might say they are still reviewing applications, or give you inaccurate information (e.g., you will hear in two weeks). In short, you just have to be patient and wait (however, beware that some schools do not send out rejection letters at all).
 
 \section{Increasing my admission chance}\label{sec:improve-your-chance}
 
@@ -1387,7 +1425,7 @@ In the end, the total budget comes out to be \$73K/year to support a PhD student
 
 \section{Buying Computer Equipment}\label{sec:buying-equipment}
 
-Students understandably get excited about their upcoming PhD journey and want to buy new computer equipment and electronics to prepare. However, you should check with your prof. first.  They might have funding to buy you computers and other equipment (e.g., software, books, keyboards, headphones, tablets, etc). Many CS programs also provide budget or computer equipment to incoming PhD students (e.g., a laptop). 
+Students understandably get excited about their upcoming PhD journey and want to buy new computer equipment and electronics to prepare. However, you should first check with your professor.  They might have funding to buy you computers and other equipment (e.g., software, books, keyboards, headphones, tablets, etc). Many CS programs also provide budget or computer equipment to incoming PhD students (e.g., a laptop). 
 
 Keep in mind that these computers would be university property, which might be monitored and have certain restrictions, e.g., do not install illegal software on them (\autoref{sec:illegal-software}).  You might also have to return them when you graduate. 
 
@@ -1403,50 +1441,51 @@ For a specific start date or TA assignment (e.g., TA'ing a particular course), y
 
 \appendix
 
+\chapter{Visa for International Students}\label{sec:visa}
+
+\epigraph{\vspace{-0.2in} I didn’t do it. Nobody saw me do it. You can’t prove anything!}{\textsc{The Simpsons}}
 
 
-% \section{Additional Resources}
-% \begin{itemize}
-%   \item \bibentry{nlpphd}
-% \end{itemize}
+% \begin{center}
+%     \includegraphics[scale=0.8]{files/visa.pdf}
+% \end{center}
 
-% \chapter{Additional Resources}
+For international students pursuing a PhD in the US, \textbf{F-1} is the main visa that allows a student to study full-time at an accredited institution.  Here are some key points about the F-1 visa:
 
+\begin{itemize}
+\item \textbf{Employment:} You are allowed to work on-campus for up to \textbf{20 hours per week during the academic year} (because you still need to take classes) and \textbf{full-time} (typically 40 hrs) during official school breaks (e.g., summer and winter breaks). Off-campus employment requires authorization, which can be obtained through programs like Curricular Practical Training and Optional Practical Training described below.
 
-% \chapter{Undergraduate Research Opportunities}
+\item \textbf{Curricular Practical Training (CPT):} CPT allows you to participate in internships or practical training that is an integral part of their academic curriculum. CPT must be related to your field of study and can be full-time or part-time. It requires prior authorization from your university and must be completed before graduation.
 
-% Prospective PhD students are often unaware of the importance of research experience in their application.  This provides both concrete research experiences and potential LOR writers that can talk about your research ability.
-% % This is especially true for students from small colleges where research opportunities are limited.
-% This section aims to provide some guidance on how to gain research experience as an undergraduate student. %This section is written together Didier, a PhD student at Mason who did his undergraduate study in Rwanda.
+\item \textbf{Optional Practical Training (OPT):} OPT provides up to 12 months of work authorization for students before or after completing their degree. For students in STEM fields, there is an additional 24-month extension available. OPT requires prior application and approval from USCIS.
 
-% \paragraph{Locally} There are many ways to find research opportunities right in your own institution.  If you did well or like a class, you can check with the professor of that class for research opportunities.  Sometimes professors would mention that they look for undergraduates on their websites, so do check those out! Even if they say they are looking for graduate students, you still should contact them and ask.  You can also ask your academic adviser or other faculty members for suggestions.  Finally, you can also ask your peers who are already doing research.  You can use the method described in \autoref{sec:contact} to contact professors
+\item \textbf{Full-time Enrollment:} You must maintain full-time enrollment status during the academic year. This means taking a minimum number of credits each semester, as defined by your program. Dropping below full-time status can result in loss of visa status.
+\end{itemize}
 
-% In short, the most important thing is that you need to \emph{ask}!  Don't be shy, don't be afraid of rejection, and don't be afraid of being ignored or that you're not good enough.  Just ask!  The worst thing that can happen is that you get a ``no'' or no response.  But you will never know if you don't ask.  And if you get a ``no'', you can always ask again later.  There are students who got rejected the first time but got accepted the second time.  So don't give up!
-
-% \paragraph{Online Research Communities and Open Source Contributions}:
-% Places such as Github offer many opportunities for research, even though they might not appear so (e.g., they do not explicitly mention research). Students can explore repositories related to their areas of interest, collaborate with other contributors, and actively engage in open source research projects. By contributing code, fixing bugs, implementing new features, or providing documentation, students can gain practical research experience and interact with experienced developers and researchers in the field.
-
-% \paragraph{Paid or Unpaid}  travel opportunities, publishing opportunities, etc
+\includepdf[pages=-]{files/visa.pdf}
 
 
-% \section{Virtual Research Opportunities Beyond Physical Boundaries (written by Didier)}
-% \didi{In my experience, prospective PhD students (from Rwanda) are often unaware of the information provided in this document throughout their undergraduate. For this reason they often find themselves unprepared for PhD admission process by the time they finish undergraduate and have to spend a year or more to improve their application profiles. I think it would be beneficial to expand the document to also target students who are not yet ready for the application process to help them improve on all criteria considered during admission. I drafted the short essay on how to gain research experience remotely in order to improve their research profile and potentially get LOR from experts (hopefully faculty)}\\
-% In the realm of computer science, research experience plays a crucial role in securing admissions to top-tier PhD programs. However, students from underrepresented small colleges, both in the United States and internationally, often encounter limited research opportunities within their institutions. Thankfully, there exists an alternative pathway for these aspiring researchers to gain valuable research experience, even without being physically present at a university.
+\section{For Spouses and Children}
 
-% \textbf{Virtual Research Programs}:
-% Several universities, organizations, and research institutions offer virtual internships and research programs aimed at providing hands-on research experience. These programs often involve working remotely under the guidance of experienced mentors and collaborating with a team of fellow researchers. For instance, \href{https://docs.google.com/forms/d/1btIwt4HwjyKMOUk-EMy3rbkfWzFxv2lNrMm_zkd0pA4/viewform?edit_requested=true}{UIUC+ Summer Undergraduate Research in Software Engineering}  offers an unpaid remote internship for software engineering students all over the world to collaborate with mentors from University of Illinois at Urbana Champaign.
-% Virtual internships offer opportunities to contribute to ongoing research projects, conduct experiments, analyze data, and write research reports. Students can search for such programs through university websites, research institutes, or as of recently chatGPT (or Bard).
+The spouses and children of F-1 visa holders can enter the US under the F-2 visa status. The F-2 visa allows family members to live in the US with the following conditions:
 
-
-
-% \textbf{Online Conferences and Workshops}:
-% Attending online conferences and workshops is another way to gain exposure to cutting-edge research and establish connections with experts in the field. Many conferences now provide virtual participation options, enabling students to access research talks, poster sessions, and panel discussions and sometimes access designated chat rooms or networking events where participants can engage with researchers, ask questions, and seek potential research collaborations. It is beneficial to also create profiles academic collaboration platforms such as ResearchGate. By creating profiles, joining relevant research groups, and participating in discussions, students can connect with established researchers, contribute to ongoing projects, and potentially collaborate on publications or research proposals as they provide access
-
-% In conclusion, for students lacking research opportunities at their small colleges, the virtual realm offers a wealth of possibilities to gain valuable research experience. Engaging with open source projects, joining online research communities, utilizing academic collaboration platforms, participating in virtual internships, and attending online conferences are all avenues to contribute to research, connect with experts, and enhance one's research profile.
+For Spouse: 
+\begin{itemize}
+\item \textbf{Work Restrictions:} F-2 spouses are not permitted to work in the US.
+\item \textbf{Education:} They can study part-time but cannot enroll in full-time degree programs.
+\end{itemize}
+For Children:
+\begin{itemize}
+\item \textbf{Education:} F-2 children can attend K-12 schools but cannot pursue higher education full-time.
+\item \textbf{Work Restrictions:} Like F-2 spouses, children are not allowed to work under any circumstances.
+\end{itemize}
+F-2 visa holders must leave the US if the primary F-1 student visa holder loses status or completes their program.
 
 \chapter{Domestic Students}\label{sec:domestic-students}
 
-Most of what is written in this document applies to both domestic\footnote{For simplicity domestic means you did your undergrad (or MS) at a US university.} and international students.  However, there are some differences and benefits that domestic students should be aware of.
+\epigraph{\vspace{-0.2in} I’m not a bad guy! I work hard, and I love my kids. So why should I spend half my Sunday hearing about how I’m going to Hell?}{\textsc{The Simpsons}}
+
+Most of what is written in this document applies to both domestic\footnote{For simplicity domestic means you did your undergrad (or MS) at a US university.} and international students.  However, there are some differences and benefits that domestic students should be aware of and can leverage to improve their chances of admission.
 
 \paragraph{Standing out \autoref{sec:improve-your-chance}} There are \emph{few} domestic applications compared to international ones, i.e., domestic students are the minority (\autoref{sec:urm}) in the CS PhD application pool. Many US universities want to increase the number of domestic students in their programs (and as mentioned later, there are specific fellowships and funding for domestic students).
 That makes you stand out and can help your case.
@@ -1461,7 +1500,7 @@ That makes you stand out and can help your case.
 
 \paragraph{Funding \autoref{sec:funding}} You have more opportunities for funding, e.g., through government scholarships for US citizens and permanent residents.  You can also apply to specific programs \emph{before} you start your PhD, e.g., NSF Graduate Research Fellowship Program (GRFP) and Hertz Foundation Fellowship.  These fellowships are very competitive and can significantly improve your admission chances.
 
-\paragraph{Research Experiences \autoref{sec:research-opportunities}} You might have many opportunities to do research as an undergraduates, e.g., through REUs and internships at your undergrad university.  Highlight such experiences in your application.
+\paragraph{Research Experiences \autoref{sec:research-opportunities}} You might have many opportunities to do research as an undergraduate, e.g., through REUs and internships at your undergrad university.  Highlight such experiences in your application.
 
 \paragraph{Open House \autoref{sec:accepted}} It is easier for you to attend open house events in person.  This can help you make a better decision on which school to attend.
 
@@ -1469,6 +1508,11 @@ That makes you stand out and can help your case.
 % \end{domesticbox}
 
 \chapter{Research Opportunities}\label{sec:research-opportunities}
+
+\epigraph{\vspace{-0.2in} Kids, you tried your best and you failed miserably. The lesson is: never try.}{\textsc{The Simpsons}}
+
+
+
 \begin{center}
     \includegraphics[scale=0.5]{files/phd100404s.png}
   \end{center}
@@ -1508,6 +1552,9 @@ By contributing code, fixing bugs, implementing new features, or providing docum
 
 
 \chapter{Cultural Differences}\label{sec:cultural}
+
+\epigraph{\vspace{-0.2in} Ay caramba!}{\textsc{The Simpsons}}
+
 
 This section lists some cultural issues that students, especially international ones, might want to pay attention to. These issues apply in general and not just PhD admission.
 
@@ -1583,6 +1630,8 @@ Many people maintain lifelong relationships with their professors and colleagues
 
 \chapter{Rankings of CS PhD programs}\label{sec:ranking}
 
+\epigraph{\vspace{-0.2in} The whole damn system is wrong!}{\textsc{The Simpsons}}
+
 
 \begin{table}[h]
   \centering
@@ -1643,6 +1692,8 @@ Finally, my upbringing in the US provides a perspective aligned with American cu
 \paragraph{Acknowledgement} Many people have contributed to this work.
 Profs. Craig Yu (Mason), Hakan Aydin (Mason), 
 Xiaokuan Zhang (Mason), Hung Le (UMass), and Deepak Kapur (UNM) provided valuable input in the early version. Other Mason faculty members also have provided feedback and contributions.  Many students including Didier (Mason), Thanh (Melbourne), and Dat (Melbourne) have contributed valuable questions and feedback. 
+
+Also thanks to NSF for encouraging faculty to be creative in research and education, which allows me to write this document. 
 
 \textbf{Thank you!}
 

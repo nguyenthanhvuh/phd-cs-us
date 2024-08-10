@@ -1,0 +1,286 @@
+\documentclass[oneside,11pt,dvipsnames]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{soul}
+% \usepackage[small,compact]{titlesec} %very powerful
+\usepackage[most]{tcolorbox}
+% \setsecnumdepth{subsection}
+% \setcounter{tocdepth}{3}
+\usepackage{enumitem}
+\usepackage{epigraph}
+\usepackage{cite}
+\usepackage{caption}
+\captionsetup{font=small}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\setlength\intextsep{0pt} % remove extra space above and below in-line float
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=blue,
+  urlcolor=blue,
+}
+\usepackage{booktabs}
+
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{xcolor}
+
+\usepackage{anyfontsize}
+\usepackage{sectsty}
+
+\usepackage[makeroom]{cancel}
+
+\newtcolorbox{mybox}{
+  enhanced,
+  boxrule=0pt,frame hidden,
+  borderline west={2pt}{0pt}{green!75!black},
+  colback=green!10!white,
+  sharp corners
+}
+
+\newenvironment{commentbox}[1][]{
+  \small
+  \begin{mybox}
+    {\small \textbf{#1}}
+  }{
+  \end{mybox}
+}
+
+\newtcolorbox{mydomesticbox}{
+  enhanced,
+  boxrule=0pt,frame hidden,
+  borderline west={2pt}{0pt}{red!75!black},
+  colback=blue!10!white,
+  sharp corners
+}
+
+\newenvironment{domesticbox}[1][]{
+  \small
+  \begin{mydomesticbox}
+    {\small \textbf{#1}}
+  }{
+  \end{mydomesticbox}
+}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Tab.}
+\def\Section{\S}
+\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\tableautorefname}{Tab.}
+\makeatletter
+\renewcommand{\chapterautorefname}{\S\@gobble}
+\renewcommand{\sectionautorefname}{\S\@gobble}
+\renewcommand{\subsectionautorefname}{\S\@gobble}
+\renewcommand{\appendixautorefname}{\S\@gobble}
+\makeatother
+
+\newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
+\newcommand{\tvn}[1]{\mycomment{TVN}{#1}}{}
+\newcommand{\didi}[1]{\mycomment{Didier}{#1}}{}
+\newcommand{\tl}[1]{\mycomment{ThanhLe}{#1}}{}
+\newcommand{\red}[1]{{\color{red}{#1}}}
+\newcommand{\xz}[1]{\mycomment{Xiaokuan}{[#1]}}{}
+
+
+\begin{document}
+
+\pagestyle{empty}
+\begin{tikzpicture}[overlay,remember picture]
+
+    % Background color
+    \fill[
+    black!2]
+    (current page.south west) rectangle (current page.north east);
+    
+    % Rectangles
+    \shade[
+    left color=Dandelion, 
+    right color=Dandelion!40,
+    transform canvas ={rotate around ={45:($(current page.north west)+(0,-6)$)}}] 
+    ($(current page.north west)+(0,-6)$) rectangle ++(9,1.5);
+    
+    \shade[
+    left color=lightgray,
+    right color=lightgray!50,
+    rounded corners=0.75cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}]
+    ($(current page.north west)+(0.5,-10)$) rectangle ++(15,1.5);
+    
+    \shade[
+    left color=lightgray,
+    rounded corners=0.3cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}] ($(current page.north west)+(1.5,-9.55)$) rectangle ++(7,.6);
+    
+    \shade[
+    left color=orange!80,
+    right color=orange!60,
+    rounded corners=0.4cm,
+    transform canvas ={rotate around ={45:($(current page.north)+(-1.5,-3)$)}}]
+    ($(current page.north)+(-1.5,-3)$) rectangle ++(9,0.8);
+    
+    \shade[
+    left color=red!80,
+    right color=red!80,
+    rounded corners=0.9cm,
+    transform canvas ={rotate around ={45:($(current page.north)+(-3,-8)$)}}] ($(current page.north)+(-3,-8)$) rectangle ++(15,1.8);
+    
+    \shade[
+    left color=orange,
+    right color=Dandelion,
+    rounded corners=0.9cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(4,-15.5)$)}}]
+    ($(current page.north west)+(4,-15.5)$) rectangle ++(30,1.8);
+    
+    \shade[
+    left color=RoyalBlue,
+    right color=Emerald,
+    rounded corners=0.75cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(13,-10)$)}}]
+    ($(current page.north west)+(13,-10)$) rectangle ++(15,1.5);
+    
+    \shade[
+    left color=ForestGreen,
+    rounded corners=0.3cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(18,-8)$)}}]
+    ($(current page.north west)+(18,-8)$) rectangle ++(15,0.6);
+    
+    \shade[
+    left color=ForestGreen,
+    rounded corners=0.4cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(19,-5.65)$)}}]
+    ($(current page.north west)+(19,-5.65)$) rectangle ++(15,0.8);
+    
+    \shade[
+    left color=OrangeRed,
+    right color=red!80,
+    rounded corners=0.6cm,
+    transform canvas ={rotate around ={45:($(current page.north west)+(20,-9)$)}}] 
+    ($(current page.north west)+(20,-9)$) rectangle ++(14,1.2);
+    
+ 
+    
+    % Title
+    \node[align=center] at ($(current page.center)+(0,-5)$) 
+    {
+    {\fontsize{38}{1} \selectfont {{Neural Network Verification}}}\\[0.5in]
+    
+    {\fontsize{14}{19.2} \selectfont \textcolor{ForestGreen}{ \bf ThanhVu (Vu) Nguyen}}\\[0.1in]
+    \today{} (latest version available on  \href{https://github.com/nguyenthanhvuh/phd-cs-us}{Github})
+    };
+    \end{tikzpicture}
+
+    
+\chapter*{Preface}
+Having been involved in PhD admission committees for many years, I've realized that many \textbf{international} students, especially those in smaller countries or less well-known universities, lack a clear understanding of
+the Computer Science PhD admission process at US universities. This confusion not only
+discourages students from applying but also creates the perception that
+getting admitted to a CS PhD program in the US is difficult compared to other countries.
+
+% though \emph{very} top schools could be very selective, e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU
+So I want to share some details about the admission process and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
+Originally, this document was intended for international students, but I have expanded it to include information that might also be useful for \emph{US domestic students}.
+Moreover, while this is primarily intended for students interested in CS, it might be relevant to students from various STEM (Science, Technologies, Engineering, and Mathematics) disciplines.
+Furthermore, although many examples are specifics for schools that I and other contributors of this document know about, the information should be generalizable to other R1\footnote{An \href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1 institution} in the US is a research-intensive university with a high level of research activity across various disciplines. Currently, 146 (out of 4000) US universities are classified as R1.} institutions in the US.
+
+This information can also help \textbf{US faculty and admission committee} gain a better understanding of international students and their cultural differences.  By recognizing and leveraging these differences, CS programs in the US can attract larger and more competitive application pools from international students.
+
+I wish you the best of luck. Happy school hunting!
+
+\begin{mybox}
+This document will be updated regularly to reflect the latest information and updates in the admission process. Its latest version is available at
+
+\begin{center}
+  \href{https://nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf}{nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf},
+\end{center}
+
+\noindent and its \LaTeX{} source is also on \href{https://github.com/nguyenthanhvuh/phd-cs-us}{GitHub}. If you have questions or comments, feel free to create new \href{https://github.com/nguyenthanhvuh/phd-cs-us/issues}{GitHub issues} or \href{https://github.com/nguyenthanhvuh/phd-cs-us/discussions}{discussions}.
+
+\end{mybox}
+
+\newpage
+\tableofcontents
+
+\chapter{Basic of Neural Network}\label{sec:basic}
+
+A \emph{neural network} (\textbf{NN})~\cite{Goodfellow-et-al-2016} consists of an input layer, multiple hidden layers, and an output layer. Each layer has a number of neurons, each connected to neurons from previous layers through a predefined set of weights (derived by training the network with data). A \textbf{DNN} is an NN with at least two hidden layers. 
+
+%A deep neural network consists of three types of layers: an input layer, multiple hidden layers, and an output layer. Each layer consists of a number of neurons, each connected to neurons from another layers through a predefined set of weights (derived by training the network with data). A network is called a \emph{fully connected feed-forward} neural network (FNN) if it connects every neuron in a layer (i.e., all weights are non-zero) to a neuron in the next layer.
+
+The output of a DNN is obtained by iteratively computing  the  values  of  neurons  in  each  layer.
+The value of a neuron in the input layer is the input data. The value of a neuron in the hidden layers is computed by applying an \emph{affine transformation} to values of neurons in the previous layers, then followed by an \emph{activation function} such as the popular Rectified Linear Unit (ReLU) activation.
+
+For this activation, the value of a hidden neuron \(y\) is 
+$ReLU(w_1v_1 + \dots{} + w_nv_n + b)$, where \(b\) is the bias parameter of \(y\), \(w_i, \dots, w_n\) are the weights of \(y\), \(v_1,\dots,v_n\) are the neuron values of preceding layer, \(w_1v_1 + \dots + w_nv_n+b\) is the affine transformation, and \(ReLU(x) = \max(x,0)\) is the ReLU activation. The values of a neuron in the output layer is evaluated similarly but it may skip the activation function.
+A ReLU activated neuron is said to be \emph{active} if its input value is greater than
+zero and \emph{inactive} otherwise.
+
+\paragraph{DNN Verification} Given a DNN \(N\) and a property $\phi$, the \emph{DNN verification problem} asks if $\phi$ is a valid property of $N$.
+Typically, $\phi$ is a formula of the form $\phi_{in} \Rightarrow \phi_{out}$, where $\phi_{in}$ is a property over the inputs of $N$ and $\phi_{out}$ is a property over the outputs of $N$.
+%This form of properties has been used to encode safety and security requirements of DNNs, e.g., safety specifications to avoid collision in unmanned aircraft~\cite{kochenderfer2012next} and \emph{adversarial robustness}~\cite{katz2017towards} properties desired by all DNNs, in which a small input perturbation does not cause major spikes in the DNN's outputs.
+A DNN verifier attempts to find a \emph{counterexample} input to $N$ that satisfies $\phi_{in}$ but violates $\phi_{out}$.  If no such counterexample exists, $\phi$ is a valid property of $N$. Otherwise, $\phi$ is not valid and the counterexample can be used to retrain or debug the DNN~\cite{huang2017safety}.
+
+
+
+
+% Verification tool such as Marabou and nnenum are then applied to the network to prove that the network is safe or identifier counterexample representing small input differences causing large output changes.
+
+
+% \footnote{This is encoded as the differences of the inputs being within a certain small range  ($\phi_{in}$) implies the differences of the outputs still fall within a certain range in $\phi_{out}$)}.
+
+
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{figure/dnn.pdf}
+    \caption{\label{fig:dnn} An FNN with ReLU.}
+  \end{wrapfigure}
+\paragraph{Example} Fig.~\ref{fig:dnn} shows a simple DNN with two inputs $x_1,x_2$, two hidden neurons $x_3,x_4$, and one output $x_5$. The weights of a neuron are shown on its incoming edges , and the bias is shown above or below each neuron. The outputs of the hidden neurons  are computed the affine transformation and ReLU, e.g., $x_3 = ReLU(-0.5x_1+0.5x_2+1.0)$. The output neuron is computed with just the affine transformation, i.e., $x_5=-x_3+x_4-1$.
+
+A valid property for this DNN is that the output is $x_5 \le 0$ for any inputs $x_1 \in [-1,1], x_2\in[-2,2]$. An invalid property for this network is that $x_5 > 0$ for those similar inputs.
+A counterexample showing this property violation is $\{x_1=-1, x_2=2\}$, from which the network evaluates to $x_5=-3.5$. Such properties can capture \emph{safety requirements} (e.g., a rule in an  collision avoidance system in~\cite{kochenderfer2012next,katz2017reluplex} is ``if the intruder is distant and significantly slower than us, then we stay below a certain threshold'') or \emph{local robustness}~\cite{katz2017towards} conditions (a form of adversarial robustness stating that small perturbations of a given input all yield the same output).
+
+%Fig.~\ref{fig:dnn}b shows the same network but with each hidden neuron $x$ split into two neurons $x'$ and $x''$ representing the result of affine transformation on $x$ and ReLU activation on $x'$, respectively, e.g.,  $x_3'=-x_1-0.5x_2-1.0$ and  $x_3'' = ReLU(x_3')$. This ReLU-slitting representation is adopted by \tool{} and other DNN analyses (e.g., ~\cite{katz2017reluplex,wang2018efficient,henriksen2020efficient}) 
+% including Reluplex~\cite{katz2017reluplex}, Neurify~\cite{wang2018efficient}, and VeriNet~\cite{henriksen2020efficient},
+%because it does not change the semantics or complexity of the problem and is easier to reason about as we will show in \S\ref{sec:overview}.
+
+\section{Affine Transformation}
+
+\section{Activation Function}
+
+\section{Properties of Neural Networks}
+
+\subsection{Robustness}
+
+\subsection{Safety}
+
+\chapter{Verification of Neural Networks}\label{sec:verification}
+
+\section{Complexity}
+
+\chapter{Search Algorithms}
+
+\chapter{Constraint Solving}
+\section{SMT}
+\section{MILP}
+\chapter{Abstraction}
+
+\section{Interval}
+\section{Zotope}
+\section{Polytope}
+
+\chapter{Popular Techniques and Tools}
+\chapter{Verifying the Verifiers}
+\chapter{Conclusion}
+
+\bibliographystyle{abbrv}
+\bibliography{demystify.bib}
+
+\end{document}
