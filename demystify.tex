@@ -80,15 +80,55 @@
 \renewcommand{\sectionautorefname}{\S\@gobble}
 \renewcommand{\subsectionautorefname}{\S\@gobble}
 \renewcommand{\appendixautorefname}{\S\@gobble}
+
+
+\newcommand*\l@chapterinfo{\@nodottedtocline{0}{0.0em}{1.5em}}
+\newcommand*\l@sectioninfo{\@nodottedtocline{1}{1.5em}{2.3em}}
+\newcommand*\l@subsectioninfo{\@nodottedtocline{2}{3.8em}{3.2em}}
+\newcommand*\l@subsubsectioninfo{\@nodottedtocline{3}{7.0em}{4.1em}}
+\newcommand*\l@paragraphinfo{\@nodottedtocline{4}{10em}{5em}}
+%\newcommand*\l@subparagraphinfo{\@nodottedtocline{5}{12em}{6em}}line{5}{12em}{6em}}
+
+% Copied from the book class macro `\@dottedtocline`. Removed the dots and page number
+\def\@nodottedtocline#1#2#3#4#5{%
+  \ifnum #1>\c@tocdepth \else
+    \vskip \z@ \@plus.2\p@
+    {\leftskip #2\relax \rightskip \@tocrmarg \parfillskip -\rightskip
+     \parindent #2\relax\@afterindenttrue
+     \interlinepenalty\@M
+     \leavevmode
+     \@tempdima #3\relax
+     \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+     {#4}\nobreak
+     \leaders\hbox{$\m@th
+        \mkern \@dotsep mu\hbox{\,}\mkern \@dotsep
+        mu$}\hfill
+     \nobreak
+     \hb@xt@\@pnumwidth{\hfil\normalfont \normalcolor }%
+     \par}%
+  \fi}
+
 \makeatother
+
+\def\chapterinfo#1{%
+  \addcontentsline{toc}{chapterinfo}{%
+    \noexpand\numberline{}\color{black}{#1}}%
+}
+\def\sectioninfo#1{%
+  \addcontentsline{toc}{sectioninfo}{%
+    \noexpand\numberline{}\color{black}{#1}}%
+}
+\def\subsectioninfo#1{%
+    \addcontentsline{toc}{subsectioninfo}{%
+    \noexpand\numberline{}\color{black}{#1}}%
+}
 
 \newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
 \newcommand{\tvn}[1]{\mycomment{TVN}{#1}}{}
 \newcommand{\didi}[1]{\mycomment{Didier}{#1}}{}
 \newcommand{\tl}[1]{\mycomment{ThanhLe}{#1}}{}
-\newcommand{\red}[1]{{\color{red}{#1}}}
 \newcommand{\xz}[1]{\mycomment{Xiaokuan}{[#1]}}{}
-
+\newcommand{\red}[1]{{\color{red}{#1}}}
 
 \begin{document}
 
@@ -232,84 +272,51 @@ This document will be updated regularly to reflect the latest information and up
 \newpage
 \tableofcontents
 
-\chapter{Summary}\label{sec:summary}
-
-This section summarizes the main points of this guideline. It also gives you an overview to decide which specific topics you want to explore more thoroughly.
+% \chapter{Summary}\label{sec:summary}
 
 
-\begin{enumerate}
-  \item Should you apply to a PhD CS program in the US?
-        \begin{itemize}
-          \item \emph{Yes, definitely}.  CS PhD study in the US is fully funded and admission into good universities is not any harder than in other countries (\autoref{sec:should}).
-        \end{itemize}
-  \item How is your application evaluated?
-        \begin{itemize}
-          \item Applications are evaluated by the \emph{PhD Admission} (adcom) committee and each application is typically reviewed by three faculty members (\autoref{sec:evalapps}).
-          \item Individually faculty member \emph{cannot directly admit} a student---so do not email and ask if you have a chance. However, faculty can \emph{advocate} for a student and therefore increase their admission chance---so do contact and introduce yourself (\autoref{sec:contact}).
-         \end{itemize}
-  \item Application Materials
-        \begin{itemize}
-          \item The committee will look at various factors, but the most important ones are letters of recommendation (LORs),  statements of purpose (SOP), and research experience and potential, e.g., publications.
-          \item \emph{LORs are very important}, but only if they are personalized and talk about your research ability (\autoref{sec:lor}).
-          \item \emph{SOP is very important}. Write it in such a way that makes you \emph{stand out} (\autoref{sec:research-statement} and \autoref{sec:improve-your-chance})
-          \item  \emph{Publications can greatly help}. Papers in good venues are concrete evidence that you have successfully engaged in research. But they are not required! (\autoref{sec:research-experience}).
-
-          \item \emph{High grades probably won't help much} (unless you're from a well-known school), but bad ones likely will raise concerns (\autoref{sec:your-school}).
-          
-          \item \emph{Standard tests are not important} (\autoref{sec:standard-tests}). GRE typically \emph{is not} required. For standard English tests (not required for domestic students), just do enough to pass the minimum requirements.
-
-          \item \emph{Contacting a prof. is recommended}, but do it \emph{properly} to get a reply (\autoref{sec:contact}).
-
-          \item Getting an interview is typically a \emph{good sign}; but no interview does not mean rejection (\autoref{sec:interview}).
-
-        \end{itemize}
-  \item What to do after getting admitted?
-        \begin{itemize}
-                \item  Celebrating! Now it is your turn to evaluate the school!
-          \item Attend \emph{Open House} to learn more about the place and \emph{interview} profs---they would be much more willing to talk to you now (\autoref{sec:accepted}).
-        \end{itemize}
-  \item Funding
-        \begin{itemize}
-          \item TAs, RAs, and fellowships are main funding sources for PhDs (\autoref{sec:funding}).  TAs (teaching assistantships) are provided by the department to help with classes (e.g., grading). RAs (research assistantships) are given by profs. to help with their research.  Fellowships, provided by the university, department, or external sources such as government or industry, give move flexibility but are very competitive.
-        \end{itemize}
-  \item Choosing School and Professors
-        \begin{itemize}
-          \item Not every professor, even those in CS, can advise or graduate CS PhD students (\autoref{sec:schoolsandprofs}).
-        \end{itemize}
-
-    \item Miscs and FAQS
-        \begin{itemize}
-          \item One reason why you were rejected (\autoref{sec:why-rejected}) is because you applied to AI/ML, a super competitive field in recent years with many applicants.
-          
-          \item Why rejection letters are sent so late? (\autoref{sec:late-rejection}). Grad programs often wait for the accepted students to make their decisions, typically by April 15, before sending out rejection letters.
-          
-          \item Increasing admission chance by being unique and standing out (\autoref{sec:improve-your-chance}).
-          \item It takes about 10 minutes to review an application (\autoref{sec:ievaluate}).
-          \item Sometimes adcom members discuss applicants, but in most cases they make independent decisions (\autoref{sec:adcom-discuss}).           
-          \item Adcom members only review applications assigned to them (typically matching their expertise) and rarely get involved in other applications (\autoref{sec:read-all}).
-        
-          \item Being a minority can significantly help your application (\autoref{sec:urm}).
-          \item You can successfully apply to CS PhD even if you have non-CS background (\autoref{sec:non-stem}).
-          \item You do not need an MS (\autoref{sec:msrequirement}), and CS PhD takes about 5--7 years (\autoref{sec:time}). Compared to other countries, CS PhD in the US does not require an MS degree but has a longer PhD study time (\autoref{sec:non-us-differences}).
-          \item What should you call your profs.? (\autoref{sec:address}) Many possibilities (e.g., prof., Dr., and even their firstnames), but probably not Mr. or Mrs.
-          \item Your entire PhD program costs about \$400K in total, but you \emph{do not} pay for it (\autoref{sec:ra-cost})
-          \item Ask your prof. if they can buy computer equipment and such for your research (\autoref{sec:buying-equipment}).
-          %\item Despite some miserable stories on social media, many PhD students have good mentors, supportive lab mates, healthy working environment ... and are happy (\autoref{sec:happy}).
-        \end{itemize}
+% This section summarizes the main points of this guideline. It also gives you an overview to decide which specific topics you want to explore more thoroughly.
 
 
-    \item Appendices
-    \begin{itemize}
-      \item Specific advice for domestic students (\autoref{sec:domestic-students}).
-      \item How to find research opportunities (\autoref{sec:research-opportunities}).
-      \item Cultural differences between US and other countries (\autoref{sec:cultural}).
-    \end{itemize}
 
-\end{enumerate}
+  %\item Should you apply to a PhD CS program in the US?
+
+
+          %\item \emph{Contacting a prof. is recommended}, but do it \emph{properly} to get a reply (\autoref{sec:contact}).
+
+          %\item  (\autoref{sec:interview}).
+
+
+
+    % \item Miscs and FAQS
+    %     \begin{itemize}
+
+    %       \item (\autoref{sec:read-all}).
+
+    %       \item
+    %       \item
+    %       \item You do not need an MS (\autoref{sec:msrequirement}), and CS PhD takes about 5--7 years (\autoref{sec:time}). Compared to other countries, CS PhD in the US does not require an MS degree but has a longer PhD study time (\autoref{sec:non-us-differences}).
+    %       \item
+    %       \item
+    %       \item
+    %       %\item Despite some miserable stories on social media, many PhD students have good mentors, supportive lab mates, healthy working environment ... and are happy (\autoref{sec:happy}).
+    %     \end{itemize}
+
+
+    % \item Appendices
+    % \begin{itemize}
+    %   \item Specific advice for domestic students (\autoref{sec:domestic-students}).
+    %   \item How to find research opportunities (\autoref{sec:research-opportunities}).
+    %   \item Cultural differences between US and other countries (\autoref{sec:cultural}).
+    % \end{itemize}
+
+
 
 
 \mainmatter
 \chapter{Should You Apply to a CS PhD Program in the US?}\label{sec:should}
+
+\chapterinfo{\emph{Yes, definitely}.  CS PhD study in the US is fully funded and admission into good universities is not any harder than in other countries.}
 
 \epigraph{\vspace{-0.2in} Don't make fun of graduate students. They just made a terrible life choice.}{\textsc{The Simpsons}}
 
@@ -373,16 +380,18 @@ While this document may not fully meet the needs of students aiming for top-10 s
 
 \chapter{How is Your Application Evaluated?}\label{sec:evalapps}
 
+\chapterinfo{Applications are evaluated by the \emph{PhD Admission} (adcom) committee and each application is typically reviewed by three faculty members.}
+
 \epigraph{How is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some of the old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?}{\textsc{The Simpsons}}
 
-After you submit your PhD application (e.g., in late Fall of year $X$ for the Fall admission of year $X+1$), it will first be screened
+After you submit your PhD application (e.g., in late Fall of year $X$ for the Fall admission of year $X+1$), it will first be ``screened''
 for general requirements, e.g., did you submit your transcripts and standard scores? did your reference writers submit their letters? Usually, this screening process is done through a central university system, i.e., not by CS faculty. If you pass this, your application will be forwarded to the CS department for further evaluation. If you don't,  the system will tell you what is missing and what you need to do. So pay attention to your email and check your application status regularly.
 
 \begin{commentbox}[Hakan:]
   At Mason, for full consideration, students should make sure to submit \textbf{ALL} required documents by the application deadline, and should never assume that some required documents (such as official TOEFL scores or official diplomas/transcripts) will be waived by the admissions office. If something is listed and not marked as ``optional'', it is mandatory and they should plan for submitting all those.
 \end{commentbox}
 
-Then, applications are reviewed by a \emph{PhD admission committee} (\textbf{adcom}) that consists of faculty members in CS\footnote{In some cases the committee can involve affiliated faculty from different disciplines.}. These adcom members have a wide range of expertise and background to ensure diverse perspectives in the evaluation process. The size and the review load of the adcom depend on the department size. At Mason, the PhD adcom typically has 15--20 faculty, and each committee member is assigned to review about 30 applications. Note that most large schools, including Mason, have separate adcoms for MS programs.
+\paragraph{Adcom} After screening applications are reviewed by a \emph{PhD admission committee} (\textbf{adcom}) that consists of faculty members in CS\footnote{In some cases the committee can involve affiliated faculty from different disciplines.}. These adcom members have a wide range of expertise and background to ensure diverse perspectives in the evaluation process. The size and the review load of the adcom depend on the department size. At Mason, the PhD adcom typically has 15--20 faculty, and each committee member is assigned to review about 30 applications. Note that most large schools, including Mason, have separate adcoms for MS programs.
 
 Each application is assigned to about 3 adcom members, who will evaluate your profile and reach a consensus.  While the assigned reviewers are the main ones deciding your application, other faculty in the department will likely have access to your application and can provide inputs and opinions on your profile.
 
@@ -409,13 +418,16 @@ In my opinion, requiring applicants to pay the fee helps ensure their seriousnes
 
 \chapter{Your Application}\label{sec:application}
 
+\chapterinfo{The committee will look at various factors, but the most important ones are letters of recommendation (LORs),  statements of purpose (SOP), and research experience and potential, e.g., publications.}
+
 \epigraph{Son, if you really want something in this life, you have to work for it. Now quiet! They’re about to announce the lottery numbers.}{\textsc{The Simpsons}}
 
 
-The focus of adcom is to evaluate your background and interest in research to see if you \textbf{fit into our PhD program}! The emphasis here is \emph{fitting}, which varies from school to school, faculty to faculty, and even from year to year.  However, in general, to evaluate your profile, we consider the following key indicators.
+The goal of adcom is to evaluate your research experience, potential, and interest to see if you \textbf{fit into our PhD program}! The emphasis here is \emph{fitting}, which varies from school to school, faculty to faculty, and even from year to year.  However, in general, to evaluate your profile, we consider the following key indicators.
 
 
 \section{Letters of Recommendation (LOR)}\label{sec:lor}
+\sectioninfo{\emph{LORs are very important}, but only if they are personalized and talk about your research ability.}
 
 \begin{center}
   \includegraphics[width=0.6\linewidth]{files/c6.png}
@@ -499,7 +511,8 @@ Thus you do want to send reminders because professors can be quite busy and migh
 
 \subsection{VEF 2.0} For Vietnamese students, it's worth mentioning the \href{https://vef2.org/}{VEF2.0 program}, which has helped many students gain admission to top CS PhD programs in the US. VEF2.0 invites US faculty members from leading institutions to conduct rigorous interviews with VEF students and subsequently provide reference letters on their behalf. Despite the limited interaction between the interviewer and the interviewee (primarily just the interview), these reference letters are generally effective and have helped many students get into good PhD programs.
 
-\section{Statement of Purpose (SOP)}\label{sec:research-statement}
+\section{Statement of Purpose (SOP)}\label{sec:sop}
+\sectioninfo{\\emph{SOP is very important}. Write it in such a way that makes you \emph{stand out}.}
 
 \begin{center}
   \includegraphics[scale=0.5]{files/c2.png}
@@ -590,6 +603,8 @@ Finally, you should get your SOP reviewed by your LoR writers, professors (espec
 
 \section{Research Experience}\label{sec:research-experience}
 
+\sectioninfo{\emph{Publications can greatly help}. Papers in good venues are concrete evidence that you have successfully engaged in research. But they are not required!}
+
 This section discusses various research experiences that can strengthen your application.
 \autoref{sec:research-opportunities} provides more information on how to find research opportunities (e.g., during your undergrad study).
 
@@ -600,7 +615,7 @@ Having published papers, especially at top venues, is a sign that the you has be
   Many international students mention Scopus Q1, which consists of various journals from IEEE, Elsevier, and many other publishers.  I don't know/recognize many of the journals listed in Scopus Q1. This might be something to be mindful of, as \textbf{CS} faculty might not be too familiar with Scopus or journals listed there, so devote some part in your statement to discuss the significance of your papers.
 \end{commentbox}
 
-However, it is understandable that many students do not have the opportunity to publish papers. Thus, general writings, even those under submissions or rejected, would still be good (much better than nothing).  Be sure to upload your papers with your application and talk about them in your statement (see \autoref{sec:research-statement}).  Note that local conferences and non-English journals or conferences do
+However, it is understandable that many students do not have the opportunity to publish papers. Thus, general writings, even those under submissions or rejected, would still be good (much better than nothing).  Be sure to upload your papers with your application and talk about them in your statement (see \autoref{sec:sop}).  Note that local conferences and non-English journals or conferences do
 not carry as much weight since their quality is often unknown to US faculty. However, if you have published in such places, you should still upload them, mention them in your statement, and explain why they are good.
 
 % In CS, conferences are important and top conferences are prestigious. You can find top CS conferences at places such as \href{https://csrankings.org}{CSRankings}, which ranks CS programs based on how their faculty publish at top \emph{conferences} (see more in \autoref{sec:ranking}).
@@ -635,6 +650,7 @@ For example, participating in Math Olympiads if you want to do theory or winning
 
 
 \section{Your School and Grades}\label{sec:your-school}
+\sectioninfo{\emph{High grades probably won't help much} (unless you're from a well-known school), but bad ones likely will raise concerns.}
 
 \subsection{School} Graduating from top universities \emph{that we recognize} helps. For example, if you are an international student and your school is well-known, then it is \emph{``top foreign''}, which is a plus.
 However, if we do not know much about schools in your country, then we are uncertain about the quality of your school and likely treat your school as \emph{``unknown foreign''}, which can be a minus point.
@@ -675,8 +691,9 @@ Note that bad grades in non-relevant courses, e.g., e.g., about politics or hist
 A common question is whether you should be concern and explain bad grades in relevant courses in your SOP.  If you have just a few, then they do not matter much, so don't spend much time explaining them (many adcom reviewers themselves have bad grades in relevent courses!). But if you have many bad grades for an entire semester or year due to some specific reasons, then you may be you should explain them in your SOP.
 
 \section{Standard Tests (e.g., GRE and IELTS), Online Courses, and Certificates}\label{sec:standard-tests}
+\sectioninfo{\emph{Standard tests are not important}. GRE typically \emph{is not} required. For standard English tests (not required for domestic students), just do enough to pass the minimum requirements.}
 
-\subsection{GREs Do Not Matter Much} While a few schools still require taking the GRE (e.g., UCF), most good CS PhD programs in the US \textbf{no longer} require it. Thus, if you haven't taken the GRE or have bad scores, then don't waste time (re)taking it. Being optional really means optional, and not taking it will not hurt your application.
+\subsection{GREs Are Optional and Do Not Matter} While a few schools still require taking the GRE (e.g., UCF), most good CS PhD programs in the US \textbf{no longer} require it. Thus, if you haven't taken the GRE or have bad scores, then don't waste time (re)taking it. Being optional really means optional, and not taking it will not hurt your application.
 
 However, if you took it and have really good scores then it might be worth it to include and talk about them in your application, but don't expect them to make much difference (many adcom reviewers never took it). But if your scores are bad, then you should not include them in your application, which can be a \red{red flag}.
 
@@ -711,6 +728,7 @@ The CV/Resume provides a summary of the applicant's achievements. Most schools r
 Prepare your CV in such a way that it allows the reviewers to quickly scan to identify major achievements, e.g., Publications, Programming Competition Awards, and Teaching Experience.
 
 \section{Interview and the Waiting Game}\label{sec:interview}
+\sectioninfo{Getting an interview is typically a \emph{good sign}; but no interview does not mean rejection}
 
 After you submit your applications, the waiting game begins! For many students, this is a very stressful time. This section provides some information and tips to help you get through this time.
 
@@ -775,6 +793,9 @@ However, no interviews could mean that you will not likely get an RA (\autoref{s
 
 \chapter{Getting Admitted}\label{sec:accepted}
 
+\chapterinfo{Celebrating! Now it is your turn to evaluate the school!
+Attend \emph{Open House} to learn more about the place and \emph{interview} profs---they would be much more willing to talk to you now.}
+
 \epigraph{``Oh... and how is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some old stuff out of my brain. Remember when I took that home wine-making course and I forgot how to drive?''}{\textsc{The Simpsons}}
 
 By around March you should hear back from most PhD programs that want to admit you.  In many cases you will not hear back from schools that do not want to admit you (see \autoref{sec:late-rejection}).
@@ -807,6 +828,8 @@ No, don't bother.  You will likely not get any useful feedback.  We are not will
 
 
 \chapter{Funding}\label{sec:funding}
+
+\chapterinfo{TAs, RAs, and fellowships are main funding sources for PhDs.  TAs (teaching assistantships) are provided by the department to help with classes (e.g., grading). RAs (research assistantships) are given by profs. to help with their research.  Fellowships, provided by the university, department, or external sources such as government or industry, give move flexibility but are very competitive.}
 
 \epigraph{Bart, with \$10,000, we’d be millionaires! We could buy all kinds of useful things like…love!’}{\textsc{The Simpsons}}
 If you're admitted to a \emph{good} CS PhD program, you should not have to worry about funding!
@@ -842,6 +865,7 @@ Several things about stipends.  First, the amount of stipend \emph{varies} and d
 \paragraph{Low Stipend?} Students sometimes complain about their stipend being low. However, in most cases it is not bad, and you can live comfortably with it.  It might also be enough to support your spouse and kids (many CS PhD students have their families with them). So don't worry too much about the stipend.  If you're admitted to a good CS PhD program, you will be fine. A good school would know that it has to be competitive to attract students.  For example, at Mason, every year we try to improve the benefits, and especially stipend, for our graduate students.
 
 For a full breakdown of how much a graduate student costs, see \autoref{sec:ra-cost}.
+\sectioninfo{Your entire PhD program costs about \$400K in total, but you \emph{do not} pay for it.}
 
 \begin{commentbox}[Vu:]
   TA and RA at Mason have similar benefits in tuition waiving and insurance.  The college and department will set the rate for a 9-month graduate assistant stipend.  TA, which is paid by the department, will likely be that amount but RA might be higher depending on the stage of the student (1st year vs ABD\footnote{All but dissertation: close to graduate.}) and the prof.
@@ -958,6 +982,8 @@ In the end, the total budget comes out to be \$73K/year to support a PhD student
 
 
 \chapter{Choosing Schools and Professors}\label{sec:schoolsandprofs}
+
+\chapterinfo{Not every professor, even those in CS, can advise or graduate CS PhD students.}
 
 \epigraph{\vspace{-0.2in} The answer to life's problems aren't at the bottom of a bottle. Heh heh! They're on TV!}{\textsc{The Simpsons}}
 
@@ -1113,6 +1139,8 @@ Tenured faculty, e.g., associate and full profs., are likely older, more well-kn
 
 \subsection{Should you contact a professor? How to get a desired reply?}\label{sec:contact}
 
+\subsectioninfo{Individually faculty member \emph{cannot directly admit} a student---so do not email and ask if you have a chance. However, faculty can \emph{advocate} for a student and therefore increase their admission chance---so do contact and introduce yourself.}
+
 
 \begin{center}
   \includegraphics[scale=0.6]{files/emails.png}
@@ -1194,6 +1222,8 @@ Finally, profs. are very busy so don't take it personally if you don't get anyth
 
 \section{Why did I get rejected?}\label{sec:why-rejected}
 
+\sectioninfo{One reason why you were rejected is because you applied to AI/ML, a super competitive field in recent years with many applicants.}
+
 Many students lament that they get no interviews or are rejected (with strong profiles) and that the admission process seems random.  However, while it is true that the process is not perfect, it is not random.
 Other than not having a strong profile (e.g., research potential, GPA, LoRs, SOP, poor interviews), here are some other reasons for rejections.
 
@@ -1227,6 +1257,7 @@ In general, these things are rare, but they do happen and cause concern to the a
 
 
 \section{Timeline: Why are rejection letters sent so late?}\label{sec:late-rejection}
+\sectioninfo{Why rejection letters are sent so late? Grad programs often wait for the accepted students to make their decisions, typically by April 15, before sending out rejection letters.}
 
 %"Just reject me already!" is a common sentiment among applicants.  Indeed, school will first send out admission offers to the top candidates. They do not send out rejection letters because there is still a chance that some of the top candidates will decline the offer. If they do, then the school will go to the next set of candidates and send out offers to them.  This process continues until all spots are filled.  This is why you might not hear back until late in the admission cycle.
 
@@ -1241,6 +1272,8 @@ Some universities have rolling admissions, meaning they send out acceptance lett
 \paragraph{Rejection Letters} Schools typically start sending out rejection letters to remaining applicants \emph{after they have finalized their admissions decisions}. Thus, rejection letters are often sent out late (e.g., after April 15th or even much later). Not much you can do here, you can try to contact the school to ask about your status, but they might not reply, they might say they are still reviewing applications, or give you inaccurate information (e.g., you will hear in two weeks). In short, you just have to be patient and wait (however, beware that some schools do not send out rejection letters at all).
 
 \section{Increasing my admission chance}\label{sec:improve-your-chance}
+
+\sectioninfo{Increasing admission chance by being unique and standing out.}
 
 \begin{center}
   \includegraphics[scale=0.2]{files/alpinist-climbing-peak-mountain-comic-hand-drawn-vector-illustration.jpg}
@@ -1258,6 +1291,7 @@ In his \href{https://matt.might.net/articles/how-to-apply-and-get-in-to-graduate
 % It is worth noting that in many cases,  an application could be rejected by most reviewers, however have a "champion", who doesn't even have to be in the Admission comittee, that strongly advocate for your profile.
 
 \section{How long do you evaluate an application?}\label{sec:ievaluate}
+\sectioninfo{It takes about 10 minutes to review an application.}
 
 On average, I spend about 10 minutes reviewing each application (less for clear rejections and more for potential acceptances). While this seems short, it is not that difficult to tell if an application is good or bad.  In fact, this
 is twice what other faculty spend on average, e.g., Philip Guo spent \href{https://pg.ucsd.edu/PhD-application-tips.htm}{3--5 minutes} per application.
@@ -1282,7 +1316,7 @@ Similarly, if the student mentioned a faculty member in their SOP, adcom might a
 
 
 \section{Do adcom members talk to each other?}\label{sec:adcom-discuss}
-
+\sectioninfo{Sometimes adcom members discuss applicants, but in most cases they make independent decisions.}
 
 However, in some rare cases we do talk to each other.  For example, when there are discrepancies in evaluations, in which case the adcom chair will ask reviewers to discuss the application to reach a consensus.  We also talk to each other for interesting or strong applications, e.g., how to recruit this student or who should be the adviser. 
 If the student mentioned a faculty member in their SOP, we might ask that faculty member if they are interested in the student. 
@@ -1290,10 +1324,12 @@ If the student mentioned a faculty member in their SOP, we might ask that facult
 
 
 \section{Do adcom members read all applications?}\label{sec:read-all}
+\sectioninfo{Adcom members only review applications assigned to them (typically matching their expertise) and rarely get involved in other applications}
 
 While adcom members (in fact, any faculty) can view any application, we only review those that are assigned to us, which are already too many. Adcom chair will assign applications to reviewers based on their expertise (e.g., if a student says they want to do SE or interested in working with me), and reviewers will only review those applications. Occasionally we might look at other applications, e.g., if we know the student or have some special circumstances (e.g., if that student contacted me, I know that student, they are from Vietnam, etc). However, even if we look at them, we usually do not get involved in their evaluation.
 
 \section{Member of an underrepresented or LGBTQ+ groups}\label{sec:urm}
+\sectioninfo{Being a minority can significantly help your application.}
 
 A common question is whether you should mention, e.g., in your SOP, that you are a member of an underrepresented and minority (URM) group\footnote{URM in CS in the US include African Americans, Hispanic Americans, American Indians/Native Alaskans, Native Hawaiians/Pacific Islanders (excluding Asian Americans), and multiracial students identifying with at least one of the previously listed URM categories.} or LGBTQ+ group.
 This is a strong concern for international (and even domestic) students, who may have encountered discrimination in their countries or personal experiences.
@@ -1321,6 +1357,7 @@ If uncertain, you can seek additional guidance from your close professors and co
 %https://cs.brown.edu/degrees/doctoral/applications/helpful-resources-applying-computer-science-phd-programs/
 
 \section{My undergrad was not in CS or related areas}\label{sec:non-stem}
+\sectioninfo{You can successfully apply to CS PhD even if you have non-CS background.}
 
 You still can apply to PhD in CS \emph{as long as} you can demonstrate you are ready for it through your background, research experience, LoRs, statements, etc. You might be even able to leverage this to make your profile stand out as mentioned in \autoref{sec:improve-your-chance}.
 
@@ -1466,6 +1503,7 @@ In the US, PhD graduates often apply directly for faculty positions. Postdoc for
 \emph{Work-life balance}: PhD students in the US are often said to be overworked compared to other countries, e.g., in Europe.  This is partly due to the longer PhD program and that US PhD students are often paid through TA, which requires them to do TA in addition to their own research. In contrast, PhD students in other countries are often paid through fellowships, which might not require doing TA.
 
 \section{How do I call or address a professor?}\label{sec:address}
+\sectioninfo{What should you call your profs.? Many possibilities (e.g., prof., Dr., and even their firstnames), but not Mr. or Mrs.}
 
 \begin{center}
   \includegraphics[scale=0.5]{files/c5.png}
@@ -1500,6 +1538,7 @@ Do not include ranking (e.g., Assistant, Associate, Scientist, ...) when referri
 
 
 \section{Buying Computer Equipment}\label{sec:buying-equipment}
+\sectioninfo{Ask your prof. if they can buy computer equipment and such for your research.}
 
 Students understandably get excited about their upcoming PhD journey and want to buy new computer equipment and electronics to prepare. However, you should first check with your professor.  They might have funding to buy you computers and other equipment (e.g., software, books, keyboards, headphones, tablets, etc). Many CS programs also provide budget or computer equipment to incoming PhD students (e.g., a laptop). 
 
@@ -1620,7 +1659,7 @@ You can also take honor thesis or independent study courses with a professor.  T
 \paragraph{Online Research Communities and Open Source Contributions} Places such as GitHub offer many research opportunities, even though they might not appear so (e.g., they do not explicitly mention research).
 In many cases, professors or research labs put their projects on GitHub. For example, my research group, \href{https://github.com/dynaroars/}{Dynaroars}, has many open-source projects that undergrads can contribute to.
 
-By contributing code, fixing bugs, implementing new features, or providing documentation, students can gain practical research experience and interact with experienced developers and researchers in the field. Not only you gain research experience, but you might be able to get a LoR from the project maintainer, and you should write about this experience in your SOP (\autoref{sec:research-statement}.)
+By contributing code, fixing bugs, implementing new features, or providing documentation, students can gain practical research experience and interact with experienced developers and researchers in the field. Not only you gain research experience, but you might be able to get a LoR from the project maintainer, and you should write about this experience in your SOP (\autoref{sec:sop}.)
 
 \paragraph{Virtual Research Opportunities} This is less common but several places offer virtual internships and research programs aimed at providing hands-on research experience. These programs often involve working remotely under the guidance of experienced mentors and collaborating with a team of fellow researchers. For instance, \href{https://docs.google.com/forms/d/1btIwt4HwjyKMOUk-EMy3rbkfWzFxv2lNrMm_zkd0pA4/viewform?edit_requested=true}{UIUC+ Summer Undergraduate Research in Software Engineering}  offers an unpaid remote internship for software engineering students all over the world to collaborate with mentors from University of Illinois at Urbana Champaign.
 
@@ -1645,7 +1684,7 @@ By contributing code, fixing bugs, implementing new features, or providing docum
   \item[Field or Area] A specific research area, e.g., Machine Learning, Computer Vision, Software Engineering, etc.
   \item [In-state vs. Out-of-state] In-state tuition is the tuition rate for students who are residents of the state where the university is located. Out-of-state tuition is the tuition rate for students who are not residents of that state. In-state tuition is typically much lower than out-of-state tuition. PhD students typically do not have to pay tuition as it is covered by their funding, but this might be important for MS students.
   \item[LoR] Letter of Recommendation. A letter written by a professor or supervisor that assesses your qualifications and potential for graduate study (\autoref{sec:lor}).
-  \item[SOP] Statement of Purpose. A document written by yourself to explains your research interests, background, and reasons for applying to a PhD program (\autoref{sec:research-statement}).
+  \item[SOP] Statement of Purpose. A document written by yourself to explains your research interests, background, and reasons for applying to a PhD program (\autoref{sec:sop}).
 
   \item[RA] Research Assistantship. A form of funding where you work as a research assistant for a professor.
   \item[TA] Teaching Assistantship. A form of funding where you work as a teaching assistant for a professor.
