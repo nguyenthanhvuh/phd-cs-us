@@ -237,11 +237,11 @@ A DNN verifier attempts to find a \emph{counterexample} input to $N$ that satisf
 
 
 
-\begin{wrapfigure}{r}{0.3\textwidth}
-    \centering
-    \includegraphics[width=1\linewidth]{figure/dnn.pdf}
-    \caption{\label{fig:dnn} An FNN with ReLU.}
-  \end{wrapfigure}
+%\begin{wrapfigure}{r}{0.3\textwidth}
+%    \centering
+%    \includegraphics[width=1\linewidth]{figure/dnn.pdf}
+%    \caption{\label{fig:dnn} An FNN with ReLU.}
+%  \end{wrapfigure}
 \paragraph{Example} Fig.~\ref{fig:dnn} shows a simple DNN with two inputs $x_1,x_2$, two hidden neurons $x_3,x_4$, and one output $x_5$. The weights of a neuron are shown on its incoming edges , and the bias is shown above or below each neuron. The outputs of the hidden neurons  are computed the affine transformation and ReLU, e.g., $x_3 = ReLU(-0.5x_1+0.5x_2+1.0)$. The output neuron is computed with just the affine transformation, i.e., $x_5=-x_3+x_4-1$.
 
 A valid property for this DNN is that the output is $x_5 \le 0$ for any inputs $x_1 \in [-1,1], x_2\in[-2,2]$. An invalid property for this network is that $x_5 > 0$ for those similar inputs.
@@ -281,6 +281,6 @@ A counterexample showing this property violation is $\{x_1=-1, x_2=2\}$, from wh
 \chapter{Conclusion}
 
 \bibliographystyle{abbrv}
-\bibliography{demystify.bib}
+\bibliography{nnv.bib}
 
 \end{document}
