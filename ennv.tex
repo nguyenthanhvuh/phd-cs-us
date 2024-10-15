@@ -280,6 +280,54 @@ Fig.~\ref{fig:dnn} shows a simple DNN with two inputs $x_1,x_2$, two hidden neur
 
 \section{Types of Neural Networks}
 
+
+\paragraph{Feed-Forward Network} A Feed-Forward Network (FFN) is a type of neural network where the connections between the neurons do not form a cycle. In an FFN, the information flows in one direction, from the input layer to the output layer. FFNs are the simplest type of neural network and are often used in classification and regression tasks.  A fully connected feed-forward neural network (FNN) is a type of FFN where every neuron in a layer is connected to every neuron in the next layer.
+\begin{center}
+\begin{tikzpicture}[scale=0.8, transform shape]
+% Input Layer
+\node at (0,4) {\textbf{Input Layer}};
+\foreach \x in {1,2,3,4} {
+    \node[circle, draw=black, fill=white, minimum size=0.6cm] (I\x) at (0,4-\x) {};
+}
+
+% Hidden Layer 1
+\node at (3,4) {\textbf{Hidden Layer 1}};
+\foreach \x in {1,2,3,4,5} {
+    \node[circle, draw=black, fill=white, minimum size=0.6cm] (H1\x) at (3,4.5-\x) {};
+}
+
+% Hidden Layer 2
+\node at (6,4) {\textbf{Hidden Layer 2}};
+\foreach \x in {1,2,3,4,5} {
+    \node[circle, draw=black, fill=white, minimum size=0.6cm] (H2\x) at (6,4.5-\x) {};
+}
+
+% Output Layer
+\node at (9,3.5) {\textbf{Output Layer}};
+\foreach \x in {1,2,3} {
+    \node[circle, draw=black, fill=white, minimum size=0.6cm] (O\x) at (9,3.5-\x) {};
+}
+
+% Connections
+\foreach \i in {1,2,3,4}
+    \foreach \j in {1,2,3,4,5}
+        \draw[->] (I\i) -- (H1\j);
+
+\foreach \i in {1,2,3,4,5}
+    \foreach \j in {1,2,3,4,5}
+        \draw[->] (H1\i) -- (H2\j);
+
+\foreach \i in {1,2,3,4,5}
+    \foreach \j in {1,2,3}
+        \draw[->] (H2\i) -- (O\j);
+
+\end{tikzpicture}
+\end{center}
+
+
+
+
+
 \paragraph{Convolutional Neural Networks} Convolutional Neural Networks (CNNs) are a type of neural network that is often used in image recognition and classification. CNNs are designed to automatically and adaptively learn spatial hierarchies of features from input images. CNNs are made up of neurons that have learnable weights and biases. Each neuron receives several inputs, takes a weighted sum over them, passes it through an activation function, and responds with an output.
 
 \paragraph{Recurrent Neural Networks} Recurrent Neural Networks (RNNs) are a type of neural network that is often used in natural language processing and speech recognition. RNNs are designed to recognize patterns in sequences of data. RNNs have loops in them, allowing information to persist. This loop allows information to be passed from one step of the network to the next.
