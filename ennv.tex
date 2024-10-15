@@ -212,7 +212,7 @@ This document will be updated regularly to reflect the latest information and up
 
 \chapter{Basic of Neural Network}\label{sec:basic}
 
-A \emph{neural network} (\textbf{NN})~\cite{Goodfellow-et-al-2016} consists of an input layer, multiple hidden layers, and an output layer. Each layer has a number of neurons, each connected to neurons from previous layers through a predefined set of weights (derived by training the network with data). A \textbf{DNN} is an NN with at least two hidden layers. 
+A \emph{neural network} (\textbf{NN})~\cite{Goodfellow-et-al-2016} consists of an input layer, multiple hidden layers, and an output layer. Each layer has a number of neurons, each connected to neurons from previous layers through a predefined set of weights (derived by training the network with data). A \emph{Deep Neural Network} (\textbf{DNN}) is an NN with at least two hidden layers. 
 
 %A deep neural network consists of three types of layers: an input layer, multiple hidden layers, and an output layer. Each layer consists of a number of neurons, each connected to neurons from another layers through a predefined set of weights (derived by training the network with data). A network is called a \emph{fully connected feed-forward} neural network (FNN) if it connects every neuron in a layer (i.e., all weights are non-zero) to a neuron in the next layer.
 
@@ -254,8 +254,38 @@ A counterexample showing this property violation is $\{x_1=-1, x_2=2\}$, from wh
 %because it does not change the semantics or complexity of the problem and is easier to reason about as we will show in \S\ref{sec:overview}.
 
 \section{Affine Transformation}
+The affine transformation (AF) of a neuron is the sum of the products of the weights of the incoming edges and the values of the neurons in the previous layer, plus the bias of the neuron.
+More specifically, the AF of a neuron \(y\) with weights \(w_1, \dots, w_n\) and bias \(b\) and the values of neurons in the previous layer \(v_1, \dots, v_n\) is \(w_1v_1 + \dots + w_nv_n + b\). 
 
-\section{Activation Function}
+For example, the AF of a neuron \(y\) with weights \(-0.5, 0.5\) and bias \(1.0\) and the values of neurons in the previous layer \(x_1, x_2\) is \(-0.5x_1 + 0.5x_2 + 1.0\).
+
+For DNN verification, AF is straightforward to reason about because it is a linear function. However, AFs are often followed by non-linear activation functions, described next in \autoref{sec:activation}, which make the verification problem more challenging.
+
+\section{Activation Functions}\label{sec:activation}
+Several popular activation functions used in DNNs include ReLU, Sigmoid, Tanh, and Softmax. All of these are non-linear\footnote{Non-linear means that the output of the function is not a linear combination of its inputs.} functions that introduce non-linearity to the network, allowing it to learn complex patterns in the data.
+
+
+\begin{itemize}
+\item ReLU (Rectified Linear Unit): ReLU is the most popular activation function in DNNs. It returns 0 if the input is less than zero, and the input itself otherwise. It is often used in hidden layers.\\
+    \begin{center}
+        $ReLU(x) = \max(x,0)$
+    \end{center}
+\item Sigmoid: Sigmoid is a smooth function that maps any real value to the range (0,1). It is often used in the output layer of a binary classification problem.\\
+    \begin{center}
+        $Sigmoid(x) = \frac{1}{1+e^{-x}}$
+    \end{center}
+\item Tanh: Tanh is similar to the sigmoid function but maps any real value to the range (-1,1). It is often used in the output layer of a multi-class classification problem.\\
+    \begin{center}
+        $Tanh(x) = \frac{e^x-e^{-x}}{e^x+e^{-x}}$
+    \end{center}
+\item Softmax: Softmax is a generalization of the sigmoid function that maps any real value to the range (0,1) and ensures that the sum of the output values is 1. It is often used in the output layer of a multi-class classification problem.\\
+    \begin{center}
+    $Softmax(x)_i = \frac{e^{x_i}}{\sum_{j=1}^{n}e^{x_j}}$
+    \end{center}
+\end{itemize}
+
+For DNN verification, these non-linear activation functions make verification difficult because it introduces multiple possible outcomes for any input, making it hard to reason about the output of the network. For example, ReLU has two possible outputs for any input: 0 if the input is less than zero, and the input itself otherwise, and Sigmoid has a smooth curve with infinite possible outputs for any input.
+
 
 \section{Properties of Neural Networks}
 
@@ -283,6 +313,6 @@ A counterexample showing this property violation is $\{x_1=-1, x_2=2\}$, from wh
 \chapter{Conclusion}
 
 \bibliographystyle{abbrv}
-\bibliography{nnv.bib}
+\bibliography{ennv.bib}
 
 \end{document}
