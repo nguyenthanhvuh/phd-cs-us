@@ -45,6 +45,10 @@
 \SetAlCapNameFnt{\footnotesize\rm}
 
 
+
+
+
+
 \newcommand{\functiontextformat}[1]{\textrm{\texttt{#1}}}
 
 % \newtoggle{usecomment}
@@ -305,9 +309,9 @@ Several popular activation functions used in DNNs include ReLU, Sigmoid, Tanh, a
 
 
 \begin{itemize}
-\item ReLU (Rectified Linear Unit): ReLU is the most popular activation function in DNNs. It returns 0 if the input is less than zero, and the input itself otherwise. It is often used in hidden layers and skipped in the output layer.  
-A ReLU activated neuron is said to be \emph{active} if its input value is greater than
-zero and \emph{inactive} otherwise.\\
+\item ReLU (Rectified Linear Unit):  ReLU returns 0 if the input is less than zero, and the input itself otherwise. 
+A ReLU activated neuron is said to be \emph{active} if its input value is greater than zero and \emph{inactive} otherwise.
+ReLU is the most popular activation function in DNNs.\\
     \begin{center}
         $ReLU(x) = \max(x,0)$
     \end{center}
@@ -451,6 +455,171 @@ A counterexample showing this property violation is $\{x_1=-1, x_2=2\}$, from wh
 \section{Complexity}
 
 \chapter{Search Algorithms}
+
+
+
+
+\begin{algorithm}[t]
+    \SetKwFor{Parfor}{parfor}{do}{endparfor}
+
+    \SetKwInOut{Input}{input}
+    \SetKwInOut{Output}{output}
+    
+    \SetKw{Break}{break}
+    \SetKw{Continue}{continue}
+    \SetKw{In}{in}
+    
+    \SetKwData{model}{model}
+    \SetKwData{layer}{layer}
+    \SetKwData{nextlayer}{layer$_{i+1}$}
+    \SetKwData{prooftree}{proof}
+    \SetKwData{leaf}{node}
+    \SetKwData{status}{status}
+    \SetKwData{minimum}{objval}
+    \SetKwData{mynull}{null}
+    
+    \SetKwFunction{InputMILP}{AddInputConstrs}
+    \SetKwFunction{GetUnstableNeurons}{GetUnstableNeurons}
+    \SetKwFunction{PiecewiseLinearMILP}{AddConstrsPWL}
+    \SetKwFunction{LinearMILP}{AddConstrsLinear}
+    \SetKwFunction{Maximize}{Maximize}
+    \SetKwFunction{Minimize}{Minimize}
+    \SetKwFunction{Feasible}{CheckFeasibility}
+    \SetKwFunction{Optimize}{Optimize}
+    \SetKwFunction{isPiecewiseLinear}{isPiecewiseLinear}
+    \SetKwFunction{CreateStabilizedMILP}{CreateStabilizedMILP}
+    \SetKwFunction{GetLeafNodes}{GetLeafNodes}
+    \SetKwFunction{AddConstrs}{AddConstrs}
+    \SetKwFunction{RemoveConstrs}{RemoveConstrs}
+    \SetKwFunction{AddObjective}{AddObjectives}
+    \SetKwFunction{ShortenSplitConstrs}{ShortenSplitConstrs}
+    \SetKwFunction{RemoveLeafNodes}{RemoveLeaves}
+    \SetKwFunction{StoppingConditions}{StoppingConditions}
+    \SetKwFunction{RepOK}{RepOK}
+    \SetKwFunction{RaiseError}{RaiseError}
+
+    \SetKwInOut{Input}{input}
+    \SetKwInOut{Output}{output}
+    \SetKw{Break}{break}
+    \SetKw{Continue}{continue}
+    \SetKwFunction{Backtrack}{Backtrack}
+    \SetKwFunction{Select}{Select}
+    \SetKwFunction{Decide}{Decide}
+    \SetKwFunction{BCP}{BCP}
+    \SetKwFunction{Deduce}{Deduce}
+    \SetKwFunction{AnalyzeConflict}{AnalyzeConflict}
+    \SetKwFunction{BooleanAbstraction}{BooleanAbstraction}
+    \SetKwFunction{AddClause}{AddClause}
+    \SetKwFunction{isTotal}{isTotal}
+    \SetKwFunction{randomattack}{RandomAttack}
+    \SetKwFunction{pgd}{PGDAttack}
+    
+    \SetKwFunction{DPLLT}{DPLLT}
+    \SetKwFunction{isValid}{isValid}
+    \SetKwFunction{isEmpty}{isEmpty}
+    \SetKwFunction{LPSolver}{LPSolver}
+    \SetKwFunction{Solve}{Solve}
+    \SetKwFunction{FindLayerNodes}{FindLayerNodes}
+    \SetKwFunction{TightenInputBounds}{TightenInputBounds}
+    \SetKwFunction{Abstract}{Abstract}
+    \SetKwFunction{Check}{Check}
+    \SetKwFunction{Decide}{Decide}
+    \SetKwFunction{Imply}{Imply}
+    \SetKwFunction{Lower}{LowerBound}
+    \SetKwFunction{Upper}{UpperBound}
+    \SetKwFunction{GetInputBounds}{GetInputBounds}
+    \SetKwFunction{GetInputs}{GetInputs}
+    \SetKwFunction{GetNumInputs}{GetNumInputs}
+    \SetKwFunction{CurrentConflictClause}{CurrentConflictClause}
+    \SetKwFunction{StopCriterion}{StopCriterion}
+    \SetKwFunction{LastAssignedLiteral}{LastLiteral}
+    \SetKwFunction{LiteralToVariable}{LiteralToVariable}
+    \SetKwFunction{Antecedent}{Antecedent}
+    \SetKwFunction{BinRes}{BinRes}
+    \SetKwFunction{BacktrackLevel}{BacktrackLevel}
+    \SetKwFunction{AddClause}{AddClause}
+    \SetKwFunction{ActivationStatus}{ActivationStatus}
+    \SetKwFunction{Backjump}{Backjump}
+    \SetKwFunction{EstimateBounds}{EstimateBounds}
+    
+    \SetKwData{problems}{ActPatterns}
+    \SetKwData{implicationgraph}{igraph}
+    \SetKwData{literal}{lit}
+    \SetKwData{variable}{var}
+    \SetKwData{antecedent}{ante}
+    \SetKwData{conflict}{conflict}
+    \SetKwData{none}{none}
+    \SetKwData{layerid}{lid}
+    \SetKwData{hiddenbounds}{hidden\_bounds}
+    \SetKwData{layerbounds}{layer\_bounds}
+    \SetKwData{inputs}{inputs}
+    \SetKwData{inputbounds}{input\_bounds}
+    \SetKwData{outputbounds}{output\_bounds}
+    \SetKwData{infeasible}{INFEASIBLE}
+    \SetKwData{unreachable}{UNREACHABLE}
+    \SetKwData{maxinputs}{MAX\_NUM\_INPUT}
+    \SetKwData{assignment}{$\sigma$}
+    \SetKwData{dl}{dl}
+    \SetKwData{lpmodel}{solver}
+    \SetKwData{clauses}{clauses}
+    \SetKwData{conflict}{conflict}
+    \SetKwData{clause}{clause}
+    \SetKwData{igraph}{igraph}
+    \SetKwData{cex}{cex}
+    \SetKwData{sat}{sat}
+    \SetKwData{unsat}{unsat}
+    \SetKwData{certified}{certified}
+    \SetKwData{uncertified}{uncertified}
+    \SetKwData{submodel}{sub\_model}
+    
+    \SetKwData{true}{true}
+    \SetKwData{false}{false}
+    \DontPrintSemicolon
+    
+    \SetKwFunction{Restart}{Restart}
+    
+    \SetKwData{counterexample}{cex}
+    \SetKwData{conflictclause}{conflict\_clause}
+    \SetKwData{isconflict}{is\_conflict}
+
+    \footnotesize
+    \DontPrintSemicolon
+  
+    \Input{DNN $\mathcal{N}$, property $\phi_{in} \Rightarrow \phi_{out}$}
+    Output{($\unsat, \prooftree$)}
+    \Output{($\unsat, \prooftree$) if property is valid, otherwise ($\sat, \counterexample$)}
+    \BlankLine
+
+
+    $\problems \leftarrow \{ \emptyset \}$ \tcp{initialize verification problems} 
+    $\prooftree \gets \{ ~ \}$ \tcp{initialize proof tree}\label{line:prooftree}
+    
+    \While(\tcp*[h]{main loop}){$\problems$}{\label{line:dpllstart}
+        % \tcp{$\sigma_i$ is the activation pattern of problem $i$-th}
+        $\sigma_i \gets \Select(\problems)$ \tcp{process problem $i$-th}
+        % \Parfor(\tcp*[h]{process in parallel}){$\sigma_i ~\In~ \problems$}{ \label{line:parfor}
+            \If{\Deduce{$\mathcal{N}, \phi_{in}, \phi_{out}, \sigma_i$}}{\label{line:deduce}
+                $(\counterexample, v_i) \leftarrow \Decide(\mathcal{N}, \phi_{in}, \phi_{out}, \sigma_i)$ \\ \label{line:decide}
+                \If(\tcp*[h]{found a valid counter-example}){$\counterexample$}{
+                    \Return{$(\sat, \counterexample)$} 
+                }
+                \tcp{create new activation patterns}
+                $\problems \leftarrow \problems \cup \{ \sigma_i \land v_i ~;~ \sigma_i \land \overline{v_i} \}$ \;
+            }
+            \Else(\tcp*[h]{detect a conflict}){
+                % $\clauses \leftarrow \clauses \cup \AnalyzeConflict(\igraph_i)$ \\ \label{line:analyze_conflict}
+                $\prooftree \leftarrow \prooftree \cup \{ \sigma_i \}$ \tcp{build proof tree} \label{line:record_proof}
+            }
+        % }
+        % \If(\tcp*[h]{no more problems}){$\isEmpty(\problems)$}{
+        % }
+        
+    }\label{line:dpllend}
+    \Return{$(\unsat, \prooftree)$}
+    
+    \caption{The \dd{} algorithm with proof generation.}\label{fig:alg}
+\end{algorithm}
+
 \autoref{fig:alg} shows \dd{}, a reference architecture~\cite{nakagawa2014consolidating} 
 for modern DNN verifiers that we use to illustrate our observations.  
 \dd{} takes as input a ReLU-based DNN $\mathcal{N}$ and a formulae $\phi_{in}\Rightarrow \phi_{out}$ representing the property of interest.
