@@ -232,8 +232,8 @@
     \node[align=center] at ($(current page.center)+(0,-7)$)
     {
     {\fontsize{24}{24} \selectfont {{Demystifying the Computer Science}}} \\[0.15in]
-    {\fontsize{24}{24} \selectfont {{PhD Admission in the US}}} \\[0.2in]    
-    {\fontsize{18}{18} \selectfont {{A Handbook for International Students}}} \\[1.in]
+    {\fontsize{24}{24} \selectfont {{PhD Admission in the US}}} \\[1in]    
+    %{\fontsize{18}{18} \selectfont {{A Handbook for International Students}}} \\[1.in]
 
     {\fontsize{16}{19.2} \selectfont \textcolor{ForestGreen}{ \bf ThanhVu (Vu) Nguyen}}\\[0.1in]
     George Mason University, Dept. of Computer Science\\[0.1in]
@@ -245,21 +245,20 @@
 \chapter*{Preface}
 Having been involved in PhD admission committees for many years, I've realized that many \textbf{international} students, especially those in smaller countries or less well-known universities, lack a clear understanding of
 the Computer Science PhD admission process at US universities. This confusion not only
-discourages students from applying but also creates the perception that
-getting admitted to a CS PhD program in the US is difficult compared to other countries.
+discourages students from applying but also creates the perception that getting admitted to a CS PhD program in the US is difficult compared to other countries.
 
 % though \emph{very} top schools could be very selective, e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU
 So I want to share some details about the admission process and advice for those who are interested in applying for a \textbf{PhD in Computer Science in the US}.
-Originally, this document was intended for international students, but I have expanded it to include information that might also be useful for \emph{US domestic students}.
-Moreover, while this is primarily intended for students interested in CS, it might be relevant to students from various STEM (Science, Technologies, Engineering, and Mathematics) disciplines.
-Furthermore, although many examples are specifics for schools that I and other contributors of this document know about, the information should be generalizable to other R1\footnote{An \href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1 institution} in the US is a research-intensive university with a high level of research activity across various disciplines. Currently, 146 (out of 4000) US universities are classified as R1.} institutions in the US.
+Originally, this document was intended for \emph{international students}, but I have expanded it to include information that might also be useful for \emph{US domestic students}.
+Moreover, while this primarily aims at students interested in CS, it might be relevant to students from various STEM (Science, Technologies, Engineering, and Mathematics) disciplines.
+Furthermore, although many examples are specifics for schools that I and other contributors of this document know about, the information should be generalizable to other good R1\footnote{An \href{https://en.wikipedia.org/wiki/List_of_research_universities_in_the_United_States}{R1 institution} in the US is a research-intensive university with a high level of research activity across various disciplines. Currently, 146 (out of 4000) US universities are classified as R1.} institutions in the US.
 
 This information can also help \textbf{US faculty and admission committee} gain a better understanding of international students and their cultural differences.  By recognizing and leveraging these differences, CS programs in the US can attract larger and more competitive application pools from international students.
 
-I wish you the best of luck. Happy school hunting!
+I wish you the best of luck.
 
 \begin{mybox}
-This document will be updated regularly to reflect the latest information and updates in the admission process. Its latest version is available at
+This document is open source and updated regularly. Its latest version is available at
 
 \begin{center}
   \href{https://nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf}{nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf},
@@ -320,42 +319,44 @@ This document will be updated regularly to reflect the latest information and up
 
 \epigraph{\vspace{-0.2in} Don't make fun of graduate students. They just made a terrible life choice.}{\textsc{The Simpsons}}
 
-International students, especially those from less well-known universities and smaller countries, often wonder if they should apply to a CS PhD program in the US. Specifically, they are worried about (i) the \textbf{difficulty of getting admitted} and (ii) the \textbf{cost of graduate study} in the US. This section addresses these concerns.
+International students, especially those from less well-known universities and smaller countries, often wonder if they should apply to a CS PhD program in the US. Specifically, they are worried about (i) the \textbf{difficulty of getting admitted} and (ii) the \textbf{cost of graduate study} in the US. Part of the reasons is the lack of information and guidance on the admission process in the US (let's face it, public forums like Facebook communities and Reddit are full of confusion and concerns from students).  This section and the rest of this document aim to address these concerns.
 
 
-First, applying to a good US university \emph{should not} be any harder than at schools in other countries. In fact, it might even be more flexible since CS PhD in the US \emph{do not} require having an MS or a research topic/proposal/adviser in advance. If you believe you have a chance in other countries, e.g., South Korea, Singapore, Germany, UK, Japan, and Australia, then you will surely have a chance in the US as well. \autoref{sec:non-us-differences} compares CS PhD study in the US to other countries.
+First, applying to a good US university \emph{should not} be any harder than at schools in other countries. It might even be more flexible since CS PhD in the US \emph{do not} require having an MS or a research topic, proposal, or adviser in advance (\autoref{sec:non-us-differences} compares CS PhD study in the US to other countries). 
+If you believe you have a chance in other countries, e.g., South Korea, Singapore, Germany, UK, Japan, and Australia, then you will surely have a chance in the US as well. 
 
 
 Second, PhD students in CS \emph{do not} need to worry about funding, especially at good R1
-universities in the US. If you are admitted, you will almost certainly
-receive \emph{full funding} (\autoref{sec:funding}) to support your study, including tuition,
-health insurance, and stipend (i.e., you get paid for your study). Moreover, depending on the university,
-you may even receive additional benefits such as summer pay, laptops, and traveling to conferences and workshops.
+universities in the US. 
+If you are admitted, you will almost certainly
+receive \emph{full funding} (\autoref{sec:funding}) to support your study. This includes tuition,
+health insurance, and stipend (i.e., you get paid for your study). 
+In fact, full funding for CS PhD students is the norm in the US, and I'd go as far as to say that if you are not admitted with full funding, you should be cautious about the program and might want to not accept the offer.
+Moreover, depending on the university, you may receive additional benefits such as summer pay, laptops, and traveling to conferences and workshops.
 
-
-The rest of this document will provide you with more details on the CS PhD admission process in the US, including how to prepare your application, what to expect during process, what to do with acceptance (and how to deal with rejection), and so on. The goal is to help you understand the process and make the best decisions for your future.
-
-
-\begin{commentbox}[Vu:]
-  One of the reasons I created this document is that my colleagues at Mason are interested in recruiting Vietnamese students and are surprised when seeing very few applications in Vietnam (see \autoref{sec:ack}). Each year our CS PhD program receives 500+ PhD applications, most of which are international but only 5--6 are from Vietnam. In general the number of CS PhD applications from Vietnam to US universities is very low and more would be welcome.
-\end{commentbox}
 
 \section{Who is this document for?}
 \sectioninfo{This document is intended for international students from smaller countries and domestic students from less well-known universities.}
 
 The guideline can be useful for all students, but it is primarily intended for \textbf{international students} from \textbf{smaller countries and less well-known universities} (or domestic students from US universities with no PhD programs or limited research opportunities).
 
-Students from top schools with strong research cultures and experiences might already know most of the information given here.
+Students from top schools with strong research cultures and experience might already know most of the information given here.
 My goal is thus to level the playing field by providing information that is not readily available to less privileged students. 
 I hope to encourage more students with such backgrounds to apply to CS PhD programs in the US.
 
+Another goal is to explain the \emph{``why''} behind the admission process, e.g., why LoRs are important, why you should not draft your own LoR, why you should contact professors, etc.
+
 While this document may not fully meet the needs of students aiming for top-10 schools (\autoref{sec:ranking}), which typically have more stringent requirements (e.g., see the \href{https://da-data.blogspot.com/2015/03/reflecting-on-cs-graduate-admissions.html}{admission process} at CMU), it should be valuable for those targeting other reputable R1 institutions. It is certainly useful for students aiming for Mason!
 
-
+\begin{commentbox}[Vu:]
+    One of the reasons I created this document is that my colleagues at Mason are interested in recruiting Vietnamese students and are surprised when seeing very few applications in Vietnam (see \autoref{sec:ack}). Each year our CS PhD program receives 500+ PhD applications, most of which are international but only 5--6 are from Vietnam. In general the number of CS PhD applications from Vietnam to US universities is very low and more would be welcome.
+  \end{commentbox}
+  
+  
 \section{How long to complete the CS PhD program?}\label{sec:time}
 \sectioninfo{About 5--7 years in the US.}
 
-Typically, it takes 5--7 years for CS PhD in the US.  This can be longer than CS PhDs in other countries, which might require MS first (recall from \autoref{sec:msrequirement} that CS PhD programs in the US do not require MS and you can get MS along the way to PhD). Within these 5--7 years, CS PhD students often take a ``leave of absence'' for 1--2 semesters to do internships at companies and research labs.
+Typically, it takes 5--7 years for CS PhD in the US.  This can be longer than CS PhDs in other countries (\autoref{sec:msrequirement}), which might require MS first. 
 
 
 \begin{center}
@@ -363,13 +364,13 @@ Typically, it takes 5--7 years for CS PhD in the US.  This can be longer than CS
 \end{center}
 
 The first two years you typically take coursework (somewhat equivalent to an MS study), find an adviser, and learn how to do research.  The next 2--3 years you focus on your research, form a dissertation topic, and get results published. The last 1--2 years you continue to publish, write and defend your dissertation, and look for a job.
-In many cases you might take a summer or two off to do an internship to get additional research opportunities.
+Within these 5--7 years, CS PhD students often take a ``leave of absence'' for 1--2 semesters or summer to do internships at companies and research labs.
+
 The PhDComics figure above shows the ``ambition'' level of a PhD student over their years of study (they miss the 6--7th year when the ambition is \emph{``Just let me graduate''}).
 
-
-% \begin{commentbox}[Vu:]
-%     I start my PhD with an MS, and it took me 7 years (Fall'2007-- Fall'14). I spent half a year doing an internship at the Naval Research Lab.
-%   \end{commentbox}
+\begin{commentbox}[Vu:]
+    I start my PhD with an MS, and it took me 7 years (Fall'07-- Fall'14). I spent half a year doing an internship at the Naval Research Lab. My PhD did take a bit longer than usual, but allows me to explore various research areas and topics.
+  \end{commentbox}
 
 \section{My undergrad was not in CS or related areas}\label{sec:non-stem}
 \sectioninfo{You can successfully apply to CS PhD even if you have non-CS background.}
@@ -406,10 +407,12 @@ In short, you \emph{do not need} to formally take CS courses, you just need to s
 
 No. In fact, students can get MS degree ``along the way'' to PhD, e.g., after finishing the 2-year course work.  However, MS can help admission if it gives research experience or is from a more well-known school than your undergrad institution (\autoref{sec:your-school}).
 
-If you have an MS then some course work \emph{might be} transferred for course credits, which \emph{might} save some time. But don't count on this.
+If you have an MS then some course work \emph{might be} transferred for course credits, which \emph{might} save some time. But in general don't count finishing earlier just because you have an MS. 
 
 \begin{commentbox}[Vu:]
-    I start my PhD with an MS in CS from a US university.  I found that the MS helped me a lot in research, but not with course work and I had to retake many courses.  In general, don't worry if you don't have an MS. But also don't feel that you wasted your time if you have an MS, as it can help you in research.
+    I start my PhD with an MS in CS from a US university.  I found that the MS helped me in gaining research experience, but I still had to retake courses because I did my MS at a different university.  So in the end, I did not save any time because of the MS.
+    
+    In general, don't worry if you don't have an MS. But also don't feel that you wasted your time if you have an MS, as it can help you in research.
   \end{commentbox}
 
 
@@ -480,14 +483,6 @@ In the US, PhD graduates often apply directly for faculty positions. Postdoc for
 % \end{table}
 % \section{Why the US and not other countries?}
 % TODO
-\subsubsection{Why CS depts do not waive the application fee?}  
-
-Some universities do waive, e.g., Rice does for all PhD applicants and many universities for domestic students (\autoref{sec:domestic-students}), however most do not for international students.  In any case, the application fee is typically a requirement of the university. Individual departments and programs do not have the flexibility to waive the application fee, even if they want to.
-
-\begin{commentbox}{Vu:}
-In my opinion, requiring applicants to pay the fee helps ensure their seriousness, as it filters out non-serious candidates. Also, most CS programs already receive many applications and would be overwhelmed if the application process were free.  Note that if you have financial difficulties, you can ask the department for a waiver, but this is typically only granted in exceptional cases.
-\end{commentbox}
-
 
 \chapter{How is Your Application Evaluated?}\label{sec:evalapps}
 
@@ -549,6 +544,16 @@ If the student mentioned a faculty member in their SOP, we might ask that facult
 \sectioninfo{Adcom members only review applications assigned to them (typically matching their expertise) and rarely get involved in other applications}
 
 While adcom members (in fact, any faculty) can view any application, we only review those that are assigned to us, which are already too many. Adcom chair will assign applications to reviewers based on their expertise (e.g., if a student says they want to do SE or interested in working with me), and reviewers will only review those applications. Occasionally we might look at other applications, e.g., if we know the student or have some special circumstances (e.g., if that student contacted me, I know that student, they are from Vietnam, etc). However, even if we look at them, we usually do not get involved in their evaluation.
+
+\subsection{Why CS depts do not waive the application fee?}  
+
+Some universities do waive, e.g., Rice does for all PhD applicants and many universities for domestic students (\autoref{sec:domestic-students}), however most do not for international students.  In any case, the application fee is typically a requirement of the university. Individual departments and programs do not have the flexibility to waive the application fee, even if they want to.
+
+\begin{commentbox}{Vu:}
+In my opinion, requiring applicants to pay the fee helps ensure their seriousness, as it filters out non-serious candidates. Also, most CS programs already receive many applications and would be overwhelmed if the application process were free.  Note that if you have financial difficulties, you can ask the department for a waiver, but this is typically only granted in exceptional cases.
+\end{commentbox}
+
+
 
 \chapter{Your Application}\label{sec:application}
 
