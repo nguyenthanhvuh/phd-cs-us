@@ -38,6 +38,35 @@
 
 \usepackage[makeroom]{cancel}
 
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+
+\SetAlgoCaptionSeparator{.}
+\SetAlCapFnt{\footnotesize\rm}
+\SetAlCapNameFnt{\footnotesize\rm}
+
+
+\newcommand{\functiontextformat}[1]{\textrm{\texttt{#1}}}
+
+% \newtoggle{usecomment}
+% \settoggle{usecomment}{true}
+
+% \newcommand{\tcomment}[1]{\iftoggle{usecomment}{#1}{}}
+% \newcommand{\tvn}[1]{\iftoggle{usecomment}{{\color{red}{[TVN]: #1}}}{}}
+
+% \newcommand{\mbd}[1]{\iftoggle{usecomment}{{\color{magenta}{[MBD]: #1}}}{}}
+% \newcommand{\matt}[1]{\iftoggle{usecomment}{{\color{magenta}{[MBD]: #1}}}{}}
+
+% \newcommand{\hd}[1]{\iftoggle{usecomment}{{\color{blue}{[HD]: #1}}}{}}
+
+% \newcommand{\mynew}[1]{\iftoggle{usecomment}{{\color{red}{[NEW]: #1}}}{}}
+
+
+%\newcommand{\ignore}[1]{}
+
+
+
+
+
 \newtcolorbox{mybox}{
   enhanced,
   boxrule=0pt,frame hidden,
@@ -70,16 +99,52 @@
   \end{mydomesticbox}
 }
 
+% for captions
+\def\Section{\S}
 \renewcommand{\figurename}{Fig.}
 \renewcommand{\tablename}{Tab.}
-\def\Section{\S}
+\renewcommand{\algorithmcfname}{Alg.}
+
+
+% for cross references
+% \renewcommand{\algorithmcflinename}{L.}
+\renewcommand{\algorithmautorefname}{Alg.}
 \renewcommand{\figureautorefname}{Fig.}
 \renewcommand{\tableautorefname}{Tab.}
-\makeatletter
+\renewcommand{\equationautorefname}{Eq.}
 \renewcommand{\chapterautorefname}{\S\@gobble}
 \renewcommand{\sectionautorefname}{\S\@gobble}
 \renewcommand{\subsectionautorefname}{\S\@gobble}
 \renewcommand{\appendixautorefname}{\S\@gobble}
+
+
+
+\newcommand{\nnproofgen}{\texttt{APTPgen}}
+\newcommand{\nnproofcheck}{\texttt{APTPcheck}}
+\newcommand{\nnproofchecker}{\texttt{APTPchecker}}
+\newcommand{\nnproofformat}{\texttt{APTP}}
+%\newcommand{\tool}{\texttt{NNProofChecker}}
+\newcommand{\veristable}{\texttt{VeriStable}}
+\newcommand{\crown}{\texttt{$\alpha\beta$-CROWN}}
+\newcommand{\nnenum}{\texttt{nnenum}}
+\newcommand{\marabou}{\texttt{Marabou}}
+\newcommand{\eran}{\texttt{ERAN}}
+\newcommand{\reluplex}{\texttt{Reluplex}}
+\newcommand{\reluval}{\texttt{Reluval}}
+\newcommand{\neurify}{\texttt{Neurify}}
+\newcommand{\nnv}{\texttt{NNV}}
+\newcommand{\ovalnnv}{\texttt{OVAL}}
+\newcommand{\dnnv}{\texttt{DNNV}}
+\newcommand{\verinet}{\texttt{VeriNet}}
+\newcommand{\mnbab}{\texttt{MN-BaB}}
+% \newcommand{\vnncomp}{VNN-COMP'23}
+\newcommand{\planet}{\texttt{Planet}}
+\newcommand{\dd}{\texttt{BaB$_{\text{NV}}$}}
+\newcommand{\neuralsat}{\texttt{NeuralSAT}}
+\newcommand{\mipverify}{\texttt{MIPVerify}}
+\newcommand{\crowndefault}{\texttt{$\alpha\beta$-CROWN} (default)}
+
+\makeatletter
 \makeatother
 
 \newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
@@ -386,6 +451,52 @@ A counterexample showing this property violation is $\{x_1=-1, x_2=2\}$, from wh
 \section{Complexity}
 
 \chapter{Search Algorithms}
+\autoref{fig:alg} shows \dd{}, a reference architecture~\cite{nakagawa2014consolidating} 
+for modern DNN verifiers that we use to illustrate our observations.  
+\dd{} takes as input a ReLU-based DNN $\mathcal{N}$ and a formulae $\phi_{in}\Rightarrow \phi_{out}$ representing the property of interest.
+
+\dd{} iterates between two components: \texttt{Decide} (branching, \autoref{line:decide}), which decides (assigns) an activation status value for a neuron, and \texttt{Deduce} (bounding, \autoref{line:deduce}), which checks the feasibility of the current activation pattern. 
+To add proof generation capability, \dd{} is instrumented with a proof tree (\texttt{proof}) variable (\autoref{line:prooftree}) to record these branching decisions. The proof is represented as a binary tree structure, where each node represents a neuron and its left and right edges represent its activation decision (active or inactive). %The proof tree is then used to generate a proof in the \nnproofformat{} format (\autoref{sec:proof-format}).
+
+
+
+
+\begin{figure}[t]
+    \begin{minipage}[b]{\linewidth}
+        \centering
+        \begin{minipage}[t]{0.48\textwidth}
+            \centering  
+            \includegraphics[width=\linewidth]{figure/proof_net.pdf}
+            \caption*{(a)}
+        \end{minipage}
+        \begin{minipage}[t]{0.48\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{figure/proof_tree.pdf}
+            \caption*{(b)}
+        \end{minipage}
+        \caption{(a) A simple DNN.  (b) A proof tree produced verifying the property $(x_1, x_2) \in [-2.0, 2.0] \times [-1.0, 1,0] \Rightarrow (y_1 > y_2)$.}
+        \label{fig:example}
+    \end{minipage}
+\end{figure}
+%White nodes correspond to branching nodes where \neuralsat{} makes decisions to split ReLU neurons.
+
+\paragraph{Example} \autoref{fig:example}a illustrates a DNN and how \dd{} determines unsatisfiability (i.e., verifies the problem) and generates the unsat proof in \autoref{fig:example}b.
+
+First, \dd{} initializes the activation pattern set \functiontextformat{ActPatterns} with an empty activation pattern $\emptyset$. Then \dd{} enters a loop (\autoref{line:dpllstart}-\autoref{line:dpllend}) to search for a satisfying assignment or a proof of unsatisfiability. In the first iteration, \dd{} selects the only available activation pattern $\emptyset \in \functiontextformat{ActPatterns}$. 
+It calls \functiontextformat{Deduce} to check the feasibility of the problem based on the current activation pattern. \functiontextformat{Deduce} uses abstraction to approximate that from the input constraints the output values are feasible for the given network. 
+Since \functiontextformat{Deduce} cannot decide infeasibility, \dd{} randomly selects a neuron to split (\functiontextformat{Decide}). Let us assume that it chooses $v_4$ to split, which essentially means the problem is split into two independent subproblems: one with $v_4$ active and the other with $v_4$ inactive.
+\dd{} then adds $v_4$ and $\overline{v_4}$ to \functiontextformat{ActPatterns}.
+
+In the second iteration, \dd{} has two subproblems (that can be processed in parallel). For the first subproblem with $v_4$, \functiontextformat{Deduce} cannot decide infeasibility, so it selects $v_2$ to split. It then conjoins $v_4$ with $v_2$ and then with $\overline{v_2}$ and adds both conjuncts to \texttt{ActPatterns}. 
+For the second subproblem with $\overline{v_4}$ inactive, \functiontextformat{Deduce} determines that the problem is unsatisfiable and \dd{} saves the node $v_4$ to the proof tree, as node 3, to indicate one unsatisfiable pattern, i.e., whenever the network has $v_4$ being inactive, the problem is unsatisfiable.
+
+In the third iteration, \dd{} has two subproblems for $v_4 \land v_2$ and $v_4 \land \overline{v_2}$. For the first subproblem, \functiontextformat{Deduce} cannot decide infeasibility, so it selects $v_1$ to split. It then conjoins $v_1$ and then $\overline{v_1}$ to the current activation pattern and adds them to \functiontextformat{ActPatterns}. For the second subproblem, \functiontextformat{Deduce} determines that the problem is unsatisfiable and \dd{} saves the node $v_4 \land \overline{v_2}$ to the proof tree, as node 5.
+
+In the fourth iteration, \dd{} has two subproblems for $v_4 \land v_2 \land v_1$ and $v_4 \land v_2 \land \overline{v_1}$. Both subproblems are determined to be unsatisfiable, and \dd{} saves them to the proof tree as nodes 6 and 7, respectively.
+
+Finally, \dd{} has an empty \texttt{ActPatterns}, stops the search, and returns \texttt{unsat} and the proof tree. 
+
+
 
 \chapter{Constraint Solving}
 \section{SMT}
