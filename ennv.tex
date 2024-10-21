@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[margin=1.5in]{geometry}
+\usepackage{amsmath}
 \usepackage{soul}
 % \usepackage[small,compact]{titlesec} %very powerful
 \usepackage[most]{tcolorbox}
@@ -109,7 +110,7 @@
 \renewcommand{\tablename}{Tab.}
 \renewcommand{\algorithmcfname}{Alg.}
 
-
+\makeatletter
 % for cross references
 % \renewcommand{\algorithmcflinename}{L.}
 \renewcommand{\algorithmautorefname}{Alg.}
@@ -121,6 +122,10 @@
 \renewcommand{\subsectionautorefname}{\S\@gobble}
 \renewcommand{\appendixautorefname}{\S\@gobble}
 
+
+
+
+\makeatother
 
 
 \newcommand{\nnproofgen}{\texttt{APTPgen}}
@@ -148,8 +153,6 @@
 \newcommand{\mipverify}{\texttt{MIPVerify}}
 \newcommand{\crowndefault}{\texttt{$\alpha\beta$-CROWN} (default)}
 
-\makeatletter
-\makeatother
 
 \newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
 \newcommand{\tvn}[1]{\mycomment{TVN}{#1}}{}
@@ -281,11 +284,11 @@ This document will be updated regularly to reflect the latest information and up
 
 \chapter{Basic of Neural Network}\label{sec:basic}
 
-A \emph{neural network} (\textbf{NN})~\cite{Goodfellow-et-al-2016} consists of an input layer, multiple hidden layers, and an output layer. Each layer has a number of neurons, each connected to neurons from previous layers through a predefined set of weights (derived by training the network with data). A \emph{Deep Neural Network} (\textbf{DNN}) is an NN with at least two hidden layers. 
+A \emph{neural network} (\textbf{NN})~\cite{Goodfellow-et-al-2016} consists of an input layer, multiple hidden layers, and an output layer. Each layer has a number of neurons, each connected to neurons in the next layer through a predefined set of weights (derived by training the network with data). A \emph{Deep Neural Network} (\textbf{DNN}) is an NN with two or more hidden layers. 
 
 %A deep neural network consists of three types of layers: an input layer, multiple hidden layers, and an output layer. Each layer consists of a number of neurons, each connected to neurons from another layers through a predefined set of weights (derived by training the network with data). A network is called a \emph{fully connected feed-forward} neural network (FNN) if it connects every neuron in a layer (i.e., all weights are non-zero) to a neuron in the next layer.
 
-The output of a DNN is obtained by iteratively computing  the  values  of  neurons  in  each  layer.
+The output of an NN is obtained by iteratively computing  the  values  of  neurons  in  each  layer.
 The value of a neuron in the input layer is the input data. The value of a neuron in the hidden layers is computed by applying an \emph{affine transformation} (\autoref{sec:affine}) to values of neurons in the previous layers, then followed by an \emph{activation function} (\autoref{sec:activation}) such as ReLU and Sigmoid. The value of a neuron in the output layer is computed similarly but may skip the activation function.
 
 
@@ -433,6 +436,9 @@ Similar to software programs, neural networks have desirable properties to ensur
 
 
 \chapter{Verification of Neural Networks}\label{sec:verification}
+
+
+\section{The Neural Network Verification Problem and Its Formalization}
 \paragraph{DNN Verification} Given a DNN \(N\) and a property $\phi$, the \emph{DNN verification problem} asks if $\phi$ is a valid property of $N$.
 Typically, $\phi$ is a formula of the form $\phi_{in} \Rightarrow \phi_{out}$, where $\phi_{in}$ is a property over the inputs of $N$ and $\phi_{out}$ is a property over the outputs of $N$.
 %This form of properties has been used to encode safety and security requirements of DNNs, e.g., safety specifications to avoid collision in unmanned aircraft~\cite{kochenderfer2012next} and \emph{adversarial robustness}~\cite{katz2017towards} properties desired by all DNNs, in which a small input perturbation does not cause major spikes in the DNN's outputs.
@@ -452,12 +458,27 @@ A DNN verifier attempts to find a \emph{counterexample} input to $N$ that satisf
 A counterexample showing this property violation is $\{x_1=-1, x_2=2\}$, from which the network evaluates to $x_5=-3.5$. Such properties can capture \emph{safety requirements} (e.g., a rule in an  collision avoidance system in~\cite{kochenderfer2012next,katz2017reluplex} is ``if the intruder is distant and significantly slower than us, then we stay below a certain threshold'') or \emph{local robustness}~\cite{katz2017towards} conditions (a form of adversarial robustness stating that small perturbations of a given input all yield the same output).
 
 
+\section{Satisfiability and Activation Pattern Search} As with traditional software, DNN verification is often represented as a satisfiability problem.
+We thus need to define a formula to represent the network. Typically this formula is a conjunction of constraints representing the affine transformation and activation function of each neuron in the network.
+For a network with $L$ layers, $N$ neurons per layer, and ReLU activations this formula is:
+\begin{align*}
+\alpha = \bigwedge_{\begin{smallmatrix}i \in [1,L]\\ j \in [1,N]\end{smallmatrix}} v_{i,j} = \max \Big( \sum_{k \in [1,N]} (w_{i-1,j,k} \cdot v_{i-1,j}) + b_{i,j}, 0 \Big)
+\end{align*}
+With this definition DNN verification can be formulated as checking the satisfiability of:
+\begin{equation}\label{eq:prob}
+  \alpha \land \phi_{in} \land \neg \phi_{out}
+\end{equation}
+If \autoref{eq:prob} is unsatisfiable, $\phi$ is a valid property of $\mathcal{N}$. Otherwise, $\phi$ is not valid (and the counterexample of the original problem is any satisfying assignment that makes \autoref{eq:prob} true).
+
+For the widely-used ReLU activation problem, this problem becomes a search for \emph{activation patterns}, i.e., boolean assignments representing activation status of neurons, that lead to satisfaction the formula in \autoref{eq:prob}. Modern DNN verification techniques~\cite{bunel2020branch,wang2021beta,ferrari2022complete,duong2024harnessing,duong2023dpllt,ovalbab,katz2019marabou,bak2021nnenum} all adopt this idea and search for satisfying activation patterns.
+
+
 \section{Complexity}
 
-\chapter{Search Algorithms}
+\chapter{Common Search Algorithms}
 
-
-
+\section{Symbolic Search and Constraint solving}
+\section{Branch-and-Bound (BnB)}
 
 \begin{algorithm}[t]
     \SetKwFor{Parfor}{parfor}{do}{endparfor}
