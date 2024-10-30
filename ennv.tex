@@ -470,7 +470,10 @@ With this definition DNN verification can be formulated as checking the satisfia
 \end{equation}
 If \autoref{eq:prob} is unsatisfiable, $\phi$ is a valid property of $\mathcal{N}$. Otherwise, $\phi$ is not valid (and the counterexample of the original problem is any satisfying assignment that makes \autoref{eq:prob} true).
 
-For the widely-used ReLU activation problem, this problem becomes a search for \emph{activation patterns}, i.e., boolean assignments representing activation status of neurons, that lead to satisfaction the formula in \autoref{eq:prob}. Modern DNN verification techniques~\cite{bunel2020branch,wang2021beta,ferrari2022complete,duong2024harnessing,duong2023dpllt,ovalbab,katz2019marabou,bak2021nnenum} all adopt this idea and search for satisfying activation patterns.
+
+\section{Activation Pattern Search} For the widely-used ReLU activation problem, the DNN verification problem becomes a search for \emph{activation patterns}, i.e., boolean assignments representing activation status of neurons, that lead to satisfaction the formula in \autoref{eq:prob}. 
+
+Modern DNN verification techniques~\cite{bunel2020branch,wang2021beta,ferrari2022complete,duong2024harnessing,duong2023dpllt,ovalbab,katz2019marabou,bak2021nnenum} all adopt this idea and search for satisfying activation patterns.
 
 
 \section{Complexity}
@@ -607,8 +610,7 @@ For the widely-used ReLU activation problem, this problem becomes a search for \
     \DontPrintSemicolon
   
     \Input{DNN $\mathcal{N}$, property $\phi_{in} \Rightarrow \phi_{out}$}
-    Output{($\unsat, \prooftree$)}
-    \Output{($\unsat, \prooftree$) if property is valid, otherwise ($\sat, \counterexample$)}
+    \Output{$\unsat$ if property is valid, otherwise ($\sat, \counterexample$)}
     \BlankLine
 
 
@@ -627,26 +629,29 @@ For the widely-used ReLU activation problem, this problem becomes a search for \
                 \tcp{create new activation patterns}
                 $\problems \leftarrow \problems \cup \{ \sigma_i \land v_i ~;~ \sigma_i \land \overline{v_i} \}$ \;
             }
-            \Else(\tcp*[h]{detect a conflict}){
+            %\Else(\tcp*[h]{detect a conflict}){
                 % $\clauses \leftarrow \clauses \cup \AnalyzeConflict(\igraph_i)$ \\ \label{line:analyze_conflict}
-                $\prooftree \leftarrow \prooftree \cup \{ \sigma_i \}$ \tcp{build proof tree} \label{line:record_proof}
-            }
+            %    $\prooftree \leftarrow \prooftree \cup \{ \sigma_i \}$ \tcp{build proof tree} \label{line:record_proof}
+            %}
         % }
         % \If(\tcp*[h]{no more problems}){$\isEmpty(\problems)$}{
         % }
         
     }\label{line:dpllend}
-    \Return{$(\unsat, \prooftree)$}
+    \Return{\unsat}
     
     \caption{The \dd{} algorithm with proof generation.}\label{fig:alg}
 \end{algorithm}
 
-\autoref{fig:alg} shows \dd{}, a reference architecture~\cite{nakagawa2014consolidating} 
-for modern DNN verifiers that we use to illustrate our observations.  
-\dd{} takes as input a ReLU-based DNN $\mathcal{N}$ and a formulae $\phi_{in}\Rightarrow \phi_{out}$ representing the property of interest.
+Modern DNN verifiers often adopt the branch-and-bound (BnB) approach to search for activation patterns that satisfy the DNN verification problem. A BnB search consists of two main components: (branch) splitting into the problem smaller subproblems 
+by using \emph{neuron splitting}, which decides boolean values representing neuron activation status, 
+and (bound) using abstraction and LP solving to approximate bounds on neuron values to determine 
+the satisfiability of the partial activation pattern formed by the split.
 
-\dd{} iterates between two components: \texttt{Decide} (branching, \autoref{line:decide}), which decides (assigns) an activation status value for a neuron, and \texttt{Deduce} (bounding, \autoref{line:deduce}), which checks the feasibility of the current activation pattern. 
-To add proof generation capability, \dd{} is instrumented with a proof tree (\texttt{proof}) variable (\autoref{line:prooftree}) to record these branching decisions. The proof is represented as a binary tree structure, where each node represents a neuron and its left and right edges represent its activation decision (active or inactive). %The proof tree is then used to generate a proof in the \nnproofformat{} format (\autoref{sec:proof-format}).
+
+\autoref{fig:alg} shows \dd{}, a reference BnB architecture~\cite{nakagawa2014consolidating} for modern DNN verifiers. \dd{} takes as input a ReLU-based DNN $\mathcal{N}$ and a formulae $\phi_{in}\Rightarrow \phi_{out}$ representing the property of interest.
+\dd{} iterates between (i) branching ()\autoref{line:decide}), which \emph{decides} (assigns) an activation status value for a neuron, and (ii) bounding (\autoref{line:deduce}), which \emph{deduces} or checks the feasibility of the current activation pattern. 
+%To add proof generation capability, \dd{} is instrumented with a proof tree (\texttt{proof}) variable (\autoref{line:prooftree}) to record these branching decisions. The proof is represented as a binary tree structure, where each node represents a neuron and its left and right edges represent its activation decision (active or inactive). %The proof tree is then used to generate a proof in the \nnproofformat{} format (\autoref{sec:proof-format}).
 
 
 
