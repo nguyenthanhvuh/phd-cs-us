@@ -643,14 +643,14 @@ Modern DNN verification techniques~\cite{bunel2020branch,wang2021beta,ferrari202
     \caption{The \dd{} algorithm with proof generation.}\label{fig:alg}
 \end{algorithm}
 
-Modern DNN verifiers often adopt the branch-and-bound (BnB) approach to search for activation patterns that satisfy the DNN verification problem. A BnB search consists of two main components: (branch) splitting into the problem smaller subproblems 
+Most modern DNN verifiers adopt the branch-and-bound (BnB) approach to search for activation patterns for DNN verification. A BnB search consists of two main components: (branch) splitting into the problem smaller subproblems 
 by using \emph{neuron splitting}, which decides boolean values representing neuron activation status, 
 and (bound) using abstraction and LP solving to approximate bounds on neuron values to determine 
 the satisfiability of the partial activation pattern formed by the split.
 
 
 \autoref{fig:alg} shows \dd{}, a reference BnB architecture~\cite{nakagawa2014consolidating} for modern DNN verifiers. \dd{} takes as input a ReLU-based DNN $\mathcal{N}$ and a formulae $\phi_{in}\Rightarrow \phi_{out}$ representing the property of interest.
-\dd{} iterates between (i) branching ()\autoref{line:decide}), which \emph{decides} (assigns) an activation status value for a neuron, and (ii) bounding (\autoref{line:deduce}), which \emph{deduces} or checks the feasibility of the current activation pattern. 
+\dd{} iterates between (i) branching (\autoref{line:decide}), which \emph{decides} (assigns) an activation status value for a neuron, and (ii) bounding (\autoref{line:deduce}), which \emph{deduces} or checks the feasibility of the current activation pattern. 
 %To add proof generation capability, \dd{} is instrumented with a proof tree (\texttt{proof}) variable (\autoref{line:prooftree}) to record these branching decisions. The proof is represented as a binary tree structure, where each node represents a neuron and its left and right edges represent its activation decision (active or inactive). %The proof tree is then used to generate a proof in the \nnproofformat{} format (\autoref{sec:proof-format}).
 
 
