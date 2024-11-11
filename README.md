@@ -158,13 +158,14 @@ This guideline helps demystify the PhD admission process in Computer Science in 
 1. Public examples: [[Extensive NSF collection by Alex Lang]](https://docs.google.com/spreadsheets/d/1xoezGhbtcpg3BvNdag2F5dTQM-Xl2EELUgAfG1eUg0s/edit#gid=0), [[Victoria Dean (NSF personal)]](https://vdean.github.io/resources/NSF_Personal_Statement_Victoria_Dean.pdf), [[Victoria Dean (NSF research)]](https://vdean.github.io/resources/NSF_Research_Statement_Victoria_Dean.pdf), [[Tara Safavi (NSF)]](https://tsafavi.github.io/assets/pdf/nsf-personal.pdf), [[Paul Liang (Facebook)]](http://www.cs.cmu.edu/~pliang/research_statement_paul_liang_2020.pdf), [[Devendra Chaplot (Facebook)]](https://devendrachaplot.github.io/misc/DevendraChaplot_Statement2019.pdf), [[Sai Rallabandi (Facebook)]](http://www.cs.cmu.edu/~srallaba/pdfs/fellowships_mothersheet.pdf)
 
 ###  1.6. <a name='ChoosingAdvisorandSchool'></a>Choosing Advisor and School
-[Questions to Ask a Prospective Ph.D. Advisor on Visit Day, With Thorough and Forthright Explanations by Andrew Kuznetsov](https://blog.ml.cmu.edu/2020/03/02/questions-to-ask-a-prospective-ph-d-advisor-on-visit-day-with-thorough-and-forthright-explanations/)
 
-[How to Choose Your Grad School by Tim Dettmers](https://timdettmers.com/2022/03/13/how-to-choose-your-grad-school/)
+1. [Questions to Ask a Prospective Ph.D. Advisor on Visit Day, With Thorough and Forthright Explanations by Andrew Kuznetsov](https://blog.ml.cmu.edu/2020/03/02/questions-to-ask-a-prospective-ph-d-advisor-on-visit-day-with-thorough-and-forthright-explanations/)
 
-[How to Pick a Graduate Advisor by Ben Barres](https://hst.mit.edu/sites/default/files/media/files/Barres%20BA.Neuron.80.275.2013.pdf)
+1. [How to Choose Your Grad School by Tim Dettmers](https://timdettmers.com/2022/03/13/how-to-choose-your-grad-school/)
 
-[The Definitive ‘what do I ask/look for’ in a PhD Advisor Guide by Columbia CS](https://www.cs.columbia.edu/wp-content/uploads/2019/03/Get-Advisor.pdf)
+1. [How to Pick a Graduate Advisor by Ben Barres](https://hst.mit.edu/sites/default/files/media/files/Barres%20BA.Neuron.80.275.2013.pdf)
+
+1. [The Definitive ‘what do I ask/look for’ in a PhD Advisor Guide by Columbia CS](https://www.cs.columbia.edu/wp-content/uploads/2019/03/Get-Advisor.pdf)
 
 
 
