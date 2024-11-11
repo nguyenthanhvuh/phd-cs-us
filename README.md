@@ -9,9 +9,9 @@ This guideline helps demystify the PhD admission process in Computer Science in 
 
 
 
-# Collection of advice for prospective PhD students
+# Collection links for prospective PhD students
 
-> This collection was originally started by Paul Liang for current PhD students.  I've made it more focused on **PhD admission to CS and related fields in the US** (but also includes advice for current and graduating students).  Please feel free to contribute by sending a pull request. Credit goes out to Paul and the original authors of each link.
+> This collection was originally started by Paul Liang for [**current** PhD students](https://github.com/pliang279/awesome-phd-advice).  I've made it more focused on **PhD admission to CS** (but also have sections for current and graduating students).  You can contribute by sending a *pull request*.
 
 <!-- ![](/phd030110s.gif) -->
 
@@ -146,15 +146,16 @@ This guideline helps demystify the PhD admission process in Computer Science in 
 ###  1.5. <a name='FundingTARAFellowships'></a>Funding (TA, RA, Fellowships)
 
 ####  1.5.1. <a name='Fellowships'></a>Fellowships
-[Tips for the NSF GRFP Application by Danielle Perry](https://web.uri.edu/graduate-writing-center/tips-for-the-nsf-grfp-application/)
 
-[NSF GRFP Advice by Christine Liu](http://www.christineliuart.com/writing/2018/8/31/advice-for-applying-to-the-nsf-grfp)
+1. [Tips for the NSF GRFP Application by Danielle Perry](https://web.uri.edu/graduate-writing-center/tips-for-the-nsf-grfp-application/)
 
-[NSF Fellowship by Alex Lang](https://www.alexhunterlang.com/nsf-fellowship)
+1. [NSF GRFP Advice by Christine Liu](http://www.christineliuart.com/writing/2018/8/31/advice-for-applying-to-the-nsf-grfp)
 
-[Tips by Tara Safavi](https://tsafavi.github.io/nsf-grfp.html)
+1. [NSF Fellowship by Alex Lang](https://www.alexhunterlang.com/nsf-fellowship)
 
-Public examples: [[Extensive NSF collection by Alex Lang]](https://docs.google.com/spreadsheets/d/1xoezGhbtcpg3BvNdag2F5dTQM-Xl2EELUgAfG1eUg0s/edit#gid=0), [[Victoria Dean (NSF personal)]](https://vdean.github.io/resources/NSF_Personal_Statement_Victoria_Dean.pdf), [[Victoria Dean (NSF research)]](https://vdean.github.io/resources/NSF_Research_Statement_Victoria_Dean.pdf), [[Tara Safavi (NSF)]](https://tsafavi.github.io/assets/pdf/nsf-personal.pdf), [[Paul Liang (Facebook)]](http://www.cs.cmu.edu/~pliang/research_statement_paul_liang_2020.pdf), [[Devendra Chaplot (Facebook)]](https://devendrachaplot.github.io/misc/DevendraChaplot_Statement2019.pdf), [[Sai Rallabandi (Facebook)]](http://www.cs.cmu.edu/~srallaba/pdfs/fellowships_mothersheet.pdf)
+1. [Tips by Tara Safavi](https://tsafavi.github.io/nsf-grfp.html)
+
+1. Public examples: [[Extensive NSF collection by Alex Lang]](https://docs.google.com/spreadsheets/d/1xoezGhbtcpg3BvNdag2F5dTQM-Xl2EELUgAfG1eUg0s/edit#gid=0), [[Victoria Dean (NSF personal)]](https://vdean.github.io/resources/NSF_Personal_Statement_Victoria_Dean.pdf), [[Victoria Dean (NSF research)]](https://vdean.github.io/resources/NSF_Research_Statement_Victoria_Dean.pdf), [[Tara Safavi (NSF)]](https://tsafavi.github.io/assets/pdf/nsf-personal.pdf), [[Paul Liang (Facebook)]](http://www.cs.cmu.edu/~pliang/research_statement_paul_liang_2020.pdf), [[Devendra Chaplot (Facebook)]](https://devendrachaplot.github.io/misc/DevendraChaplot_Statement2019.pdf), [[Sai Rallabandi (Facebook)]](http://www.cs.cmu.edu/~srallaba/pdfs/fellowships_mothersheet.pdf)
 
 ###  1.6. <a name='ChoosingAdvisorandSchool'></a>Choosing Advisor and School
 [Questions to Ask a Prospective Ph.D. Advisor on Visit Day, With Thorough and Forthright Explanations by Andrew Kuznetsov](https://blog.ml.cmu.edu/2020/03/02/questions-to-ask-a-prospective-ph-d-advisor-on-visit-day-with-thorough-and-forthright-explanations/)
@@ -288,27 +289,27 @@ Public examples: [[Extensive NSF collection by Alex Lang]](https://docs.google.c
 
 ##  3. <a name='ForGraduatingStudentsJobSearch'></a>For Graduating Students (Job Search)
 
-[Tips for Computer Science Faculty Applications](https://yisongyue.medium.com/checklist-of-tips-for-computer-science-faculty-applications-9fd2480649cc)
+1. [Tips for Computer Science Faculty Applications](https://yisongyue.medium.com/checklist-of-tips-for-computer-science-faculty-applications-9fd2480649cc)
 
-[How to Ask for a Letter of Recommendation](https://kamathematics.wordpress.com/2021/08/18/how-to-ask-for-a-letter-of-recommendation/)
+1. [How to Ask for a Letter of Recommendation](https://kamathematics.wordpress.com/2021/08/18/how-to-ask-for-a-letter-of-recommendation/)
 
-[Interview Questions for Computer Science Faculty Jobs](https://csfaculty.github.io/)
+1. [Interview Questions for Computer Science Faculty Jobs](https://csfaculty.github.io/)
 
-[The Ph.D. Job Hunt - Helping Students Find the Right Positions by Ed Lazowska](http://lazowska.cs.washington.edu/jobs.pdf)
+1. [The Ph.D. Job Hunt - Helping Students Find the Right Positions by Ed Lazowska](http://lazowska.cs.washington.edu/jobs.pdf)
 
-[The N Things I wish I Knew Before the Job Search, by Maria Ebling, Guerney Hunt, Lily Mummert, Bill Tetzlaff, and John Davis](https://people.engr.tamu.edu/rabi/N%20Things.PDF)
+1. [The N Things I wish I Knew Before the Job Search, by Maria Ebling, Guerney Hunt, Lily Mummert, Bill Tetzlaff, and John Davis](https://people.engr.tamu.edu/rabi/N%20Things.PDF)
 
-[The academic job search for computer scientists in 10 questions by Nicolas Papernot and Elissa Redmiles](https://docs.google.com/document/u/1/d/e/2PACX-1vSeOnC_QdaJVc3OuuMfDHVlk3QotUxvghytRFaDsrdA0uovD5axQjp8kJCM4Evu1cCf9Hg_u_Stabu1/pub)
+1. [The academic job search for computer scientists in 10 questions by Nicolas Papernot and Elissa Redmiles](https://docs.google.com/document/u/1/d/e/2PACX-1vSeOnC_QdaJVc3OuuMfDHVlk3QotUxvghytRFaDsrdA0uovD5axQjp8kJCM4Evu1cCf9Hg_u_Stabu1/pub)
 
-[Checklist for faculty job-hunting in Stat/ML by Aaditya Ramdas](https://www.stat.cmu.edu/~aramdas/checklists/aadi-jobhunt-checklist.pdf)
+1. [Checklist for faculty job-hunting in Stat/ML by Aaditya Ramdas](https://www.stat.cmu.edu/~aramdas/checklists/aadi-jobhunt-checklist.pdf)
 
-[Tips on the interview process by Jeannette Wing](https://www.cs.cmu.edu/~emigration/interview.pdf)
+1. [Tips on the interview process by Jeannette Wing](https://www.cs.cmu.edu/~emigration/interview.pdf)
 
-[Getting an academic job by Michael Ernst](https://homes.cs.washington.edu/~mernst/advice/academic-job.html)
+1. [Getting an academic job by Michael Ernst](https://homes.cs.washington.edu/~mernst/advice/academic-job.html)
 
-[Computer science graduate job and interview guide by Wes Weimer, Claire Le Goues, Zak Fry, Kevin Leach, Yu Huang, and Kevin Angstadt](https://csguides.github.io/grad-job-guide/)
+1. [Computer science graduate job and interview guide by Wes Weimer, Claire Le Goues, Zak Fry, Kevin Leach, Yu Huang, and Kevin Angstadt](https://csguides.github.io/grad-job-guide/)
 
-[Academic job search advice by Matt Might](http://matt.might.net/articles/advice-for-academic-job-hunt/)
+1. [Academic job search advice by Matt Might](http://matt.might.net/articles/advice-for-academic-job-hunt/)
 
 
 ##  4. <a name='Memoirs'></a>Memoirs
