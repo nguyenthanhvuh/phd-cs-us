@@ -1,4 +1,4 @@
-# Resources for Prospective PhD Students in Computer Science in the US
+# Resources for Students Applying to Computer Science PhD programs in the US
 
 
 ##  1. <a name='PhDDemystify:AGuidelineforProspectivePhDStudentsinCS'></a>PhD Demystify: A Guideline for Prospective PhD Students in CS
@@ -10,21 +10,24 @@ This guideline helps demystify the PhD admission process in Computer Science in 
 
 
 
-##  2. <a name='LinksforProspectivePhDstudentsinCS'></a>Links for Prospective PhD students in CS 
+##  2. <a name='LinksforProspectiveStudents'></a>Links for Prospective Students
+
+This list is inspired by various curated lists of resources, e.g., Paul Liang's [awesome-phd-advice](https://github.com/pliang279/awesome-phd-advice), which focuses mostly on current students.  This list is specifically tailored for **prospective** students applying to **Computer Science PhD** programs in the **US**.
+
 
 
 <!-- ![](/phd030110s.gif) -->
 
 <!-- vscode-markdown-toc -->
 * 1. [PhD Demystify: A Guideline for Prospective PhD Students in CS](#PhDDemystify:AGuidelineforProspectivePhDStudentsinCS)
-* 2. [Links for Prospective PhD students in CS](#LinksforProspectivePhDstudentsinCS)
+* 2. [Links for Prospective Students](#LinksforProspectiveStudents)
 	* 2.1. [Letters of Recommendation (LOR)](#LettersofRecommendationLOR)
 	* 2.2. [Statement of purpose (SOP)](#StatementofpurposeSOP)
-	* 2.3. [Research Experience (Publications and all)](#ResearchExperiencePublicationsandall)
-	* 2.4. [GPA and Standard Tests (GREs, IELETS, TOEFL)](#GPAandStandardTestsGREsIELETSTOEFL)
-	* 2.5. [Funding (TA, RA, Fellowships)](#FundingTARAFellowships)
-		* 2.5.1. [Fellowships](#Fellowships)
-	* 2.6. [Choosing Advisor and School](#ChoosingAdvisorandSchool)
+	* 2.3. [GPA and Standard Tests (GREs, IELETS, TOEFL) -->](#GPAandStandardTestsGREsIELETSTOEFL--)
+	* 2.4. [Funding (TA, RA, Fellowships)](#FundingTARAFellowships)
+		* 2.4.1. [Fellowships](#Fellowships)
+	* 2.5. [Choosing Advisor and School](#ChoosingAdvisorandSchool)
+	* 2.6. [Contacting / Cold-Emailing Professors](#ContactingCold-EmailingProfessors)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -117,14 +120,14 @@ This guideline helps demystify the PhD admission process in Computer Science in 
   \item     \href{https://cs-sop.notion.site/cs-sop/CS-PhD-Statements-of-Purpose-df39955313834889b7ac5411c37b958d?p=f5d5980a71524ebaa4e6ae57266b847c&pm=s}{CS PhD SOP database} by cs-sop.org
  -->
 
-###  2.3. <a name='ResearchExperiencePublicationsandall'></a>Research Experience (Publications and all)
-###  2.4. <a name='GPAandStandardTestsGREsIELETSTOEFL'></a>GPA and Standard Tests (GREs, IELETS, TOEFL)
+<!-- ###  2.3. <a name='ResearchExperiencePublicationsandall'></a>Research Experience (Publications and all)
+###  2.3. <a name='GPAandStandardTestsGREsIELETSTOEFL--'></a>GPA and Standard Tests (GREs, IELETS, TOEFL) -->
 
-###  2.5. <a name='FundingTARAFellowships'></a>Funding (TA, RA, Fellowships)
+###  2.4. <a name='FundingTARAFellowships'></a>Funding (TA, RA, Fellowships)
 
   - [Computer Science Awards, Scholarships, & Fellowships - GitHub by Chinasa T. Okolo](https://github.com/chinasatokolo/csGraduateFellowships)
 
-####  2.5.1. <a name='Fellowships'></a>Fellowships
+####  2.4.1. <a name='Fellowships'></a>Fellowships
 
 1. [Tips for the NSF GRFP Application by Danielle Perry](https://web.uri.edu/graduate-writing-center/tips-for-the-nsf-grfp-application/)
 
@@ -136,7 +139,7 @@ This guideline helps demystify the PhD admission process in Computer Science in 
 
 1. Public examples: [[Extensive NSF collection by Alex Lang]](https://docs.google.com/spreadsheets/d/1xoezGhbtcpg3BvNdag2F5dTQM-Xl2EELUgAfG1eUg0s/edit#gid=0), [[Victoria Dean (NSF personal)]](https://vdean.github.io/resources/NSF_Personal_Statement_Victoria_Dean.pdf), [[Victoria Dean (NSF research)]](https://vdean.github.io/resources/NSF_Research_Statement_Victoria_Dean.pdf), [[Tara Safavi (NSF)]](https://tsafavi.github.io/assets/pdf/nsf-personal.pdf), [[Paul Liang (Facebook)]](http://www.cs.cmu.edu/~pliang/research_statement_paul_liang_2020.pdf), [[Devendra Chaplot (Facebook)]](https://devendrachaplot.github.io/misc/DevendraChaplot_Statement2019.pdf), [[Sai Rallabandi (Facebook)]](http://www.cs.cmu.edu/~srallaba/pdfs/fellowships_mothersheet.pdf)
 
-###  2.6. <a name='ChoosingAdvisorandSchool'></a>Choosing Advisor and School
+###  2.5. <a name='ChoosingAdvisorandSchool'></a>Choosing Advisor and School
 
 1. [Questions to Ask a Prospective Ph.D. Advisor on Visit Day, With Thorough and Forthright Explanations by Andrew Kuznetsov](https://blog.ml.cmu.edu/2020/03/02/questions-to-ask-a-prospective-ph-d-advisor-on-visit-day-with-thorough-and-forthright-explanations/)
 
@@ -146,6 +149,6 @@ This guideline helps demystify the PhD admission process in Computer Science in 
 
 1. [The Definitive ‘what do I ask/look for’ in a PhD Advisor Guide by Columbia CS](https://www.cs.columbia.edu/wp-content/uploads/2019/03/Get-Advisor.pdf)
 
-### Contacting / Cold-Emailing Professors
+###  2.6. <a name='ContactingCold-EmailingProfessors'></a>Contacting / Cold-Emailing Professors
 1. [Advice on Contacting Faculty for Prospective Research Students by Dave Evan](https://uvasrg.github.io/prospective/)
 
