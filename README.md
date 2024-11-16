@@ -1,5 +1,7 @@
-# PhD Demystify: A Guideline for Prospective PhD Students in Computer Science in the US
+# Resources for Prospective PhD Students in Computer Science in the US
 
+
+##  1. <a name='PhDDemystify:AGuidelineforProspectivePhDStudentsinCS'></a>PhD Demystify: A Guideline for Prospective PhD Students in CS
 This guideline helps demystify the PhD admission process in Computer Science in US universities. It aims to encourage international (and domestic) students from smaller countries and universities to apply to CS PhD programs in the US.
 
 - PDF: [https://nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf](https://nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf)
@@ -8,22 +10,21 @@ This guideline helps demystify the PhD admission process in Computer Science in 
 
 
 
-
-# Links for PhD students
-
+##  2. <a name='LinksforProspectivePhDstudentsinCS'></a>Links for Prospective PhD students in CS 
 
 
 <!-- ![](/phd030110s.gif) -->
 
 <!-- vscode-markdown-toc -->
-* 1. [For Prospective Students](#ForProspectiveStudents)
-	* 1.1. [Letters of Recommendation (LOR)](#LettersofRecommendationLOR)
-	* 1.2. [Statement of purpose (SOP)](#StatementofpurposeSOP)
-	* 1.3. [Research Experience (Publications and all)](#ResearchExperiencePublicationsandall)
-	* 1.4. [GPA and Standard Tests (GREs, IELETS, TOEFL)](#GPAandStandardTestsGREsIELETSTOEFL)
-	* 1.5. [Funding (TA, RA, Fellowships)](#FundingTARAFellowships)
-		* 1.5.1. [Fellowships](#Fellowships)
-	* 1.6. [Choosing Advisor and School](#ChoosingAdvisorandSchool)
+* 1. [PhD Demystify: A Guideline for Prospective PhD Students in CS](#PhDDemystify:AGuidelineforProspectivePhDStudentsinCS)
+* 2. [Links for Prospective PhD students in CS](#LinksforProspectivePhDstudentsinCS)
+	* 2.1. [Letters of Recommendation (LOR)](#LettersofRecommendationLOR)
+	* 2.2. [Statement of purpose (SOP)](#StatementofpurposeSOP)
+	* 2.3. [Research Experience (Publications and all)](#ResearchExperiencePublicationsandall)
+	* 2.4. [GPA and Standard Tests (GREs, IELETS, TOEFL)](#GPAandStandardTestsGREsIELETSTOEFL)
+	* 2.5. [Funding (TA, RA, Fellowships)](#FundingTARAFellowships)
+		* 2.5.1. [Fellowships](#Fellowships)
+	* 2.6. [Choosing Advisor and School](#ChoosingAdvisorandSchool)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -31,8 +32,6 @@ This guideline helps demystify the PhD admission process in Computer Science in 
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
 
-
-##  1. <a name='ForProspectiveStudents'></a>For Prospective Students
 
 
 1. [Applying to PhD Programs in Computer Science by Mor Harchol-Balter](https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf)
@@ -80,21 +79,7 @@ This guideline helps demystify the PhD admission process in Computer Science in 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-###  1.1. <a name='LettersofRecommendationLOR'></a>Letters of Recommendation (LOR)
+###  2.1. <a name='LettersofRecommendationLOR'></a>Letters of Recommendation (LOR)
 
 
 1. [Advice for Requesting Letters of Recommendation - Goldhaber-Gordon Group, Stanford University](https://ggg.stanford.edu/advice-recommendations) 
@@ -102,7 +87,7 @@ This guideline helps demystify the PhD admission process in Computer Science in 
 1. [HOWTO: How to get a great LOR - Matt Might](https://matt.might.net/articles/how-to-recommendation-letter/) 
 
 
-###  1.2. <a name='StatementofpurposeSOP'></a>Statement of purpose (SOP)
+###  2.2. <a name='StatementofpurposeSOP'></a>Statement of purpose (SOP)
 
 
 1. [Database of Example PhD SOPs by the CS-SOP initiative](https://cs-sop.org)
@@ -131,14 +116,14 @@ This guideline helps demystify the PhD admission process in Computer Science in 
   \item     \href{https://cs-sop.notion.site/cs-sop/CS-PhD-Statements-of-Purpose-df39955313834889b7ac5411c37b958d?p=f5d5980a71524ebaa4e6ae57266b847c&pm=s}{CS PhD SOP database} by cs-sop.org
  -->
 
-###  1.3. <a name='ResearchExperiencePublicationsandall'></a>Research Experience (Publications and all)
-###  1.4. <a name='GPAandStandardTestsGREsIELETSTOEFL'></a>GPA and Standard Tests (GREs, IELETS, TOEFL)
+###  2.3. <a name='ResearchExperiencePublicationsandall'></a>Research Experience (Publications and all)
+###  2.4. <a name='GPAandStandardTestsGREsIELETSTOEFL'></a>GPA and Standard Tests (GREs, IELETS, TOEFL)
 
-###  1.5. <a name='FundingTARAFellowships'></a>Funding (TA, RA, Fellowships)
+###  2.5. <a name='FundingTARAFellowships'></a>Funding (TA, RA, Fellowships)
 
   - [Computer Science Awards, Scholarships, & Fellowships - GitHub by Chinasa T. Okolo](https://github.com/chinasatokolo/csGraduateFellowships)
 
-####  1.5.1. <a name='Fellowships'></a>Fellowships
+####  2.5.1. <a name='Fellowships'></a>Fellowships
 
 1. [Tips for the NSF GRFP Application by Danielle Perry](https://web.uri.edu/graduate-writing-center/tips-for-the-nsf-grfp-application/)
 
@@ -150,7 +135,7 @@ This guideline helps demystify the PhD admission process in Computer Science in 
 
 1. Public examples: [[Extensive NSF collection by Alex Lang]](https://docs.google.com/spreadsheets/d/1xoezGhbtcpg3BvNdag2F5dTQM-Xl2EELUgAfG1eUg0s/edit#gid=0), [[Victoria Dean (NSF personal)]](https://vdean.github.io/resources/NSF_Personal_Statement_Victoria_Dean.pdf), [[Victoria Dean (NSF research)]](https://vdean.github.io/resources/NSF_Research_Statement_Victoria_Dean.pdf), [[Tara Safavi (NSF)]](https://tsafavi.github.io/assets/pdf/nsf-personal.pdf), [[Paul Liang (Facebook)]](http://www.cs.cmu.edu/~pliang/research_statement_paul_liang_2020.pdf), [[Devendra Chaplot (Facebook)]](https://devendrachaplot.github.io/misc/DevendraChaplot_Statement2019.pdf), [[Sai Rallabandi (Facebook)]](http://www.cs.cmu.edu/~srallaba/pdfs/fellowships_mothersheet.pdf)
 
-###  1.6. <a name='ChoosingAdvisorandSchool'></a>Choosing Advisor and School
+###  2.6. <a name='ChoosingAdvisorandSchool'></a>Choosing Advisor and School
 
 1. [Questions to Ask a Prospective Ph.D. Advisor on Visit Day, With Thorough and Forthright Explanations by Andrew Kuznetsov](https://blog.ml.cmu.edu/2020/03/02/questions-to-ask-a-prospective-ph-d-advisor-on-visit-day-with-thorough-and-forthright-explanations/)
 
