@@ -46,6 +46,7 @@ This guideline helps demystify the PhD admission process in Computer Science in 
 
 1. [HOWTO: Get into grad school for science, engineering, math and computer science by Matt Might](https://matt.might.net/articles/how-to-apply-and-get-in-to-graduate-school-in-science-mathematics-engineering-or-computer-science/)
 
+1. [Grad School Resources by Kalpesh Krishna](https://martiansideofthemoon.github.io/2018/05/29/grad-resources.html)
 
 1. [Ph.D. Applications: FAQ by Noah Smith](https://docs.google.com/document/d/1lT-bsIP0GKfh8l5sQnM2hCzzR9prt-QLx16rimUOdIM/edit)
 
@@ -145,5 +146,6 @@ This guideline helps demystify the PhD admission process in Computer Science in 
 
 1. [The Definitive ‘what do I ask/look for’ in a PhD Advisor Guide by Columbia CS](https://www.cs.columbia.edu/wp-content/uploads/2019/03/Get-Advisor.pdf)
 
-
+### Contacting / Cold-Emailing Professors
+1. [Advice on Contacting Faculty for Prospective Research Students by Dave Evan](https://uvasrg.github.io/prospective/)
 
