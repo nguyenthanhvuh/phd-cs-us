@@ -12,31 +12,6 @@ This guideline helps demystify the PhD admission process in Computer Science in 
 
 ##  2. <a name='LinksforProspectiveStudents'></a>Links for Prospective Students
 
-This list is inspired by various curated lists of resources, e.g., Paul Liang's [awesome-phd-advice](https://github.com/pliang279/awesome-phd-advice), which focuses mostly on current students.  This list is specifically tailored for **prospective** students applying to **Computer Science PhD** programs in the **US**.
-
-
-
-<!-- ![](/phd030110s.gif) -->
-
-<!-- vscode-markdown-toc -->
-* 1. [PhD Demystify: A Guideline for Prospective PhD Students in CS](#PhDDemystify:AGuidelineforProspectivePhDStudentsinCS)
-* 2. [Links for Prospective Students](#LinksforProspectiveStudents)
-	* 2.1. [Letters of Recommendation (LOR)](#LettersofRecommendationLOR)
-	* 2.2. [Statement of purpose (SOP)](#StatementofpurposeSOP)
-	* 2.3. [GPA and Standard Tests (GREs, IELETS, TOEFL) -->](#GPAandStandardTestsGREsIELETSTOEFL--)
-	* 2.4. [Funding (TA, RA, Fellowships)](#FundingTARAFellowships)
-		* 2.4.1. [Fellowships](#Fellowships)
-	* 2.5. [Choosing Advisor and School](#ChoosingAdvisorandSchool)
-	* 2.6. [Contacting / Cold-Emailing Professors](#ContactingCold-EmailingProfessors)
-
-<!-- vscode-markdown-toc-config
-	numbering=true
-	autoSave=true
-	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc -->
-
-
-
 1. [Applying to PhD Programs in Computer Science by Mor Harchol-Balter](https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf)
 
 1. [Demystifying PhD Admissions in Computer Science in the US: A Guide for International (and Domestic) Students by ThanhVu Nguyen](https://github.com/nguyenthanhvuh/phd-cs-us/)
