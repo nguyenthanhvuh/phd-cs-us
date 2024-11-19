@@ -1,4 +1,4 @@
-# Ppplying to Computer Science PhD programs in the US
+# Applying to Computer Science PhD programs in the US
 
 
 ##  1. <a name='PhDDemystify:AGuidelineforProspectivePhDStudentsinCS'></a>PhD Demystify: A Guideline for Prospective PhD Students in CS
