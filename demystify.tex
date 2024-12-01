@@ -70,6 +70,24 @@
   \end{mydomesticbox}
 }
 
+
+\newtcolorbox{myemphasisbox}{
+  enhanced,
+  boxrule=1pt, frame hidden,
+  %borderline = {1pt}{0pt}{blue!75!black},
+  colback=gray!20!white,
+  sharp corners
+}
+
+\newenvironment{emphasisbox}[1][]{
+  \small
+  \begin{myemphasisbox}
+    {\small \textbf{#1}}
+  }{
+  \end{myemphasisbox}
+}
+
+
 \renewcommand{\figurename}{Fig.}
 \renewcommand{\tablename}{Tab.}
 \def\Section{\S}
@@ -406,7 +424,7 @@ In short, you \emph{do not need} to formally take CS courses, you just need to s
 
 
 
-\section{Is an MS required for admission to PhD in CS in the US?}\label{sec:msrequirement}
+\section{Is MS required for admission to PhD in CS?}\label{sec:msrequirement}
 \sectioninfo{You do not need an MS to do PhD in CS.}
 
 No, not in the US (other countries often do though~\autoref{sec:non-us-differences}).  In the US, it is common to apply for a PhD program directly after your undergrad.  Most CS PhD programs are designed so that students can get MS degree ``along the way'' to PhD, e.g., after finishing the 2-year course work. 
@@ -708,98 +726,6 @@ For students who I know well, i.e., strong letters, then writing will take a lot
 %Profs. are used to write letters for their students
 
 
-\section{Statement of Purpose (SOP)}\label{sec:sop}
-\sectioninfo{\emph{SOP is important}. Write it in such a way that makes you \emph{stand out}.}
-
-\begin{center}
-  \includegraphics[scale=0.5]{files/c2.png}
-\end{center}
-
-While you might not have control over LORs (\autoref{sec:lor}) or where your go to school (\autoref{sec:your-school}), you do over your
-statement of purpose (SOP) or personal statement\footnote{Few schools separate these documents and ask you to write both: SOP, which focuses on research experiences, and personal statement, which is everything more personal, e.g., why PhD, challenges, diversity, etc}! A well-written SOP also shows that you can communicate, which is very important in research, and that you can effectively teach and communicate with students, which is important for TA funding (see \autoref{sec:funding}).  Many SOP samples for CS are \href{https://cs-sop.org/}{available here}.  
-
-%In your statement, you have the opportunity to connect directly with adcom members and make your application stand out and unique. Your SOP can convince adcom members that you would \emph{fit} their program, even if you don't have very strong research experience.
-% is important because if you need (GTA) funding, it will provide evidence
-% that you can teach and communicate with students.
-
-In your SOP, focus on research potential and convince us through your experience, e.g., published papers. Back up your claims with \textbf{concrete evidence}. For example, if you say you have experience with teaching, then show what you did, e.g., undergrad TA or mentoring someone.  If you say you work on a project, then show some results, e.g., paper submitted (or even rejected), achieved certain performance improvement over the state of the art. 
-
-
-You should talk about things that adcom members might not know about and can help make you \textbf{stand out} in the application pool of thousands of applicants, e.g., you are member of a minority or LGBTQ+ group (\autoref{sec:urm}), your personal Github project with hundreds of stars or your regular contributions to well-known open-source projects (see \autoref{sec:improve-your-chance} for increasing your admission chance).
-
-
-This is a simple task often overlooked by many applicants: \textbf{tailor your SOP} to the institution you're applying for,
-e.g., why do you apply \emph{here}? who do you want to work with?
-Provide names of professors who you're interested in (if they are not already in the adcom, your application might get forwarded to them for evaluation; and they might be interested in interviewing and recruiting you).
-This shows that you're serious and have done homework on places you're applying to.
-Adcom will look for this part (\autoref{sec:why-rejected}).
-
-Finally, your SOP reviewed by your LoR writers and professors, especially those who have served in adcom, or even postdocs or PhD students as they have been through this process.
-
-\begin{commentbox}[Vu:]
-  I often read LORs and SOP first (\autoref{sec:ievaluate}). If I am
-  persuaded by then, I would skim over other factors and advocate for
-  admission (unless I see red flags in other parts). However, if I am not
-  convinced, then I will likely recommend rejection (unless I see
-  something stand out in other parts).
-  \tcblower
-  Do careful research on professors, don't mention \emph{emeritus} or adjunct faculty (see more about various types of faculty in \autoref{sec:faculty-types}).
-  Also, be careful not to send statements to the wrong schools or mix
-  facts (e.g., talking about school X but mentioning working with
-  profs. at school Y; and do not talk about George Washington when applying to George Mason). I have seen such statements more times than I should.
-\end{commentbox}
-
-
-\subsection{Kiss of Death in SOP} \label{sec:kiss-of-death-sop}
-
-\begin{itemize}
-\item \textbf{Too personal} Don't talk about your personal issues, e.g., family, health, relationship, etc. This can raise concerns about your ability to handle the PhD. Don't talk about religious or political beliefs (\autoref{sec:cultural}).
-\item \textbf{Criticizing} your current or previous institution or professors: just like in a job interview, don't badmouth your current or previous employer. 
-\item \textbf{No concrete evidence to back up claims}: e.g., saying you are passionate about a research topic without showing any experience. This is where specific names (work submitted at conf. X), numbers (outperformed SOTA by Y \%), and examples (worked on project Z) can help. 
-\item \textbf{Use flowery and AI-like language}: don't use AI to write your SOP. Not that hard to raise suspicion.
-\item \textbf{Not customized to the program}: If your SOP can be sent to multiple programs with few changes, it is too generic. Do some homework and mention why you want to spend the next 5--7 years there.
-\item \textbf{Mentioning wrong professors}: do not mention emeritus professors or those who have left.  Do your homework to see if the professors you mention are still active in research.  Teaching and adjunct faculty are often not active in mentoring PhD students (\autoref{sec:faculty-types}).
-\item \textbf{Too Long and fancy format}: As mentioned, keep it under 2 pages. Don't use too much coloring or fancy fonts (like those in Words). CS academics like using LaTeX (common way to write our papers and other documents), so write your SOP using LaTeX. 
-\end{itemize}
-
-
-\subsection*{Additional Resources}
-\begin{itemize}
-    \item \href{https://chrisblattman.com/blog/2022/01/11/}{Writing your statement of purpose} by Chris Blattman
-  \item \href{http://www.pl-enthusiast.net/2022/10/03/how-to-write-a-grad-school-personal-statement/}{How to Write a Grad School Personal Statement} by Mike Hicks
-  \item     \href{https://cs-sop.notion.site/cs-sop/CS-PhD-Statements-of-Purpose-df39955313834889b7ac5411c37b958d?p=f5d5980a71524ebaa4e6ae57266b847c&pm=s}{CS PhD SOP database} by cs-sop.org
-\end{itemize}
-% \subsection{Outline of a LOR}\label{sec:lor-outline}
-
-
-\subsection{Diversity Statement}\label{sec:diversity-statement}
-
-
-Many universities now require a diversity, equity, and inclusion (DEI) statement as part of the application (also see \autoref{sec:urm}). Students, especially international ones, often struggle with what to write, especially when they are not from a minority group or do not have much experience in DEI.
-
-A DEI statement is about showing your \emph{awareness} of DEI, \emph{understanding} of the challenges others face, and \emph{potential things} you can do to contribute. 
-
-\begin{itemize}
-\item \textbf{You don't have to be from a minority group.} You just need to understand what DEI is, e.g., be aware of challenges faced by minority groups in studying CS, STEM fields, academia, workplace. Show that you understand the importance of DEI and how it can benefit the CS field and society. 
-
-\item \textbf{Show your awareness, customized to your own experiences}. If you come from a different culture or country, talk about DEI there. Many countries, especially developing countries, do not have/care about DEI or even have laws against it, so does minority group face in your country?  How do you think DEI can benefit? Remember, you would have a unique perspective on this topic that we might not know about, so use that to your advantage.
-
-\item \textbf{Highlight your contributions}.  You do not need to be in any group or organization specific to DEI.  You can talk about your contributions to your community, e.g., mentoring students, organizing events, or even just helping people in needs. If you don't believe you have done anything much, then talk about what you plan to do. 
-
-\item \textbf{Customized it to your application} Can your PhD study or research contribute to DEI?  Can you help or mentor students from underrepresented groups from your country?  These are very doable and can be very convincing.  
-
-\end{itemize}
-
-
-\begin{commentbox}[Vu:]
-One common pitfall is to write about how you are from a poor family, a small town, or a developing country.  These are not related to DEI and raise concerns about you not understanding or even bother to do some basic research about the topic.   I have seen people consider themselves as minority because they are Asian or international students studying in the US (have you seen how many Asian or international students are in CS programs in the US?).\\
-
-Moreover, do not make up stories or exaggerate your experiences.  Just show your awareness and understanding of the topic and what you did or how you plan to contribute to it (e.g., mentoring students, helping others). One of the best DEI statements I have read starts the acknowledgement that the applicant is not a minority, but a white male in a STEM field (i.e., that make them the majority), and that they do not have much experience in DEI, but show that they are aware of the challenges faced by minority groups and how they can contribute to it.
-\end{commentbox}
-
-
-
-
 
 \section{Research Experience}\label{sec:research-experience}
 
@@ -854,6 +780,98 @@ So do not spend much time talking about non-research-related job in your SOP.
 For example, participating in Math Olympiads if you want to do theory or winning ACM programming contests if you want to ``build'' systems, e.g., software analysis.
 
 
+\section{Statement of Purpose (SOP)}\label{sec:sop}
+\sectioninfo{\emph{SOP is important}. Write it in such a way that makes you \emph{stand out}.}
+
+\begin{center}
+  \includegraphics[scale=0.5]{files/c2.png}
+\end{center}
+
+While you might not have control over LORs (\autoref{sec:lor}) or where your go to school (\autoref{sec:your-school}), you do over your
+statement of purpose (SOP) or personal statement\footnote{Few schools separate these documents and ask you to write both: SOP, which focuses on research experiences, and personal statement, which is everything more personal, e.g., why PhD, challenges, diversity, etc}! A well-written SOP also shows that you can communicate, which is very important in research, and that you can effectively teach and communicate with students, which is important for TA funding (see \autoref{sec:funding}).  Many SOP samples for CS are \href{https://cs-sop.org/}{available here}.  
+
+%In your statement, you have the opportunity to connect directly with adcom members and make your application stand out and unique. Your SOP can convince adcom members that you would \emph{fit} their program, even if you don't have very strong research experience.
+% is important because if you need (GTA) funding, it will provide evidence
+% that you can teach and communicate with students.
+
+In your SOP, focus on research potential and convince us through your experience, e.g., published papers. Back up your claims with \textbf{concrete evidence}. For example, if you say you have experience with teaching, then show what you did, e.g., undergrad TA or mentoring someone.  If you say you work on a project, then show some results, e.g., paper submitted (or even rejected), achieved certain performance improvement over the state of the art. 
+
+
+You should talk about things that adcom members might not know about and can help make you \textbf{stand out} in the application pool of thousands of applicants, e.g., you are member of a minority or LGBTQ+ group (\autoref{sec:urm}), your personal Github project with hundreds of stars or your regular contributions to well-known open-source projects (see \autoref{sec:improve-your-chance} for increasing your admission chance).
+
+
+This is a simple task often overlooked by many applicants: \textbf{tailor your SOP} to the institution you're applying for,
+e.g., why do you apply \emph{here}? who do you want to work with?
+Provide names of professors who you're interested in (if they are not already in the adcom, your application might get forwarded to them for evaluation; and they might be interested in interviewing and recruiting you).
+This shows that you're serious and have done homework on places you're applying to.
+Adcom will look for this part (\autoref{sec:why-rejected}).
+
+Finally, your SOP reviewed by your LoR writers and professors, especially those who have served in adcom, or even postdocs or PhD students as they have been through this process.
+
+\begin{commentbox}[Vu:]
+  I often read LORs and SOP first (\autoref{sec:ievaluate}). If I am
+  persuaded by then, I would skim over other factors and advocate for
+  admission (unless I see red flags in other parts). However, if I am not
+  convinced, then I will likely recommend rejection (unless I see
+  something stand out in other parts).
+  \tcblower
+  Do careful research on professors, don't mention \emph{emeritus} or adjunct faculty (see more about various types of faculty in \autoref{sec:faculty-types}).
+  Also, be careful not to send statements to the wrong schools or mix
+  facts (e.g., talking about school X but mentioning working with
+  profs. at school Y; and do not talk about George Washington when applying to George Mason). I have seen such statements more times than I should.
+\end{commentbox}
+
+
+\subsection{Kiss of Death in SOP} \label{sec:kiss-of-death-sop}
+
+\begin{itemize}
+\item \textbf{Too personal} Don't talk about your personal issues, e.g., family, health, relationship, etc. This can raise concerns about your ability to handle the PhD. Don't talk about religious or political beliefs (\autoref{sec:cultural}).
+\item \textbf{Criticizing} your current or previous institution or professors. Just like in a job interview, don't badmouth your current or previous employer. 
+\item \textbf{No concrete evidence to back up claims}: e.g., saying you are passionate about a research topic without showing any experience. This is where specific names (work submitted at conf. X), numbers (outperformed SOTA by Y \%), and examples (worked on project Z) can help. 
+\item \textbf{Use flowery and AI-like language}. Don't use AI to write your SOP. Not that hard to raise suspicion. Though you can ask AI to check your grammar and spelling.
+\item \textbf{Not customized to the program}: If your SOP can be sent to multiple programs with few changes, it is too generic. Do some research and mention why you want to spend the next 5--7 years there.
+\item \textbf{Mentioning wrong professors}: do not mention emeritus professors or those who have left.  Teaching and adjunct faculty are often not active in mentoring PhD students (\autoref{sec:faculty-types}). Do your homework and mention profs who are till active in research. 
+\item \textbf{Too Long and fancy format}: As mentioned, keep it under 2 pages. Don't use too much coloring or fancy fonts (like those in Words). CS academics like using LaTeX (common way to write our papers and other documents), so write your SOP using LaTeX (with Times or default font, 11pt, and 1-inch margin).
+\end{itemize}
+
+
+\subsection*{Additional Resources}
+\begin{itemize}
+    \item \href{https://chrisblattman.com/blog/2022/01/11/}{Writing your statement of purpose} by Chris Blattman
+  \item \href{http://www.pl-enthusiast.net/2022/10/03/how-to-write-a-grad-school-personal-statement/}{How to Write a Grad School Personal Statement} by Mike Hicks
+  \item     \href{https://cs-sop.notion.site/cs-sop/CS-PhD-Statements-of-Purpose-df39955313834889b7ac5411c37b958d?p=f5d5980a71524ebaa4e6ae57266b847c&pm=s}{CS PhD SOP database} by cs-sop.org
+\end{itemize}
+% \subsection{Outline of a LOR}\label{sec:lor-outline}
+
+
+\subsection{Diversity Statement}\label{sec:diversity-statement}
+
+
+Many universities now require a diversity, equity, and inclusion (DEI) statement as part of the application (also see \autoref{sec:urm}). Students, especially international ones, often struggle with what to write, especially when they are not from a minority group or do not have much experience in DEI.
+
+A DEI statement is about showing your \emph{awareness} of DEI, \emph{understanding} of the challenges others face, and \emph{potential things} you can do to contribute. 
+
+\begin{itemize}
+\item \textbf{You don't have to be from a minority group.} You just need to understand what DEI is, e.g., be aware of challenges faced by minority groups in studying CS, STEM fields, academia, workplace. Show that you understand the importance of DEI and how it can benefit the CS field and society. 
+
+\item \textbf{Show your awareness, customized to your own experiences}. If you come from a different culture or country, talk about DEI there. Many countries, especially developing countries, do not have/care about DEI or even have laws against it, so does minority group face in your country?  How do you think DEI can benefit? Remember, you would have a unique perspective on this topic that we might not know about, so use that to your advantage.
+
+\item \textbf{Highlight your contributions}.  You do not need to be in any group or organization specific to DEI.  You can talk about your contributions to your community, e.g., mentoring students, organizing events, or even just helping people in needs. If you don't believe you have done anything much, then talk about what you plan to do. 
+
+\item \textbf{Customized it to your application} Can your PhD study or research contribute to DEI?  Can you help or mentor students from underrepresented groups from your country?  These are very doable and can be very convincing.  
+
+\end{itemize}
+
+
+\begin{commentbox}[Vu:]
+One common pitfall is to write about how you are from a poor family, a small town, or a developing country.  These are not related to DEI and raise concerns about you not understanding or even bother to do some basic research about the topic.   I have seen people consider themselves as minority because they are Asian or international students studying in the US (have you seen how many Asian or international students are in CS programs in the US?).\\
+
+Moreover, do not make up stories or exaggerate your experiences.  Just show your awareness and understanding of the topic and what you did or how you plan to contribute to it (e.g., mentoring students, helping others). One of the best DEI statements I have read starts the acknowledgement that the applicant is not a minority, but a white male in a STEM field (i.e., that make them the majority), and that they do not have much experience in DEI, but show that they are aware of the challenges faced by minority groups and how they can contribute to it.
+\end{commentbox}
+
+
+
+
 
 
 \section{Your School and Grades}\label{sec:your-school}
@@ -874,9 +892,9 @@ Of course, if you're interested in working with Vietnamese, consider  \href{http
 \end{commentbox}
 \subsection{Grades}\label{sec:gpa}
 
-Grades generally do not matter much for CS PhD admission. PhD in CS is a research degree and doing well in undergrad courses does not necessarily mean you can do research (other factors such as research experiences, pubs, LoRs are more important).
+Compared to other factors such as LoRs (\autoref{sec:lor}) and research experiences (\autoref{sec:research-experience}), grades generally do not matter much for CS PhD admission. PhD in CS is a research degree and doing well in undergrad courses does not necessarily mean you can do research (other factors such as research experiences, pubs, LoRs are more important).  In fact, many CS faculty members themselves have bad grades in undergrad courses (and some were proud of that!).
 
-Nonetheless, if you are from a well-known school, having good grades do help (not a lot though), e.g., adcom members often note details such as "good GPA from well-known school (\autoref{sec:ievaluate}). However if your school is not well-known, having top grades or rankings usually will not help because we cannot evaluate them (e.g., we don't know how hard it is to get a 4.0 or A's at your school). This can be an issue for students in many top international universities where the competition is so high that very good students can still have low rankings from these schools (and be overlooked by adcom).
+Nonetheless, if you are from a well-known school (\autoref{sec:your-school}), having good grades do help (not a lot though), e.g., adcom members often note details such as "good GPA from well-known school (\autoref{sec:ievaluate}). However if your school is not well-known, having top grades or rankings usually will not help because we cannot evaluate them (e.g., we don't know how hard it is to get a 4.0 or A's at your school). This can be an issue for students in many top international universities where the competition is so high that very good students can still have low rankings from these schools (and be overlooked by adcom).
 
 As with school reputation, you and your LoR writers can mention the grading system of your university if you think that is helpful for adcom to evaluate (\autoref{sec:help-your-LOR-writers}).
 
@@ -1639,10 +1657,21 @@ However, this is \emph{not} why we ``ghost'' you and provide no response (\autor
 
 %These questions are not useful and should be avoided. First, no one knows! Even adcom members can't tell if you would get admitted to their programs or not. As mentioned throughout this guide, the admission process is complex and involves many factors that are not part of your profile, e.g., whether the faculty have funding or are interested in your background. Second, answers to this questions are often not helpful to you.  Faculty and people knowledgeable about the process will not answer these questions, and those who do are often not knowledgeable and might give you false hope or despair. OK, someone say your GRE is low (which does not even matter for most schools (\autoref{sec:standard-tests}) , are you going to retake it?  Or someone says your GPA is low, are you going to apply to a different school?  No, you should apply to the schools you want to go to and see what happens.  If you don't get in, then you can ask for feedback and improve your profile for the next round.
 
+\section{``Chance me'' on getting admitted to Top 10}\label{sec:chance-me}
 
+Many students, especially international students, aim for very top CS PhD programs such as Stanford and MIT, and Ivy Leagues. Every year Reddit and other forums have numerous students asking for evaluation of their chances of getting into these schools (the so called \emph{``chance me''} or \emph{``roast my CV/profile''} posts) and then later posts on being \emph{``rejected everywhere''}.
 
+\paragraph{You are unlikely to get in these schools}  While being ambitious is always good, it is important to be realistic, and the harsh reality is that it is very unlikely that you will get in MIT, or Harvard. Why? people who do get in these schools often were explicitly encouraged by their mentors and LoR writers, who themselves might be alumni of these schools or are academic celebrities who've sent many of their students there. If you are not in this category (doubt you are, because you're asking random people on the internet instead of your trusted LoR writers), then you're likely not going to get in, and MIT and Stanford would glady take your application money.
 
+\paragraph{``Your'' top might not really top in CS} Harvard and the Ivies? yes good for many things but usually not coding marathon and typically MIA at top CS confs (ok, they are still good, but a school somewhere in Maryland, Wisconsin, or Urbana Champaign cornfield would likely beat them by far in CS). MIT and Stanford? yes, they are top, but many are equivalent, and there could be CS areas where they are not as strong as other schools.  Caltech and John Hopkins?  ... are you confused CS with Physics and Medicine?
 
+You're missing out some serious places: UCSD, UW, UMD, Michigan, Purdue, Stony brook. These all have super strong CS programs but rarely get mentioned. Utah, Rutgers, Buffalo, Penn State, UVA, Ohio, UC Riverside, George Mason ... any of them rings a bell? These might not ranked very high on QS or US News and are not household names to you, your friends, mom and dad, but they are excellent CS schools where graduating students from your dream schools often apply for faculty positions (e.g., see \href{https://github.com/dynaroars/dynaroars.github.io/wiki/About-GMU}{GMU stats}). You can go to these places and be superstar there.
+
+\paragraph{You don't need to be top}  Top schools will open doors to more opportunities. In countries like Vietnam, there are usually only a few top schools, and if you don't get into them, you are doomed  (or so you think). But that is not the case in the US. There are simply too many good schools, and it is not a binary choice between top X or nothing.  In fact, ``equity'' is emphasized in the US and ``smaller'' schools are often given more resources and attention to help students succeed.  
+
+\begin{emphasisbox}
+In short, don't aim for just the moon and the stars, also try the sky, clouds, or even just the trees.  You might find much happiness and success there, which then can catapult you places beyond the moon and the stars.  This is the American dream, which is strongly embodied in the its higher education system.
+\end{emphasisbox}
 
 \section{How long does it take to evaluate an application?}\label{sec:ievaluate}
 \sectioninfo{It takes me about 10--15 minutes to review an application.}
