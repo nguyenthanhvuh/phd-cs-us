@@ -28,8 +28,6 @@
 
 \usepackage[makeroom]{cancel}
 
-
-
 \newtcolorbox{mybox}{
   enhanced,
   boxrule=0pt,frame hidden,
@@ -66,7 +64,6 @@
 \newtcolorbox{myemphasisbox}{
   enhanced,
   boxrule=1pt, frame hidden,
-  %borderline = {1pt}{0pt}{blue!75!black},
   colback=gray!20!white,
   sharp corners
 }
@@ -119,22 +116,17 @@
 
 \makeatother
 
-
-%\usepackage{tocloft} % For custom TOC levels
-
 \newcommand{\chapterinfo}[1]{%
   \phantomsection
-  \addcontentsline{toc}{chapterinfo}{#1}%
+  \addcontentsline{toc}{chapterinfo}{\color{black}{#1}}%
 }
-
 \newcommand{\sectioninfo}[1]{%
   \phantomsection
-  \addcontentsline{toc}{sectioninfo}{#1}%
+  \addcontentsline{toc}{sectioninfo}{\color{black}{#1}}%
 }
-
 \newcommand{\subsectioninfo}[1]{%
   \phantomsection
-  \addcontentsline{toc}{subsectioninfo}{#1}%
+  \addcontentsline{toc}{subsectioninfo}{\color{black}{#1}}%
 }
 
 \newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
@@ -1440,7 +1432,7 @@ For my students, I have been fortunate to have funding to support them over the 
 Finally, for fellowships (\autoref{sec:fellowships}) you might get paid over the summer depending on your fellowship (\autoref{sec:fellowships}). Good ones, e.g., from NSF, Google, and Microsoft, will pay you the whole year.
 
 \subsection{How much do you cost?}\label{sec:ra-cost}
-\sectioninfo{Your entire PhD program costs about \$400K in total, but you \emph{do not} pay for it.}
+\subsectioninfo{Your entire PhD program costs about \$400K in total, but you \emph{do not} pay for it.}
 
 PhD students often ask why their salary is low compared to the large grants their advisers get. They also wonder why their offer letters sometimes show that their benefits are higher than what they receive (i.e., stipend).
 
