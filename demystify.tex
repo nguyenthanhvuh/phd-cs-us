@@ -2,7 +2,6 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[margin=1.5in]{geometry}
 \usepackage{soul}
 % \usepackage[small,compact]{titlesec} %very powerful
 \usepackage[most]{tcolorbox}
@@ -18,25 +17,18 @@
 \usepackage{hyperref}
 \usepackage{wrapfig}
 \setlength\intextsep{0pt} % remove extra space above and below in-line float
-\usepackage{hyperref}
-\hypersetup{
-  colorlinks,
-  citecolor=black,
-  filecolor=black,
-  linkcolor=blue,
-  urlcolor=blue,
-}
-\usepackage{booktabs}
 
+\usepackage{booktabs}
 
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \usepackage{xcolor}
-
-\usepackage{anyfontsize}
-\usepackage{sectsty}
+%\usepackage{anyfontsize}
+%\usepackage{sectsty}
 
 \usepackage[makeroom]{cancel}
+
+
 
 \newtcolorbox{mybox}{
   enhanced,
@@ -99,7 +91,6 @@
 \renewcommand{\subsectionautorefname}{\S\@gobble}
 \renewcommand{\appendixautorefname}{\S\@gobble}
 
-
 \newcommand*\l@chapterinfo{\@nodottedtocline{0}{0.0em}{1.5em}}
 \newcommand*\l@sectioninfo{\@nodottedtocline{1}{1.5em}{2.3em}}
 \newcommand*\l@subsectioninfo{\@nodottedtocline{2}{3.8em}{3.2em}}
@@ -128,17 +119,22 @@
 
 \makeatother
 
-\def\chapterinfo#1{%
-  \addcontentsline{toc}{chapterinfo}{%
-    \noexpand\numberline{}\color{black}{#1}}%
+
+%\usepackage{tocloft} % For custom TOC levels
+
+\newcommand{\chapterinfo}[1]{%
+  \phantomsection
+  \addcontentsline{toc}{chapterinfo}{#1}%
 }
-\def\sectioninfo#1{%
-  \addcontentsline{toc}{sectioninfo}{%
-    \noexpand\numberline{}\color{black}{#1}}%
+
+\newcommand{\sectioninfo}[1]{%
+  \phantomsection
+  \addcontentsline{toc}{sectioninfo}{#1}%
 }
-\def\subsectioninfo#1{%
-    \addcontentsline{toc}{subsectioninfo}{%
-    \noexpand\numberline{}\color{black}{#1}}%
+
+\newcommand{\subsectioninfo}[1]{%
+  \phantomsection
+  \addcontentsline{toc}{subsectioninfo}{#1}%
 }
 
 \newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
@@ -147,6 +143,21 @@
 \newcommand{\tl}[1]{\mycomment{ThanhLe}{#1}}{}
 \newcommand{\xz}[1]{\mycomment{Xiaokuan}{[#1]}}{}
 \newcommand{\red}[1]{{\color{red}{#1}}}
+
+
+\usepackage{hyperref}
+\hypersetup{
+    hidelinks,
+    linktoc=all,
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=blue,
+  urlcolor=blue,
+  pdfpagemode=UseOutlines,
+}
+
+\usepackage[margin=1.5in]{geometry}
 
 \begin{document}
 
@@ -447,6 +458,7 @@ Moreover, if you have an MS then some course work \emph{might be} transferred fo
 
 
 \section{PhD in the US vs. Other Countries}\label{sec:non-us-differences}
+
 \sectioninfo{Among several differences, CS PhD in the US does not require an MS degree but has a longer PhD study time.}
 
 \begin{table}
@@ -577,7 +589,7 @@ If the student mentioned a faculty member in their SOP, we might ask that facult
 
 While adcom members (in fact, any faculty) can view any application, we only review those that are assigned to us, which are already too many. Adcom chair will assign applications to reviewers based on their expertise (e.g., if a student says they want to do SE or interested in working with me), and reviewers will only review those applications. Occasionally we might look at other applications, e.g., if we know the student or have some special circumstances (e.g., if that student contacted me, I know that student, they are from Vietnam, etc). However, even if we look at them, we usually do not get involved in their evaluation.
 
-\subsection{Why CS depts do not waive the application fee?}\label{sec:fee-waive}
+\section{Why CS depts do not waive the application fee?}\label{sec:fee-waive}
 
 Some universities do waive, e.g., Rice does for all PhD applicants and many universities for domestic students (\autoref{sec:domestic-students}), however most do not for international students.
 Some require proof of financial difficulties, e.g., a statement from a financial adviser or a bank statement.
@@ -845,8 +857,7 @@ I usually submit a letter for a student in batch (e.g., I submit to all universi
 
 
 \chapter{Research Experience}\label{chap:research-experience}
-
-\sectioninfo{\emph{Publications can greatly help}. Papers in good venues are concrete evidence that you have successfully engaged in research. But they are not required!}
+\chapterinfo{\emph{Publications can greatly help}. Papers in good venues are concrete evidence that you have successfully engaged in research. But they are not required!}
 
 Here we look at publications and other research experiences that can strengthen your application.
 \autoref{chap:research-opportunities} provides more information on how to find research opportunities (e.g., during your undergrad study).
@@ -1770,6 +1781,7 @@ However, this is \emph{not} why we ``ghost'' you and provide no response (\autor
     \end{commentbox}
     
 
+\part{Miscs and FAQs}\label{part:faqs}
 \chapter{Miscs and FAQs}\label{sec:faqs}
 
 \epigraph{``I want to share something with you – the three little sentences that will get you through life; number 1: Cover for me, number 2: Oh, good idea, Boss, and number 3: It was like that when I got here.''}{\textsc{The Simpsons}}
@@ -1883,6 +1895,7 @@ Do not include ranking (e.g., Assistant, Associate, Scientist, ...) when referri
 % \section{Will I be miserable during my a PhD?}\label{sec:happy}
 % There are many stories of how students are mistreated, stressed, and miserable. Issues including bad relationships with professors, conflicts with co-authors and lab mates, feeling discriminated against (e.g., because you're an international student), \emph{do} exist, and it is good to be aware of those.  However, in reality, there are many good mentors, supportive lab mates and departments, and so on.  So don't let social media make you feel pessimistic and deter your quest to advance knowledge.
 
+\part{Appendices}\label{part:appendices}
 \appendix
 \chapter{Glossary}\label{sec:glossary}
 
