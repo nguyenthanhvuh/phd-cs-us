@@ -118,15 +118,15 @@
 
 \newcommand{\chapterinfo}[1]{%
   \phantomsection
-  \addcontentsline{toc}{chapterinfo}{\color{black}{#1}}%
+  \addcontentsline{toc}{chapterinfo}{\color{black}{\emph{#1}}}%
 }
 \newcommand{\sectioninfo}[1]{%
   \phantomsection
-  \addcontentsline{toc}{sectioninfo}{\color{black}{#1}}%
+  \addcontentsline{toc}{sectioninfo}{\color{black}{\emph{#1}}}%
 }
 \newcommand{\subsectioninfo}[1]{%
   \phantomsection
-  \addcontentsline{toc}{subsectioninfo}{\color{black}{#1}}%
+  \addcontentsline{toc}{subsectioninfo}{\color{black}{\texttt #1}}%
 }
 
 \newcommand{\mycomment}[3][\color{blue}]{{#1{{#2}: {#3}}}}
@@ -340,12 +340,11 @@ This document is open source and updated regularly. Its latest version is availa
 
 \chapter{Should You Apply?}\label{sec:should}
 
-\chapterinfo{\emph{Yes, definitely}.  CS PhD study in the US is fully funded and admission into good universities in the US is not any harder than in other countries.}
+\chapterinfo{Yes, definitely.  CS PhD study in the US is fully funded and admission into good universities in the US is not any harder than in other countries.}
 
 \epigraph{\vspace{-0.2in} Don't make fun of graduate students. They just made a terrible life choice.}{\textsc{The Simpsons}}
 
-International students, especially those from less well-known universities and smaller countries, often wonder if they should apply to a CS PhD program in the US. Common concerns include (i) the \textbf{difficulty of getting admitted}, (ii) the \textbf{cost of graduate study} in the US, and for some, the fear of \textbf{discrimination} based on gender identity, sexual orientation, or cultural background.
-
+International students, especially those from less well-known universities and smaller countries, often wonder if they should apply to a CS PhD program in the US. Common concerns include (i) the \textbf{difficulty of getting admitted}, (ii) the \textbf{cost of graduate study} in the US, and for some, the fear of \textbf{discrimination} e.g., based on gender identity or cultural background.
 Much of these uncertainties stem from the lack of information and guidance on the admission process in the US (social places like Facebook and Reddit are full of confusion and contradictory information).  This document aims to address these concerns.
 
 
@@ -363,8 +362,9 @@ For many students, the stipends provided are not only sufficient to cover your o
 Moreover, depending on the university, you may receive additional benefits such as summer pay, laptops, and traveling to conferences and workshops. 
 Full funding for CS PhD students is the norm in the US, and I'd go as far as to say that if you are not admitted with full funding, you might want to not accept the offer.
 
-\paragraph{Discrimination is not tolerated} Third, higher education in the US take a very strong stance against discrimination, especially at the university level.
-Many resources are available to encourage and support students from minority groups to pursue research, e.g., specific scholarships and fellowships. Faculty in CS are also \emph{very} familiar with and are highly encouraged to support such students in their group. There are also incentives, such as dedicated funding, to motivate faculty to recruit and mentor minority students (\autoref{sec:urm}).
+\paragraph{Discrimination is not tolerated} Third, not only is discrimination illegal, diversity and inclusion are highly valued in US universities. Many universities take great pride in their diverse student body and faculty.
+
+In fact, many resources are available to encourage and support students from minority and diverse groups to pursue higher education and research, e.g., specific scholarships and fellowships. Faculty in CS are also \emph{very} familiar with and are highly encouraged to support such students in their group. There are also incentives, such as dedicated funding and awards, to motivate faculty to recruit and mentor minority students (\autoref{sec:urm}).
 
 \section{Who is this document for?}
 \sectioninfo{This document is intended for international students from smaller countries and domestic students from less well-known universities.}
@@ -436,7 +436,7 @@ In short, you \emph{do not need} to formally take CS courses, you just need to s
 \section{Is MS required for admission to PhD in CS?}\label{sec:msrequirement}
 \sectioninfo{You do not need an MS to do PhD in CS.}
 
-No, not in the US (other countries often do though~\autoref{sec:non-us-differences}).  In the US, it is common to apply for a PhD program directly after your undergrad.  Most CS PhD programs are designed so that students can get MS degree ``along the way'' to PhD, e.g., after finishing the 2-year course work. 
+No, while other countries often require an MS for PhD student in CS (~\autoref{sec:non-us-differences}), it is common in he US to apply for a PhD program directly after a 4-year undergrad program (e.g., after getting a B.S degree).  Most CS PhD programs are designed so that students can get MS degree ``along the way'' to PhD, e.g., after finishing the 2-year course work. 
 
 However, MS can help admission if it gives research experience or is from a more well-known school than your undergrad institution (\autoref{chap:your-school}).
 Moreover, if you have an MS then some course work \emph{might be} transferred for course credits, which \emph{might} save some time. But in general don't count finishing earlier just because you have an MS. 
@@ -454,7 +454,7 @@ Moreover, if you have an MS then some course work \emph{might be} transferred fo
 \sectioninfo{Among several differences, CS PhD in the US does not require an MS degree but has a longer PhD study time.}
 
 \begin{table}
-\caption{Comparison of US and Other PhD Programs}\label{tab:us-vs-other}
+\caption{Comparison of the CS PhD program in the US and other countries}\label{tab:us-vs-other}
 \center
 \small
 \begin{tabular}{c|c|c}
@@ -521,7 +521,7 @@ In the US, PhD graduates often apply directly for faculty positions. Postdoc for
 
 \chapter{How is Your Application Evaluated?}\label{sec:evalapps}
 
-\sectioninfo{Applications are evaluated by the \emph{PhD Admission} (adcom) committee and each application is typically reviewed by three faculty members.}
+\chapterinfo{Applications are evaluated by the \emph{PhD Admission} (adcom) committee and each application is typically reviewed by three faculty members.}
 
 \epigraph{How is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some of the old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?}{\textsc{The Simpsons}}
 
@@ -534,6 +534,7 @@ After screening, your application is complete and forwarded to the CS department
 \end{commentbox}
 
 \section{Admission Committee (adcom)}\label{sec:adcom}
+\sectioninfo{Adcom members are faculty who evaluate your application.}
 
 Your applications are reviewed by a PhD admission committee or \emph{adcom} that consists of faculty members in CS\footnote{In some cases the committee can involve affiliated faculty from different disciplines.}. These adcom members have a wide range of expertise and background to ensure diverse perspectives in the evaluation process. The size and the review load of the adcom depend on the department size. At Mason, the PhD adcom typically has 15--20 faculty, and each committee member is assigned to review about 30 applications. Note that most large schools, including Mason, have separate adcoms for MS programs (\autoref{chap:ms}).
 
@@ -608,7 +609,7 @@ The committee will look at various factors, but the most important ones are lett
 
 
 \chapter{Letters of Recommendation (LoR)}\label{chap:lor}
-\chapterinfo{\emph{LORs are very important}, but only if they are personalized and talk about your research ability.}
+\chapterinfo{LORs are very important, but only if they are personalized and talk about your research ability.}
 
 \begin{center}
   \includegraphics[width=0.6\linewidth]{files/c6.png}
@@ -849,7 +850,7 @@ I usually submit a letter for a student in batch (e.g., I submit to all universi
 
 
 \chapter{Research Experience}\label{chap:research-experience}
-\chapterinfo{\emph{Publications can greatly help}. Papers in good venues are concrete evidence that you have successfully engaged in research. But they are not required!}
+\chapterinfo{Publications can greatly help. Papers in good venues are concrete evidence that you have successfully engaged in research. But they are not required!}
 
 Here we look at publications and other research experiences that can strengthen your application.
 \autoref{chap:research-opportunities} provides more information on how to find research opportunities (e.g., during your undergrad study).
@@ -902,7 +903,7 @@ For example, participating in Math Olympiads if you want to do theory or winning
 
 
 \chapter{Statement of Purpose (SOP)}\label{chap:sop}
-\chapterinfo{\emph{SOP is important}. Write it in such a way that makes you \emph{stand out}.}
+\chapterinfo{SOP is important. Write it in such a way that makes you \emph{stand out}.}
 
 \begin{center}
   \includegraphics[scale=0.5]{files/c2.png}
@@ -996,7 +997,7 @@ Moreover, do not make up stories or exaggerate your experiences.  Just show your
 
 
 \chapter{Your School and Grades}\label{chap:your-school}
-\chapterinfo{\emph{High grades probably won't help much} (unless you're from a very top and well-known school), but bad ones likely will raise concerns.}
+\chapterinfo{High grades probably won't help much, but bad ones likely will raise concerns.}
 
 \section{School} Graduating from top universities \emph{that adcom members recognize helps}. For example, if you are an international student and your school is well-known, then it is \emph{``top foreign''}, which is a plus.
 However, if we do not know much about schools in your country, then we are uncertain about the quality of your school and likely treat your school as \emph{``unknown foreign''}, which can be a minus point.
@@ -1038,7 +1039,7 @@ Note that bad grades in non-relevant courses, e.g., e.g., about politics or hist
 Should you explain bad grades in relevant courses in your SOP?  If you have just a few,  they do not matter much, so don't spend much time explaining them (many adcom reviewers themselves have bad grades in relevant courses!). But if you have many bad grades for an entire semester or year due to some specific reasons, then you should explain them in your SOP.
 
 \chapter{Standard Tests (GRE and IELTS)}\label{chap:standard-tests}
-\chapterinfo{\emph{Standard tests are not important}. GRE typically \emph{is not} required. For standard English tests (not required for domestic students), just do enough to pass the minimum requirements.}
+\chapterinfo{Standard tests are not important. GRE typically \emph{is not} required. For standard English tests (not required for domestic students), just do enough to pass the minimum requirements.}
 
 \section{GREs Are Optional and Do Not Matter} While a few schools still require taking the GRE (e.g., UCF), most good CS PhD programs in the US \textbf{no longer} require it. Thus, if you haven't taken the GRE or have bad scores, then don't waste time (re)taking it. Being optional really means optional, and not taking it will not hurt your application.
 
@@ -1090,7 +1091,7 @@ However, as mentioned in \autoref{sec:non-stem}, if you do not have a CS backgro
 
 \part{After You Apply}\label{part:after-apply}
 \chapter{Interview and the Waiting Game}\label{chap:interview}
-\chapterinfo{Getting an interview is typically a \emph{good sign}; but no interview does not mean rejection}
+\chapterinfo{Getting an interview is typically a good sign; but no interview does not mean rejection}
 
 After you submit your applications, the waiting game begins! For many students, this is a very stressful time. This section provides some information and tips to help you get through this time.
 
@@ -1127,7 +1128,7 @@ However, no interviews mean that you will not likely get an RA (\autoref{sec:ra}
 
 
 \section{Notification Timeline: Why rejection letters are sent so late?}\label{sec:late-rejection}
-\sectioninfo{Grad programs often wait for the accepted students to make their decisions, typically by April 15, before sending out rejection letters.}
+\sectioninfo{Grad programs often wait for accepted students to make their decisions, typically by April 15, before sending out rejection letters.}
 
 %"Just reject me already!" is a common sentiment among applicants.  Indeed, school will first send out admission offers to the top candidates. They do not send out rejection letters because there is still a chance that some of the top candidates will decline the offer. If they do, then the school will go to the next set of candidates and send out offers to them.  This process continues until all spots are filled.  This is why you might not hear back until late in the admission cycle.
 
