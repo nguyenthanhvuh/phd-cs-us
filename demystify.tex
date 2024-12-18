@@ -3,7 +3,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{soul}
-% \usepackage[small,compact]{titlesec} %very powerful
 \usepackage[most]{tcolorbox}
 % \setsecnumdepth{subsection}
 % \setcounter{tocdepth}{3}
@@ -291,56 +290,17 @@ This document is open source and updated regularly. Its latest version is availa
 \end{mybox}
 
 \newpage
+\renewcommand{\contentsname}{Contents and Summary}
 \tableofcontents
-
-% \chapter{Summary}\label{sec:summary}
-
-
-% This section summarizes the main points of this guideline. It also gives you an overview to decide which specific topics you want to explore more thoroughly.
-
-
-
-  %\item Should you apply to a PhD CS program in the US?
-
-
-          %\item \emph{Contacting a prof. is recommended}, but do it \emph{properly} to get a reply (\autoref{sec:contact}).
-
-          %\item  (\autoref{sec:interview}).
-
-
-
-    % \item Miscs and FAQS
-    %     \begin{itemize}
-
-    %       \item (\autoref{sec:read-all}).
-
-    %       \item
-    %       \item
-    %       \item (\autoref{sec:msrequirement}), and CS PhD takes abou (\autoref{sec:time}). Pu(\autoref{sec:non-us-differences}).
-    %       \item
-    %       \item
-    %       \item
-    %       %\item Despite some miserable stories on social media, many PhD students have good mentors, supportive lab mates, healthy working environment ... and are happy (\autoref{sec:happy}).
-    %     \end{itemize}
-
-
-    % \item Appendices
-    % \begin{itemize}
-    %   \item Specific advice for domestic students (\autoref{sec:domestic-students}).
-    %   \item How to find research opportunities (\autoref{sec:research-opportunities}).
-    %   \item Cultural differences between US and other countries (\autoref{sec:cultural}).
-    % \end{itemize}
-
-
 
 
 \mainmatter
 
-\part{Introduction To CS PhD Admission in the US}\label{part:intro}
+\part{Introduction To CS PhD Admission}\label{part:intro}
 
 \chapter{Should You Apply?}\label{sec:should}
 
-\chapterinfo{Yes, definitely.  CS PhD study in the US is fully funded and admission into good universities in the US is not any harder than in other countries.}
+\chapterinfo{Yes, definitely.  CS PhD study in the US is often fully funded and admission into good universities in the US is not any harder than in other countries.}
 
 \epigraph{\vspace{-0.2in} Don't make fun of graduate students. They just made a terrible life choice.}{\textsc{The Simpsons}}
 
@@ -521,7 +481,7 @@ In the US, PhD graduates often apply directly for faculty positions. Postdoc for
 
 \chapter{How is Your Application Evaluated?}\label{sec:evalapps}
 
-\chapterinfo{Applications are evaluated by the \emph{PhD Admission} (adcom) committee and each application is typically reviewed by three faculty members.}
+\chapterinfo{Applications are evaluated by the \emph{PhD Admission} (\textbf{adcom}) committee and each application is typically reviewed by three faculty members.}
 
 \epigraph{How is education supposed to make me feel smarter? Besides, every time I learn something new, it pushes some of the old stuff out of my brain. Remember when I took that home wine making course, and I forgot how to drive?}{\textsc{The Simpsons}}
 
@@ -534,13 +494,17 @@ After screening, your application is complete and forwarded to the CS department
 \end{commentbox}
 
 \section{Admission Committee (adcom)}\label{sec:adcom}
-\sectioninfo{Adcom members are faculty who evaluate your application.}
+\sectioninfo{Adcom members are faculty who evaluate your application. They consider various factors, e.g., research experience, LoRs, SOP}
 
-Your applications are reviewed by a PhD admission committee or \emph{adcom} that consists of faculty members in CS\footnote{In some cases the committee can involve affiliated faculty from different disciplines.}. These adcom members have a wide range of expertise and background to ensure diverse perspectives in the evaluation process. The size and the review load of the adcom depend on the department size. At Mason, the PhD adcom typically has 15--20 faculty, and each committee member is assigned to review about 30 applications. Note that most large schools, including Mason, have separate adcoms for MS programs (\autoref{chap:ms}).
+Your applications are reviewed by a PhD admission committee or \emph{adcom} that consists of faculty members in CS\footnote{In some cases the committee can involve affiliated faculty from different disciplines.}. Adcom members have a wide range of expertise and background to ensure diverse perspectives in the evaluation process. The size and the review load of the adcom depend on the department size. At Mason, the PhD adcom typically has 15--20 faculty, and each committee member is assigned to review about 30 applications. Note that most large schools, including Mason, have separate adcoms for MS programs (\autoref{chap:ms}).
 
-Each application is assigned to about three adcom members, who will evaluate your profile and reach a consensus.  While the assigned reviewers are the main ones deciding your application, other faculty in the department can also have access to your application and provide inputs and opinions on your profile.
+The PhD adcom typically involves assistant professors in the department (see \autoref{sec:faculty-types} for various types of faculty). This provides junior faculty the opportunities to recruit students. The adcom \emph{chair} will likely be a senior faculty, but they will not review individual applications and instead assign them to committee members. The chair will look at various factors such as research interests or mentioning faculty names to assign the applications to appropriate faculty, e.g., I am often assigned to review applicants interested in software engineering.
 
-The PhD adcom typically involves assistant professors in the department (see \autoref{sec:faculty-types} for various types of faculty). This provides junior faculty the opportunities to recruit students. The chair of the committee will likely be a senior faculty, but they will not review individual applications and instead assign them to committee members. The chair will look at various factors such as research interests or mentioning faculty names to assign the applications to appropriate faculty, e.g., I am often assigned to review applicants interested in software engineering.
+
+
+Each application is assigned to about three adcom members, who will evaluate your profile and reach a consensus.  They will consider various factors, e.g., research experience, GPA, LoRs, SOP, and test scores. More details about these factors are discussed in \autoref{part:appendices}.
+
+
 
 \begin{commentbox}{Vu:}
 At Mason, we usually decide that a full-time PhD candidate is either (i) admitted with funding (\autoref{sec:funding}) or (ii) rejected. In other words, in most cases, we either
@@ -548,13 +512,19 @@ admit you with full funding or reject your application. In some rare cases, we a
 without funding because you have funding on your own, e.g.,
 supported by your government or having external fellowships. We justify
 our decision (\autoref{sec:ievaluate}) with a summary of your application, where we list
-strengths, e.g., a well-known school, and weaknesses, e.g., weak
-LORs.
+strengths, e.g., a well-known school, and weaknesses, e.g., weak LoRs.
 \end{commentbox}
 
 % \didi{Is there more information on typical strengths and common weaknesses of applications. This is especially useful to sophomore and junior students as they still have time to work on those strengths.}
 % tvn: the main thing is research experiences
 
+\section{How applications are assigned to adcom members?}\label{sec:applications-assigned}
+\sectioninfo{Adcom members only review applications assigned to them (typically matching their expertise) and rarely get involved in other applications}
+
+
+While adcom members (in fact, any faculty) can view any application, we only review those that are assigned to us, which are already too many. Adcom chair will assign applications to reviewers based on their expertise (e.g., if a student says they want to do SE or interested in working with me), and reviewers will only review those applications. Occasionally we might look at other applications, e.g., if we know the student or have some special circumstances (e.g., if that student contacted me, I know that student, they are from Vietnam, etc). However, even if we look at them, we usually do not get involved in their evaluation.
+
+Note that while the assigned reviewers are the main ones deciding your application, other faculty in the department can also have access to your application and provide inputs and opinions on your profile. Thus, it helps to contact faculty (\autoref{sec:contact}) and mention faculty you're interested in in your SOP (\autoref{chap:sop}).
 
 \section{How are decisions made?}\label{sec:how-decisions}
 \sectioninfo{Even if all adcom reviewers recommend acceptance, the application can still be rejected. Vice versa, if all reviewers think the application is weak, the student might still be admitted.}
@@ -576,11 +546,6 @@ If the student mentioned a faculty member in their SOP, we might ask that facult
 
 
 
-\section{How applications are assigned to adcom members?}\label{sec:applications-assigned}
-\sectioninfo{Adcom members only review applications assigned to them (typically matching their expertise) and rarely get involved in other applications}
-
-
-While adcom members (in fact, any faculty) can view any application, we only review those that are assigned to us, which are already too many. Adcom chair will assign applications to reviewers based on their expertise (e.g., if a student says they want to do SE or interested in working with me), and reviewers will only review those applications. Occasionally we might look at other applications, e.g., if we know the student or have some special circumstances (e.g., if that student contacted me, I know that student, they are from Vietnam, etc). However, even if we look at them, we usually do not get involved in their evaluation.
 
 \section{Why CS depts do not waive the application fee?}\label{sec:fee-waive}
 
@@ -619,7 +584,7 @@ The committee will look at various factors, but the most important ones are lett
 Most PhD programs will require at least \emph{two} letter of recommendations (LoRs). 
 The goal of the LoRs is to provide the adcom with an assessment of your research ability from someone who knows you.  The LoRs should focus on your research background, achievements, and potentials, all of which paint a compelling picture of you as a researcher to adcom.
 
-\section{LoR writers}\label{sec:lor-writers} 
+\section{LoR writers}\label{sec:lor-writers} \sectioninfo{LoR writers should be someone who (i) can talk in depth about your research experience and potential and (ii) have the credibility to evaluate your research ability.}
 
 LoR writers should be someone who (i) can talk in depth about your research experience and potential and (ii) have the credibility to evaluate your research ability.  
 
@@ -695,6 +660,7 @@ For example, they can provide convincing and concrete examples based on their ex
 
 
 \section{Asking for LORs}\label{sec:asking-lor}
+\sectioninfo{Ask for LoRs at least a month before the deadline.  Waive your right to see the letter. Help your writers by providing details about your research experience and potential.}
 
 As mentioned in~\autoref{sec:lor-writers}, LoR writers should be someone who knows you well and has the credibility to evaluate your research ability.  In the US, students usually explicitly ask if the writer would be willing to provide a strong letter, and the writer are also very direct in their response.  If they are not willing (you should be thankful that they are honest with you), then you should ask someone else.
 
@@ -1100,23 +1066,26 @@ After you submit your applications, the waiting game begins! For many students, 
 
 After you apply, you might get interviews. The most common case is that a prof. is interested in working with you and wants to chat with you, e.g., to offer RA (\autoref{sec:ra}). In some cases, the interview is done by several professors, e.g., to see if a student fits in their group or to recruit a very strong student to their program. 
 
-Typically, an interview takes about 15--30 minutes, and one important aspect of evaluation is your ability to effectively communicate, including speaking and understanding English. 
-You might be asked to talk about your research experience and interests and to read a paper and discuss it. In some rare cases you might also be asked to solve a problem (one of my colleagues at Mason often does coding interview).
-The interview is also a good opportunity for you to ask questions, e.g., about the prof, their group, the CS PhD program, and the university.
-
-You should treat the interview as an informal chat. Have ``elevator pitches'' about your research experience and interests. You might also want to have a 5-minute presentation about your research. If a prof. asks you to read a paper, do it and be prepared to discuss it. You can also ask if you need to prepare for a coding problem. Finally, prepare some thoughtful questions to ask, e.g., about the program, the university, or the professor's research (see \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Answers-to-Ph.D-Advisor-Guide}{some questions} you can ask a potential adviser).
-
-\begin{commentbox}[Vu:]
-  At Mason, faculty are encouraged to interview candidates. For very strong candidates, the interview is actually to recruit them.  In some cases a faculty interviews a candidate that they see potential and want to advocate for their admission. Without the interview, such applications may be more likely to be rejected.\\
-  
-  In short, getting an interview is a good sign; it means that someone is considering you. If we are not interested in your application, we will not proceed with an interview.
-\end{commentbox}
-
-\paragraph{Follow-Up Emails} If you had an interview and have not heard back, you can email to ask about the status of your application. See \autoref{sec:accept-postpone-decline} for how to check status and follow-up emails.
-
 \paragraph{When do interviews happen?}
 
 The timeline for interviews varies.  Faculty set up interviews based on their (busy and erratic) schedule. Do not be surprised if you get an interview invitation at the last minute. Some schools do not do interviews at all (\autoref{sec:no-interview}).
+
+\begin{commentbox}[Vu:]
+    At Mason, faculty are encouraged to interview candidates. For very strong candidates, the interview is actually to recruit them.  In some cases a faculty interviews a candidate that they see potential and want to advocate for their admission. Without the interview, such applications may be more likely to be rejected.\\
+    
+    In short, getting an interview is a good sign; it means that someone is considering you. If we are not interested in your application, we will not proceed with an interview.
+  \end{commentbox}
+  
+\paragraph{Preparing for interviews} Typically, an interview takes about 15--30 minutes, and one important aspect of evaluation is your ability to effectively communicate, including speaking and understanding English. 
+You might be asked to talk about your research experience and interests and to read a paper and discuss it. In some rare cases you might also be asked to solve a problem (one of my colleagues at Mason often does coding interview).
+
+
+You should treat the interview as an informal chat. Prepare an \emph{``elevator pitche''} about your research experience and interests. You might also want to have a 5-minute presentation about your research. If a prof. asks you to read a paper, do it and be prepared to discuss it. You should also ask if you need to prepare for coding. Finally, the interview gives you an opportunity to ask questions, e.g., about the program and the professor's research.  You should definitely ask as it shows that you're interested (see \href{https://github.com/dynaroars/dynaroars.github.io/wiki/Answers-to-Ph.D-Advisor-Guide}{some questions} you can ask).
+
+
+
+\paragraph{Follow-Up Emails} If you had an interview and have not heard back, you can email to ask about the status of your application. See \autoref{sec:accept-postpone-decline} for how to check status and follow-up emails.
+
 
 
 \paragraph{Updating your profile} You should not send emails to update your profile.  However, if you have new publications or other big achievements, you can ask them to update your application (though no guarantee that they will consider them).
@@ -1245,7 +1214,9 @@ However, note this is a privilege and a courtesy and not a right.  Your prof. is
 
 Keep in mind that these computers and equipment would be university property, which might be monitored and have certain restrictions, e.g., do not install illegal software on them (\autoref{sec:illegal-software}).  You will likely need to return them when you graduate. 
 
-\section{If you do not get admitted}\label{sec:not-accepted} 
+\chapter{Dealing with Rejection}\label{chap:not-accepted}
+
+\section{Try Again!}\label{sec:try-again}
 
 If you do not get admitted to any schools or don't want to go to the ones that admit you, try again next time.  Graduate admission can involve randomness and noise. In the meantime, you can work on improving your profile, e.g., get more research experiences, publish more papers, improve your connections for stronger LoRs, etc. See rejection reasons (\autoref{sec:why-rejected}) and additional advice to improve your chance next time (\autoref{sec:improve-your-chance}).
 
@@ -1256,14 +1227,14 @@ If you get into an MS program at a school of your choice, you can contact profes
 No, don't bother.  You will likely not get any useful feedback.  We are not willing (sometimes not allowed) to reveal your evaluation results or give you feedback on how to improve your profile. \emph{So just move on}.  If you really want advice, ask your professors, collaborators, ref writers, or those who have previously applied.
 
 
-\subsection{Why did you get rejected?}\label{sec:why-rejected}
+\section{Why did you get rejected?}\label{sec:why-rejected}
 \subsectioninfo{You aim too high, are overqualified, or even because you applied to AI/ML, a super competitive field in recent years with many applicants.}
 
 Many students lament that they get no interviews or are rejected and that the admission process seems random.  However, while it is true that the process is not perfect, it is not random.
 Other than not having a strong profile (e.g., research potential, GPA, LoRs, SOP, poor interviews), here are some other reasons for rejections.
 
 \paragraph{You aim too high} 
-You have applied to schools that are \emph{way too high} for your profile (\autoref{sec:selecting-ranking-schools}). Many students simply just go for very top schools (e.g., top 10) and are surprised when they are rejected to all of them, in multiple years, and completely get shut out.  This is very obvious but many students still do this. An analogy is a person who has never hike wanting to climb Everest, which btw if you could, you might have a better admission chance (\autoref{sec:improve-your-chance}).
+You have applied to schools that are \emph{way too high} for your profile (\autoref{sec:selecting-ranking-schools}). Many students simply just go for very top schools (e.g., top 10) and are surprised when they are rejected to all of them, in multiple years, and completely get shut out.  This is very obvious but many students still do this (\autoref{sec:chance-me}). An analogy is a person who has never hike but wants to climb Mt. Everest (which btw if you could, you might have a better admission chance as mentioned in \autoref{sec:improve-your-chance}).
 
 While being ambitious and aiming high is good, you should understand how PhD admission works (e.g., by reading \emph{this} document and realizing things such as having a good GPA or GRE doesn't mean much to top programs), that in the US there are many good schools, and just be realistic. 
 
@@ -1296,7 +1267,7 @@ In general, these things are rare, but they do happen and cause concern to the a
 
 
 
-\subsection{Increasing your admission chance}\label{sec:improve-your-chance}
+\section{Increasing your admission chance}\label{sec:improve-your-chance}
 \subsectioninfo{You can improve your profile by being unique and standing out.}
 
 \begin{center}
@@ -1316,7 +1287,7 @@ In his \href{https://matt.might.net/articles/how-to-apply-and-get-in-to-graduate
 There are other things you might not think are important but can make you stand out. For example, if you have a strong background in a non-CS field but can be integrated with CS, e.g., you have a degree or background in \emph{dance} or \emph{music} and want to integrate them with CS, do talk about it. Are you a female or a minority in CS? Do you participate in outreach activities that help increase diversity and inclusion in CS? Diversity is highly valued in CS programs in the US (\autoref{sec:urm}), and experiences in these areas can make you stand out and get noticed from reviewers.
 
 
-\part{Funding, Schools, and Profs.}\label{part:funding-schools-profs}
+\part{Types of Funding and Choosing Schools and Profs.}\label{part:funding-schools-profs}
 
 \chapter{Funding}\label{sec:funding}
 \chapterinfo{TAs, RAs, and fellowships are main funding sources for PhDs.  TAs are provided by the department to help with classes. RAs are given by profs. to help with their research.  Fellowships, provided by the university, department, or external sources such as government or industry, give move flexibility but can be very competitive.}
